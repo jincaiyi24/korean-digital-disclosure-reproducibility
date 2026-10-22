@@ -1,0 +1,1352 @@
+[
+  {
+    "role": "v4",
+    "name": "api_key",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "line_start": 242,
+    "line_end": 246,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "v4",
+    "name": "ensure_dirs",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "line_start": 249,
+    "line_end": 251,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "v4",
+    "name": "safe_csv",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "line_start": 254,
+    "line_end": 256,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "v4",
+    "name": "quarter_windows",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "line_start": 259,
+    "line_end": 270,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "v4",
+    "name": "request_json",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "line_start": 273,
+    "line_end": 293,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "v4",
+    "name": "company_profile",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "line_start": 296,
+    "line_end": 318,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "v4",
+    "name": "parse_report_period",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "line_start": 321,
+    "line_end": 323,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "v4",
+    "name": "collect_delisted_companies",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "line_start": 326,
+    "line_end": 361,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "v4",
+    "name": "collect_delisted_filings",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "line_start": 364,
+    "line_end": 392,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "v4",
+    "name": "collect_metadata",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "line_start": 395,
+    "line_end": 554,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "v4",
+    "name": "legacy_report_index",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "line_start": 557,
+    "line_end": 565,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "v4",
+    "name": "download_one",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "line_start": 586,
+    "line_end": 637,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "v4",
+    "name": "download_reports",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "line_start": 640,
+    "line_end": 694,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "v4",
+    "name": "parse_viewer_nodes",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "line_start": 697,
+    "line_end": 707,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "v4",
+    "name": "strategy_nodes",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "line_start": 710,
+    "line_end": 723,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "v4",
+    "name": "public_get",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "line_start": 726,
+    "line_end": 738,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "v4",
+    "name": "section_text_one",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "line_start": 741,
+    "line_end": 778,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "v4",
+    "name": "download_strategy_sections",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "line_start": 781,
+    "line_end": 825,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "v4",
+    "name": "score_reports",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "line_start": 906,
+    "line_end": 1004,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "v4",
+    "name": "parse_args",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "line_start": 1007,
+    "line_end": 1022,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "v4",
+    "name": "main",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "line_start": 1025,
+    "line_end": 1038,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "v2",
+    "name": "metric",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "line_start": 476,
+    "line_end": 497,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "v2",
+    "name": "evaluate",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "line_start": 500,
+    "line_end": 526,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "splitter",
+    "name": "progress",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "line_start": 350,
+    "line_end": 353,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "splitter",
+    "name": "simple_progress",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "line_start": 356,
+    "line_end": 363,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "splitter",
+    "name": "text_profile",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "line_start": 382,
+    "line_end": 401,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "splitter",
+    "name": "has_boilerplate_language",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "line_start": 478,
+    "line_end": 479,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "splitter",
+    "name": "has_non_strategic_context",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "line_start": 482,
+    "line_end": 483,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "splitter",
+    "name": "classify_sentence",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "line_start": 486,
+    "line_end": 521,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "splitter",
+    "name": "analyze_text",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "line_start": 524,
+    "line_end": 579,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "splitter",
+    "name": "add_relative_signals",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "line_start": 582,
+    "line_end": 641,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "splitter",
+    "name": "order_panel_columns",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "line_start": 644,
+    "line_end": 689,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "splitter",
+    "name": "sanitize_dataframe_for_excel",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "line_start": 692,
+    "line_end": 706,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "splitter",
+    "name": "write_excel",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "line_start": 709,
+    "line_end": 711,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "splitter",
+    "name": "build_korean_panel",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "line_start": 714,
+    "line_end": 794,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "splitter",
+    "name": "run_pipeline",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "line_start": 797,
+    "line_end": 813,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "splitter",
+    "name": "self_test",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "line_start": 816,
+    "line_end": 830,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "splitter",
+    "name": "build_parser",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "line_start": 833,
+    "line_end": 849,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "splitter",
+    "name": "config_from_args",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "line_start": 852,
+    "line_end": 857,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "splitter",
+    "name": "main",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "line_start": 860,
+    "line_end": 876,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "ensure_runtime_packages",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 70,
+    "line_end": 120,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "compile_term_patterns",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 360,
+    "line_end": 368,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "progress",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 421,
+    "line_end": 424,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "simple_progress",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 427,
+    "line_end": 439,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "dependency_status",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 442,
+    "line_end": 450,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "_has_openpyxl",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 453,
+    "line_end": 459,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "normalize_text",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 471,
+    "line_end": 477,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "clean_sentence",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 480,
+    "line_end": 484,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "language_profile",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 487,
+    "line_end": 507,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "is_table_or_list_fragment",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 510,
+    "line_end": 527,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "is_english_narrative_sentence",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 530,
+    "line_end": 547,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "split_sentences",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 550,
+    "line_end": 567,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "match_terms",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 570,
+    "line_end": 571,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "has_boilerplate_language",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 574,
+    "line_end": 575,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "classify_sentence",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 578,
+    "line_end": 612,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "analyze_text",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 615,
+    "line_end": 672,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "markup_to_text",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 675,
+    "line_end": 690,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "zip_document_to_text",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 693,
+    "line_end": 704,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "ensure_dirs",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 835,
+    "line_end": 838,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "write_excel",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 841,
+    "line_end": 853,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "sanitize_dataframe_for_excel",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 856,
+    "line_end": 876,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "read_excel_if_exists",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 879,
+    "line_end": 882,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "parse_corp_code_zip",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 885,
+    "line_end": 908,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "get_listed_corporations",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 911,
+    "line_end": 923,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "quarter_windows",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 926,
+    "line_end": 938,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "infer_fiscal_year",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 941,
+    "line_end": 962,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "normalize_report_rows",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 965,
+    "line_end": 993,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "normalize_reports_dataframe",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 996,
+    "line_end": 1010,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "load_completed_search_windows",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1013,
+    "line_end": 1020,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "save_completed_search_windows",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1023,
+    "line_end": 1031,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "save_search_checkpoint",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1034,
+    "line_end": 1038,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "search_task_key",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1041,
+    "line_end": 1042,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "search_english_annual_reports_bulk",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1045,
+    "line_end": 1110,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "choose_one_report_per_firm_year",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1113,
+    "line_end": 1124,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "fetch_company_profiles",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1127,
+    "line_end": 1170,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "available_year_blocks",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1173,
+    "line_end": 1192,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "first_nonempty",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1195,
+    "line_end": 1199,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "mode_market",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1202,
+    "line_end": 1209,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "is_financial_industry",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1212,
+    "line_end": 1230,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "build_metadata_grid",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1233,
+    "line_end": 1283,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "build_corporation_availability",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1286,
+    "line_end": 1346,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "build_selected_sample",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1349,
+    "line_end": 1396,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "load_selected_sample_override",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1399,
+    "line_end": 1435,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "safe_filename_piece",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1438,
+    "line_end": 1441,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "download_report_text",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1444,
+    "line_end": 1461,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "build_panel",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1464,
+    "line_end": 1546,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "add_relative_signals",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1549,
+    "line_end": 1616,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "order_panel_columns",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1619,
+    "line_end": 1664,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "run_pipeline",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1667,
+    "line_end": 1773,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "doctor",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1776,
+    "line_end": 1793,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "self_test",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1796,
+    "line_end": 1814,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "parse_markets",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1817,
+    "line_end": 1822,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "parse_corp_codes",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1825,
+    "line_end": 1828,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "build_parser",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1831,
+    "line_end": 1872,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "config_from_args",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1875,
+    "line_end": 1896,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "decoder",
+    "name": "main",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1899,
+    "line_end": 1920,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "ensure_runtime_packages",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 70,
+    "line_end": 120,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "compile_term_patterns",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 360,
+    "line_end": 368,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "progress",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 421,
+    "line_end": 424,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "simple_progress",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 427,
+    "line_end": 439,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "dependency_status",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 442,
+    "line_end": 450,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "_has_openpyxl",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 453,
+    "line_end": 459,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "clean_sentence",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 480,
+    "line_end": 484,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "language_profile",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 487,
+    "line_end": 507,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "is_table_or_list_fragment",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 510,
+    "line_end": 527,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "is_english_narrative_sentence",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 530,
+    "line_end": 547,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "split_sentences",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 550,
+    "line_end": 567,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "match_terms",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 570,
+    "line_end": 571,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "has_boilerplate_language",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 574,
+    "line_end": 575,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "classify_sentence",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 578,
+    "line_end": 612,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "analyze_text",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 615,
+    "line_end": 672,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "parse_open_dart_error",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 707,
+    "line_end": 725,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "ensure_dirs",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 835,
+    "line_end": 838,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "write_excel",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 841,
+    "line_end": 853,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "sanitize_dataframe_for_excel",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 856,
+    "line_end": 876,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "read_excel_if_exists",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 879,
+    "line_end": 882,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "parse_corp_code_zip",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 885,
+    "line_end": 908,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "get_listed_corporations",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 911,
+    "line_end": 923,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "quarter_windows",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 926,
+    "line_end": 938,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "infer_fiscal_year",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 941,
+    "line_end": 962,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "normalize_report_rows",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 965,
+    "line_end": 993,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "normalize_reports_dataframe",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 996,
+    "line_end": 1010,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "load_completed_search_windows",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1013,
+    "line_end": 1020,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "save_completed_search_windows",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1023,
+    "line_end": 1031,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "save_search_checkpoint",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1034,
+    "line_end": 1038,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "search_task_key",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1041,
+    "line_end": 1042,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "search_english_annual_reports_bulk",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1045,
+    "line_end": 1110,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "choose_one_report_per_firm_year",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1113,
+    "line_end": 1124,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "fetch_company_profiles",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1127,
+    "line_end": 1170,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "available_year_blocks",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1173,
+    "line_end": 1192,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "first_nonempty",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1195,
+    "line_end": 1199,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "mode_market",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1202,
+    "line_end": 1209,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "is_financial_industry",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1212,
+    "line_end": 1230,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "build_metadata_grid",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1233,
+    "line_end": 1283,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "build_corporation_availability",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1286,
+    "line_end": 1346,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "build_selected_sample",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1349,
+    "line_end": 1396,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "load_selected_sample_override",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1399,
+    "line_end": 1435,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "safe_filename_piece",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1438,
+    "line_end": 1441,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "download_report_text",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1444,
+    "line_end": 1461,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "build_panel",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1464,
+    "line_end": 1546,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "add_relative_signals",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1549,
+    "line_end": 1616,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "order_panel_columns",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1619,
+    "line_end": 1664,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "run_pipeline",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1667,
+    "line_end": 1773,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "doctor",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1776,
+    "line_end": 1793,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "self_test",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1796,
+    "line_end": 1814,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "parse_markets",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1817,
+    "line_end": 1822,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "parse_corp_codes",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1825,
+    "line_end": 1828,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "build_parser",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1831,
+    "line_end": 1872,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "config_from_args",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1875,
+    "line_end": 1896,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "main",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "line_start": 1899,
+    "line_end": 1920,
+    "loaded": false,
+    "warning": "Source presence is not evidence this function is called by the current adapter."
+  }
+]

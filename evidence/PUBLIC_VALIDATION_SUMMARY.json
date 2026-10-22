@@ -1,0 +1,88 @@
+{
+  "schema": "CURRENT_METHOD_THREE_OFFLINE_REPLAYS_PUBLIC_VALIDATION_V1",
+  "status": "THREE_ACTUAL_FRESH_OFFLINE_REPLAYS_INDEPENDENTLY_VERIFIED",
+  "method_version": "locked_source_aware_plus_metadata_viewer15_20261023_v1",
+  "completed_rounds": 3,
+  "reports_per_round": 22654,
+  "classifier_calls_per_round": 25041971,
+  "current_measurement_totals": {
+    "D": 25041971,
+    "digital_candidates": 338468,
+    "substantive_digital": 49704,
+    "BMODD": 25070,
+    "NonBMODD": 24634
+  },
+  "measurement_sha256": "6f05a4951aa4e940544c8d6a4daed28fd53fd6c9719fe44b423e10e793b42127",
+  "panel_sha256": "2cc250301eb25152b823a506bd57f8682026efe5216c73e11e39e0223d233aaf",
+  "supplementary_BH_test_family": 19,
+  "required_model_field_checks_per_round": 96,
+  "network_requests_during_replay": 0,
+  "locked_public_file_sha256": {
+    "code/public_run.py": "496e563768b888f44ac1941cc7e36523cc81c7ccc01e392732abb3f7289e6b45",
+    "code/rebuild_current_method.py": "db797d939967554599ca822b8206bb0343a86b51c327ebb0c1ff83c1446b381c",
+    "code/complete_current_models.py": "ceba9ae9a8a8b982d2bb5457d29c876d0e4b9d66c40c7f89d21a3dc47d6d9dbf",
+    "code/replay_three_rounds.py": "f2793c354fc9be7e91711adb70753ef4280d106d2cd0a4595f4c6c743bea24e9",
+    "bundle/PUBLIC_INPUT_TEMPLATE.json": "7435acc785505c1a8af15cc83e5f687ce30d6300993a77f3a6f6e47a256cb58d",
+    "bundle/SOURCE_PLAN.json": "ab2a0846f9780534492fc2ffa4ad2b5ae87c6186df39490b131f4ae33a70080a",
+    "bundle/finance/expanded_panel.csv": "c1100096d259f92b889078618412896cb46ae54ad1f0a394d2627eb2c9a1edfc",
+    "bundle/finance/frozen_augmented_panel.csv": "fc8bd3fc69d0196ad14f4c14e6424eea0be85b3a857e91e9cc53ca6403fd74bc",
+    "bundle/PUBLIC_ENVIRONMENT_CONTRACT_V1.json": "11d4650b67479ff926135e7942df19e07d30521c4aac58fb02350f4eb8bc8eb2",
+    "bundle/PUBLIC_PACKAGE_PAYLOAD_LOCK.json": "c7e0c483bab96389e166e6240c35fcf629cfdba9298a0e4cf52b4869a6ac67a2"
+  },
+  "same_numeric_sample_and_plot_file_sha256": {
+    "BMODD_FIRM_YEAR_CLASSIFICATION.csv": "17c2e6dddd9295fe38cec712dcd14af48ef51c0f4e13a373d57c246b4d5351aa",
+    "confirmatory_two_test_BH.csv": "9097b11ab678b0e108089cdea06458c90df043b46468e02ff1ea502291f83060",
+    "CURRENT_MEASUREMENT_PANEL_INTERNAL.csv": "2cc250301eb25152b823a506bd57f8682026efe5216c73e11e39e0223d233aaf",
+    "decomposition_coefficient_identity.csv": "0367c75a8bab8f069247c19161cf00a27a72598339ba46b132d4cd6df61ca405",
+    "decomposition_common_sample.csv": "31cd5add9ef1cff56a5a7f1284a70882735db7e2f45d1d31e5fb614a6b7e6b25",
+    "decomposition_sample_flow.csv": "b20f195622189dc9af3d7f6451ea09443dadcdfcabb9a142fb37aa992d2438ae",
+    "figure1_annual_mean_source_data.csv": "376a28c064ac1c887ff04bc48f395ab669d7b1622fc4a32218942566bda72abf",
+    "h2_wald.csv": "bdca8828bdf8f6e50d73a53f935543e21a069babe395e6c46e26f60eef0edbbf",
+    "placebo.csv": "de5c008a84a3acb08c329a133cb2adca0d21fdc2b7f49c115f6c98c1dd4de35a",
+    "primary_h1_h2.csv": "bf41db67496a457991115c1190f982f46d57d51aa054fc00d3889c95afce4eb3",
+    "supplement_with_original_BH19.csv": "a470bb6361990bd09461d25b3369b01916f0772eaa615142f820aab520420f73",
+    "trend.csv": "a59c41ced4aa0f922c0d242b8aff65006ddcf490ddd89fdd7e2451b5396df28a",
+    "current_core/core_coefficients.csv": "4a5373721cf2b4b9b1c4a3ed54005aa99457f73cdc09a20dc2009d7d1712dc05",
+    "current_core/core_sample_keys.csv": "147eaa3b9d2715b03c1a50daedd6087a3798b84dfc314e88257168b0c2a0f73f",
+    "h3_joint/h3_joint_coefficients.csv": "f867fdc6b758e5baa26a64a3588ab660a877af57711c33dac6653df9edb02737",
+    "h3_joint/h3_joint_differences.csv": "fc05522839f5ce22ecf3a16320e6ae7c6d39298b80a54b2ba9bb8a4e11aa7201",
+    "h3_joint/h3_joint_sample_keys.csv": "c546699c07d8a3038c4d5b04339806de8d378049de6a65cc611789e2e0287705",
+    "ipw/07_t2可观察样本平衡诊断.csv": "d9b41ef7e46afb0cf9aa4a1d957f81827d524b8de71db8e43ee61c35739fa817",
+    "ipw/08_样本留存LPM与IPW结果.csv": "730c847775a2d7d579e205ce76bba73d3cd36ede9b3fbc6b72461ed1ccfb290c",
+    "ipw/17_IPW诊断.csv": "4529d5791eba483d4cb4820a180765b5d70ad72850e00ff7c4984df823c2efb5",
+    "ipw/图5_IPW重叠与权重分布.png": "daa935cceaa7fe6a1d7f600ad8e1045a3f1f7097e10e2502c2a159c246766f7d"
+  },
+  "round_proof_sha256": [
+    {
+      "round": 1,
+      "run_receipt_sha256": "7e9b934d1bd573d7477e96370ed6f7de78211a1eafcc482f38a5afc02bc2c619",
+      "report_prediction_file_sha256": "f73b386742bf9e224b957388f1d5351b01e23bade49ffcb3a3f445112f35dec5",
+      "model_seal_sha256": "322aa3e8e86135952c41b33bc2cfd1aaffd70c64b6691ff64d897f74785dcaca"
+    },
+    {
+      "round": 2,
+      "run_receipt_sha256": "64aca62cc87b4464060f69792edf0647654d051641bf7bdc3e457a360fb1909a",
+      "report_prediction_file_sha256": "b656ebd9c4a4be1cce93192d77c0551b7fc96f0a2ddb5d50724b6f470b9585db",
+      "model_seal_sha256": "322aa3e8e86135952c41b33bc2cfd1aaffd70c64b6691ff64d897f74785dcaca"
+    },
+    {
+      "round": 3,
+      "run_receipt_sha256": "cc6a0e6494b29d8ddf7b2c6977c8e88d9621d6bdde9ca8ed17fc047dfbe6b4ae",
+      "report_prediction_file_sha256": "37b1055406e35c8cea528d4754a4801ce256a5cf0503fd61716be20ec4264edc",
+      "model_seal_sha256": "322aa3e8e86135952c41b33bc2cfd1aaffd70c64b6691ff64d897f74785dcaca"
+    }
+  ],
+  "three_round_coordinator_receipt_sha256": "1f66ea38be03e183bfc0dda1a724d78e33880e88932b48bb037debae722c79e3",
+  "scope": {
+    "same_locked_local_input_snapshot_and_current_method": true,
+    "fresh_original_source_extraction_and_classification_each_round": true,
+    "all_current_paper_models_reestimated_each_round": true,
+    "new_website_or_financial_download": false,
+    "recovered_historical_25080866_sentence_measurement": false,
+    "independent_human_validation_recomputed": false,
+    "sentence_flags_independently_recomputed_from_full_saved_sentence_ledger": false,
+    "sentence_flag_check_basis": "Original worker streams flags into each report canonical digest; complete report-level JSONL/count/digest identities are independently checked. No complete per-sentence ledger is claimed.",
+    "cross_platform_bitwise_reproducibility_claimed": false,
+    "GitHub_publication_or_fresh_public_clone_verified_by_this_summary": false
+  }
+}

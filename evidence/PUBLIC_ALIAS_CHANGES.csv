@@ -1,0 +1,75 @@
+﻿file,row,column_index,source_column,public_column,before,after,kind
+results/models/primary_h1_h2.csv,1,2,term,term,BMI_z,BMODD_z,explicit_identifier_or_whole_value_alias
+results/models/primary_h1_h2.csv,15,0,model_id,model_id,M2_BMI_NONBMI,M2_BMODD_NONBMODD,explicit_identifier_or_whole_value_alias
+results/models/primary_h1_h2.csv,15,2,term,term,BMI_z,BMODD_z,explicit_identifier_or_whole_value_alias
+results/models/primary_h1_h2.csv,16,0,model_id,model_id,M2_BMI_NONBMI,M2_BMODD_NONBMODD,explicit_identifier_or_whole_value_alias
+results/models/primary_h1_h2.csv,16,2,term,term,NonBMI_z,NonBMODD_z,explicit_identifier_or_whole_value_alias
+results/models/primary_h1_h2.csv,17,0,model_id,model_id,M2_BMI_NONBMI,M2_BMODD_NONBMODD,explicit_identifier_or_whole_value_alias
+results/models/primary_h1_h2.csv,18,0,model_id,model_id,M2_BMI_NONBMI,M2_BMODD_NONBMODD,explicit_identifier_or_whole_value_alias
+results/models/primary_h1_h2.csv,19,0,model_id,model_id,M2_BMI_NONBMI,M2_BMODD_NONBMODD,explicit_identifier_or_whole_value_alias
+results/models/primary_h1_h2.csv,20,0,model_id,model_id,M2_BMI_NONBMI,M2_BMODD_NONBMODD,explicit_identifier_or_whole_value_alias
+results/models/primary_h1_h2.csv,21,0,model_id,model_id,M2_BMI_NONBMI,M2_BMODD_NONBMODD,explicit_identifier_or_whole_value_alias
+results/models/primary_h1_h2.csv,22,0,model_id,model_id,M2_BMI_NONBMI,M2_BMODD_NONBMODD,explicit_identifier_or_whole_value_alias
+results/models/primary_h1_h2.csv,23,0,model_id,model_id,M2_BMI_NONBMI,M2_BMODD_NONBMODD,explicit_identifier_or_whole_value_alias
+results/models/primary_h1_h2.csv,24,0,model_id,model_id,M2_BMI_NONBMI,M2_BMODD_NONBMODD,explicit_identifier_or_whole_value_alias
+results/models/primary_h1_h2.csv,25,0,model_id,model_id,M2_BMI_NONBMI,M2_BMODD_NONBMODD,explicit_identifier_or_whole_value_alias
+results/models/primary_h1_h2.csv,26,0,model_id,model_id,M2_BMI_NONBMI,M2_BMODD_NONBMODD,explicit_identifier_or_whole_value_alias
+results/models/primary_h1_h2.csv,27,0,model_id,model_id,M2_BMI_NONBMI,M2_BMODD_NONBMODD,explicit_identifier_or_whole_value_alias
+results/models/primary_h1_h2.csv,28,0,model_id,model_id,M2_BMI_NONBMI,M2_BMODD_NONBMODD,explicit_identifier_or_whole_value_alias
+results/models/primary_h1_h2.csv,29,0,model_id,model_id,M2_BMI_NONBMI,M2_BMODD_NONBMODD,explicit_identifier_or_whole_value_alias
+results/models/h2_wald.csv,1,0,model_id,model_id,M2_BMI_NONBMI,M2_BMODD_NONBMODD,explicit_identifier_or_whole_value_alias
+results/models/h2_wald.csv,1,1,contrast,contrast,BMI_z - NonBMI_z,BMODD_z - NonBMODD_z,explicit_identifier_or_whole_value_alias
+results/models/current_core/core_coefficients.csv,16,2,term,term,BMI_share_substantive_0_z,BMODD_share_substantive_0_z,explicit_identifier_or_whole_value_alias
+results/models/current_core/core_coefficients.csv,30,2,term,term,BMI_z,BMODD_z,explicit_identifier_or_whole_value_alias
+results/models/current_core/core_coefficients.csv,44,2,term,term,BMI_z,BMODD_z,explicit_identifier_or_whole_value_alias
+results/models/current_core/core_coefficients.csv,58,2,term,term,BMI_z,BMODD_z,explicit_identifier_or_whole_value_alias
+results/models/current_core/core_coefficients.csv,71,2,term,term,BMI_z,BMODD_z,explicit_identifier_or_whole_value_alias
+results/models/current_core/core_coefficients.csv,85,2,term,term,BMI_z,BMODD_z,explicit_identifier_or_whole_value_alias
+results/models/current_core/core_coefficients.csv,99,2,term,term,BMI_z,BMODD_z,explicit_identifier_or_whole_value_alias
+results/models/current_core/core_coefficients.csv,113,2,term,term,BMI_z,BMODD_z,explicit_identifier_or_whole_value_alias
+results/models/current_core/core_coefficients.csv,127,2,term,term,BMI_z,BMODD_z,explicit_identifier_or_whole_value_alias
+results/models/current_core/core_coefficients.csv,141,2,term,term,BMI_z,BMODD_z,explicit_identifier_or_whole_value_alias
+results/models/current_core/core_coefficients.csv,154,2,term,term,BMI_z,BMODD_z,explicit_identifier_or_whole_value_alias
+results/models/current_core/core_coefficients.csv,167,2,term,term,BMI_z,BMODD_z,explicit_identifier_or_whole_value_alias
+results/models/current_core/core_coefficients.csv,180,2,term,term,BMI_z,BMODD_z,explicit_identifier_or_whole_value_alias
+results/models/current_core/core_coefficients.csv,193,2,term,term,BMI_z,BMODD_z,explicit_identifier_or_whole_value_alias
+results/models/current_core/core_coefficients.csv,206,2,term,term,BMI_z,BMODD_z,explicit_identifier_or_whole_value_alias
+results/models/current_core/core_coefficients.csv,219,2,term,term,BMI_z,BMODD_z,explicit_identifier_or_whole_value_alias
+results/models/current_core/core_coefficients.csv,233,2,term,term,BMI_z,BMODD_z,explicit_identifier_or_whole_value_alias
+results/models/current_core/core_coefficients.csv,247,2,term,term,BMI_z,BMODD_z,explicit_identifier_or_whole_value_alias
+results/models/current_core/core_coefficients.csv,260,2,term,term,BMI_log_count_z,BMODD_log_count_z,explicit_identifier_or_whole_value_alias
+results/models/current_core/core_coefficients.csv,274,2,term,term,BMI_any,BMODD_any,explicit_identifier_or_whole_value_alias
+results/models/current_core/core_coefficients.csv,288,2,term,term,BMI_share_substantive_0_z,BMODD_share_substantive_0_z,explicit_identifier_or_whole_value_alias
+results/models/current_core/core_coefficients.csv,302,2,term,term,BMI_positive_intensity_z,BMODD_positive_intensity_z,explicit_identifier_or_whole_value_alias
+results/models/current_core/core_coefficients.csv,316,2,term,term,BMI_z,BMODD_z,explicit_identifier_or_whole_value_alias
+results/models/current_core/core_coefficients.csv,330,2,term,term,BMI_z,BMODD_z,explicit_identifier_or_whole_value_alias
+results/models/placebo.csv,1,0,model_id,model_id,PLACEBO_FUTURE_BMI_H1,PLACEBO_FUTURE_BMODD_H1,explicit_identifier_or_whole_value_alias
+results/models/placebo.csv,1,2,term,term,FutureBMI_h1_exact,FutureBMODD_h1_exact,explicit_identifier_or_whole_value_alias
+results/models/placebo.csv,2,0,model_id,model_id,PLACEBO_FUTURE_BMI_H2,PLACEBO_FUTURE_BMODD_H2,explicit_identifier_or_whole_value_alias
+results/models/placebo.csv,2,2,term,term,FutureBMI_h2_exact,FutureBMODD_h2_exact,explicit_identifier_or_whole_value_alias
+results/diagnostics/ipw_balance.csv,1,0,variable,variable,BMI_z,BMODD_z,explicit_identifier_or_whole_value_alias
+results/diagnostics/ipw_balance.csv,2,0,variable,variable,BMI_raw,BMODD_raw,explicit_identifier_or_whole_value_alias
+results/models/ipw_lpm_results.csv,1,2,term,term,BMI_z,BMODD_z,explicit_identifier_or_whole_value_alias
+results/models/ipw_lpm_results.csv,2,2,term,term,BMI_z,BMODD_z,explicit_identifier_or_whole_value_alias
+results/models/supplement_with_original_BH19.csv,0,22,bmi_standardization,BMODD_standardization,bmi_standardization,BMODD_standardization,explicit_header_alias
+results/models/supplement_with_original_BH19.csv,1,26,fdr_scope,fdr_scope,all newly estimated supplementary BMI tests in this audit; baseline excluded,all newly estimated supplementary BMODD tests in this audit; baseline excluded,explicit_identifier_or_whole_value_alias
+results/models/supplement_with_original_BH19.csv,2,26,fdr_scope,fdr_scope,all newly estimated supplementary BMI tests in this audit; baseline excluded,all newly estimated supplementary BMODD tests in this audit; baseline excluded,explicit_identifier_or_whole_value_alias
+results/models/supplement_with_original_BH19.csv,3,26,fdr_scope,fdr_scope,all newly estimated supplementary BMI tests in this audit; baseline excluded,all newly estimated supplementary BMODD tests in this audit; baseline excluded,explicit_identifier_or_whole_value_alias
+results/models/supplement_with_original_BH19.csv,4,26,fdr_scope,fdr_scope,all newly estimated supplementary BMI tests in this audit; baseline excluded,all newly estimated supplementary BMODD tests in this audit; baseline excluded,explicit_identifier_or_whole_value_alias
+results/models/supplement_with_original_BH19.csv,5,26,fdr_scope,fdr_scope,all newly estimated supplementary BMI tests in this audit; baseline excluded,all newly estimated supplementary BMODD tests in this audit; baseline excluded,explicit_identifier_or_whole_value_alias
+results/models/supplement_with_original_BH19.csv,6,26,fdr_scope,fdr_scope,all newly estimated supplementary BMI tests in this audit; baseline excluded,all newly estimated supplementary BMODD tests in this audit; baseline excluded,explicit_identifier_or_whole_value_alias
+results/models/supplement_with_original_BH19.csv,7,26,fdr_scope,fdr_scope,all newly estimated supplementary BMI tests in this audit; baseline excluded,all newly estimated supplementary BMODD tests in this audit; baseline excluded,explicit_identifier_or_whole_value_alias
+results/models/supplement_with_original_BH19.csv,8,26,fdr_scope,fdr_scope,all newly estimated supplementary BMI tests in this audit; baseline excluded,all newly estimated supplementary BMODD tests in this audit; baseline excluded,explicit_identifier_or_whole_value_alias
+results/models/supplement_with_original_BH19.csv,9,26,fdr_scope,fdr_scope,all newly estimated supplementary BMI tests in this audit; baseline excluded,all newly estimated supplementary BMODD tests in this audit; baseline excluded,explicit_identifier_or_whole_value_alias
+results/models/supplement_with_original_BH19.csv,10,26,fdr_scope,fdr_scope,all newly estimated supplementary BMI tests in this audit; baseline excluded,all newly estimated supplementary BMODD tests in this audit; baseline excluded,explicit_identifier_or_whole_value_alias
+results/models/supplement_with_original_BH19.csv,11,26,fdr_scope,fdr_scope,all newly estimated supplementary BMI tests in this audit; baseline excluded,all newly estimated supplementary BMODD tests in this audit; baseline excluded,explicit_identifier_or_whole_value_alias
+results/models/supplement_with_original_BH19.csv,12,26,fdr_scope,fdr_scope,all newly estimated supplementary BMI tests in this audit; baseline excluded,all newly estimated supplementary BMODD tests in this audit; baseline excluded,explicit_identifier_or_whole_value_alias
+results/models/supplement_with_original_BH19.csv,13,26,fdr_scope,fdr_scope,all newly estimated supplementary BMI tests in this audit; baseline excluded,all newly estimated supplementary BMODD tests in this audit; baseline excluded,explicit_identifier_or_whole_value_alias
+results/models/supplement_with_original_BH19.csv,14,26,fdr_scope,fdr_scope,all newly estimated supplementary BMI tests in this audit; baseline excluded,all newly estimated supplementary BMODD tests in this audit; baseline excluded,explicit_identifier_or_whole_value_alias
+results/models/supplement_with_original_BH19.csv,15,26,fdr_scope,fdr_scope,all newly estimated supplementary BMI tests in this audit; baseline excluded,all newly estimated supplementary BMODD tests in this audit; baseline excluded,explicit_identifier_or_whole_value_alias
+results/models/supplement_with_original_BH19.csv,16,26,fdr_scope,fdr_scope,all newly estimated supplementary BMI tests in this audit; baseline excluded,all newly estimated supplementary BMODD tests in this audit; baseline excluded,explicit_identifier_or_whole_value_alias
+results/models/supplement_with_original_BH19.csv,17,26,fdr_scope,fdr_scope,all newly estimated supplementary BMI tests in this audit; baseline excluded,all newly estimated supplementary BMODD tests in this audit; baseline excluded,explicit_identifier_or_whole_value_alias
+results/models/supplement_with_original_BH19.csv,18,26,fdr_scope,fdr_scope,all newly estimated supplementary BMI tests in this audit; baseline excluded,all newly estimated supplementary BMODD tests in this audit; baseline excluded,explicit_identifier_or_whole_value_alias
+results/models/supplement_with_original_BH19.csv,19,26,fdr_scope,fdr_scope,all newly estimated supplementary BMI tests in this audit; baseline excluded,all newly estimated supplementary BMODD tests in this audit; baseline excluded,explicit_identifier_or_whole_value_alias
+results/models/supplement_with_original_BH19.csv,20,26,fdr_scope,fdr_scope,all newly estimated supplementary BMI tests in this audit; baseline excluded,all newly estimated supplementary BMODD tests in this audit; baseline excluded,explicit_identifier_or_whole_value_alias
+results/models/supplement_with_original_BH19.csv,21,26,fdr_scope,fdr_scope,all newly estimated supplementary BMI tests in this audit; baseline excluded,all newly estimated supplementary BMODD tests in this audit; baseline excluded,explicit_identifier_or_whole_value_alias

@@ -1,0 +1,14 @@
+[
+  {
+    "role": "splitter",
+    "loaded_parent_function": "split_korean_sentences",
+    "name": "flush_buffer",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "source_sha256": "5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0",
+    "line_start": 452,
+    "line_end": 463,
+    "ast_sha256": "80064f483de3ad6bc15110f941dcea4279a06bfb5f89f5869527d0aa760a3579",
+    "binding_scope": "Nested definition included verbatim in the loaded parent function AST, not a separately extracted module-global function.",
+    "source_expression": "def flush_buffer() -> None:\n        if not buffer:\n            return\n        combined = clean_segment(\" \".join(buffer))\n        buffer.clear()\n        if not combined:\n            return\n        parts = SENTENCE_SPLIT_RE.split(combined)\n        for part in parts:\n            cleaned = clean_segment(part)\n            if is_korean_narrative_segment(cleaned):\n                candidates.append(cleaned)"
+  }
+]

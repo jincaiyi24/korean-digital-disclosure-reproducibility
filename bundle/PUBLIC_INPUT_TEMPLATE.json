@@ -1,0 +1,105 @@
+{
+  "method_root": "method",
+  "source_plan": "SOURCE_PLAN.json",
+  "viewer_rows": "VIEWER_REPLAY_ROWS_PUBLIC.json",
+  "raw_dir": "DATA/raw_dart",
+  "supplemental_raw_dir": "DATA/supplemental_raw",
+  "viewer_capture_root": "DATA/viewer_capture",
+  "financial_panel": {
+    "path": "finance/expanded_panel.csv",
+    "sha256": "c1100096d259f92b889078618412896cb46ae54ad1f0a394d2627eb2c9a1edfc"
+  },
+  "frozen_financial_panel": {
+    "path": "finance/frozen_augmented_panel.csv",
+    "sha256": "fc8bd3fc69d0196ad14f4c14e6424eea0be85b3a857e91e9cc53ca6403fd74bc"
+  },
+  "posthoc_classification": {
+    "path": "posthoc/classification_expected.json",
+    "sha256": "41d535470e3cbd844d1e3ebd88e4c881b33017bf99874b709bb23ba8c29d0882"
+  },
+  "posthoc_models": {
+    "primary": {
+      "path": "posthoc/primary.csv",
+      "sha256": "bf41db67496a457991115c1190f982f46d57d51aa054fc00d3889c95afce4eb3"
+    },
+    "wald": {
+      "path": "posthoc/wald.csv",
+      "sha256": "bdca8828bdf8f6e50d73a53f935543e21a069babe395e6c46e26f60eef0edbbf"
+    },
+    "core": {
+      "path": "posthoc/core.csv",
+      "sha256": "442ee471ad069af45b37b6cfc0f24ccf8ecaa3252ef97040b601d921ff203913"
+    },
+    "h45": {
+      "path": "posthoc/h45.csv",
+      "sha256": "6071cd8f8f0d4b098b03de2bf1f8ad7baa350f5be8f015d9b08591d32081f18d"
+    },
+    "joint": {
+      "path": "posthoc/joint.csv",
+      "sha256": "8bb0c7ddc717185e94f2109dca0bca10dd6f5fba1eb2ff655c867c18f6b708ee"
+    },
+    "differences": {
+      "path": "posthoc/differences.csv",
+      "sha256": "fc05522839f5ce22ecf3a16320e6ae7c6d39298b80a54b2ba9bb8a4e11aa7201"
+    },
+    "trend": {
+      "path": "posthoc/trend.csv",
+      "sha256": "a35e47ae1d66f2aa47401d693b7407691f7094e83459feb5483b595729268345"
+    },
+    "placebo": {
+      "path": "posthoc/placebo.csv",
+      "sha256": "de5c008a84a3acb08c329a133cb2adca0d21fdc2b7f49c115f6c98c1dd4de35a"
+    },
+    "ipw": {
+      "path": "posthoc/ipw.csv",
+      "sha256": "730c847775a2d7d579e205ce76bba73d3cd36ede9b3fbc6b72461ed1ccfb290c"
+    },
+    "supplement": {
+      "path": "posthoc/supplement.csv",
+      "sha256": "a470bb6361990bd09461d25b3369b01916f0772eaa615142f820aab520420f73"
+    }
+  },
+  "code_pins": {
+    "frozen_api.py": "9208af07d8f6b7bf65a62c00e7cdc9ba09276955a1691163d83e42b276930349",
+    "production_source_api.py": "21a27ac4847b29cbac0cf25b0e98c77d72f2c490c0ea7fd1452a7c8c1ee4f50a",
+    "recover_historical_viewer_sources.py": "99ff5ba37539ad5b02c67a02cb71fb6e5bd84df8e37140052fcfe664e875d427",
+    "config/frozen_sources.json": "43351047965f97fd3486d07f9fe0f7a850324e76d27ea9f3e97e32b91b42cccd",
+    "model_code/empirical_adapter.py": "96b0d7c90f3e2c90765a7e4e7a08ee9bcad606547bf5ebd26a383af44215bd64",
+    "model_code/current_components.py": "030ec2f769f00bae3a81e5c70f0126a2eb496c9ea38eac67e32006efb0090633",
+    "model_code/alias_provenance.py": "4858059cb7eba27a7e05b52d7b583a709593c5d7cb88bb34da92228875b66388",
+    "model_sources/original_estimator.py": "937cd7f3a3d3a730bda21d01b8cefa68eb6555d6846d6703a8cba321e606b2a5",
+    "model_sources/original_viewer_recovery.py": "eaa04dbd970b5032372c75822f8b7673d4d20a098904ab9ee1191aebee3cad6b",
+    "model_sources/trend.py": "8ebd869b1fec9ec45c748e92a760049c9695c1eb173f3a038de5658150177202",
+    "model_sources/placebo.py": "822f5054fdb6fae259d5811656c9161f30ea4c152b0c3305c9205f4e51c2df6a",
+    "model_sources/formal_h3.py": "583dd4fd61413097c80e68c73ba065e5ec4f58b506f61c782bd5b41c06fe9e21",
+    "model_sources/supplement.py": "a4142cdbe7c786e396bdbf5f02f7237250ce36967fb5172980d16c3141a533aa",
+    "vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+    "vendor/frozen/outputs/ssci_korean_classifier_v2.py": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py": "5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0",
+    "vendor/frozen/outputs/korea_digital_strategy_pipeline.py": "620d4a38c9ab12834c0be529fc14f518d68b4fef03d9a7f9e4328e8dd23236c3"
+  },
+  "source_plan_sha256": "ab2a0846f9780534492fc2ffa4ad2b5ae87c6186df39490b131f4ae33a70080a",
+  "viewer_rows_sha256": "8efc128fab86f5045f49cf9af7b2e9b485bc14cf15feb0f6d076429260b70f8d",
+  "expected_new_panel_sha256_after_generation": "2cc250301eb25152b823a506bd57f8682026efe5216c73e11e39e0223d233aaf",
+  "pipeline_pins": {
+    "../code/rebuild_current_method.py": "db797d939967554599ca822b8206bb0343a86b51c327ebb0c1ff83c1446b381c",
+    "../code/complete_current_models.py": "ceba9ae9a8a8b982d2bb5457d29c876d0e4b9d66c40c7f89d21a3dc47d6d9dbf",
+    "../code/replay_three_rounds.py": "f2793c354fc9be7e91711adb70753ef4280d106d2cd0a4595f4c6c743bea24e9"
+  },
+  "environment_reference": {
+    "path": "PUBLIC_ENVIRONMENT_CONTRACT_V1.json",
+    "sha256": "11d4650b67479ff926135e7942df19e07d30521c4aac58fb02350f4eb8bc8eb2"
+  },
+  "scope": {
+    "offline": true,
+    "website_redownload": false,
+    "financial_from_raw_redownload": false,
+    "historical_old_measurement_exact_recovery": false,
+    "method_version": "locked_source_aware_plus_metadata_viewer15_20261023_v1",
+    "financial_input_policy": "public copies only: A.opendart_error_note and B.text_cache_path blank; all other original cell strings unchanged",
+    "financial_input_values_differ_from_private_original_only_in_nonanalysis_fields": true,
+    "runtime": "fresh isolated official-wheel Windows AMD64 CPython3.13.12",
+    "full_rounds_validated_by_assembly": 0
+  },
+  "viewer_descriptor_root": "viewer_descriptors"
+}

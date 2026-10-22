@@ -1,0 +1,25 @@
+{
+  "classifier_version": "korean_contextual_v4_final_action_attribution_2026-08-15",
+  "files": {
+    "v4": {
+      "path": "vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+      "sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+      "bytes": 56882
+    },
+    "v2": {
+      "path": "vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+      "sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+      "bytes": 26259
+    },
+    "splitter": {
+      "path": "vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+      "sha256": "5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0",
+      "bytes": 28305
+    },
+    "decoder": {
+      "path": "vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+      "sha256": "620d4a38c9ab12834c0be529fc14f518d68b4fef03d9a7f9e4328e8dd23236c3",
+      "bytes": 69452
+    }
+  }
+}

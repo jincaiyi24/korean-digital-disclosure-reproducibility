@@ -1,0 +1,36 @@
+{
+  "artifact_kind": "read_only_machine_searchable_rule_lookup_not_classifier_input",
+  "algorithm_or_classifier_changed": false,
+  "runtime_pins_or_current_method_inputs_changed": false,
+  "file_paths": "All file metadata is repository-root-relative with forward slashes; source line numbers and source hashes refer to the preserved frozen source bytes.",
+  "contents": {
+    "ACTUALLY_LOADED_RULE_DECLARATIONS.json": "projected independently reviewed lookup; only file metadata paths changed",
+    "EFFECTIVE_FUNCTIONS_AND_ORDERED_CONDITIONS.json": "projected independently reviewed lookup; only file metadata paths changed",
+    "SOURCE_FUNCTIONS_NOT_LOADED.json": "projected independently reviewed lookup; only file metadata paths changed",
+    "INLINE_REGEX_CALLS.json": "projected independently reviewed lookup; only file metadata paths changed",
+    "NESTED_FUNCTION_SCOPE_SUPPLEMENT.json": "projected independently reviewed lookup; only file metadata paths changed",
+    "AGGREGATION_AND_CATEGORY_SOURCE_SITES.json": "projected independently reviewed lookup; only file metadata paths changed",
+    "DECISION_PRIORITY_AND_MEASUREMENT_BOUNDARIES.json": "projected independently reviewed lookup; only file metadata paths changed",
+    "REGEX_AND_KEYWORD_INDEX.csv": "projected independently reviewed lookup; only file metadata paths changed"
+  },
+  "loaded_inventory": {
+    "declarations": 73,
+    "functions": 23,
+    "inline_regex_calls": 23,
+    "nested_loaded_functions": 1,
+    "source_role_function_entries_not_loaded": 150
+  },
+  "critical_semantics": [
+    "Every valid within-report deduplicated narrative fragment is classified. DIGITAL_CORE_TERMS only rescues one preliminary noisy-line skip and is not a global digital-keyword prefilter.",
+    "specific_plan may set substantive/S=True after earlier v2 exclusions. It does not directly reset digital candidate/C. The later business_purpose and fourth-industrial-revolution checks remain in their original order.",
+    "The 48 v2 compiled regexes use IGNORECASE; the 16 v4 compiled regexes do not. Literal company-name substring checks are not made case-insensitive merely by those v2 regex flags.",
+    "lower() is used in the within-report deduplication key only. The first retained original fragment, not that lowercased key, is passed to classification.",
+    "v4 obtains v2 flags then applies its final vetoes; a positive v2 result does not override a later v4 exclusion.",
+    "Public BMODD maps the frozen BMI/bmi fields. NonBMODD is substantive S minus BMODD B, not a separate internal-digitization classifier. Exclude includes non-digital and digital-but-non-substantive fragments.",
+    "Loaded splitter.LATIN_RE is statically unreachable from the effective roots and must not be treated as an effective classification trigger. SOURCE_FUNCTIONS_NOT_LOADED lists source presence only, not deployed rules.",
+    "Keyword/regex attribution and action checks do not prove real-world execution, semantic coreference, completion of a promise, or causality. Human codebook standards and this approximate Python implementation are distinct."
+  ],
+  "lookup_excluded_from_pipeline_pins": true,
+  "private_environment_or_absolute_path_execution_receipts_included": false,
+  "reproduction_success_or_publication_claim": null
+}

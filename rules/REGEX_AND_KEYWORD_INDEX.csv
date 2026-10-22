@@ -1,0 +1,423 @@
+role,name,kind,active_static_reachability,line_start,line_end,source_sha256,file,pattern,flags_integer,IGNORECASE,source_expression
+v4,CLEAN_FOCAL_RE,regex,True,61,64,b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb,bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py,\ub2f9\uc0ac|\ub2f9\ud68c\uc0ac|\ud68c\uc0ac\ub294|\ubcf8\uc0ac\ub294|\uc6b0\ub9ac\s*\ud68c\uc0ac|\ub2f9\s*\uadf8\ub8f9|\uc5f0\uacb0\ud68c\uc0ac|\uc885\uc18d\ud68c\uc0ac,32,False,"CLEAN_FOCAL_RE = re.compile(
+    r""\ub2f9\uc0ac|\ub2f9\ud68c\uc0ac|\ud68c\uc0ac\ub294|\ubcf8\uc0ac\ub294|\uc6b0\ub9ac\s*\ud68c\uc0ac|""
+    r""\ub2f9\s*\uadf8\ub8f9|\uc5f0\uacb0\ud68c\uc0ac|\uc885\uc18d\ud68c\uc0ac""
+)"
+v4,MARKET_TREND_RE,regex,True,65,69,b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb,bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py,"\uc2dc\uc7a5\uc870\uc0ac|\ubcf4\uace0\uc11c\uc5d0\s*\ub530\ub974\uba74|\uac83\uc73c\ub85c\s*(?:\uc804\ub9dd|\uc608\uc0c1)|\uc2dc\uc7a5\s*\uaddc\ubaa8|\uc131\uc7a5\ub960|\uc218\uc694.{0,30}\uc99d\uac00|\uc0b0\uc5c5\uc740|\uc2dc\uc7a5\uc740|\uae30\uc220\uc774\s*\ubc1c\uc804\ud568\uc5d0\s*\ub530\ub77c|\uc9d1\uc911\ub3c4\uac00\s*\uc804\ud658",32,False,"MARKET_TREND_RE = re.compile(
+    r""\uc2dc\uc7a5\uc870\uc0ac|\ubcf4\uace0\uc11c\uc5d0\s*\ub530\ub974\uba74|\uac83\uc73c\ub85c\s*(?:\uc804\ub9dd|\uc608\uc0c1)|""
+    r""\uc2dc\uc7a5\s*\uaddc\ubaa8|\uc131\uc7a5\ub960|\uc218\uc694.{0,30}\uc99d\uac00|\uc0b0\uc5c5\uc740|\uc2dc\uc7a5\uc740|""
+    r""\uae30\uc220\uc774\s*\ubc1c\uc804\ud568\uc5d0\s*\ub530\ub77c|\uc9d1\uc911\ub3c4\uac00\s*\uc804\ud658""
+)"
+v4,EXTERNAL_ACTOR_RE,regex,True,70,72,b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb,bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py,"(?<![A-Za-z])[A-Za-z][A-Za-z0-9.\-]{1,30}\s*\uc5d0\uc11c.{0,100}(?:\uac1c\ubc1c|\uc0dd\uc0b0|\ucd9c\uc2dc|\uc81c\uacf5)",32,False,"EXTERNAL_ACTOR_RE = re.compile(
+    r""(?<![A-Za-z])[A-Za-z][A-Za-z0-9.\-]{1,30}\s*\uc5d0\uc11c.{0,100}(?:\uac1c\ubc1c|\uc0dd\uc0b0|\ucd9c\uc2dc|\uc81c\uacf5)""
+)"
+v4,GENERIC_EXTERNAL_ACTOR_RE,regex,True,73,77,b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb,bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py,"(?:\ube45\ud14c\ud06c\s*\uae30\uc5c5\ub4e4|\uae30\uc5c5\ub4e4|\uc5c5\uccb4\ub4e4|IT\uc11c\ube44\uc2a4\s*\uc5c5\uccb4\ub4e4|\ud1b5\uc2e0\uc0ac|\ud1b5\uc2e0\uc0ac\uc5c5\uc790|\uace0\uac1d\uc0ac|\ud3ec\ud138\s*\ud50c\ub7ab\ud3fc\ub4e4).{0,80}(?:\uac1c\ubc1c|\ub3c4\uc785|\uc6b4\uc601|\uc81c\uacf5|\uad6c\ucd95|\ud22c\uc790|\ucd9c\uc2dc|\uc0c1\uc6a9\ud654)",32,False,"GENERIC_EXTERNAL_ACTOR_RE = re.compile(
+    r""(?:\ube45\ud14c\ud06c\s*\uae30\uc5c5\ub4e4|\uae30\uc5c5\ub4e4|\uc5c5\uccb4\ub4e4|IT\uc11c\ube44\uc2a4\s*\uc5c5\uccb4\ub4e4|""
+    r""\ud1b5\uc2e0\uc0ac|\ud1b5\uc2e0\uc0ac\uc5c5\uc790|\uace0\uac1d\uc0ac|\ud3ec\ud138\s*\ud50c\ub7ab\ud3fc\ub4e4).{0,80}""
+    r""(?:\uac1c\ubc1c|\ub3c4\uc785|\uc6b4\uc601|\uc81c\uacf5|\uad6c\ucd95|\ud22c\uc790|\ucd9c\uc2dc|\uc0c1\uc6a9\ud654)""
+)"
+v4,STATIC_SCOPE_RE,regex,True,78,85,b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb,bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py,"(?:\uac1c\ubc1c|\uc81c\uc870)\s*\ubc0f\s*\ud310\ub9e4(?:\s*\uc0ac\uc5c5)?\s*$|\uc0ac\uc5c5\s*\ubaa9\uc801|\uc0ac\uc5c5\uc758\s*\uac1c\uc694|\uc0ac\uc5c5\uc758\s*\ub0b4\uc6a9\s*$|\uac1c\uc694\s*(?:\ub2f9\uc0ac|\ud68c\uc0ac)\ub294|\uc9c0\ubc30\ud68c\uc0ac\s*\ubc0f\s*\uc885\uc18d\ud68c\uc0ac\ub294|\uacf5\uc2dc\ub300\uc0c1\uc0ac\uc5c5\uad6c\ubd84|\ud310\ub9e4\uacbd\ub85c|\uc790\uc6d0\s*\uc870\ub2ec\s*\uc0c1\ud669|\uc8fc\ub825\s*\uc81c\ud488(?:\uc740|\uc73c\ub85c)|\uc18c\ud504\ud2b8\uc6e8\uc5b4.{0,60}(?:\uacf5\uae09\uc5c5|\ud310\ub9e4\uc5c5)\s*\d*\.?\s*$",32,False,"STATIC_SCOPE_RE = re.compile(
+    r""(?:\uac1c\ubc1c|\uc81c\uc870)\s*\ubc0f\s*\ud310\ub9e4(?:\s*\uc0ac\uc5c5)?\s*$|""
+    r""\uc0ac\uc5c5\s*\ubaa9\uc801|\uc0ac\uc5c5\uc758\s*\uac1c\uc694|\uc0ac\uc5c5\uc758\s*\ub0b4\uc6a9\s*$|""
+    r""\uac1c\uc694\s*(?:\ub2f9\uc0ac|\ud68c\uc0ac)\ub294|\uc9c0\ubc30\ud68c\uc0ac\s*\ubc0f\s*\uc885\uc18d\ud68c\uc0ac\ub294|""
+    r""\uacf5\uc2dc\ub300\uc0c1\uc0ac\uc5c5\uad6c\ubd84|\ud310\ub9e4\uacbd\ub85c|""
+    r""\uc790\uc6d0\s*\uc870\ub2ec\s*\uc0c1\ud669|\uc8fc\ub825\s*\uc81c\ud488(?:\uc740|\uc73c\ub85c)|""
+    r""\uc18c\ud504\ud2b8\uc6e8\uc5b4.{0,60}(?:\uacf5\uae09\uc5c5|\ud310\ub9e4\uc5c5)\s*\d*\.?\s*$""
+)"
+v4,SEGMENT_LIST_RE,regex,True,86,91,b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb,bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py,"\uc0ac\uc5c5\ubd80\ubb38\ubcc4\s*\ud604\ud669|\uc0ac\uc5c5\ubd80\ubb38.{0,100}(?:\uad6c\uc131|\ud604\ud669)|\ubd80\ubb38\uc73c\ub85c\s*\uad6c\uc131|\uc8fc\uc694\s*\uc81c\ud488.{0,80}\ud604\ud669|\ubd80\ubb38\ubcc4\s*\uc8fc\uc694\s*\uc81c\ud488|\uc8fc\uc694\s*\uc0ac\uc5c5\uc758\s*\ub0b4\uc6a9|\ud310\ub9e4\uacbd\ub85c|\ud310\ub9e4\uc804\ub7b5\s*\uc0ac\uc5c5\ubd80\ubb38|(?:\u2192.{0,160}){3}",32,False,"SEGMENT_LIST_RE = re.compile(
+    r""\uc0ac\uc5c5\ubd80\ubb38\ubcc4\s*\ud604\ud669|\uc0ac\uc5c5\ubd80\ubb38.{0,100}(?:\uad6c\uc131|\ud604\ud669)|""
+    r""\ubd80\ubb38\uc73c\ub85c\s*\uad6c\uc131|\uc8fc\uc694\s*\uc81c\ud488.{0,80}\ud604\ud669|""
+    r""\ubd80\ubb38\ubcc4\s*\uc8fc\uc694\s*\uc81c\ud488|\uc8fc\uc694\s*\uc0ac\uc5c5\uc758\s*\ub0b4\uc6a9|""
+    r""\ud310\ub9e4\uacbd\ub85c|\ud310\ub9e4\uc804\ub7b5\s*\uc0ac\uc5c5\ubd80\ubb38|(?:\u2192.{0,160}){3}""
+)"
+v4,ACTIVE_CLEAN_RE,regex,True,92,108,b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb,bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py,"\uc6b4\uc601\s*\uc911|\uc6b4\uc601(?:\ud558|\ud574\uc624)|\uc81c\uacf5\s*\uc911|\ud310\ub9e4\s*\uc911|\uc2dc\ud310\s*\uc911|(?<!\ucc3d)\ucd9c\uc2dc|\ub860\uce6d|\uc624\ud508|\uac1c\uc7a5|\uc124\ub9bd|\ud569\ubcd1|\uccb4\uacb0|\uc644\ub8cc|\uc778\uc218|\ucde8\ub4dd|\uad6c\ucd95(?:\ud558|\ud588|\ub418|\uc911|\uc644\ub8cc)|\uad6c\ucd95.{0,30}(?:\uc9c4\ud589|\uc218\ud589)|\ud22c\uc790(?:\ub97c|\ub3c4|\uac00)?\s*(?:\ud558\uc600|\ud588|\ud558\uace0|\ud560|\uc911|\uc9c4\ud589|\uc9d1\ud589|\uacc4\ud68d|\ud655\ub300|\uc2b9\uc778)|\ub3c4\uc785(?:\ud558|\ud588|\ub418|\uc911|\uc644\ub8cc)|\uac1c\ubc1c(?:\ud558|\ud588|\ud574\uc624|\uc911|\uc644\ub8cc)|\uac1c\ubc1c.{0,30}(?:\uc9c4\ud589|\uc218\ud589|\uc644\ub8cc)|\uc9c4\ud589\s*\uc911.{0,30}\uac1c\ubc1c|\ud604\uc7ac.{0,80}\uac1c\ubc1c|\uc5f0\uad6c\uac1c\ubc1c\s*(?:\uc218\ud589|\uc9c4\ud589)|(?:\uc5f0\uad6c\uacfc\uc81c|\uc790\uccb4\uacfc\uc81c|\uac1c\ubc1c\uc2e4\uc801|\uc5f0\uad6c\uac1c\ubc1c\uc2e4\uc801)|\uacf5\uae09.{0,20}(?:\uc911|\ub418|\ud558|\uc2dc\uc791)|\ub0a9\ud488(?:\ud558|\uc911)|(?:\uc11c\ube44\uc2a4|\uc194\ub8e8\uc158).{0,8}\uc81c\uacf5(?:\ud558\uace0|\ud574\uc624|\uc911)|\ud310\ub9e4.{0,20}(?:\ud1b5\ud574|\ub9e4\ucd9c)|\ub9e4\ucd9c.{0,15}(?:\ucc3d\ucd9c|\ubc1c\uc0dd)|\ud504\ub85c\uc81d\ud2b8\ub97c?\s*\uc218\ud589|\uacc4\uc57d.{0,20}(?:\uccb4\uacb0|\ub9fa)|\ucd94\uc9c4\s*(?:\ud558\uae30\ub85c|\uacc4\ud68d|\uc911|\ud558\uace0)|(?:\uc804\ub7b5|\uacc4\ud68d|\uc608\uc815|\ubaa9\ud45c).{0,60}(?:\uad6c\ucd95|\uac15\ud654|\ud655\ub300|\uc804\ud658|\ub3c4\uc785|\uac1c\ubc1c|\ucd9c\uc2dc)|(?:\uad6c\ucd95|\uac15\ud654|\ud655\ub300|\uc804\ud658|\ub3c4\uc785|\uac1c\ubc1c|\ucd9c\uc2dc).{0,45}(?:\uacc4\ud68d|\uc608\uc815|\ucd94\uc9c4|\ud558\uaca0\uc2b5\ub2c8\ub2e4|\ud558\uae30\ub85c)|\uc785\uc810.{0,20}(?:\uc911|\uc644\ub8cc)|\uc9c4\ucd9c(?:\ud558|\uc911)|\ubaa8\uc0c9\s*\uc911|(?:\uac1c\ubc1c|\uacf5\uae09|\uc6b4\uc601|\ud310\ub9e4|\uc11c\ube44\uc2a4).{0,20}\uc2dc\uc791",32,False,"ACTIVE_CLEAN_RE = re.compile(
+    r""\uc6b4\uc601\s*\uc911|\uc6b4\uc601(?:\ud558|\ud574\uc624)|\uc81c\uacf5\s*\uc911|\ud310\ub9e4\s*\uc911|\uc2dc\ud310\s*\uc911|""
+    r""(?<!\ucc3d)\ucd9c\uc2dc|\ub860\uce6d|\uc624\ud508|\uac1c\uc7a5|\uc124\ub9bd|\ud569\ubcd1|\uccb4\uacb0|\uc644\ub8cc|\uc778\uc218|\ucde8\ub4dd|""
+    r""\uad6c\ucd95(?:\ud558|\ud588|\ub418|\uc911|\uc644\ub8cc)|\uad6c\ucd95.{0,30}(?:\uc9c4\ud589|\uc218\ud589)|""
+    r""\ud22c\uc790(?:\ub97c|\ub3c4|\uac00)?\s*(?:\ud558\uc600|\ud588|\ud558\uace0|\ud560|\uc911|\uc9c4\ud589|\uc9d1\ud589|\uacc4\ud68d|\ud655\ub300|\uc2b9\uc778)|\ub3c4\uc785(?:\ud558|\ud588|\ub418|\uc911|\uc644\ub8cc)|""
+    r""\uac1c\ubc1c(?:\ud558|\ud588|\ud574\uc624|\uc911|\uc644\ub8cc)|\uac1c\ubc1c.{0,30}(?:\uc9c4\ud589|\uc218\ud589|\uc644\ub8cc)|""
+    r""\uc9c4\ud589\s*\uc911.{0,30}\uac1c\ubc1c|\ud604\uc7ac.{0,80}\uac1c\ubc1c|\uc5f0\uad6c\uac1c\ubc1c\s*(?:\uc218\ud589|\uc9c4\ud589)|""
+    r""(?:\uc5f0\uad6c\uacfc\uc81c|\uc790\uccb4\uacfc\uc81c|\uac1c\ubc1c\uc2e4\uc801|\uc5f0\uad6c\uac1c\ubc1c\uc2e4\uc801)|""
+    r""\uacf5\uae09.{0,20}(?:\uc911|\ub418|\ud558|\uc2dc\uc791)|\ub0a9\ud488(?:\ud558|\uc911)|""
+    r""(?:\uc11c\ube44\uc2a4|\uc194\ub8e8\uc158).{0,8}\uc81c\uacf5(?:\ud558\uace0|\ud574\uc624|\uc911)|""
+    r""\ud310\ub9e4.{0,20}(?:\ud1b5\ud574|\ub9e4\ucd9c)|\ub9e4\ucd9c.{0,15}(?:\ucc3d\ucd9c|\ubc1c\uc0dd)|""
+    r""\ud504\ub85c\uc81d\ud2b8\ub97c?\s*\uc218\ud589|\uacc4\uc57d.{0,20}(?:\uccb4\uacb0|\ub9fa)|\ucd94\uc9c4\s*(?:\ud558\uae30\ub85c|\uacc4\ud68d|\uc911|\ud558\uace0)|""
+    r""(?:\uc804\ub7b5|\uacc4\ud68d|\uc608\uc815|\ubaa9\ud45c).{0,60}(?:\uad6c\ucd95|\uac15\ud654|\ud655\ub300|\uc804\ud658|\ub3c4\uc785|\uac1c\ubc1c|\ucd9c\uc2dc)|""
+    r""(?:\uad6c\ucd95|\uac15\ud654|\ud655\ub300|\uc804\ud658|\ub3c4\uc785|\uac1c\ubc1c|\ucd9c\uc2dc).{0,45}(?:\uacc4\ud68d|\uc608\uc815|\ucd94\uc9c4|\ud558\uaca0\uc2b5\ub2c8\ub2e4|\ud558\uae30\ub85c)|""
+    r""\uc785\uc810.{0,20}(?:\uc911|\uc644\ub8cc)|\uc9c4\ucd9c(?:\ud558|\uc911)|\ubaa8\uc0c9\s*\uc911|""
+    r""(?:\uac1c\ubc1c|\uacf5\uae09|\uc6b4\uc601|\ud310\ub9e4|\uc11c\ube44\uc2a4).{0,20}\uc2dc\uc791""
+)"
+v4,HIGH_CONFIDENCE_ACTION_RE,regex,True,109,119,b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb,bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py,"\uc5f0\uad6c\uacfc\uc81c|\uc790\uccb4\uacfc\uc81c|\uac1c\ubc1c\uc2e4\uc801|\uc5f0\uad6c\uac1c\ubc1c\uc2e4\uc801|\uac1c\ubc1c(?:\ud558\uc600|\ud588|\ud558\uace0|\uc911|\uc644\ub8cc|\uc9c4\ud589)|\uc9c4\ud589\s*\uc911.{0,30}\uac1c\ubc1c|\ud604\uc7ac.{0,80}\uac1c\ubc1c|\uad6c\ucd95(?:\ud558\uc600|\ud588|\ud558\uace0|\uc644\ub8cc|\uc911)|\ub3c4\uc785(?:\ud558\uc600|\ud588|\ud558\uace0|\uc644\ub8cc|\uc911)|\uacc4\uc57d.{0,25}(?:\uccb4\uacb0|\ub9fa)|\ud22c\uc790.{0,15}(?:\uc9d1\ud589|\uc644\ub8cc|\uc2b9\uc778)|(?<!\ucc3d)\ucd9c\uc2dc(?:\ud558|\ud588|\ud560|\uc911|\uc608\uc815)?|\ub860\uce6d|\uc624\ud508|\uac1c\uc7a5|\uc124\ub9bd|\ud569\ubcd1|\uc778\uc218|\uc6b4\uc601(?:\ud558\uace0|\ud574\uc624|\uc911)|(?:\uc11c\ube44\uc2a4|\uc194\ub8e8\uc158).{0,8}\uc81c\uacf5(?:\ud558\uace0|\ud574\uc624|\uc911)|(?:\uc81c\ud488|\uc11c\ube44\uc2a4|\uc194\ub8e8\uc158|\uc7a5\ube44|\uc2dc\uc2a4\ud15c).{0,35}\uacf5\uae09(?:\ud558\uace0|\uc911|\ub418)|\ub0a9\ud488(?:\ud558\uace0|\uc911)|\uc804\ub7b5\uc801\s*\uc81c\ud734|\ucd94\uc9c4\s*\ud558\uae30\ub85c|(?:\uc804\ub7b5|\uacc4\ud68d).{0,60}(?:\uad6c\ucd95|\uac15\ud654|\ud655\ub300|\uc804\ud658|\ub3c4\uc785|\uac1c\ubc1c|\ucd9c\uc2dc)",32,False,"HIGH_CONFIDENCE_ACTION_RE = re.compile(
+    r""\uc5f0\uad6c\uacfc\uc81c|\uc790\uccb4\uacfc\uc81c|\uac1c\ubc1c\uc2e4\uc801|\uc5f0\uad6c\uac1c\ubc1c\uc2e4\uc801|""
+    r""\uac1c\ubc1c(?:\ud558\uc600|\ud588|\ud558\uace0|\uc911|\uc644\ub8cc|\uc9c4\ud589)|\uc9c4\ud589\s*\uc911.{0,30}\uac1c\ubc1c|""
+    r""\ud604\uc7ac.{0,80}\uac1c\ubc1c|\uad6c\ucd95(?:\ud558\uc600|\ud588|\ud558\uace0|\uc644\ub8cc|\uc911)|\ub3c4\uc785(?:\ud558\uc600|\ud588|\ud558\uace0|\uc644\ub8cc|\uc911)|""
+    r""\uacc4\uc57d.{0,25}(?:\uccb4\uacb0|\ub9fa)|\ud22c\uc790.{0,15}(?:\uc9d1\ud589|\uc644\ub8cc|\uc2b9\uc778)|""
+    r""(?<!\ucc3d)\ucd9c\uc2dc(?:\ud558|\ud588|\ud560|\uc911|\uc608\uc815)?|\ub860\uce6d|\uc624\ud508|\uac1c\uc7a5|\uc124\ub9bd|\ud569\ubcd1|\uc778\uc218|""
+    r""\uc6b4\uc601(?:\ud558\uace0|\ud574\uc624|\uc911)|(?:\uc11c\ube44\uc2a4|\uc194\ub8e8\uc158).{0,8}\uc81c\uacf5(?:\ud558\uace0|\ud574\uc624|\uc911)|""
+    r""(?:\uc81c\ud488|\uc11c\ube44\uc2a4|\uc194\ub8e8\uc158|\uc7a5\ube44|\uc2dc\uc2a4\ud15c).{0,35}\uacf5\uae09(?:\ud558\uace0|\uc911|\ub418)|\ub0a9\ud488(?:\ud558\uace0|\uc911)|""
+    r""\uc804\ub7b5\uc801\s*\uc81c\ud734|\ucd94\uc9c4\s*\ud558\uae30\ub85c|""
+    r""(?:\uc804\ub7b5|\uacc4\ud68d).{0,60}(?:\uad6c\ucd95|\uac15\ud654|\ud655\ub300|\uc804\ud658|\ub3c4\uc785|\uac1c\ubc1c|\ucd9c\uc2dc)""
+)"
+v4,PRODUCT_REFERENCE_RE,regex,True,120,123,b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb,bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py,\ud3ec\ud2b8\ud3f4\ub9ac\uc624\s*(?:\.jpg)?|\ud65c\uc6a9\ubd84\uc57c\s*(?:\.jpg)?|\uc81c\ud488\uad70\s*(?:\uc18c\uac1c|\ud604\ud669)|\uc81c\ud488\ubcc4\s*\ud604\ud669,32,False,"PRODUCT_REFERENCE_RE = re.compile(
+    r""\ud3ec\ud2b8\ud3f4\ub9ac\uc624\s*(?:\.jpg)?|\ud65c\uc6a9\ubd84\uc57c\s*(?:\.jpg)?|""
+    r""\uc81c\ud488\uad70\s*(?:\uc18c\uac1c|\ud604\ud669)|\uc81c\ud488\ubcc4\s*\ud604\ud669""
+)"
+v4,NON_DIGITAL_PLATFORM_RE,regex,True,124,127,b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb,bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py,"(?:\ubc14\uc774\uc624|\uc784\uc0c1|\uc2e0\uc57d|\uc81c\uc57d|\uc0c1\uc6a9\uae30\uc220|\uc5f0\uad6c).{0,35}\ud50c\ub7ab\ud3fc|\ud50c\ub7ab\ud3fc\s*\ud615\uc2dd\uc73c\ub85c\s*\uacf5\uc815\ub77c\uc778|(?:\uacf5\uc815\ub77c\uc778|\uc784\uac00\uacf5|2\ucc28\uc804\uc9c0\uc18c\uc7ac).{0,40}\ud50c\ub7ab\ud3fc",32,False,"NON_DIGITAL_PLATFORM_RE = re.compile(
+    r""(?:\ubc14\uc774\uc624|\uc784\uc0c1|\uc2e0\uc57d|\uc81c\uc57d|\uc0c1\uc6a9\uae30\uc220|\uc5f0\uad6c).{0,35}\ud50c\ub7ab\ud3fc|""
+    r""\ud50c\ub7ab\ud3fc\s*\ud615\uc2dd\uc73c\ub85c\s*\uacf5\uc815\ub77c\uc778|(?:\uacf5\uc815\ub77c\uc778|\uc784\uac00\uacf5|2\ucc28\uc804\uc9c0\uc18c\uc7ac).{0,40}\ud50c\ub7ab\ud3fc""
+)"
+v4,DIGITAL_PLATFORM_QUALIFIER_RE,regex,True,128,130,b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb,bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py,AI|\uc778\uacf5\uc9c0\ub2a5|\ub370\uc774\ud130|\uc628\ub77c\uc778|\uc18c\ud504\ud2b8\uc6e8\uc5b4|IT|\ud074\ub77c\uc6b0\ub4dc|\ub514\uc9c0\ud138|IoT,32,False,"DIGITAL_PLATFORM_QUALIFIER_RE = re.compile(
+    r""AI|\uc778\uacf5\uc9c0\ub2a5|\ub370\uc774\ud130|\uc628\ub77c\uc778|\uc18c\ud504\ud2b8\uc6e8\uc5b4|IT|\ud074\ub77c\uc6b0\ub4dc|\ub514\uc9c0\ud138|IoT""
+)"
+v4,VAGUE_STRATEGY_RE,regex,True,131,134,b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb,bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py,"\ub178\ub825\ud558\uc600|\ub9e4\uc9c4|\uc2dc\uc7a5\uc744?\s*\uc120\ub3c4|\uc8fc\uc5ed|\ucc45\uc784.{0,20}\ub2e4\ud558|\ucd5c\uace0\uc758\s*\uae30\uc220\uc744?\s*\ubcf4\uc720",32,False,"VAGUE_STRATEGY_RE = re.compile(
+    r""\ub178\ub825\ud558\uc600|\ub9e4\uc9c4|\uc2dc\uc7a5\uc744?\s*\uc120\ub3c4|\uc8fc\uc5ed|\ucc45\uc784.{0,20}\ub2e4\ud558|""
+    r""\ucd5c\uace0\uc758\s*\uae30\uc220\uc744?\s*\ubcf4\uc720""
+)"
+v4,DIGITAL_DEMAND_EXPOSURE_RE,regex,True,135,139,b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb,bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py,"(?:5G|AI|\uc778\uacf5\uc9c0\ub2a5|\uc790\uc728\s*\uc8fc\ud589).{0,120}(?:\uc218\uc694|\uc2dc\uc7a5).{0,120}(?:\uc18c\uc7ac|\ud654\ud559|\ubd80\ud488|\uc6d0\ub8cc|\ubc18\ub3c4\uccb4\s*\uacf5\uc815)|(?:\ubc18\ub3c4\uccb4\s*\uacf5\uc815\uc6a9\s*\ud654\ud559\s*\uc18c\uc7ac).{0,120}(?:\uc218\uc694|5G|AI)",32,False,"DIGITAL_DEMAND_EXPOSURE_RE = re.compile(
+    r""(?:5G|AI|\uc778\uacf5\uc9c0\ub2a5|\uc790\uc728\s*\uc8fc\ud589).{0,120}(?:\uc218\uc694|\uc2dc\uc7a5).{0,120}""
+    r""(?:\uc18c\uc7ac|\ud654\ud559|\ubd80\ud488|\uc6d0\ub8cc|\ubc18\ub3c4\uccb4\s*\uacf5\uc815)|""
+    r""(?:\ubc18\ub3c4\uccb4\s*\uacf5\uc815\uc6a9\s*\ud654\ud559\s*\uc18c\uc7ac).{0,120}(?:\uc218\uc694|5G|AI)""
+)"
+v4,CUSTOMER_OR_COMPETITOR_CONTEXT_RE,regex,True,140,143,b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb,bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py,"(?:\uace0\uac1d|\ubc29\uc1a1/\ud1b5\uc2e0\uc0ac\uc5c5\uc790).{0,240}(?:\ud22c\uc790|\ud655\ub300).{0,120}\uc804\ub9dd|(?:\ub124\uc774\ubc84|\uce74\uce74\uc624).{0,500}(?:\ub124\uc774\ubc84|\uce74\uce74\uc624)",32,False,"CUSTOMER_OR_COMPETITOR_CONTEXT_RE = re.compile(
+    r""(?:\uace0\uac1d|\ubc29\uc1a1/\ud1b5\uc2e0\uc0ac\uc5c5\uc790).{0,240}(?:\ud22c\uc790|\ud655\ub300).{0,120}\uc804\ub9dd|""
+    r""(?:\ub124\uc774\ubc84|\uce74\uce74\uc624).{0,500}(?:\ub124\uc774\ubc84|\uce74\uce74\uc624)""
+)"
+v4,FORMER_BUSINESS_RE,regex,True,144,147,b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb,bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py,"\uc124\ub9bd\s*(?:\ub2f9\uc2dc|\ubc30\uacbd)|\uc131\uc7a5\s*\uacfc\uc815|\ud569\ubcd1\s*\uc804|\ud569\ubcd1\uc804|\uacfc\uac70.{0,40}\uc8fc\ub41c\s*\uc0ac\uc5c5|\uc18c\ud504\ud2b8\uc6e8\uc5b4.{0,100}\ubcc0\uacbd\ub418\uc5c8",32,False,"FORMER_BUSINESS_RE = re.compile(
+    r""\uc124\ub9bd\s*(?:\ub2f9\uc2dc|\ubc30\uacbd)|\uc131\uc7a5\s*\uacfc\uc815|\ud569\ubcd1\s*\uc804|\ud569\ubcd1\uc804|\uacfc\uac70.{0,40}\uc8fc\ub41c\s*\uc0ac\uc5c5|""
+    r""\uc18c\ud504\ud2b8\uc6e8\uc5b4.{0,100}\ubcc0\uacbd\ub418\uc5c8""
+)"
+v4,CLEAN_ACCOUNTING_OR_ENTITY_LIST_RE,regex,True,148,157,b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb,bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py,"\ub300\uc5ec\uae08|\ud68c\uc218\uac00\ub2a5\uc131|\ucda9\ub2f9\uae08|\ubb34\ud615\uc790\uc0b0|\ucde8\ub4dd\uc6d0\uac00|\uc5f0\uacb0\uc81c\uc678|\uc5f0\uacb0\uc5d0\s*\ud3ec\ud568|\uc2e0\uaddc\ub85c\s*\uc5f0\uacb0|\uc9c0\ubd84\uc728\s*\ubcc0\ub3d9|\uccad\uc0b0\uc73c\ub85c\s*\uc778\ud55c\s*\uc81c\uc678|\uc8fc\uc694\s*\uc885\uc18d\uae30\uc5c5|\ud2b9\uc218\uad00\uacc4\uc790|\uc9c0\ubd84\ubc95|\uc720\uc0c1\uc99d\uc790|\uc8fc\uc2dd.{0,30}\ucde8\ub4dd|\uae30\ucd08.{0,30}\ucde8\ub4dd.{0,30}\ucc98\ubd84|\uc2e0\uaddc\uc124\ub9bd\uc5d0\s*\ub530\ub978\s*\uc9c0\ubc30\ub825|\uc7ac\ubb34\uc0c1\ud0dc\ud45c|\ucd9c\uc790\ubaa9\uc801|\uc7a5\ubd80\uac00\uc561|\uc190\uc0c1\ud3c9\uac00|\uc190\uc0c1\uc744\s*\uc778\uc2dd|\uae30\uc5c5\ud68c\uacc4\uae30\uc900\uc11c|\uc218\ud589\uc758\ubb34|\uc9c0\ubc30\ub825\uc744\s*\ud589\uc0ac|\uc885\uc18d\uae30\uc5c5\uc73c\ub85c\s*\ubd84\ub958|\ub2f9\uae30\s*\uc911\s*\uc885\uc18d\uae30\uc5c5|\uc778\uc801\ubd84\ud560|\ud1b5\uc81c\uc758\s*\uc774\uc804|\uc218\uc775\uc774\s*\uc778\uc2dd|\uc218\uc775\s*\uc778\uc2dd\uc2dc\uae30",32,False,"CLEAN_ACCOUNTING_OR_ENTITY_LIST_RE = re.compile(
+    r""\ub300\uc5ec\uae08|\ud68c\uc218\uac00\ub2a5\uc131|\ucda9\ub2f9\uae08|\ubb34\ud615\uc790\uc0b0|\ucde8\ub4dd\uc6d0\uac00|""
+    r""\uc5f0\uacb0\uc81c\uc678|\uc5f0\uacb0\uc5d0\s*\ud3ec\ud568|\uc2e0\uaddc\ub85c\s*\uc5f0\uacb0|\uc9c0\ubd84\uc728\s*\ubcc0\ub3d9|""
+    r""\uccad\uc0b0\uc73c\ub85c\s*\uc778\ud55c\s*\uc81c\uc678|\uc8fc\uc694\s*\uc885\uc18d\uae30\uc5c5|\ud2b9\uc218\uad00\uacc4\uc790|""
+    r""\uc9c0\ubd84\ubc95|\uc720\uc0c1\uc99d\uc790|\uc8fc\uc2dd.{0,30}\ucde8\ub4dd|\uae30\ucd08.{0,30}\ucde8\ub4dd.{0,30}\ucc98\ubd84|""
+    r""\uc2e0\uaddc\uc124\ub9bd\uc5d0\s*\ub530\ub978\s*\uc9c0\ubc30\ub825|\uc7ac\ubb34\uc0c1\ud0dc\ud45c|\ucd9c\uc790\ubaa9\uc801|\uc7a5\ubd80\uac00\uc561|""
+    r""\uc190\uc0c1\ud3c9\uac00|\uc190\uc0c1\uc744\s*\uc778\uc2dd|\uae30\uc5c5\ud68c\uacc4\uae30\uc900\uc11c|\uc218\ud589\uc758\ubb34|""
+    r""\uc9c0\ubc30\ub825\uc744\s*\ud589\uc0ac|\uc885\uc18d\uae30\uc5c5\uc73c\ub85c\s*\ubd84\ub958|\ub2f9\uae30\s*\uc911\s*\uc885\uc18d\uae30\uc5c5|\uc778\uc801\ubd84\ud560|""
+    r""\ud1b5\uc81c\uc758\s*\uc774\uc804|\uc218\uc775\uc774\s*\uc778\uc2dd|\uc218\uc775\s*\uc778\uc2dd\uc2dc\uae30""
+)"
+v2,ACCOUNTING_RE,regex,True,26,35,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,"무형자산|상각(?:누계액|비|이|을)|장부금액|역사적\s*원가|내용연수|재무제표|회계정책|손상차손|공정가치|이연법인세|주석\s*\d|차입금명칭|전자단기사채|출자약정금액|리스채권|특수관계자.{0,80}거래|수익인식|자본화된\s*개발비|컴퓨터소프트웨어|\([12]\)\s*(?:제품|상품|재화)의\s*판매\s*(?:연결)?회사는|영업이익\s*감소.{0,100}대손충당금|구\s*분.{0,120}영업이익|산출기준.{0,100}(?:단가|가격변동)|주요\s*가격변동요인|가격변동추이|유형자산\s*취득약정|관계기업.{0,120}ERP\s*구축\s*컨설팅",34,True,"ACCOUNTING_RE = rx(
+    r""무형자산|상각(?:누계액|비|이|을)|장부금액|역사적\s*원가|내용연수|""
+    r""재무제표|회계정책|손상차손|공정가치|이연법인세|주석\s*\d|""
+    r""차입금명칭|전자단기사채|출자약정금액|리스채권|특수관계자.{0,80}거래|""
+    r""수익인식|자본화된\s*개발비|컴퓨터소프트웨어|""
+    r""\([12]\)\s*(?:제품|상품|재화)의\s*판매\s*(?:연결)?회사는|""
+    r""영업이익\s*감소.{0,100}대손충당금|구\s*분.{0,120}영업이익|""
+    r""산출기준.{0,100}(?:단가|가격변동)|주요\s*가격변동요인|가격변동추이|""
+    r""유형자산\s*취득약정|관계기업.{0,120}ERP\s*구축\s*컨설팅""
+)"
+v2,ENTITY_OR_NAME_RE,regex,True,36,40,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,"투자조합|벤처투자조합|사모투자|스마트신세계|스마트\s*CKD|나이스비즈니스플랫폼|요즈마글로벌AI펀드|메디클라우드.{0,40}전환사채|스마트사이드주식회사|스마트로더\s*전자단기사채|스마트역삼",34,True,"ENTITY_OR_NAME_RE = rx(
+    r""투자조합|벤처투자조합|사모투자|스마트신세계|스마트\s*CKD|""
+    r""나이스비즈니스플랫폼|요즈마글로벌AI펀드|메디클라우드.{0,40}전환사채|""
+    r""스마트사이드주식회사|스마트로더\s*전자단기사채|스마트역삼""
+)"
+v2,NON_DIGITAL_COLLISION_RE,regex,True,41,49,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,"당사\s*맥주인\s*['\""]?클라우드|클라우드\s*제품\s*리뉴얼|브랜드\s*플랫폼|CPU\s*플랫폼|터빈.{0,20}플랫폼|날개\s*구조물\s*플랫폼|마우스\s*플랫폼|항체.{0,30}플랫폼|기술\s*플랫폼으로\s*폴리|신약개발\s*플랫폼(?!.*AI)|화학적으로\s*현실화시켜.{0,30}플랫폼|모바일\s*화면.{0,30}레진|모바일\s*스마트기기\s*시장.{0,30}소재|AI\s*실린더\s*헤드|PBV.{0,60}플랫폼|플랫폼.{0,60}PBV|사외이사.{0,180}4차\s*산업혁명|4차\s*산업혁명.{0,180}사외이사",34,True,"NON_DIGITAL_COLLISION_RE = rx(
+    r""당사\s*맥주인\s*['\""]?클라우드|클라우드\s*제품\s*리뉴얼|""
+    r""브랜드\s*플랫폼|CPU\s*플랫폼|터빈.{0,20}플랫폼|날개\s*구조물\s*플랫폼|""
+    r""마우스\s*플랫폼|항체.{0,30}플랫폼|기술\s*플랫폼으로\s*폴리|""
+    r""신약개발\s*플랫폼(?!.*AI)|화학적으로\s*현실화시켜.{0,30}플랫폼|""
+    r""모바일\s*화면.{0,30}레진|모바일\s*스마트기기\s*시장.{0,30}소재|""
+    r""AI\s*실린더\s*헤드|PBV.{0,60}플랫폼|플랫폼.{0,60}PBV|""
+    r""사외이사.{0,180}4차\s*산업혁명|4차\s*산업혁명.{0,180}사외이사""
+)"
+v2,FINANCIAL_ENTITY_RE,regex,True,50,53,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,"(?:AI|디지털|플랫폼).{0,25}(?:펀드|투자조합).{0,100}(?:청산|지분증권|금융자산|처분손실|특수관계자\s*거래)",34,True,"FINANCIAL_ENTITY_RE = rx(
+    r""(?:AI|디지털|플랫폼).{0,25}(?:펀드|투자조합).{0,100}""
+    r""(?:청산|지분증권|금융자산|처분손실|특수관계자\s*거래)""
+)"
+v2,NEGATION_RE,regex,True,54,54,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,미영위|추진을\s*중단|영위하지\s*않|사업을\s*영위하지|미추진,34,True,"NEGATION_RE = rx(r""미영위|추진을\s*중단|영위하지\s*않|사업을\s*영위하지|미추진"")"
+v2,BUSINESS_PURPOSE_RE,regex,True,55,59,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,사업\s*목적|목적\s*사업|정관에\s*기재된|목\s*적\s*사\s*업|사업\s*분야\(업종|변경\s*후\s*사업목적|각호에\s*관련된|진출\s*목적|사업분야\s*및\s*진출목적,34,True,"BUSINESS_PURPOSE_RE = rx(
+    r""사업\s*목적|목적\s*사업|정관에\s*기재된|목\s*적\s*사\s*업|""
+    r""사업\s*분야\(업종|변경\s*후\s*사업목적|각호에\s*관련된|""
+    r""진출\s*목적|사업분야\s*및\s*진출목적""
+)"
+v2,BUSINESS_LIST_RE,regex,True,60,69,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,"제조\s*및\s*판매업|개발\s*및\s*판매업|소프트웨어\s*개발업|전자상거래업|통신판매업|온라인\s*판매업|정보서비스업|판매조직.{0,160}스마트팜사업부문|사업부문\s*주요\s*매출품목|(?:개발|판매)사업/?제품\s*판매사업|판매업\s*\d+\.?$|물류업\s*엔터테인먼트.{0,120}미디어플랫폼\s*사업|전자상거래를\s*통한\s*상품\s*용역의\s*판매|사업부문\s*요약\s*재무현황|사업부.{0,80}(?:소프트웨어|시스템)|시스템소프트(?:웨어)?개발.{0,100}(?:사업부|수출|제품)",34,True,"BUSINESS_LIST_RE = rx(
+    r""제조\s*및\s*판매업|개발\s*및\s*판매업|소프트웨어\s*개발업|""
+    r""전자상거래업|통신판매업|온라인\s*판매업|정보서비스업|""
+    r""판매조직.{0,160}스마트팜사업부문|사업부문\s*주요\s*매출품목|""
+    r""(?:개발|판매)사업/?제품\s*판매사업|판매업\s*\d+\.?$|""
+    r""물류업\s*엔터테인먼트.{0,120}미디어플랫폼\s*사업|""
+    r""전자상거래를\s*통한\s*상품\s*용역의\s*판매|""
+    r""사업부문\s*요약\s*재무현황|사업부.{0,80}(?:소프트웨어|시스템)|""
+    r""시스템소프트(?:웨어)?개발.{0,100}(?:사업부|수출|제품)""
+)"
+v2,SCOPE_ENUM_RE,regex,True,70,77,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,"영위하고\s*있는\s*사업|사업부문\s*주요\s*매출품목|시스템\s*소프트웨어\s*개발\s*및\s*공급업|소프트웨어\s*(?:연구)?개발\s*및\s*(?:판매|공급)업?|응용소프트웨어\s*개발\s*및\s*공급업|소프트웨어\s*개발\s*및\s*판매\s*\(주\)|소프트웨어.{0,50}연결조정.{0,30}영업이익",34,True,"SCOPE_ENUM_RE = rx(
+    r""영위하고\s*있는\s*사업|사업부문\s*주요\s*매출품목|""
+    r""시스템\s*소프트웨어\s*개발\s*및\s*공급업|""
+    r""소프트웨어\s*(?:연구)?개발\s*및\s*(?:판매|공급)업?|""
+    r""응용소프트웨어\s*개발\s*및\s*공급업|""
+    r""소프트웨어\s*개발\s*및\s*판매\s*\(주\)|""
+    r""소프트웨어.{0,50}연결조정.{0,30}영업이익""
+)"
+v2,CHRONOLOGY_RE,regex,True,78,82,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,"(?:회사\s*)?연혁|(?:19|20)\d{2}\.\d{1,2}.{0,180}(?:19|20)\d{2}\.\d{1,2}|(?:19|20)\d{2}년\s*\d{1,2}월.{0,180}(?:19|20)\d{2}년\s*\d{1,2}월|경영상의\s*주요계약.{0,240}(?:도입계약|전산용역)",34,True,"CHRONOLOGY_RE = rx(
+    r""(?:회사\s*)?연혁|(?:19|20)\d{2}\.\d{1,2}.{0,180}(?:19|20)\d{2}\.\d{1,2}|""
+    r""(?:19|20)\d{2}년\s*\d{1,2}월.{0,180}(?:19|20)\d{2}년\s*\d{1,2}월|""
+    r""경영상의\s*주요계약.{0,240}(?:도입계약|전산용역)""
+)"
+v2,BOARD_LIST_RE,regex,True,83,83,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,"보고사항|의안내용|가결\s*찬성|이사회.{0,40}(?:결의|승인)",34,True,"BOARD_LIST_RE = rx(r""보고사항|의안내용|가결\s*찬성|이사회.{0,40}(?:결의|승인)"")"
+v2,GENERIC_CONTEXT_RE,regex,True,84,102,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,"산업의\s*(?:현황|정의|개요|특성|성장성)|시장의\s*향후\s*전망|성장할\s*것으로\s*예상|수요가?\s*(?:증가|확대)|시장(?:의\s*특성|\s*특성)|시장(?:은|이|의)?.{0,50}(?:성장|확대|전망|전환|증가)|산업(?:은|이|의)?.{0,50}(?:성장|확대|전망|변화|전환)|정부(?:는|가|의|에서|\s*또한)|국가적\s*차원|우리\s*기업들도|모든\s*기업|대기업들도|업체들이|글로벌\s*(?:기업|브랜드)들은|업계는|최근\s*원양어업은|네덜란드의\s*시스템|제작사들은|플랫폼\s*사는|유통\s*환경의\s*변화|활성화되고\s*있|증가하고\s*있는\s*상황|경쟁이\s*심화되고|디지털\s*TV는|참고자료\s*:|지속적인\s*관심이\s*필요|주목을\s*받고\s*있는|발생하고\s*있는\s*추세|공급과\s*수요.{0,40}성장|판매경로\s*및\s*판매방법|판매조직.{0,60}온라인담당|급속히\s*확대되는\s*추세|산업.{0,70}방향이\s*새롭게\s*떠오르|향후.{0,60}추이.{0,30}전망|경쟁\s*환경.{0,80}중요성|중요한\s*성공요인|진화에\s*따라.{0,60}변화|성장에\s*따라.{0,100}(?:급증|적용.{0,20}확대)|브랜드들.{0,120}큰\s*관심",34,True,"GENERIC_CONTEXT_RE = rx(
+    r""산업의\s*(?:현황|정의|개요|특성|성장성)|시장의\s*향후\s*전망|성장할\s*것으로\s*예상|""
+    r""수요가?\s*(?:증가|확대)|시장(?:의\s*특성|\s*특성)|""
+    r""시장(?:은|이|의)?.{0,50}(?:성장|확대|전망|전환|증가)|""
+    r""산업(?:은|이|의)?.{0,50}(?:성장|확대|전망|변화|전환)|""
+    r""정부(?:는|가|의|에서|\s*또한)|국가적\s*차원|우리\s*기업들도|""
+    r""모든\s*기업|대기업들도|업체들이|글로벌\s*(?:기업|브랜드)들은|""
+    r""업계는|최근\s*원양어업은|네덜란드의\s*시스템|""
+    r""제작사들은|플랫폼\s*사는|유통\s*환경의\s*변화|활성화되고\s*있|""
+    r""증가하고\s*있는\s*상황|경쟁이\s*심화되고|디지털\s*TV는|""
+    r""참고자료\s*:|지속적인\s*관심이\s*필요|주목을\s*받고\s*있는|""
+    r""발생하고\s*있는\s*추세|공급과\s*수요.{0,40}성장|""
+    r""판매경로\s*및\s*판매방법|판매조직.{0,60}온라인담당|""
+    r""급속히\s*확대되는\s*추세|산업.{0,70}방향이\s*새롭게\s*떠오르|""
+    r""향후.{0,60}추이.{0,30}전망|경쟁\s*환경.{0,80}중요성|""
+    r""중요한\s*성공요인|진화에\s*따라.{0,60}변화|""
+    r""성장에\s*따라.{0,100}(?:급증|적용.{0,20}확대)|""
+    r""브랜드들.{0,120}큰\s*관심""
+)"
+v2,FOCAL_FIRM_RE,regex,True,103,103,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,당사|우리\s*회사|회사(?:는|가|의)|연결회사|연결실체|그룹(?:은|내),34,True,"FOCAL_FIRM_RE = rx(r""당사|우리\s*회사|회사(?:는|가|의)|연결회사|연결실체|그룹(?:은|내)"")"
+v2,EXPLICIT_FOCAL_RE,regex,True,104,107,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,당사|우리\s*회사|연결회사|연결실체|그룹(?:은|내)|회사(?:는|가)\s*(?:새로운|디지털|스마트|온라인|데이터),34,True,"EXPLICIT_FOCAL_RE = rx(
+    r""당사|우리\s*회사|연결회사|연결실체|그룹(?:은|내)|""
+    r""회사(?:는|가)\s*(?:새로운|디지털|스마트|온라인|데이터)""
+)"
+v2,EXTERNAL_COMPANY_RE,regex,True,108,112,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,마이크로소프트|구글|아마존|알리바바|테슬라|인텔|(?<![A-Za-z])Intel(?![A-Za-z])|(?<![A-Za-z])AMD(?![A-Za-z])|메리바라|\bGM\b|General\s*Motors|해외\s*경쟁사|경쟁업체들은,34,True,"EXTERNAL_COMPANY_RE = rx(
+    r""마이크로소프트|구글|아마존|알리바바|테슬라|인텔|""
+    r""(?<![A-Za-z])Intel(?![A-Za-z])|(?<![A-Za-z])AMD(?![A-Za-z])|""
+    r""메리바라|\bGM\b|General\s*Motors|해외\s*경쟁사|경쟁업체들은""
+)"
+v2,FOURTH_IR_RE,regex,True,114,114,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,4차\s*산업혁명|제4차\s*산업혁명|디지털\s*시대,34,True,"FOURTH_IR_RE = rx(r""4차\s*산업혁명|제4차\s*산업혁명|디지털\s*시대"")"
+v2,STRONG_DIGITAL_RE,regex,True,115,126,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,"디지털(?:화|\s*(?:전환|트랜스포메이션|혁신|전략|플랫폼|서비스|솔루션|Amp))|인공지능|생성형?\s*AI|(?<![A-Za-z])AI(?![A-Za-z])|머신러닝|딥러닝|빅데이터|데이터\s*(?:분석|플랫폼|기반)|클라우드\s*(?:서비스|컴퓨팅|플랫폼)|사물인터넷|(?<![A-Za-z])IoT(?![A-Za-z])|블록체인|디지털\s*트윈|스마트\s*(?:팩토리|공장|제조|생태공장|상수도)|지능형.{0,25}시스템|(?<![A-Za-z])RPA(?![A-Za-z])|로봇(?:\s*프로세스\s*자동화|\s*기술|\s*시스템|\s*개발)|사이버\s*보안|정보보안|(?<![A-Za-z])(?:ERP|MES|WMS|TMS|CRM|BIM)(?![A-Za-z])|자율주행|알고리즘|데이터베이스|5G|Bluetooth|UWB|3D\s*스캔|드론|(?<![A-Za-z])TES(?![A-Za-z])|구독경제.{0,30}결제|휴대폰\s*결제|커넥티드카",34,True,"STRONG_DIGITAL_RE = rx(
+    r""디지털(?:화|\s*(?:전환|트랜스포메이션|혁신|전략|플랫폼|서비스|솔루션|Amp))|""
+    r""인공지능|생성형?\s*AI|(?<![A-Za-z])AI(?![A-Za-z])|머신러닝|딥러닝|""
+    r""빅데이터|데이터\s*(?:분석|플랫폼|기반)|클라우드\s*(?:서비스|컴퓨팅|플랫폼)|""
+    r""사물인터넷|(?<![A-Za-z])IoT(?![A-Za-z])|블록체인|디지털\s*트윈|""
+    r""스마트\s*(?:팩토리|공장|제조|생태공장|상수도)|지능형.{0,25}시스템|""
+    r""(?<![A-Za-z])RPA(?![A-Za-z])|로봇(?:\s*프로세스\s*자동화|\s*기술|\s*시스템|\s*개발)|""
+    r""사이버\s*보안|정보보안|(?<![A-Za-z])(?:ERP|MES|WMS|TMS|CRM|BIM)(?![A-Za-z])|""
+    r""자율주행|알고리즘|데이터베이스|5G|Bluetooth|UWB|3D\s*스캔|드론|""
+    r""(?<![A-Za-z])TES(?![A-Za-z])|""
+    r""구독경제.{0,30}결제|휴대폰\s*결제|커넥티드카""
+)"
+v2,ONLINE_DIGITAL_RE,regex,True,127,134,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,"온라인\s*(?:채널|판매|쇼핑몰|몰|사업|플랫폼|마케팅|부문)|전자상거래|이커머스|e-?커머스|모바일\s*(?:앱|플랫폼|서비스|사이트|경로)|디지털\s*채널|옴니\s*채널|비대면\s*(?:서비스|채널)|(?<![A-Za-z])OTT(?![A-Za-z])|온라인.{0,45}(?:판매|매출|수익|채널|사업|몰|마케팅|진출|입점|확대)|모바일.{0,35}(?:서비스|플랫폼|판매|결제|개발|운영)|온라인으로\s*연계|온라인을\s*근간|인터넷\s*온라인\s*광고",34,True,"ONLINE_DIGITAL_RE = rx(
+    r""온라인\s*(?:채널|판매|쇼핑몰|몰|사업|플랫폼|마케팅|부문)|""
+    r""전자상거래|이커머스|e-?커머스|모바일\s*(?:앱|플랫폼|서비스|사이트|경로)|""
+    r""디지털\s*채널|옴니\s*채널|비대면\s*(?:서비스|채널)|(?<![A-Za-z])OTT(?![A-Za-z])|""
+    r""온라인.{0,45}(?:판매|매출|수익|채널|사업|몰|마케팅|진출|입점|확대)|""
+    r""모바일.{0,35}(?:서비스|플랫폼|판매|결제|개발|운영)|""
+    r""온라인으로\s*연계|온라인을\s*근간|인터넷\s*온라인\s*광고""
+)"
+v2,AUTOMATION_RE,regex,True,135,142,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,설비\s*자동화|설비자동화|자동화\s*(?:설비|시설|라인|시스템|공정|기술|투자)|자동화를\s*(?:지속|추진|적용)|자동화(?:의|에)?\s*(?:지속적인\s*)?투자|자동화\s*(?:신기술|솔루션)|자동화(?:하|했|하여|되|된)|설비를?\s*자동화|로봇을?\s*(?:활용|적용)|공정\s*자동화|설계\s*자동화|무인\s*자동화|로봇\s*시스템|서비스\s*로봇|스마트\s*(?:팜|홈|시티|가구)|원격\s*(?:측정|검침|모니터링),34,True,"AUTOMATION_RE = rx(
+    r""설비\s*자동화|설비자동화|자동화\s*(?:설비|시설|라인|시스템|공정|기술|투자)|""
+    r""자동화를\s*(?:지속|추진|적용)|자동화(?:의|에)?\s*(?:지속적인\s*)?투자|""
+    r""자동화\s*(?:신기술|솔루션)|자동화(?:하|했|하여|되|된)|""
+    r""설비를?\s*자동화|로봇을?\s*(?:활용|적용)|공정\s*자동화|""
+    r""설계\s*자동화|무인\s*자동화|로봇\s*시스템|서비스\s*로봇|""
+    r""스마트\s*(?:팜|홈|시티|가구)|원격\s*(?:측정|검침|모니터링)""
+)"
+v2,PLATFORM_RE,regex,True,143,143,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,플랫폼,34,True,"PLATFORM_RE = rx(r""플랫폼"")"
+v2,SOFTWARE_RE,regex,True,144,144,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,소프트웨어|IT\s*(?:서비스|시스템|솔루션)|정보시스템,34,True,"SOFTWARE_RE = rx(r""소프트웨어|IT\s*(?:서비스|시스템|솔루션)|정보시스템"")"
+v2,DATA_OPERATION_RE,regex,True,145,148,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,"데이터.{0,35}(?:수집|적재|집적|축적|분석|활용|관리|통합|연결|검증)|(?:수집|적재|집적|축적|분석|활용|관리|통합).{0,35}데이터",34,True,"DATA_OPERATION_RE = rx(
+    r""데이터.{0,35}(?:수집|적재|집적|축적|분석|활용|관리|통합|연결|검증)|""
+    r""(?:수집|적재|집적|축적|분석|활용|관리|통합).{0,35}데이터""
+)"
+v2,ACTION_RE,regex,True,150,157,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,구축|도입|개발|투자|적용|활용|운영|추진|확대|고도화|개선|최적화|자동화|통합|출시|제공|강화|협력|제휴|상용화|인수|취득|설립|체결|전환|개편|확보|발굴|공급|판매|론칭|오픈|신설|충원|참여|수집|적재|집적|축적|측정|관리|조회|모니터링|자리매김|매출이\s*발생|성장하였습니다|증가하고\s*있|집중|도모|시행|진행|기획|제작|보급|소개|중개|발생|자리매김|서비스를\s*제공,34,True,"ACTION_RE = rx(
+    r""구축|도입|개발|투자|적용|활용|운영|추진|확대|고도화|개선|최적화|""
+    r""자동화|통합|출시|제공|강화|협력|제휴|상용화|인수|취득|설립|체결|""
+    r""전환|개편|확보|발굴|공급|판매|론칭|오픈|신설|충원|참여|""
+    r""수집|적재|집적|축적|측정|관리|조회|모니터링|자리매김|매출이\s*발생|""
+    r""성장하였습니다|증가하고\s*있|집중|도모|시행|진행|기획|제작|보급|""
+    r""소개|중개|발생|자리매김|서비스를\s*제공""
+)"
+v2,IMPLEMENTED_RE,regex,True,158,165,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,구축(?:하|했|하여|되어|중)|도입(?:하|했|하여|되어|중)|개발(?:하|했|하여|완료|중)|운영(?:하|했|하여|중)|출시|론칭|오픈|인수|취득|설립|투자(?:하|했|하여|중)|체결|적용(?:하|했|하여|중)|활용(?:하|했|하여|중)|제공(?:하|했|하여|중)|판매(?:하|했|하여|중)|확대(?:하|했|하여|중)|강화(?:하|했|하여|중)|고도화(?:하|했|하여|중)|진출|전환(?:하|했|하여|중)|시행|수취하였습니다|운용,34,True,"IMPLEMENTED_RE = rx(
+    r""구축(?:하|했|하여|되어|중)|도입(?:하|했|하여|되어|중)|""
+    r""개발(?:하|했|하여|완료|중)|운영(?:하|했|하여|중)|출시|론칭|오픈|""
+    r""인수|취득|설립|투자(?:하|했|하여|중)|체결|적용(?:하|했|하여|중)|""
+    r""활용(?:하|했|하여|중)|제공(?:하|했|하여|중)|판매(?:하|했|하여|중)|""
+    r""확대(?:하|했|하여|중)|강화(?:하|했|하여|중)|고도화(?:하|했|하여|중)|""
+    r""진출|전환(?:하|했|하여|중)|시행|수취하였습니다|운용""
+)"
+v2,PLAN_RE,regex,True,166,166,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,계획|예정|목표|추구|하고자|하겠습니다|추진\s*중|준비\s*중|검토,34,True,"PLAN_RE = rx(r""계획|예정|목표|추구|하고자|하겠습니다|추진\s*중|준비\s*중|검토"")"
+v2,GENERIC_HYPE_RE,regex,True,167,170,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,4차\s*산업혁명|제4차\s*산업혁명|디지털\s*시대|선제적으로\s*대응|적극적으로\s*대응|발맞춰|총력을\s*다하|노력하겠습니다|메가트렌드,34,True,"GENERIC_HYPE_RE = rx(
+    r""4차\s*산업혁명|제4차\s*산업혁명|디지털\s*시대|선제적으로\s*대응|""
+    r""적극적으로\s*대응|발맞춰|총력을\s*다하|노력하겠습니다|메가트렌드""
+)"
+v2,VAGUE_FIRM_CLAIM_RE,regex,True,171,179,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,"디지털\s*플랫폼\s*서비스\s*차별화로.{0,80}시너지|수준\s*높은\s*솔루션을\s*제공하고.{0,100}수익을\s*확보|미래먹거리를\s*선점.{0,80}총력을\s*다하|유망분야.{0,80}신규사업을\s*적극\s*발굴|유통구조\s*변화에\s*대처하여.{0,80}성장세|다양한\s*플랫폼과\s*협업.{0,120}기업으로\s*거듭|온라인\s*수익성\s*강화.{0,100}외형\s*성장",34,True,"VAGUE_FIRM_CLAIM_RE = rx(
+    r""디지털\s*플랫폼\s*서비스\s*차별화로.{0,80}시너지|""
+    r""수준\s*높은\s*솔루션을\s*제공하고.{0,100}수익을\s*확보|""
+    r""미래먹거리를\s*선점.{0,80}총력을\s*다하|""
+    r""유망분야.{0,80}신규사업을\s*적극\s*발굴|""
+    r""유통구조\s*변화에\s*대처하여.{0,80}성장세|""
+    r""다양한\s*플랫폼과\s*협업.{0,120}기업으로\s*거듭|""
+    r""온라인\s*수익성\s*강화.{0,100}외형\s*성장""
+)"
+v2,BMI_RE,regex,True,181,193,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,"비즈니스\s*모델|사업\s*모델|수익\s*모델|구독|정기구독|반복\s*매출|고객\s*(?:경험|편의|가치)|온라인\s*(?:채널|판매|쇼핑몰|몰|사업)|전자상거래|이커머스|e-?커머스|모바일\s*(?:앱|플랫폼|서비스|사이트)|디지털\s*(?:플랫폼|서비스|솔루션|채널)|플랫폼\s*(?:사업|서비스)|솔루션\s*(?:사업|서비스|제공|공급|개발)|신규\s*서비스|모빌리티\s*서비스|커넥티드|핀테크|전자결제|간편결제|D2C|O2O|스마트\s*(?:제품|홈|팜)|온라인과\s*오프라인|온/?오프라인|옴니|CRM|맞춤형\s*마케팅|데이터.{0,30}고객|고객.{0,30}데이터|온라인\s*부문|온라인\s*비즈니스|온라인몰|웹사이트|모바일\s*사이트|IT\s*서비스|ERP\s*솔루션|소프트웨어\s*(?:개발|서비스)|스마트.{0,30}솔루션|비즈니스\s*플랫폼|덴탈\s*비타민",34,True,"BMI_RE = rx(
+    r""비즈니스\s*모델|사업\s*모델|수익\s*모델|구독|정기구독|반복\s*매출|""
+    r""고객\s*(?:경험|편의|가치)|온라인\s*(?:채널|판매|쇼핑몰|몰|사업)|""
+    r""전자상거래|이커머스|e-?커머스|모바일\s*(?:앱|플랫폼|서비스|사이트)|""
+    r""디지털\s*(?:플랫폼|서비스|솔루션|채널)|플랫폼\s*(?:사업|서비스)|""
+    r""솔루션\s*(?:사업|서비스|제공|공급|개발)|신규\s*서비스|""
+    r""모빌리티\s*서비스|커넥티드|핀테크|전자결제|간편결제|D2C|O2O|""
+    r""스마트\s*(?:제품|홈|팜)|온라인과\s*오프라인|온/?오프라인|옴니|""
+    r""CRM|맞춤형\s*마케팅|데이터.{0,30}고객|고객.{0,30}데이터|""
+    r""온라인\s*부문|온라인\s*비즈니스|온라인몰|웹사이트|모바일\s*사이트|""
+    r""IT\s*서비스|ERP\s*솔루션|소프트웨어\s*(?:개발|서비스)|""
+    r""스마트.{0,30}솔루션|비즈니스\s*플랫폼|덴탈\s*비타민""
+)"
+v2,DIRECT_BMI_RE,regex,True,194,205,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,"비즈니스\s*모델|사업\s*모델|수익\s*모델|구독|정기구독|온라인.{0,45}(?:채널|판매|쇼핑몰|몰|사업|비즈니스|마케팅|입점|진출|매출|수익)|전자상거래|이커머스|e-?커머스|모바일.{0,35}(?:서비스|플랫폼|사이트|결제)|디지털\s*(?:플랫폼|서비스|솔루션|채널)|CRM|맞춤형\s*마케팅|(?:고객.{0,35}데이터|데이터.{0,35}고객)|핀테크|전자결제|간편결제|휴대폰\s*결제|IT\s*서비스|ERP\s*솔루션|소프트웨어\s*(?:서비스|판매)|플랫폼.{0,45}(?:사업|서비스|고객|매출|수익|판매|거래|취득|인수)|(?:사업|서비스|고객|매출|수익|판매|거래|취득|인수).{0,45}플랫폼|스마트.{0,35}솔루션|자동화\s*솔루션|온라인과\s*오프라인|온/?오프라인|D2C|O2O|덴탈\s*비타민",34,True,"DIRECT_BMI_RE = rx(
+    r""비즈니스\s*모델|사업\s*모델|수익\s*모델|구독|정기구독|""
+    r""온라인.{0,45}(?:채널|판매|쇼핑몰|몰|사업|비즈니스|마케팅|입점|진출|매출|수익)|""
+    r""전자상거래|이커머스|e-?커머스|모바일.{0,35}(?:서비스|플랫폼|사이트|결제)|""
+    r""디지털\s*(?:플랫폼|서비스|솔루션|채널)|CRM|맞춤형\s*마케팅|""
+    r""(?:고객.{0,35}데이터|데이터.{0,35}고객)|핀테크|전자결제|간편결제|휴대폰\s*결제|""
+    r""IT\s*서비스|ERP\s*솔루션|소프트웨어\s*(?:서비스|판매)|""
+    r""플랫폼.{0,45}(?:사업|서비스|고객|매출|수익|판매|거래|취득|인수)|""
+    r""(?:사업|서비스|고객|매출|수익|판매|거래|취득|인수).{0,45}플랫폼|""
+    r""스마트.{0,35}솔루션|자동화\s*솔루션|온라인과\s*오프라인|온/?오프라인|""
+    r""D2C|O2O|덴탈\s*비타민""
+)"
+v2,SMART_PRODUCT_RE,regex,True,206,211,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,"IoT.{0,45}(?:제품|서비스|기기)|(?:제품|서비스|기기).{0,45}IoT|자율주행.{0,35}(?:개발|솔루션|제품)|로봇.{0,35}(?:개발|솔루션|서비스)|AI.{0,35}(?:제품|서비스|비즈니스\s*모델)|(?:제품|서비스|비즈니스\s*모델).{0,35}AI",34,True,"SMART_PRODUCT_RE = rx(
+    r""IoT.{0,45}(?:제품|서비스|기기)|(?:제품|서비스|기기).{0,45}IoT|""
+    r""자율주행.{0,35}(?:개발|솔루션|제품)|로봇.{0,35}(?:개발|솔루션|서비스)|""
+    r""AI.{0,35}(?:제품|서비스|비즈니스\s*모델)|""
+    r""(?:제품|서비스|비즈니스\s*모델).{0,35}AI""
+)"
+v2,CUSTOMER_OR_REVENUE_RE,regex,True,212,214,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,고객|판매|매출|수익|채널|서비스|사업|거래|결제|마케팅|유통|시장\s*진출,34,True,"CUSTOMER_OR_REVENUE_RE = rx(
+    r""고객|판매|매출|수익|채널|서비스|사업|거래|결제|마케팅|유통|시장\s*진출""
+)"
+v2,CURRENT_LANGUAGE_RE,regex,True,215,218,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,현재|지속|운영\s*중|진행\s*중|추진\s*중|확대\s*중|\d{4}\s*~|이후|그동안|강화한\s*결과|진출한\s*결과,34,True,"CURRENT_LANGUAGE_RE = rx(
+    r""현재|지속|운영\s*중|진행\s*중|추진\s*중|확대\s*중|\d{4}\s*~|""
+    r""이후|그동안|강화한\s*결과|진출한\s*결과""
+)"
+v2,PLATFORM_QUALIFIER_RE,regex,True,219,223,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,디지털|온라인|모바일|데이터|AI|인공지능|블록체인|소프트웨어|전자상거래|이커머스|결제|핀테크|물류|헬스케어|미래농업|OTT|NDC|고객|비즈니스|수익|거래|대출비교|콘텐츠|덴탈|유통|판매|채널|사업|기록관리|동영상,34,True,"PLATFORM_QUALIFIER_RE = rx(
+    r""디지털|온라인|모바일|데이터|AI|인공지능|블록체인|소프트웨어|전자상거래|""
+    r""이커머스|결제|핀테크|물류|헬스케어|미래농업|OTT|NDC|고객|비즈니스|""
+    r""수익|거래|대출비교|콘텐츠|덴탈|유통|판매|채널|사업|기록관리|동영상""
+)"
+v2,ACCOUNTING_EXCEPTION_RE,regex,True,224,227,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,"당기\s*중.{0,180}(?:자동화\s*설비|디지털\s*플랫폼|WMS).{0,120}(?:백만원|대체)|ERP\s*구축\s*컨설팅.{0,100}(?:개발약정|계약)",34,True,"ACCOUNTING_EXCEPTION_RE = rx(
+    r""당기\s*중.{0,180}(?:자동화\s*설비|디지털\s*플랫폼|WMS).{0,120}(?:백만원|대체)|""
+    r""ERP\s*구축\s*컨설팅.{0,100}(?:개발약정|계약)""
+)"
+v2,PERSONNEL_BIO_RE,regex,True,228,230,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,"미등기\s*임원|미등기\s*상근|주요\s*경력.{0,120}(?:이커머스|AI)|글로벌이커머스\s*상무",34,True,"PERSONNEL_BIO_RE = rx(
+    r""미등기\s*임원|미등기\s*상근|주요\s*경력.{0,120}(?:이커머스|AI)|글로벌이커머스\s*상무""
+)"
+v2,SOFTWARE_SPECIFIC_RE,regex,True,231,231,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,서비스|솔루션|시스템|개발|운영|공급|판매|구축|사업,34,True,"SOFTWARE_SPECIFIC_RE = rx(r""서비스|솔루션|시스템|개발|운영|공급|판매|구축|사업"")"
+v2,ACTIVE_OPERATION_RE,regex,True,232,236,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,"영위하고\s*있|운영하고\s*있|판매를\s*시작|매출이\s*발생|매출을\s*달성|서비스를\s*제공|사업부문은|온라인을\s*근간|판매하고\s*있|자리매김|운영중|핵심\s*사업부문으로\s*성장|온라인몰.{0,40}매출",34,True,"ACTIVE_OPERATION_RE = rx(
+    r""영위하고\s*있|운영하고\s*있|판매를\s*시작|매출이\s*발생|매출을\s*달성|""
+    r""서비스를\s*제공|사업부문은|온라인을\s*근간|판매하고\s*있|자리매김|""
+    r""운영중|핵심\s*사업부문으로\s*성장|온라인몰.{0,40}매출""
+)"
+v2,NAMED_COMPANY_RE,regex,True,237,237,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,\(주\)|㈜|주식회사,34,True,"NAMED_COMPANY_RE = rx(r""\(주\)|㈜|주식회사"")"
+v2,ATTRIBUTION_RE,regex,True,238,238,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,연구개발\s*실적|개발기술|정부보조금을\s*수취|특허명|연구과제,34,True,"ATTRIBUTION_RE = rx(r""연구개발\s*실적|개발기술|정부보조금을\s*수취|특허명|연구과제"")"
+v2,OWNED_STRATEGY_RE,regex,True,239,239,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,전략을\s*추진|중점\s*추진,34,True,"OWNED_STRATEGY_RE = rx(r""전략을\s*추진|중점\s*추진"")"
+v2,FOCAL_GENERIC_ACTION_RE,regex,True,240,240,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,강화에\s*집중|개선을\s*도모|개발하여|구축하여,34,True,"FOCAL_GENERIC_ACTION_RE = rx(r""강화에\s*집중|개선을\s*도모|개발하여|구축하여"")"
+v2,BOARD_ACTION_RE,regex,True,241,241,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,계약을\s*체결|투자|인수|취득,34,True,"BOARD_ACTION_RE = rx(r""계약을\s*체결|투자|인수|취득"")"
+v2,CONCRETE_INTENT_RE,regex,True,242,242,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,진출\s*목적|하고자|위하여|판매\s*채널\s*확대,34,True,"CONCRETE_INTENT_RE = rx(r""진출\s*목적|하고자|위하여|판매\s*채널\s*확대"")"
+v2,BUSINESS_IMPLEMENTATION_RE,regex,True,243,247,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,"영위\s*중|운영\s*중|매출이?\s*(?:발생|달성)|매출을\s*달성|판매를\s*시작|론칭|보급하고\s*있|합작법인을\s*설립|투자\s*하는\s*약정|당사.{0,100}플랫폼을?\s*통(?:해|하여).{0,140}(?:중개|제공|판매)",34,True,"BUSINESS_IMPLEMENTATION_RE = rx(
+    r""영위\s*중|운영\s*중|매출이?\s*(?:발생|달성)|매출을\s*달성|""
+    r""판매를\s*시작|론칭|보급하고\s*있|합작법인을\s*설립|투자\s*하는\s*약정|""
+    r""당사.{0,100}플랫폼을?\s*통(?:해|하여).{0,140}(?:중개|제공|판매)""
+)"
+v2,INTENT_ADD_RE,regex,True,248,248,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,(?:개발|운영|판매)\s*추가\s*$,34,True,"INTENT_ADD_RE = rx(r""(?:개발|운영|판매)\s*추가\s*$"")"
+v2,PLATFORM_VALUE_RE,regex,True,249,249,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,서비스|사업|고객|판매|매출|수익|거래|제공|공급,34,True,"PLATFORM_VALUE_RE = rx(r""서비스|사업|고객|판매|매출|수익|거래|제공|공급"")"
+v2,STATIC_EQUIPMENT_RE,regex,True,250,250,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,자동화\s*설비를?\s*갖추(?:고|어|었),34,True,"STATIC_EQUIPMENT_RE = rx(r""자동화\s*설비를?\s*갖추(?:고|어|었)"")"
+v2,EQUIPMENT_LIST_RE,regex,True,251,254,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,"(?:공장|물류).{0,20}자동화\s*설비\s*등|자동화\s*설비\s*등\s*(?:\(주\)|㈜|$)",34,True,"EQUIPMENT_LIST_RE = rx(
+    r""(?:공장|물류).{0,20}자동화\s*설비\s*등|""
+    r""자동화\s*설비\s*등\s*(?:\(주\)|㈜|$)""
+)"
+v2,AUTOMATION_CHANGE_RE,regex,True,255,255,bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1,bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py,"자동화.{0,60}(?:투자|확대|구축|도입|증설|신설|전환|개선)",34,True,"AUTOMATION_CHANGE_RE = rx(r""자동화.{0,60}(?:투자|확대|구축|도입|증설|신설|전환|개선)"")"
+splitter,DIGITAL_CORE_TERMS,list,True,43,103,5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0,bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py,,,,"DIGITAL_CORE_TERMS = [
+    ""디지털 전환"",
+    ""디지털전환"",
+    ""디지털 전략"",
+    ""디지털 혁신"",
+    ""디지털화"",
+    ""디지타이제이션"",
+    ""디지털 트랜스포메이션"",
+    ""인공지능"",
+    ""머신러닝"",
+    ""딥러닝"",
+    ""생성형 ai"",
+    ""생성 ai"",
+    ""ai"",
+    ""빅데이터"",
+    ""데이터 분석"",
+    ""데이터 플랫폼"",
+    ""데이터 기반"",
+    ""클라우드"",
+    ""사물인터넷"",
+    ""iot"",
+    ""블록체인"",
+    ""사이버보안"",
+    ""사이버 보안"",
+    ""정보보안"",
+    ""rpa"",
+    ""로봇 프로세스 자동화"",
+    ""스마트팩토리"",
+    ""스마트 팩토리"",
+    ""스마트공장"",
+    ""스마트 공장"",
+    ""지능형 공장"",
+    ""스마트 제조"",
+    ""디지털 트윈"",
+    ""5g"",
+    ""디지털 플랫폼"",
+    ""디지털 서비스"",
+    ""디지털 솔루션"",
+    ""디지털 시대"",
+    ""4차 산업혁명"",
+    ""온라인 채널"",
+    ""디지털 채널"",
+    ""전자상거래"",
+    ""이커머스"",
+    ""e-commerce"",
+    ""ecommerce"",
+    ""모바일 앱"",
+    ""모바일 플랫폼"",
+    ""앱 서비스"",
+    ""커넥티드카"",
+    ""커넥티드 카"",
+    ""커넥티드 서비스"",
+    ""스마트 모빌리티"",
+    ""모빌리티 서비스"",
+    ""스마트홈"",
+    ""스마트 홈"",
+    ""erp"",
+    ""mes"",
+    ""scm"",
+    ""crm"",
+]"
+splitter,TABLE_NOISE_PATTERNS,list,True,246,275,5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0,bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py,,,,"TABLE_NOISE_PATTERNS = [
+    r""^\(?단위\s*:"",
+    r""^\(?주\s*:"",
+    r""^구\s*분\s"",
+    r""^구분\s"",
+    r""^목\s*차$"",
+    r""^해당사항\s*없음"",
+    r""^감사의견"",
+    r""^연결재무제표"",
+    r""^재무제표"",
+    r""^주석"",
+    r""^자본금\s*변동사항"",
+    r""^주식의\s*총수"",
+    r""^임원\s*및\s*직원"",
+    r""^이사회"",
+    r""^감사위원회"",
+    r""^타법인\s*출자"",
+    r""^특수관계자"",
+    r""^파생상품"",
+    r""^공정가치"",
+    r""^범주별\s*금융상품"",
+    r""^당기\s+전기"",
+    r""국내외\s*주요기업"",
+    r""서울특별시|경기도|부산광역시|대구광역시|인천광역시|대한민국"",
+    r""지급보증|우발부채|보증보험|공탁보증|이행\(지급\)|이행\(계약\)|이행\(하자\)"",
+    r""재원\s*조달방법"",
+    r""소요자금\s*미정"",
+    r""사업자등록번호|법인등록번호"",
+    r""대표자명|소재지|설립일"",
+]"
+splitter,HANGUL_RE,regex,True,287,287,5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0,bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py,[\uac00-\ud7a3],32,False,"HANGUL_RE = re.compile(r""[\uac00-\ud7a3]"")"
+splitter,LATIN_RE,regex,False,288,288,5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0,bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py,[A-Za-z],32,False,"LATIN_RE = re.compile(r""[A-Za-z]"")"
+splitter,KOREAN_TOKEN_RE,regex,True,289,289,5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0,bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py,[\uac00-\ud7a3A-Za-z0-9&+-]+,32,False,"KOREAN_TOKEN_RE = re.compile(r""[\uac00-\ud7a3A-Za-z0-9&+-]+"")"
+splitter,SENTENCE_SPLIT_RE,regex,True,290,290,5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0,bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py,(?<=[.!?。])\s+,32,False,"SENTENCE_SPLIT_RE = re.compile(r""(?<=[.!?。])\s+"")"
+splitter,KOREAN_END_RE,regex,True,291,291,5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0,bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py,(다|니다|한다|된다|하였다|했다|있다|없다|이다|임|함|됨|음)[.!?]?$,32,False,"KOREAN_END_RE = re.compile(r""(다|니다|한다|된다|하였다|했다|있다|없다|이다|임|함|됨|음)[.!?]?$"")"
+splitter,DIGITAL_CORE_PATTERNS,dict,True,306,306,5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0,bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py,,,,DIGITAL_CORE_PATTERNS = compile_terms(DIGITAL_CORE_TERMS)
+splitter,TABLE_NOISE_REGEX,list,True,312,312,5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0,bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py,,,,"TABLE_NOISE_REGEX = [re.compile(pattern, flags=re.IGNORECASE) for pattern in TABLE_NOISE_PATTERNS]"

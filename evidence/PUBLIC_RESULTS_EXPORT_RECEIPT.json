@@ -1,0 +1,800 @@
+{
+  "status": "EXACT18_VERIFIED_RESULTS_PUBLIC_ALIAS_EXPORT_PASS_NOT_PUBLISHED",
+  "files": [
+    {
+      "relative_path": "results/firm_year/BMODD_FIRM_YEAR_CLASSIFICATION.csv",
+      "selected_verified_round": 1,
+      "source_empirical_relative_path": "BMODD_FIRM_YEAR_CLASSIFICATION.csv",
+      "source_actual_run_sha256": "17c2e6dddd9295fe38cec712dcd14af48ef51c0f4e13a373d57c246b4d5351aa",
+      "public_export_sha256": "26bb8691ae0cc57b878c61b1245d251f61b9bca4a990a31ff025c70dd2b4f892",
+      "source_sha256": "17c2e6dddd9295fe38cec712dcd14af48ef51c0f4e13a373d57c246b4d5351aa",
+      "sha256": "26bb8691ae0cc57b878c61b1245d251f61b9bca4a990a31ff025c70dd2b4f892",
+      "size": 2946845,
+      "rows": 22654,
+      "columns": [
+        "corp_code",
+        "year",
+        "rcept_no",
+        "source_kind",
+        "D",
+        "candidate",
+        "S",
+        "BMODD",
+        "NonBMODD",
+        "BMODD_raw",
+        "NonBMODD_raw",
+        "TotalDigital_raw",
+        "BMODD_z_fullbase",
+        "NonBMODD_z_fullbase"
+      ],
+      "alias_changes": 0,
+      "checks": {
+        "before": {
+          "decoded_cells_checked": 317170,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "after": {
+          "decoded_cells_checked": 317170,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "row_order_preserved": true,
+        "column_order_preserved_with_explicit_header_alias_only": true,
+        "all_nonalias_cells_exact_strings": true
+      }
+    },
+    {
+      "relative_path": "results/models/primary_h1_h2.csv",
+      "selected_verified_round": 1,
+      "source_empirical_relative_path": "primary_h1_h2.csv",
+      "source_actual_run_sha256": "bf41db67496a457991115c1190f982f46d57d51aa054fc00d3889c95afce4eb3",
+      "public_export_sha256": "03934c2255039cd8e4e9200084ea0a97d6999959e88ef1c8288c130d3e81dc88",
+      "source_sha256": "bf41db67496a457991115c1190f982f46d57d51aa054fc00d3889c95afce4eb3",
+      "sha256": "03934c2255039cd8e4e9200084ea0a97d6999959e88ef1c8288c130d3e81dc88",
+      "size": 6051,
+      "rows": 29,
+      "columns": [
+        "model_id",
+        "outcome",
+        "term",
+        "coefficient",
+        "std_error",
+        "p_value",
+        "ci95_low",
+        "ci95_high",
+        "N",
+        "firms",
+        "years",
+        "within_R2",
+        "effects",
+        "cluster",
+        "weighted"
+      ],
+      "alias_changes": 18,
+      "checks": {
+        "before": {
+          "decoded_cells_checked": 450,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "after": {
+          "decoded_cells_checked": 450,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "row_order_preserved": true,
+        "column_order_preserved_with_explicit_header_alias_only": true,
+        "all_nonalias_cells_exact_strings": true
+      }
+    },
+    {
+      "relative_path": "results/models/h2_wald.csv",
+      "selected_verified_round": 1,
+      "source_empirical_relative_path": "h2_wald.csv",
+      "source_actual_run_sha256": "bdca8828bdf8f6e50d73a53f935543e21a069babe395e6c46e26f60eef0edbbf",
+      "public_export_sha256": "b055be5de279a3da226f6ea4abe43c2e9731b35375d26b3184b17c7b94b2a55f",
+      "source_sha256": "bdca8828bdf8f6e50d73a53f935543e21a069babe395e6c46e26f60eef0edbbf",
+      "sha256": "b055be5de279a3da226f6ea4abe43c2e9731b35375d26b3184b17c7b94b2a55f",
+      "size": 273,
+      "rows": 1,
+      "columns": [
+        "model_id",
+        "contrast",
+        "difference",
+        "std_error",
+        "t_stat",
+        "wald_F",
+        "p_value",
+        "ci95_low",
+        "ci95_high",
+        "df_denom"
+      ],
+      "alias_changes": 2,
+      "checks": {
+        "before": {
+          "decoded_cells_checked": 20,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "after": {
+          "decoded_cells_checked": 20,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "row_order_preserved": true,
+        "column_order_preserved_with_explicit_header_alias_only": true,
+        "all_nonalias_cells_exact_strings": true
+      }
+    },
+    {
+      "relative_path": "results/models/confirmatory_two_test_BH.csv",
+      "selected_verified_round": 1,
+      "source_empirical_relative_path": "confirmatory_two_test_BH.csv",
+      "source_actual_run_sha256": "9097b11ab678b0e108089cdea06458c90df043b46468e02ff1ea502291f83060",
+      "public_export_sha256": "3c7684a8464188ac32d901a4a9fdd08a6246680751075bf7ea5b4c41cd5ea2b9",
+      "source_sha256": "9097b11ab678b0e108089cdea06458c90df043b46468e02ff1ea502291f83060",
+      "sha256": "3c7684a8464188ac32d901a4a9fdd08a6246680751075bf7ea5b4c41cd5ea2b9",
+      "size": 144,
+      "rows": 2,
+      "columns": [
+        "hypothesis",
+        "raw_p",
+        "BH_q_within_confirmatory_core"
+      ],
+      "alias_changes": 0,
+      "checks": {
+        "before": {
+          "decoded_cells_checked": 9,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "after": {
+          "decoded_cells_checked": 9,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "row_order_preserved": true,
+        "column_order_preserved_with_explicit_header_alias_only": true,
+        "all_nonalias_cells_exact_strings": true
+      }
+    },
+    {
+      "relative_path": "results/models/current_core/core_coefficients.csv",
+      "selected_verified_round": 1,
+      "source_empirical_relative_path": "current_core/core_coefficients.csv",
+      "source_actual_run_sha256": "4a5373721cf2b4b9b1c4a3ed54005aa99457f73cdc09a20dc2009d7d1712dc05",
+      "public_export_sha256": "510f86d22d0b651311a14a63ebe73f81d2a8437fd1f9c958da862c7843d09347",
+      "source_sha256": "4a5373721cf2b4b9b1c4a3ed54005aa99457f73cdc09a20dc2009d7d1712dc05",
+      "sha256": "510f86d22d0b651311a14a63ebe73f81d2a8437fd1f9c958da862c7843d09347",
+      "size": 71982,
+      "rows": 347,
+      "columns": [
+        "model_id",
+        "outcome",
+        "term",
+        "coefficient",
+        "std_error",
+        "p_value",
+        "ci95_low",
+        "ci95_high",
+        "N",
+        "firms",
+        "years",
+        "within_R2",
+        "effects",
+        "cluster",
+        "weighted"
+      ],
+      "alias_changes": 24,
+      "checks": {
+        "before": {
+          "decoded_cells_checked": 5220,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "after": {
+          "decoded_cells_checked": 5220,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "row_order_preserved": true,
+        "column_order_preserved_with_explicit_header_alias_only": true,
+        "all_nonalias_cells_exact_strings": true
+      }
+    },
+    {
+      "relative_path": "results/sample_keys/current_core_sample_keys.csv",
+      "selected_verified_round": 1,
+      "source_empirical_relative_path": "current_core/core_sample_keys.csv",
+      "source_actual_run_sha256": "147eaa3b9d2715b03c1a50daedd6087a3798b84dfc314e88257168b0c2a0f73f",
+      "public_export_sha256": "dd66cd424e6fc52c954c7e015b4b7786cbce57ee726e515ec7dc8de5237af21e",
+      "source_sha256": "147eaa3b9d2715b03c1a50daedd6087a3798b84dfc314e88257168b0c2a0f73f",
+      "sha256": "dd66cd424e6fc52c954c7e015b4b7786cbce57ee726e515ec7dc8de5237af21e",
+      "size": 8652177,
+      "rows": 289788,
+      "columns": [
+        "corp_code",
+        "year",
+        "model_id"
+      ],
+      "alias_changes": 0,
+      "checks": {
+        "before": {
+          "decoded_cells_checked": 869367,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "after": {
+          "decoded_cells_checked": 869367,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "row_order_preserved": true,
+        "column_order_preserved_with_explicit_header_alias_only": true,
+        "all_nonalias_cells_exact_strings": true
+      }
+    },
+    {
+      "relative_path": "results/models/h3_joint/h3_joint_coefficients.csv",
+      "selected_verified_round": 1,
+      "source_empirical_relative_path": "h3_joint/h3_joint_coefficients.csv",
+      "source_actual_run_sha256": "f867fdc6b758e5baa26a64a3588ab660a877af57711c33dac6653df9edb02737",
+      "public_export_sha256": "716359b5e303ecfbbf85d1471566826a8331c741207722fd9676f64b035c28d4",
+      "source_sha256": "f867fdc6b758e5baa26a64a3588ab660a877af57711c33dac6653df9edb02737",
+      "sha256": "716359b5e303ecfbbf85d1471566826a8331c741207722fd9676f64b035c28d4",
+      "size": 766,
+      "rows": 6,
+      "columns": [
+        "horizon",
+        "coefficient",
+        "std_error",
+        "p_value",
+        "ci95_low",
+        "ci95_high",
+        "N",
+        "firms"
+      ],
+      "alias_changes": 0,
+      "checks": {
+        "before": {
+          "decoded_cells_checked": 56,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "after": {
+          "decoded_cells_checked": 56,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "row_order_preserved": true,
+        "column_order_preserved_with_explicit_header_alias_only": true,
+        "all_nonalias_cells_exact_strings": true
+      }
+    },
+    {
+      "relative_path": "results/models/h3_joint/h3_joint_differences.csv",
+      "selected_verified_round": 1,
+      "source_empirical_relative_path": "h3_joint/h3_joint_differences.csv",
+      "source_actual_run_sha256": "fc05522839f5ce22ecf3a16320e6ae7c6d39298b80a54b2ba9bb8a4e11aa7201",
+      "public_export_sha256": "14741e070651dcbecf3a163339a495ffd15cf57b86c25dcaacf413025ec1bfaa",
+      "source_sha256": "fc05522839f5ce22ecf3a16320e6ae7c6d39298b80a54b2ba9bb8a4e11aa7201",
+      "sha256": "14741e070651dcbecf3a163339a495ffd15cf57b86c25dcaacf413025ec1bfaa",
+      "size": 863,
+      "rows": 3,
+      "columns": [
+        "high_horizon",
+        "low_horizon",
+        "test_role",
+        "difference",
+        "std_error",
+        "p_value",
+        "ci95_low",
+        "ci95_high",
+        "N",
+        "firms",
+        "df",
+        "cross_equation_covariance",
+        "direct_difference_beta",
+        "direct_difference_se",
+        "holm",
+        "fdr_bh"
+      ],
+      "alias_changes": 0,
+      "checks": {
+        "before": {
+          "decoded_cells_checked": 64,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "after": {
+          "decoded_cells_checked": 64,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "row_order_preserved": true,
+        "column_order_preserved_with_explicit_header_alias_only": true,
+        "all_nonalias_cells_exact_strings": true
+      }
+    },
+    {
+      "relative_path": "results/sample_keys/h3_joint_sample_keys.csv",
+      "selected_verified_round": 1,
+      "source_empirical_relative_path": "h3_joint/h3_joint_sample_keys.csv",
+      "source_actual_run_sha256": "c546699c07d8a3038c4d5b04339806de8d378049de6a65cc611789e2e0287705",
+      "public_export_sha256": "883cb7187350bb1e28f015c97f0887e6c83ab36b386e67e1ac3bb4f26b355864",
+      "source_sha256": "c546699c07d8a3038c4d5b04339806de8d378049de6a65cc611789e2e0287705",
+      "sha256": "883cb7187350bb1e28f015c97f0887e6c83ab36b386e67e1ac3bb4f26b355864",
+      "size": 111444,
+      "rows": 7959,
+      "columns": [
+        "corp_code",
+        "year"
+      ],
+      "alias_changes": 0,
+      "checks": {
+        "before": {
+          "decoded_cells_checked": 15920,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "after": {
+          "decoded_cells_checked": 15920,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "row_order_preserved": true,
+        "column_order_preserved_with_explicit_header_alias_only": true,
+        "all_nonalias_cells_exact_strings": true
+      }
+    },
+    {
+      "relative_path": "results/models/trend.csv",
+      "selected_verified_round": 1,
+      "source_empirical_relative_path": "trend.csv",
+      "source_actual_run_sha256": "a59c41ced4aa0f922c0d242b8aff65006ddcf490ddd89fdd7e2451b5396df28a",
+      "public_export_sha256": "d1ae2801fc3ef4b9bc6f3042f4bb61036346419b5ce69ec100fb00c6e32db15a",
+      "source_sha256": "a59c41ced4aa0f922c0d242b8aff65006ddcf490ddd89fdd7e2451b5396df28a",
+      "sha256": "d1ae2801fc3ef4b9bc6f3042f4bb61036346419b5ce69ec100fb00c6e32db15a",
+      "size": 439,
+      "rows": 1,
+      "columns": [
+        "model_id",
+        "specification",
+        "coefficient",
+        "std_error",
+        "p_value",
+        "ci95_low",
+        "ci95_high",
+        "t_stat",
+        "N",
+        "firms",
+        "year_min",
+        "year_max",
+        "within_R2",
+        "cluster",
+        "sample_index_sha256"
+      ],
+      "alias_changes": 0,
+      "checks": {
+        "before": {
+          "decoded_cells_checked": 30,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "after": {
+          "decoded_cells_checked": 30,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "row_order_preserved": true,
+        "column_order_preserved_with_explicit_header_alias_only": true,
+        "all_nonalias_cells_exact_strings": true
+      }
+    },
+    {
+      "relative_path": "results/models/placebo.csv",
+      "selected_verified_round": 1,
+      "source_empirical_relative_path": "placebo.csv",
+      "source_actual_run_sha256": "de5c008a84a3acb08c329a133cb2adca0d21fdc2b7f49c115f6c98c1dd4de35a",
+      "public_export_sha256": "2a891d44b41a5aa778ca8fb5ef034934fb6672d00a65975e8cf9757378108c2c",
+      "source_sha256": "de5c008a84a3acb08c329a133cb2adca0d21fdc2b7f49c115f6c98c1dd4de35a",
+      "sha256": "2a891d44b41a5aa778ca8fb5ef034934fb6672d00a65975e8cf9757378108c2c",
+      "size": 576,
+      "rows": 2,
+      "columns": [
+        "model_id",
+        "outcome",
+        "term",
+        "coefficient",
+        "std_error",
+        "p_value",
+        "ci95_low",
+        "ci95_high",
+        "N",
+        "firms",
+        "year_min",
+        "year_max",
+        "within_R2",
+        "fixed_effects",
+        "cluster"
+      ],
+      "alias_changes": 4,
+      "checks": {
+        "before": {
+          "decoded_cells_checked": 45,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "after": {
+          "decoded_cells_checked": 45,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "row_order_preserved": true,
+        "column_order_preserved_with_explicit_header_alias_only": true,
+        "all_nonalias_cells_exact_strings": true
+      }
+    },
+    {
+      "relative_path": "results/diagnostics/ipw_balance.csv",
+      "selected_verified_round": 1,
+      "source_empirical_relative_path": "ipw/07_t2可观察样本平衡诊断.csv",
+      "source_actual_run_sha256": "d9b41ef7e46afb0cf9aa4a1d957f81827d524b8de71db8e43ee61c35739fa817",
+      "public_export_sha256": "c9d83238a8c01d7c7c2f981f7ce9cb95b03e4ae63b8cfcb7f5cf2c3bb97f340e",
+      "source_sha256": "d9b41ef7e46afb0cf9aa4a1d957f81827d524b8de71db8e43ee61c35739fa817",
+      "sha256": "c9d83238a8c01d7c7c2f981f7ce9cb95b03e4ae63b8cfcb7f5cf2c3bb97f340e",
+      "size": 1357,
+      "rows": 15,
+      "columns": [
+        "variable",
+        "included_mean",
+        "excluded_mean",
+        "standardized_difference",
+        "N_included",
+        "N_excluded"
+      ],
+      "alias_changes": 2,
+      "checks": {
+        "before": {
+          "decoded_cells_checked": 96,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "after": {
+          "decoded_cells_checked": 96,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "row_order_preserved": true,
+        "column_order_preserved_with_explicit_header_alias_only": true,
+        "all_nonalias_cells_exact_strings": true
+      }
+    },
+    {
+      "relative_path": "results/models/ipw_lpm_results.csv",
+      "selected_verified_round": 1,
+      "source_empirical_relative_path": "ipw/08_样本留存LPM与IPW结果.csv",
+      "source_actual_run_sha256": "730c847775a2d7d579e205ce76bba73d3cd36ede9b3fbc6b72461ed1ccfb290c",
+      "public_export_sha256": "6243e6778820acb427485f16d1d06bdf170790b7c9aa8d6d3cac65629fcee419",
+      "source_sha256": "730c847775a2d7d579e205ce76bba73d3cd36ede9b3fbc6b72461ed1ccfb290c",
+      "sha256": "6243e6778820acb427485f16d1d06bdf170790b7c9aa8d6d3cac65629fcee419",
+      "size": 673,
+      "rows": 2,
+      "columns": [
+        "model_id",
+        "outcome",
+        "term",
+        "coefficient",
+        "std_error",
+        "p_value",
+        "ci95_low",
+        "ci95_high",
+        "N",
+        "firms",
+        "years",
+        "within_R2",
+        "effects",
+        "cluster",
+        "weighted",
+        "observed_share",
+        "ipw_p01",
+        "ipw_p99"
+      ],
+      "alias_changes": 2,
+      "checks": {
+        "before": {
+          "decoded_cells_checked": 54,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "after": {
+          "decoded_cells_checked": 54,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "row_order_preserved": true,
+        "column_order_preserved_with_explicit_header_alias_only": true,
+        "all_nonalias_cells_exact_strings": true
+      }
+    },
+    {
+      "relative_path": "results/diagnostics/ipw_weight_diagnostics.csv",
+      "selected_verified_round": 1,
+      "source_empirical_relative_path": "ipw/17_IPW诊断.csv",
+      "source_actual_run_sha256": "4529d5791eba483d4cb4820a180765b5d70ad72850e00ff7c4984df823c2efb5",
+      "public_export_sha256": "8d72aa220bfab894b87b5c1717538bc946bac45f29c4ed7ec22283633092878c",
+      "source_sha256": "4529d5791eba483d4cb4820a180765b5d70ad72850e00ff7c4984df823c2efb5",
+      "sha256": "8d72aa220bfab894b87b5c1717538bc946bac45f29c4ed7ec22283633092878c",
+      "size": 1037,
+      "rows": 6,
+      "columns": [
+        "quantity",
+        "N",
+        "mean",
+        "sd",
+        "p01",
+        "p05",
+        "median",
+        "p95",
+        "p99",
+        "min",
+        "max"
+      ],
+      "alias_changes": 0,
+      "checks": {
+        "before": {
+          "decoded_cells_checked": 77,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "after": {
+          "decoded_cells_checked": 77,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "row_order_preserved": true,
+        "column_order_preserved_with_explicit_header_alias_only": true,
+        "all_nonalias_cells_exact_strings": true
+      }
+    },
+    {
+      "relative_path": "results/models/supplement_with_original_BH19.csv",
+      "selected_verified_round": 1,
+      "source_empirical_relative_path": "supplement_with_original_BH19.csv",
+      "source_actual_run_sha256": "a470bb6361990bd09461d25b3369b01916f0772eaa615142f820aab520420f73",
+      "public_export_sha256": "07ecff42082d7ee286fa4a3e79f2e4d85b13c9026e824f28cd80024fa8e093d0",
+      "source_sha256": "a470bb6361990bd09461d25b3369b01916f0772eaa615142f820aab520420f73",
+      "sha256": "07ecff42082d7ee286fa4a3e79f2e4d85b13c9026e824f28cd80024fa8e093d0",
+      "size": 16163,
+      "rows": 21,
+      "columns": [
+        "family",
+        "model_id",
+        "outcome",
+        "status",
+        "sample_rule",
+        "coefficient",
+        "std_error",
+        "t_value",
+        "p_value",
+        "ci95_low",
+        "ci95_high",
+        "ci95_width",
+        "N",
+        "firms",
+        "years",
+        "year_min",
+        "year_max",
+        "within_R2",
+        "coefficient_change_pct",
+        "fixed_effects",
+        "cluster",
+        "controls",
+        "BMODD_standardization",
+        "N_change",
+        "firms_change",
+        "control_protocol",
+        "fdr_scope",
+        "q_value_bh"
+      ],
+      "alias_changes": 22,
+      "checks": {
+        "before": {
+          "decoded_cells_checked": 616,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "after": {
+          "decoded_cells_checked": 616,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "row_order_preserved": true,
+        "column_order_preserved_with_explicit_header_alias_only": true,
+        "all_nonalias_cells_exact_strings": true
+      }
+    },
+    {
+      "relative_path": "results/diagnostics/decomposition_sample_flow.csv",
+      "selected_verified_round": 1,
+      "source_empirical_relative_path": "decomposition_sample_flow.csv",
+      "source_actual_run_sha256": "b20f195622189dc9af3d7f6451ea09443dadcdfcabb9a142fb37aa992d2438ae",
+      "public_export_sha256": "87d16841e75803ff087cffec7047f584147d1afa7934f3758b984f02852e8cc7",
+      "source_sha256": "b20f195622189dc9af3d7f6451ea09443dadcdfcabb9a142fb37aa992d2438ae",
+      "sha256": "87d16841e75803ff087cffec7047f584147d1afa7934f3758b984f02852e8cc7",
+      "size": 628,
+      "rows": 7,
+      "columns": [
+        "stage",
+        "N",
+        "firms",
+        "excluded_at_stage",
+        "reason"
+      ],
+      "alias_changes": 0,
+      "checks": {
+        "before": {
+          "decoded_cells_checked": 40,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "after": {
+          "decoded_cells_checked": 40,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "row_order_preserved": true,
+        "column_order_preserved_with_explicit_header_alias_only": true,
+        "all_nonalias_cells_exact_strings": true
+      }
+    },
+    {
+      "relative_path": "results/diagnostics/decomposition_coefficient_identity.csv",
+      "selected_verified_round": 1,
+      "source_empirical_relative_path": "decomposition_coefficient_identity.csv",
+      "source_actual_run_sha256": "0367c75a8bab8f069247c19161cf00a27a72598339ba46b132d4cd6df61ca405",
+      "public_export_sha256": "4cf4c60f3c41b225bcc68e76b6790c5aa19d275b3f6483a2ee4f9e064929aa9d",
+      "source_sha256": "0367c75a8bab8f069247c19161cf00a27a72598339ba46b132d4cd6df61ca405",
+      "sha256": "4cf4c60f3c41b225bcc68e76b6790c5aa19d275b3f6483a2ee4f9e064929aa9d",
+      "size": 504,
+      "rows": 3,
+      "columns": [
+        "control_protocol",
+        "beta_sales",
+        "beta_avg_assets",
+        "beta_sales_minus_assets",
+        "beta_turnover",
+        "coefficient_identity_error"
+      ],
+      "alias_changes": 0,
+      "checks": {
+        "before": {
+          "decoded_cells_checked": 24,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "after": {
+          "decoded_cells_checked": 24,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "row_order_preserved": true,
+        "column_order_preserved_with_explicit_header_alias_only": true,
+        "all_nonalias_cells_exact_strings": true
+      }
+    },
+    {
+      "relative_path": "results/figure_data/figure1_annual_mean_source_data.csv",
+      "selected_verified_round": 1,
+      "source_empirical_relative_path": "figure1_annual_mean_source_data.csv",
+      "source_actual_run_sha256": "376a28c064ac1c887ff04bc48f395ab669d7b1622fc4a32218942566bda72abf",
+      "public_export_sha256": "545979075b1dbc81fd45ad869d8a52608092680bf02cea746adc4929cb24d8d3",
+      "source_sha256": "376a28c064ac1c887ff04bc48f395ab669d7b1622fc4a32218942566bda72abf",
+      "sha256": "545979075b1dbc81fd45ad869d8a52608092680bf02cea746adc4929cb24d8d3",
+      "size": 831,
+      "rows": 11,
+      "columns": [
+        "year",
+        "BMODD_raw_mean",
+        "NonBMODD_raw_mean",
+        "TotalDigital_raw"
+      ],
+      "alias_changes": 0,
+      "checks": {
+        "before": {
+          "decoded_cells_checked": 48,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "after": {
+          "decoded_cells_checked": 48,
+          "known_secret_scan_performed": false,
+          "known_secret_values_or_fingerprints_emitted": false,
+          "matches": 0
+        },
+        "row_order_preserved": true,
+        "column_order_preserved_with_explicit_header_alias_only": true,
+        "all_nonalias_cells_exact_strings": true
+      }
+    }
+  ],
+  "file_count": 18,
+  "alias_change_ledger_sha256": "fac54d345a8d620cdf215e0b36fa93fa891d665e279205ef857a3d5f7503ed9d",
+  "alias_change_count": 74,
+  "numeric_and_other_nonalias_cells_original_strings_exact": true,
+  "all_row_and_column_orders_preserved": true,
+  "three_round_receipt_sha256": "1f66ea38be03e183bfc0dda1a724d78e33880e88932b48bb037debae722c79e3",
+  "three_round_qualification": [
+    {
+      "round": 1,
+      "round_receipt_sha256": "7e9b934d1bd573d7477e96370ed6f7de78211a1eafcc482f38a5afc02bc2c619",
+      "measurement_digest": "6f05a4951aa4e940544c8d6a4daed28fd53fd6c9719fe44b423e10e793b42127",
+      "model_seal_sha256": "322aa3e8e86135952c41b33bc2cfd1aaffd70c64b6691ff64d897f74785dcaca",
+      "model_validation_sha256": "f8bb39e8de64090df7153a675e81c4b64d043b77bd6e109ad58d7b3fdd7031f5"
+    },
+    {
+      "round": 2,
+      "round_receipt_sha256": "64aca62cc87b4464060f69792edf0647654d051641bf7bdc3e457a360fb1909a",
+      "measurement_digest": "6f05a4951aa4e940544c8d6a4daed28fd53fd6c9719fe44b423e10e793b42127",
+      "model_seal_sha256": "322aa3e8e86135952c41b33bc2cfd1aaffd70c64b6691ff64d897f74785dcaca",
+      "model_validation_sha256": "f8bb39e8de64090df7153a675e81c4b64d043b77bd6e109ad58d7b3fdd7031f5"
+    },
+    {
+      "round": 3,
+      "round_receipt_sha256": "cc6a0e6494b29d8ddf7b2c6977c8e88d9621d6bdde9ca8ed17fc047dfbe6b4ae",
+      "measurement_digest": "6f05a4951aa4e940544c8d6a4daed28fd53fd6c9719fe44b423e10e793b42127",
+      "model_seal_sha256": "322aa3e8e86135952c41b33bc2cfd1aaffd70c64b6691ff64d897f74785dcaca",
+      "model_validation_sha256": "f8bb39e8de64090df7153a675e81c4b64d043b77bd6e109ad58d7b3fdd7031f5"
+    }
+  ],
+  "qualification_input_pins_sha256": "b6159d3cec3220f5f44d28db55b198a2227837e46a12195211f7656fa7d660a9",
+  "real_three_rounds_claimed": true,
+  "contract_sha256": "fa6d9bf0f65500dc75dfd6fb531d1a3be0a9ed2c14b62b1fdeb6923930eb9b32",
+  "exporter_sha256": "57e61b668bdfb14eb2e2b46f4b70ff96afc23a2e5c3af301fe80feaae2b0327c",
+  "root_approval_sha256": "f06f1b965981a2d885b0eeb79f727233a596f48788065a212579749bae9a48c9",
+  "protected_inputs_unchanged": true,
+  "private_input_paths_in_this_receipt": false,
+  "network_requests": 0,
+  "models_fit": 0,
+  "classifications": 0,
+  "Git_or_upload_operations": 0,
+  "TotalDigital_DigitalDisclosure_merged": false,
+  "full_financial_panel_or_decomposition_financial_levels_exported": false,
+  "third_party_data_rights_relicensed_by_export": false
+}

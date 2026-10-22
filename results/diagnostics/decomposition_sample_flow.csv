@@ -1,0 +1,8 @@
+﻿stage,N,firms,excluded_at_stage,reason
+Main-regression sample,13980,2054,0,"Reproduced 13,980-observation H1 sample"
+Sales observed at t and t+2,13980,2054,0,Missing raw sales
+Sales positive at t and t+2,13976,2054,4,Non-positive raw sales
+Average assets observed at t and t+2,13976,2054,0,Missing average assets
+Average assets positive at t and t+2,13976,2054,0,Non-positive average assets
+Final strict common sample,13976,2054,0,Iterative firm/year FE singleton removal
+Stable financial-statement-basis sensitivity sample,13119,2044,857,Exclude CFS/OFS basis changes between t and t+2; not the primary decomposition sample

@@ -1,0 +1,176 @@
+{
+  "purpose": "Machine-searchable factual preparation, not a final method Word, new rule implementation, or full-reproduction success claim.",
+  "public_to_frozen_internal_aliases": {
+    "BMODD": "BMI / bmi_sentence_v2 / bmi_sentence_count",
+    "NonBMODD": "NonBMI / substantive_digital_sentence_v2==1 AND bmi_sentence_v2==0",
+    "Exclude": "substantive_digital_sentence_v2==0 after BMODD-first category check"
+  },
+  "ordered_stages": [
+    {
+      "order": 1,
+      "stage": "Valid narrative fragments and within-report deduplication",
+      "implementation": "normalize_text/clean_segment/split_korean_sentences first. Narrative length25..700, at least15Hangul characters and5tokens; table-noise tests remain. A digital keyword can rescue a noisy input line from one preliminary skip, not bypass final narrative validity. score_one then deduplicates by ''.join(sentence.lower().split()), keeps first text/order, and classifies every retained fragment.",
+      "evidence": [
+        {
+          "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+          "source_sha256": "5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0",
+          "function": "is_korean_narrative_segment",
+          "line_start": 429,
+          "line_end": 440
+        },
+        {
+          "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+          "source_sha256": "5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0",
+          "function": "split_korean_sentences",
+          "line_start": 443,
+          "line_end": 475
+        },
+        {
+          "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+          "source_sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+          "function": "score_one",
+          "line_start": 840,
+          "line_end": 851
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "stage": "Digital-related flag, not an independent preprocessing candidate sample",
+      "implementation": "v2 combines strong/online/automation/data/platform/software triggers, hard-nondigital gates and final charter/fourth-industrial-revolution flag overrides. Exact48v2regex and their original IGNORECASE flags are retained. DIGITAL_CORE_TERMS is not a global requirement that removes every other valid sentence before classification.",
+      "evidence": [
+        {
+          "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+          "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+          "function": "classify_sentence_v2",
+          "line_start": 300,
+          "line_end": 342
+        },
+        {
+          "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+          "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+          "function": "classify_sentence_v2",
+          "line_start": 454,
+          "line_end": 459
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "stage": "Provisional substantive digital gate and attribution proxy",
+      "implementation": "strategy_relevance AND action AND attributable, where actions/implementation/active operation, company-name tokens/pronouns and generic/external contexts are lexical proxies within the supplied fragment. This is not entity linking, cross-sentence coreference resolution, factual verification of execution, or external confirmation of firm behavior.",
+      "evidence": [
+        {
+          "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+          "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+          "function": "normalized_company_tokens",
+          "line_start": 285,
+          "line_end": 292
+        },
+        {
+          "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+          "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+          "function": "classify_sentence_v2",
+          "line_start": 343,
+          "line_end": 395
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "stage": "Specific-plan override occurs after earlier v2 exclusions",
+      "implementation": "specific_plan requires the coded technology/plan/focal/IMPLEMENTED and exclusion conditions. If specific_plan and not stale, substantive is setTrue again. Therefore the earlier exclusion checks must not be described as an irreversible early-return veto. Plan/action regexes include prospective expressions; the code cannot establish real-world completion.",
+      "evidence": [
+        {
+          "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+          "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+          "function": "classify_sentence_v2",
+          "line_start": 397,
+          "line_end": 409
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "stage": "Provisional BMODD scope",
+      "implementation": "After substantive passes, DIRECT_BMI or BMI-with-customer/revenue or SMART_PRODUCT or digital-platform-with-value triggers BMODD. These are lexical business-model-scope triggers, not a trained semantic model.",
+      "evidence": [
+        {
+          "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+          "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+          "function": "classify_sentence_v2",
+          "line_start": 411,
+          "line_end": 423
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "stage": "Final v4 exclusions have priority over v2 positives",
+      "implementation": "v4 first obtains originalv2labels, then evaluates its own original supplied sentence without adding v2's whitespace normalization. Sixteen v4compiledregex are case-sensitive. implementation_evidence=active_clean AND(focal OR high_confidence_action). The listed market/external/static/segment/platform/missing-implementation/vague/demand/customer-competitor/former/accounting/history vetoes zero substantive,BMODD,market-signal flags; nondigital_platform also zeros digital/boilerplate. There is no later promotion back to substantive/BMODD.",
+      "evidence": [
+        {
+          "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+          "source_sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+          "function": "classify_sentence_v4",
+          "line_start": 177,
+          "line_end": 239
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "stage": "Mutually exclusive presentation labels",
+      "implementation": "Public BMODD uses internal bmi_sentence_v2==1 first; otherwise NonBMODD if substantive_digital_sentence_v2==1; otherwise Exclude. NonBMODD is the residual substantive category, not a separately trained or independently coded internal-digitization classifier. Exclude contains both non-digital fragments and digital-related but non-substantive fragments.",
+      "evidence": [
+        {
+          "file": "bundle/method/frozen_api.py",
+          "source_sha256": "9208af07d8f6b7bf65a62c00e7cdc9ba09276955a1691163d83e42b276930349",
+          "function": "category",
+          "source_preserved_in": "AGGREGATION_AND_CATEGORY_SOURCE_SITES.json"
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "stage": "Counts and annual proportions",
+      "implementation": "D=all valid deduplicated fragments, C=digital flags, S=substantive flags, B=BMODD flags. Current wrapper checks0<=B<=S<=C<=D and category counts. NonBMODD_count=S-B; Exclude_count=D-S. Ratios are B/D,(S-B)/D,S/D for D>0. Original estimator's residual clip(lower=0) is documented, not a license to repair contradictory counts. Missing raw input is a failed execution, not a zero disclosure observation.",
+      "evidence": [
+        {
+          "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+          "source_sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+          "function": "score_one",
+          "line_start": 828,
+          "line_end": 903
+        },
+        {
+          "file": "code/rebuild_current_method.py",
+          "source_sha256": "db797d939967554599ca822b8206bb0343a86b51c327ebb0c1ff83c1446b381c",
+          "function": "score_report",
+          "source_preserved_in": "AGGREGATION_AND_CATEGORY_SOURCE_SITES.json"
+        },
+        {
+          "file": "bundle/method/model_sources/original_estimator.py",
+          "source_sha256": "937cd7f3a3d3a730bda21d01b8cefa68eb6555d6846d6703a8cba321e606b2a5",
+          "function": "load_panel",
+          "line_start": 316,
+          "line_end": 323
+        }
+      ]
+    }
+  ],
+  "codebook_vs_implementation": "Human codebook defines conceptual coding standards; the actual Python implementation uses the exact keyword/regex/metadata/window/order checks catalogued here. Do not claim unimplemented semantic recognition or use coder agreement as classifier accuracy.",
+  "root_constant_inventory": {
+    "total_loaded": 73,
+    "v2_active_compiled_regex": 48,
+    "v4_active_compiled_regex": 16,
+    "loaded_but_unreachable_from_roots": "splitter.LATIN_RE is loaded but the current roots do not reference text_profile; it is not an effective classification trigger."
+  },
+  "all_keyword_and_pattern_contents": "ACTUALLY_LOADED_RULE_DECLARATIONS.json includes exact compiled values/flags and list/dict contents; INLINE_REGEX_CALLS.json covers reachable inline re calls and explicitly marks dynamic expressions; EFFECTIVE_FUNCTIONS_AND_ORDERED_CONDITIONS.json preserves full source and order.",
+  "unknown_or_not_claimed": [
+    "Static reachability is not observed branch firing frequency.",
+    "Source presence of the old splitter classifier/text_profile is not deployment evidence.",
+    "No full classifier or model was executed by either inventory builder.",
+    "The original historical corpus/parser versions are not reconstructed merely by listing rules."
+  ]
+}

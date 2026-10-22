@@ -1,0 +1,1327 @@
+[
+  {
+    "role": "v4",
+    "name": "clean_stale_history",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "source_sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+    "line_start": 160,
+    "line_end": 174,
+    "ast_sha256": "d864f00db98c87164aea755ca68405dd8ed968970bf8ba8a29302d941f6ff38d",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "def clean_stale_history(sentence: str, report_year: int) -> bool:\n    years = [int(value) for value in re.findall(r\"(?:19|20)\\d{2}\", sentence)]\n    short_years = [\n        2000 + int(value)\n        for value in re.findall(r\"(?<!\\d)(\\d{2})\\s*\\ub144(?:\\ub3c4)?\", sentence)\n        if int(value) <= report_year % 100\n    ]\n    years.extend(short_years)\n    if not years or max(years) > report_year - 2:\n        return False\n    current_marker = re.search(\n        r\"\\ud604\\uc7ac|\\ub2f9\\uae30|\\uc9c0\\uc18d\\uc801|\\uc6b4\\uc601\\s*(?:\\uc911|\\ud558\\uace0)|\\uac1c\\ubc1c\\s*\\uc911|\\uacf5\\uae09\\s*\\uc911\",\n        sentence,\n    )\n    return not bool(current_marker)",
+    "kind": "function",
+    "statically_reachable_loaded_calls": [],
+    "referenced_loaded_declarations": [],
+    "other_call_expressions_not_claimed_as_loaded_rules": [
+      "bool",
+      "int",
+      "max",
+      "re.findall",
+      "re.search",
+      "years.extend"
+    ],
+    "ordered_if_conditions": [
+      {
+        "line_start": 168,
+        "line_end": 169,
+        "condition": "not years or max(years) > report_year - 2"
+      }
+    ]
+  },
+  {
+    "role": "v4",
+    "name": "classify_sentence_v4",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "source_sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+    "line_start": 177,
+    "line_end": 239,
+    "ast_sha256": "b51334e04ed91dd2bf6e4f4a76034f4b6e292f467e33b49d6877973c57a0e1d8",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "def classify_sentence_v4(sentence: str, report_year: int, corp_name: str) -> dict[str, Any]:\n    labels = classify_sentence_v2(sentence, report_year, corp_name)\n    compact_sentence = re.sub(r\"\\s+\", \"\", sentence)\n    compact_name = re.sub(r\"\\(\\uc8fc\\)|\\uc8fc\\uc2dd\\ud68c\\uc0ac|\\s\", \"\", str(corp_name or \"\"))\n    focal = bool(CLEAN_FOCAL_RE.search(sentence) or (len(compact_name) >= 2 and compact_name in compact_sentence))\n    active_clean = bool(ACTIVE_CLEAN_RE.search(sentence))\n    high_confidence_action = bool(HIGH_CONFIDENCE_ACTION_RE.search(sentence))\n    implementation_evidence = bool(active_clean and (focal or high_confidence_action))\n    # Forecasts and industry descriptions remain non-substantive even when a\n    # sentence mentions the focal firm, unless it also states a concrete act.\n    market_trend_without_firm = bool(\n        MARKET_TREND_RE.search(sentence)\n        and (not focal or not implementation_evidence)\n    )\n    external_actor_without_firm = bool(\n        (EXTERNAL_ACTOR_RE.search(sentence) or GENERIC_EXTERNAL_ACTOR_RE.search(sentence))\n        and not focal\n    )\n    static_scope = bool(\n        (STATIC_SCOPE_RE.search(sentence) and not implementation_evidence)\n        or (PRODUCT_REFERENCE_RE.search(sentence) and not focal)\n    )\n    segment_list = bool(SEGMENT_LIST_RE.search(sentence))\n    nondigital_platform = bool(\n        NON_DIGITAL_PLATFORM_RE.search(sentence)\n        and not DIGITAL_PLATFORM_QUALIFIER_RE.search(sentence)\n    )\n    missing_implicit_implementation = bool(\n        labels.get(\"substantive_digital_sentence_v2\")\n        and not implementation_evidence\n    )\n    vague_strategy = bool(VAGUE_STRATEGY_RE.search(sentence) and not implementation_evidence)\n    demand_exposure = bool(DIGITAL_DEMAND_EXPOSURE_RE.search(sentence))\n    customer_or_competitor_context = bool(CUSTOMER_OR_COMPETITOR_CONTEXT_RE.search(sentence))\n    former_business = bool(FORMER_BUSINESS_RE.search(sentence))\n    accounting_or_entity_list = bool(CLEAN_ACCOUNTING_OR_ENTITY_LIST_RE.search(sentence))\n    stale_history = clean_stale_history(sentence, int(report_year))\n    veto_substance = bool(\n        market_trend_without_firm or external_actor_without_firm or static_scope or segment_list\n        or nondigital_platform or missing_implicit_implementation or vague_strategy\n        or demand_exposure or customer_or_competitor_context or former_business\n        or accounting_or_entity_list or stale_history\n    )\n    if veto_substance:\n        labels[\"substantive_digital_sentence_v2\"] = 0\n        labels[\"bmi_sentence_v2\"] = 0\n        labels[\"market_signal_sentence_v2\"] = 0\n    if nondigital_platform:\n        labels[\"digital_sentence_v2\"] = 0\n        labels[\"boilerplate_digital_sentence_v2\"] = 0\n    labels[\"v4_market_trend_without_firm\"] = int(market_trend_without_firm)\n    labels[\"v4_external_actor_without_firm\"] = int(external_actor_without_firm)\n    labels[\"v4_static_scope_or_segment\"] = int(static_scope or segment_list)\n    labels[\"v4_nondigital_platform\"] = int(nondigital_platform)\n    labels[\"v4_missing_implicit_implementation\"] = int(missing_implicit_implementation)\n    labels[\"v4_vague_strategy\"] = int(vague_strategy)\n    labels[\"v4_digital_demand_exposure\"] = int(demand_exposure)\n    labels[\"v4_customer_or_competitor_context\"] = int(customer_or_competitor_context)\n    labels[\"v4_former_business\"] = int(former_business)\n    labels[\"v4_accounting_or_entity_list\"] = int(accounting_or_entity_list)\n    labels[\"v4_high_confidence_action\"] = int(high_confidence_action)\n    labels[\"v4_stale_history\"] = int(stale_history)\n    return labels",
+    "kind": "function",
+    "statically_reachable_loaded_calls": [
+      {
+        "role": "v2",
+        "name": "classify_sentence_v2"
+      },
+      {
+        "role": "v4",
+        "name": "clean_stale_history"
+      }
+    ],
+    "referenced_loaded_declarations": [
+      {
+        "role": "v4",
+        "name": "ACTIVE_CLEAN_RE"
+      },
+      {
+        "role": "v4",
+        "name": "CLEAN_ACCOUNTING_OR_ENTITY_LIST_RE"
+      },
+      {
+        "role": "v4",
+        "name": "CLEAN_FOCAL_RE"
+      },
+      {
+        "role": "v4",
+        "name": "CUSTOMER_OR_COMPETITOR_CONTEXT_RE"
+      },
+      {
+        "role": "v4",
+        "name": "DIGITAL_DEMAND_EXPOSURE_RE"
+      },
+      {
+        "role": "v4",
+        "name": "DIGITAL_PLATFORM_QUALIFIER_RE"
+      },
+      {
+        "role": "v4",
+        "name": "EXTERNAL_ACTOR_RE"
+      },
+      {
+        "role": "v4",
+        "name": "FORMER_BUSINESS_RE"
+      },
+      {
+        "role": "v4",
+        "name": "GENERIC_EXTERNAL_ACTOR_RE"
+      },
+      {
+        "role": "v4",
+        "name": "HIGH_CONFIDENCE_ACTION_RE"
+      },
+      {
+        "role": "v4",
+        "name": "MARKET_TREND_RE"
+      },
+      {
+        "role": "v4",
+        "name": "NON_DIGITAL_PLATFORM_RE"
+      },
+      {
+        "role": "v4",
+        "name": "PRODUCT_REFERENCE_RE"
+      },
+      {
+        "role": "v4",
+        "name": "SEGMENT_LIST_RE"
+      },
+      {
+        "role": "v4",
+        "name": "STATIC_SCOPE_RE"
+      },
+      {
+        "role": "v4",
+        "name": "VAGUE_STRATEGY_RE"
+      },
+      {
+        "role": "v4",
+        "name": "clean_stale_history"
+      }
+    ],
+    "other_call_expressions_not_claimed_as_loaded_rules": [
+      "ACTIVE_CLEAN_RE.search",
+      "CLEAN_ACCOUNTING_OR_ENTITY_LIST_RE.search",
+      "CLEAN_FOCAL_RE.search",
+      "CUSTOMER_OR_COMPETITOR_CONTEXT_RE.search",
+      "DIGITAL_DEMAND_EXPOSURE_RE.search",
+      "DIGITAL_PLATFORM_QUALIFIER_RE.search",
+      "EXTERNAL_ACTOR_RE.search",
+      "FORMER_BUSINESS_RE.search",
+      "GENERIC_EXTERNAL_ACTOR_RE.search",
+      "HIGH_CONFIDENCE_ACTION_RE.search",
+      "MARKET_TREND_RE.search",
+      "NON_DIGITAL_PLATFORM_RE.search",
+      "PRODUCT_REFERENCE_RE.search",
+      "SEGMENT_LIST_RE.search",
+      "STATIC_SCOPE_RE.search",
+      "VAGUE_STRATEGY_RE.search",
+      "bool",
+      "int",
+      "labels.get",
+      "len",
+      "re.sub",
+      "str"
+    ],
+    "ordered_if_conditions": [
+      {
+        "line_start": 220,
+        "line_end": 223,
+        "condition": "veto_substance"
+      },
+      {
+        "line_start": 224,
+        "line_end": 226,
+        "condition": "nondigital_platform"
+      }
+    ]
+  },
+  {
+    "role": "v4",
+    "name": "document_to_text",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "source_sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+    "line_start": 568,
+    "line_end": 583,
+    "ast_sha256": "b85f4f6b7113da57595e1b9d681be432b649fb6122d6e81ee6b9639f86a724b7",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "def document_to_text(content: bytes) -> str:\n    if content[:2] != b\"PK\":\n        message = dart_base.parse_open_dart_error(content)\n        raise RuntimeError(message or \"OpenDART document endpoint did not return ZIP\")\n    text_parts: list[str] = []\n    with zipfile.ZipFile(io.BytesIO(content)) as archive:\n        names = [name for name in archive.namelist() if name.lower().endswith((\".xml\", \".html\", \".htm\"))]\n        for name in names:\n            raw = archive.read(name)\n            decoded = dart_base.decode_bytes(raw)\n            root = etree.fromstring(\n                decoded.encode(\"utf-8\", errors=\"replace\"),\n                parser=etree.XMLParser(recover=True, huge_tree=True, encoding=\"utf-8\"),\n            )\n            text_parts.append(\"\\n\".join(part.strip() for part in root.itertext() if part and part.strip()))\n    return \"\\n\".join(text_parts)",
+    "kind": "function",
+    "statically_reachable_loaded_calls": [
+      {
+        "role": "decoder",
+        "name": "decode_bytes"
+      },
+      {
+        "role": "decoder",
+        "name": "parse_open_dart_error"
+      }
+    ],
+    "referenced_loaded_declarations": [],
+    "other_call_expressions_not_claimed_as_loaded_rules": [
+      "'\\n'.join",
+      "RuntimeError",
+      "archive.namelist",
+      "archive.read",
+      "decoded.encode",
+      "etree.XMLParser",
+      "etree.fromstring",
+      "io.BytesIO",
+      "name.lower",
+      "name.lower().endswith",
+      "part.strip",
+      "root.itertext",
+      "text_parts.append",
+      "zipfile.ZipFile"
+    ],
+    "ordered_if_conditions": [
+      {
+        "line_start": 569,
+        "line_end": 571,
+        "condition": "content[:2] != b\"PK\""
+      }
+    ]
+  },
+  {
+    "role": "v4",
+    "name": "score_one",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "source_sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+    "line_start": 828,
+    "line_end": 903,
+    "ast_sha256": "d8d56dbecfc9bd863d7563a92b84e2cb813eecbd034d7aa3fae8e85c6692680a",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "def score_one(task: dict[str, Any]) -> tuple[dict[str, Any], list[dict[str, Any]]]:\n    text_path = Path(str(task.get(\"text_cache_path\") or \"\"))\n    counts = {\n        \"digital_sentence_count\": 0,\n        \"substantive_digital_sentence_count\": 0,\n        \"bmi_sentence_count\": 0,\n        \"market_signal_sentence_count\": 0,\n        \"boilerplate_digital_sentence_count\": 0,\n    }\n    if not text_path.exists():\n        return {**task, **counts, \"total_sentences\": 0, \"score_status\": \"missing_text\"}, []\n    text = text_path.read_text(encoding=\"utf-8\", errors=\"replace\")\n    raw_sentences = korean_base.split_korean_sentences(text)\n    seen: set[str] = set()\n    sentences: list[str] = []\n    for sentence in raw_sentences:\n        key = \"\".join(sentence.lower().split())\n        if key and key not in seen:\n            seen.add(key)\n            sentences.append(sentence)\n    examples: list[dict[str, Any]] = []\n    report_year = int(task[\"year\"])\n    for sentence_id, sentence in enumerate(sentences, start=1):\n        labels = classify_sentence_v4(sentence, report_year, str(task.get(\"corp_name\") or \"\"))\n        digital = int(labels[\"digital_sentence_v2\"])\n        substantive = int(labels[\"substantive_digital_sentence_v2\"])\n        bmi = int(labels[\"bmi_sentence_v2\"])\n        market_signal = int(labels[\"market_signal_sentence_v2\"])\n        boilerplate = int(labels[\"boilerplate_digital_sentence_v2\"])\n        counts[\"digital_sentence_count\"] += digital\n        counts[\"substantive_digital_sentence_count\"] += substantive\n        counts[\"bmi_sentence_count\"] += bmi\n        counts[\"market_signal_sentence_count\"] += market_signal\n        counts[\"boilerplate_digital_sentence_count\"] += boilerplate\n        if digital:\n            examples.append({\n                \"corp_code\": task[\"corp_code\"], \"corp_name\": task[\"corp_name\"],\n                \"stock_code\": task[\"stock_code\"], \"market\": task[\"market\"],\n                \"year\": report_year, \"rcept_no\": task[\"rcept_no\"],\n                \"sentence_id\": sentence_id,\n                \"priority\": substantive * 100 + bmi * 30 + market_signal * 10 - boilerplate * 50,\n                \"sentence\": sentence[:3000], \"digital_sentence\": digital,\n                \"substantive_digital_sentence\": substantive, \"bmi_sentence\": bmi,\n                \"market_signal_sentence\": market_signal,\n                \"boilerplate_digital_sentence\": boilerplate,\n                \"v2_accounting_noise\": labels.get(\"v2_accounting_noise\", 0),\n                \"v2_name_collision\": labels.get(\"v2_name_collision\", 0),\n                \"v2_stale_history\": labels.get(\"v2_stale_history\", 0),\n                \"v2_generic_context\": labels.get(\"v2_generic_context\", 0),\n                \"v4_market_trend_without_firm\": labels.get(\"v4_market_trend_without_firm\", 0),\n                \"v4_external_actor_without_firm\": labels.get(\"v4_external_actor_without_firm\", 0),\n                \"v4_static_scope_or_segment\": labels.get(\"v4_static_scope_or_segment\", 0),\n                \"v4_nondigital_platform\": labels.get(\"v4_nondigital_platform\", 0),\n                \"v4_missing_implicit_implementation\": labels.get(\"v4_missing_implicit_implementation\", 0),\n                \"v4_vague_strategy\": labels.get(\"v4_vague_strategy\", 0),\n                \"v4_digital_demand_exposure\": labels.get(\"v4_digital_demand_exposure\", 0),\n                \"v4_customer_or_competitor_context\": labels.get(\"v4_customer_or_competitor_context\", 0),\n                \"v4_former_business\": labels.get(\"v4_former_business\", 0),\n                \"v4_accounting_or_entity_list\": labels.get(\"v4_accounting_or_entity_list\", 0),\n                \"v4_high_confidence_action\": labels.get(\"v4_high_confidence_action\", 0),\n                \"v4_stale_history\": labels.get(\"v4_stale_history\", 0),\n            })\n    examples.sort(key=lambda row: (-row[\"priority\"], row[\"sentence_id\"]))\n    examples = examples[:20]\n    for rank, row in enumerate(examples, start=1):\n        row[\"sentence_rank\"] = rank\n    denominator = len(sentences)\n    scores = {\n        **task, **counts, \"total_sentences\": denominator, \"score_status\": \"ok\",\n        \"DigitalStrategy\": counts[\"substantive_digital_sentence_count\"] / denominator if denominator else None,\n        \"BMI_Reconstruction\": counts[\"bmi_sentence_count\"] / denominator if denominator else None,\n        \"MarketSignalDisclosure\": counts[\"market_signal_sentence_count\"] / denominator if denominator else None,\n        \"BoilerplateDisclosure\": counts[\"boilerplate_digital_sentence_count\"] / denominator if denominator else None,\n        \"classifier_version\": \"korean_contextual_v4_final_action_attribution_2026-08-15\",\n    }\n    return scores, examples",
+    "kind": "function",
+    "statically_reachable_loaded_calls": [
+      {
+        "role": "splitter",
+        "name": "split_korean_sentences"
+      },
+      {
+        "role": "v4",
+        "name": "classify_sentence_v4"
+      }
+    ],
+    "referenced_loaded_declarations": [
+      {
+        "role": "v4",
+        "name": "classify_sentence_v4"
+      }
+    ],
+    "other_call_expressions_not_claimed_as_loaded_rules": [
+      "''.join",
+      "Path",
+      "enumerate",
+      "examples.append",
+      "examples.sort",
+      "int",
+      "labels.get",
+      "len",
+      "seen.add",
+      "sentence.lower",
+      "sentence.lower().split",
+      "sentences.append",
+      "set",
+      "str",
+      "task.get",
+      "text_path.exists",
+      "text_path.read_text"
+    ],
+    "ordered_if_conditions": [
+      {
+        "line_start": 837,
+        "line_end": 838,
+        "condition": "not text_path.exists()"
+      },
+      {
+        "line_start": 845,
+        "line_end": 847,
+        "condition": "key and key not in seen"
+      },
+      {
+        "line_start": 862,
+        "line_end": 889,
+        "condition": "digital"
+      }
+    ]
+  },
+  {
+    "role": "v2",
+    "name": "rx",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 22,
+    "line_end": 23,
+    "ast_sha256": "f479dc27cf55fc8c9493aa630b797da8a3cd3405294e30136fd8ad5552cc2f85",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "def rx(pattern: str) -> re.Pattern[str]:\n    return re.compile(pattern, flags=re.IGNORECASE)",
+    "kind": "function",
+    "statically_reachable_loaded_calls": [],
+    "referenced_loaded_declarations": [],
+    "other_call_expressions_not_claimed_as_loaded_rules": [
+      "re.compile"
+    ],
+    "ordered_if_conditions": []
+  },
+  {
+    "role": "v2",
+    "name": "stale_historical",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 258,
+    "line_end": 265,
+    "ast_sha256": "6164d02b80cf810ed497141ee6daa5a493a4e676c1c11347c2f050ce94390438",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "def stale_historical(sentence: str, report_year: int | None) -> bool:\n    if not report_year:\n        return False\n    years = [int(value) for value in re.findall(r\"(?:19|20)\\d{2}\", sentence)]\n    if not years:\n        return False\n    current_language = CURRENT_LANGUAGE_RE.search(sentence)\n    return max(years) <= report_year - 2 and not current_language",
+    "kind": "function",
+    "statically_reachable_loaded_calls": [],
+    "referenced_loaded_declarations": [
+      {
+        "role": "v2",
+        "name": "CURRENT_LANGUAGE_RE"
+      }
+    ],
+    "other_call_expressions_not_claimed_as_loaded_rules": [
+      "CURRENT_LANGUAGE_RE.search",
+      "int",
+      "max",
+      "re.findall"
+    ],
+    "ordered_if_conditions": [
+      {
+        "line_start": 259,
+        "line_end": 260,
+        "condition": "not report_year"
+      },
+      {
+        "line_start": 262,
+        "line_end": 263,
+        "condition": "not years"
+      }
+    ]
+  },
+  {
+    "role": "v2",
+    "name": "stale_chronology",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 268,
+    "line_end": 276,
+    "ast_sha256": "036395159cfcf2016c0abbe291fba4963024783442529a4d686597676bcf2246",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "def stale_chronology(sentence: str, report_year: int | None) -> bool:\n    if not CHRONOLOGY_RE.search(sentence):\n        return False\n    years = [int(value) for value in re.findall(r\"(?:19|20)\\d{2}\", sentence)]\n    if not years:\n        return True\n    if not report_year:\n        return False\n    return max(years) < report_year",
+    "kind": "function",
+    "statically_reachable_loaded_calls": [],
+    "referenced_loaded_declarations": [
+      {
+        "role": "v2",
+        "name": "CHRONOLOGY_RE"
+      }
+    ],
+    "other_call_expressions_not_claimed_as_loaded_rules": [
+      "CHRONOLOGY_RE.search",
+      "int",
+      "max",
+      "re.findall"
+    ],
+    "ordered_if_conditions": [
+      {
+        "line_start": 269,
+        "line_end": 270,
+        "condition": "not CHRONOLOGY_RE.search(sentence)"
+      },
+      {
+        "line_start": 272,
+        "line_end": 273,
+        "condition": "not years"
+      },
+      {
+        "line_start": 274,
+        "line_end": 275,
+        "condition": "not report_year"
+      }
+    ]
+  },
+  {
+    "role": "v2",
+    "name": "platform_is_digital",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 279,
+    "line_end": 282,
+    "ast_sha256": "2bcdff25d251f48d48702a572523275701beae3ee5305be2cedbe72cd853c879",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "def platform_is_digital(sentence: str) -> bool:\n    if not PLATFORM_RE.search(sentence) or NON_DIGITAL_COLLISION_RE.search(sentence):\n        return False\n    return bool(PLATFORM_QUALIFIER_RE.search(sentence))",
+    "kind": "function",
+    "statically_reachable_loaded_calls": [],
+    "referenced_loaded_declarations": [
+      {
+        "role": "v2",
+        "name": "NON_DIGITAL_COLLISION_RE"
+      },
+      {
+        "role": "v2",
+        "name": "PLATFORM_QUALIFIER_RE"
+      },
+      {
+        "role": "v2",
+        "name": "PLATFORM_RE"
+      }
+    ],
+    "other_call_expressions_not_claimed_as_loaded_rules": [
+      "NON_DIGITAL_COLLISION_RE.search",
+      "PLATFORM_QUALIFIER_RE.search",
+      "PLATFORM_RE.search",
+      "bool"
+    ],
+    "ordered_if_conditions": [
+      {
+        "line_start": 280,
+        "line_end": 281,
+        "condition": "not PLATFORM_RE.search(sentence) or NON_DIGITAL_COLLISION_RE.search(sentence)"
+      }
+    ]
+  },
+  {
+    "role": "v2",
+    "name": "normalized_company_tokens",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 285,
+    "line_end": 292,
+    "ast_sha256": "f791e7c2c14fad2ecc774c1b384a87c3efbace6c7c3d9517a05de96ef3b37e31",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "def normalized_company_tokens(corp_name: str | None) -> list[str]:\n    if not corp_name:\n        return []\n    cleaned = re.sub(r\"[()（）㈜주식회사\\s]\", \"\", str(corp_name))\n    tokens = [cleaned]\n    if cleaned.endswith(\"홀딩스\"):\n        tokens.append(cleaned.removesuffix(\"홀딩스\"))\n    return [token for token in tokens if len(token) >= 2]",
+    "kind": "function",
+    "statically_reachable_loaded_calls": [],
+    "referenced_loaded_declarations": [],
+    "other_call_expressions_not_claimed_as_loaded_rules": [
+      "cleaned.endswith",
+      "cleaned.removesuffix",
+      "len",
+      "re.sub",
+      "str",
+      "tokens.append"
+    ],
+    "ordered_if_conditions": [
+      {
+        "line_start": 286,
+        "line_end": 287,
+        "condition": "not corp_name"
+      },
+      {
+        "line_start": 290,
+        "line_end": 291,
+        "condition": "cleaned.endswith(\"홀딩스\")"
+      }
+    ]
+  },
+  {
+    "role": "v2",
+    "name": "classify_sentence_v2",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 295,
+    "line_end": 473,
+    "ast_sha256": "14b7d96e92fead8235767d12fb2c0bd878ddb6b9d9ca88857cddaec5606256cb",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "def classify_sentence_v2(\n    sentence: str,\n    report_year: int | None = None,\n    corp_name: str | None = None,\n) -> Dict[str, Any]:\n    sentence = \" \".join(str(sentence).split())\n    accounting = bool(ACCOUNTING_RE.search(sentence))\n    entity_name = bool(ENTITY_OR_NAME_RE.search(sentence))\n    collision = bool(NON_DIGITAL_COLLISION_RE.search(sentence))\n    financial_entity = bool(FINANCIAL_ENTITY_RE.search(sentence))\n    negated = bool(NEGATION_RE.search(sentence))\n    business_purpose = bool(BUSINESS_PURPOSE_RE.search(sentence))\n    board_list = bool(BOARD_LIST_RE.search(sentence))\n    generic_context = bool(GENERIC_CONTEXT_RE.search(sentence))\n    company_tokens = normalized_company_tokens(corp_name)\n    focal_name_present = any(token in re.sub(r\"\\s+\", \"\", sentence) for token in company_tokens)\n    focal_firm = bool(FOCAL_FIRM_RE.search(sentence) or focal_name_present)\n    explicit_focal_language = bool(EXPLICIT_FOCAL_RE.search(sentence))\n    explicit_focal = bool(explicit_focal_language or focal_name_present)\n    external_company_context = bool(EXTERNAL_COMPANY_RE.search(sentence) and not explicit_focal)\n\n    strong_digital = bool(STRONG_DIGITAL_RE.search(sentence))\n    online_digital = bool(ONLINE_DIGITAL_RE.search(sentence))\n    automation = bool(AUTOMATION_RE.search(sentence))\n    data_operation = bool(DATA_OPERATION_RE.search(sentence))\n    platform_digital = platform_is_digital(sentence)\n    software = bool(SOFTWARE_RE.search(sentence))\n    fourth_ir = bool(FOURTH_IR_RE.search(sentence))\n\n    accounting_exception = bool(ACCOUNTING_EXCEPTION_RE.search(sentence))\n    name_only = entity_name and not (IMPLEMENTED_RE.search(sentence) and not accounting)\n    personnel_bio = bool(PERSONNEL_BIO_RE.search(sentence))\n    hard_non_digital = (\n        (accounting and not accounting_exception)\n        or collision\n        or financial_entity\n        or negated\n        or name_only\n        or personnel_bio\n    )\n    technology_specific = strong_digital or online_digital or automation or data_operation or platform_digital\n    software_specific = software and bool(SOFTWARE_SPECIFIC_RE.search(sentence))\n    digital_relevance = technology_specific or software_specific or fourth_ir\n    strategy_relevance = technology_specific or software_specific\n    if hard_non_digital:\n        digital_relevance = False\n        strategy_relevance = False\n\n    action = bool(ACTION_RE.search(sentence))\n    implemented = bool(IMPLEMENTED_RE.search(sentence))\n    stale = stale_historical(sentence, report_year) or stale_chronology(sentence, report_year)\n    static_equipment_description = bool(\n        STATIC_EQUIPMENT_RE.search(sentence) and not AUTOMATION_CHANGE_RE.search(sentence)\n    )\n    active_operation = bool(ACTIVE_OPERATION_RE.search(sentence))\n    action = bool(action or implemented or active_operation)\n    implemented = bool(implemented or active_operation)\n    list_like_scope = bool(\n        (BUSINESS_LIST_RE.search(sentence) and not active_operation)\n        or SCOPE_ENUM_RE.search(sentence)\n    )\n\n    named_company = bool(NAMED_COMPANY_RE.search(sentence))\n    attributable = (\n        focal_firm\n        or named_company\n        or implemented\n        or bool(ATTRIBUTION_RE.search(sentence))\n        or bool(OWNED_STRATEGY_RE.search(sentence))\n        or (action and not generic_context)\n    )\n    if generic_context and not (\n        explicit_focal_language\n        or OWNED_STRATEGY_RE.search(sentence)\n        or (\n            focal_name_present\n            and (\n                implemented\n                or FOCAL_GENERIC_ACTION_RE.search(sentence)\n            )\n        )\n    ):\n        attributable = False\n\n    # Fourth-industrial-revolution rhetoric is disclosure, not evidence of a\n    # digital strategy unless a concrete technology or software is also named.\n    substantive = bool(strategy_relevance and action and attributable)\n    if stale or list_like_scope:\n        substantive = False\n    if static_equipment_description or EQUIPMENT_LIST_RE.search(sentence):\n        substantive = False\n    if external_company_context:\n        substantive = False\n    if business_purpose and not BUSINESS_IMPLEMENTATION_RE.search(sentence):\n        substantive = False\n    if INTENT_ADD_RE.search(sentence):\n        substantive = False\n    if board_list and not BOARD_ACTION_RE.search(sentence):\n        substantive = False\n    if VAGUE_FIRM_CLAIM_RE.search(sentence):\n        substantive = False\n\n    # A specific implementation plan counts as strategy; a charter-only intention does not.\n    specific_plan = bool(\n        strategy_relevance\n        and PLAN_RE.search(sentence)\n        and focal_firm\n        and IMPLEMENTED_RE.search(sentence)\n        and not business_purpose\n        and not generic_context\n        and not hard_non_digital\n        and not VAGUE_FIRM_CLAIM_RE.search(sentence)\n    )\n    if specific_plan and not stale:\n        substantive = True\n\n    bmi = bool(\n        substantive\n        and (\n            DIRECT_BMI_RE.search(sentence)\n            or\n            (BMI_RE.search(sentence) and CUSTOMER_OR_REVENUE_RE.search(sentence))\n            or SMART_PRODUCT_RE.search(sentence)\n            or (\n                platform_digital\n                and PLATFORM_VALUE_RE.search(sentence)\n            )\n        )\n    )\n\n    firm_signal = bool(\n        digital_relevance\n        and focal_firm\n        and not business_purpose\n        and (PLAN_RE.search(sentence) or GENERIC_HYPE_RE.search(sentence))\n        and not accounting\n        and not negated\n    )\n    implemented_business_signal = bool(\n        digital_relevance\n        and business_purpose\n        and BUSINESS_IMPLEMENTATION_RE.search(sentence)\n        and not negated\n    )\n    concrete_intent_signal = bool(\n        digital_relevance\n        and business_purpose\n        and focal_firm\n        and CONCRETE_INTENT_RE.search(sentence)\n        and not negated\n    )\n    market_signal = bool(\n        substantive or firm_signal or implemented_business_signal or concrete_intent_signal\n    )\n\n    generic_hype = bool(digital_relevance and GENERIC_HYPE_RE.search(sentence) and not substantive)\n    firm_hype = bool(firm_signal and not substantive and not business_purpose)\n    boilerplate = bool(generic_hype or firm_hype)\n\n    digital_sentence = bool(digital_relevance)\n    if business_purpose and (strong_digital or online_digital or platform_digital):\n        digital_sentence = True\n    if fourth_ir:\n        digital_sentence = True\n\n    return {\n        \"digital_sentence_v2\": int(digital_sentence),\n        \"substantive_digital_sentence_v2\": int(substantive),\n        \"bmi_sentence_v2\": int(bmi),\n        \"market_signal_sentence_v2\": int(market_signal),\n        \"boilerplate_digital_sentence_v2\": int(boilerplate),\n        \"v2_accounting_noise\": int(accounting),\n        \"v2_name_collision\": int(name_only or collision),\n        \"v2_stale_history\": int(stale),\n        \"v2_business_purpose\": int(business_purpose),\n        \"v2_generic_context\": int(generic_context),\n        \"v2_specific_plan\": int(specific_plan),\n        \"v2_external_company_context\": int(external_company_context),\n    }",
+    "kind": "function",
+    "statically_reachable_loaded_calls": [
+      {
+        "role": "v2",
+        "name": "normalized_company_tokens"
+      },
+      {
+        "role": "v2",
+        "name": "platform_is_digital"
+      },
+      {
+        "role": "v2",
+        "name": "stale_chronology"
+      },
+      {
+        "role": "v2",
+        "name": "stale_historical"
+      }
+    ],
+    "referenced_loaded_declarations": [
+      {
+        "role": "v2",
+        "name": "ACCOUNTING_EXCEPTION_RE"
+      },
+      {
+        "role": "v2",
+        "name": "ACCOUNTING_RE"
+      },
+      {
+        "role": "v2",
+        "name": "ACTION_RE"
+      },
+      {
+        "role": "v2",
+        "name": "ACTIVE_OPERATION_RE"
+      },
+      {
+        "role": "v2",
+        "name": "ATTRIBUTION_RE"
+      },
+      {
+        "role": "v2",
+        "name": "AUTOMATION_CHANGE_RE"
+      },
+      {
+        "role": "v2",
+        "name": "AUTOMATION_RE"
+      },
+      {
+        "role": "v2",
+        "name": "BMI_RE"
+      },
+      {
+        "role": "v2",
+        "name": "BOARD_ACTION_RE"
+      },
+      {
+        "role": "v2",
+        "name": "BOARD_LIST_RE"
+      },
+      {
+        "role": "v2",
+        "name": "BUSINESS_IMPLEMENTATION_RE"
+      },
+      {
+        "role": "v2",
+        "name": "BUSINESS_LIST_RE"
+      },
+      {
+        "role": "v2",
+        "name": "BUSINESS_PURPOSE_RE"
+      },
+      {
+        "role": "v2",
+        "name": "CONCRETE_INTENT_RE"
+      },
+      {
+        "role": "v2",
+        "name": "CUSTOMER_OR_REVENUE_RE"
+      },
+      {
+        "role": "v2",
+        "name": "DATA_OPERATION_RE"
+      },
+      {
+        "role": "v2",
+        "name": "DIRECT_BMI_RE"
+      },
+      {
+        "role": "v2",
+        "name": "ENTITY_OR_NAME_RE"
+      },
+      {
+        "role": "v2",
+        "name": "EQUIPMENT_LIST_RE"
+      },
+      {
+        "role": "v2",
+        "name": "EXPLICIT_FOCAL_RE"
+      },
+      {
+        "role": "v2",
+        "name": "EXTERNAL_COMPANY_RE"
+      },
+      {
+        "role": "v2",
+        "name": "FINANCIAL_ENTITY_RE"
+      },
+      {
+        "role": "v2",
+        "name": "FOCAL_FIRM_RE"
+      },
+      {
+        "role": "v2",
+        "name": "FOCAL_GENERIC_ACTION_RE"
+      },
+      {
+        "role": "v2",
+        "name": "FOURTH_IR_RE"
+      },
+      {
+        "role": "v2",
+        "name": "GENERIC_CONTEXT_RE"
+      },
+      {
+        "role": "v2",
+        "name": "GENERIC_HYPE_RE"
+      },
+      {
+        "role": "v2",
+        "name": "IMPLEMENTED_RE"
+      },
+      {
+        "role": "v2",
+        "name": "INTENT_ADD_RE"
+      },
+      {
+        "role": "v2",
+        "name": "NAMED_COMPANY_RE"
+      },
+      {
+        "role": "v2",
+        "name": "NEGATION_RE"
+      },
+      {
+        "role": "v2",
+        "name": "NON_DIGITAL_COLLISION_RE"
+      },
+      {
+        "role": "v2",
+        "name": "ONLINE_DIGITAL_RE"
+      },
+      {
+        "role": "v2",
+        "name": "OWNED_STRATEGY_RE"
+      },
+      {
+        "role": "v2",
+        "name": "PERSONNEL_BIO_RE"
+      },
+      {
+        "role": "v2",
+        "name": "PLAN_RE"
+      },
+      {
+        "role": "v2",
+        "name": "PLATFORM_VALUE_RE"
+      },
+      {
+        "role": "v2",
+        "name": "SCOPE_ENUM_RE"
+      },
+      {
+        "role": "v2",
+        "name": "SMART_PRODUCT_RE"
+      },
+      {
+        "role": "v2",
+        "name": "SOFTWARE_RE"
+      },
+      {
+        "role": "v2",
+        "name": "SOFTWARE_SPECIFIC_RE"
+      },
+      {
+        "role": "v2",
+        "name": "STATIC_EQUIPMENT_RE"
+      },
+      {
+        "role": "v2",
+        "name": "STRONG_DIGITAL_RE"
+      },
+      {
+        "role": "v2",
+        "name": "VAGUE_FIRM_CLAIM_RE"
+      },
+      {
+        "role": "v2",
+        "name": "normalized_company_tokens"
+      },
+      {
+        "role": "v2",
+        "name": "platform_is_digital"
+      },
+      {
+        "role": "v2",
+        "name": "stale_chronology"
+      },
+      {
+        "role": "v2",
+        "name": "stale_historical"
+      }
+    ],
+    "other_call_expressions_not_claimed_as_loaded_rules": [
+      "' '.join",
+      "ACCOUNTING_EXCEPTION_RE.search",
+      "ACCOUNTING_RE.search",
+      "ACTION_RE.search",
+      "ACTIVE_OPERATION_RE.search",
+      "ATTRIBUTION_RE.search",
+      "AUTOMATION_CHANGE_RE.search",
+      "AUTOMATION_RE.search",
+      "BMI_RE.search",
+      "BOARD_ACTION_RE.search",
+      "BOARD_LIST_RE.search",
+      "BUSINESS_IMPLEMENTATION_RE.search",
+      "BUSINESS_LIST_RE.search",
+      "BUSINESS_PURPOSE_RE.search",
+      "CONCRETE_INTENT_RE.search",
+      "CUSTOMER_OR_REVENUE_RE.search",
+      "DATA_OPERATION_RE.search",
+      "DIRECT_BMI_RE.search",
+      "ENTITY_OR_NAME_RE.search",
+      "EQUIPMENT_LIST_RE.search",
+      "EXPLICIT_FOCAL_RE.search",
+      "EXTERNAL_COMPANY_RE.search",
+      "FINANCIAL_ENTITY_RE.search",
+      "FOCAL_FIRM_RE.search",
+      "FOCAL_GENERIC_ACTION_RE.search",
+      "FOURTH_IR_RE.search",
+      "GENERIC_CONTEXT_RE.search",
+      "GENERIC_HYPE_RE.search",
+      "IMPLEMENTED_RE.search",
+      "INTENT_ADD_RE.search",
+      "NAMED_COMPANY_RE.search",
+      "NEGATION_RE.search",
+      "NON_DIGITAL_COLLISION_RE.search",
+      "ONLINE_DIGITAL_RE.search",
+      "OWNED_STRATEGY_RE.search",
+      "PERSONNEL_BIO_RE.search",
+      "PLAN_RE.search",
+      "PLATFORM_VALUE_RE.search",
+      "SCOPE_ENUM_RE.search",
+      "SMART_PRODUCT_RE.search",
+      "SOFTWARE_RE.search",
+      "SOFTWARE_SPECIFIC_RE.search",
+      "STATIC_EQUIPMENT_RE.search",
+      "STRONG_DIGITAL_RE.search",
+      "VAGUE_FIRM_CLAIM_RE.search",
+      "any",
+      "bool",
+      "int",
+      "re.sub",
+      "str",
+      "str(sentence).split"
+    ],
+    "ordered_if_conditions": [
+      {
+        "line_start": 339,
+        "line_end": 341,
+        "condition": "hard_non_digital"
+      },
+      {
+        "line_start": 366,
+        "line_end": 377,
+        "condition": "generic_context and not (\n        explicit_focal_language\n        or OWNED_STRATEGY_RE.search(sentence)\n        or (\n            focal_name_present\n            and (\n                implemented\n                or FOCAL_GENERIC_ACTION_RE.search(sentence)\n            )\n        )\n    )"
+      },
+      {
+        "line_start": 382,
+        "line_end": 383,
+        "condition": "stale or list_like_scope"
+      },
+      {
+        "line_start": 384,
+        "line_end": 385,
+        "condition": "static_equipment_description or EQUIPMENT_LIST_RE.search(sentence)"
+      },
+      {
+        "line_start": 386,
+        "line_end": 387,
+        "condition": "external_company_context"
+      },
+      {
+        "line_start": 388,
+        "line_end": 389,
+        "condition": "business_purpose and not BUSINESS_IMPLEMENTATION_RE.search(sentence)"
+      },
+      {
+        "line_start": 390,
+        "line_end": 391,
+        "condition": "INTENT_ADD_RE.search(sentence)"
+      },
+      {
+        "line_start": 392,
+        "line_end": 393,
+        "condition": "board_list and not BOARD_ACTION_RE.search(sentence)"
+      },
+      {
+        "line_start": 394,
+        "line_end": 395,
+        "condition": "VAGUE_FIRM_CLAIM_RE.search(sentence)"
+      },
+      {
+        "line_start": 408,
+        "line_end": 409,
+        "condition": "specific_plan and not stale"
+      },
+      {
+        "line_start": 455,
+        "line_end": 456,
+        "condition": "business_purpose and (strong_digital or online_digital or platform_digital)"
+      },
+      {
+        "line_start": 457,
+        "line_end": 458,
+        "condition": "fourth_ir"
+      }
+    ]
+  },
+  {
+    "role": "splitter",
+    "name": "compile_terms",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "source_sha256": "5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0",
+    "line_start": 294,
+    "line_end": 303,
+    "ast_sha256": "a6cf25a10685a7f32b673d72e3e064ede3d0765b70e7a95309b82f4a5339899f",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "def compile_terms(terms: Sequence[str]) -> Dict[str, re.Pattern[str]]:\n    patterns: Dict[str, re.Pattern[str]] = {}\n    for term in terms:\n        escaped = re.escape(term).replace(r\"\\ \", r\"\\s*\")\n        if re.fullmatch(r\"[A-Za-z0-9&.+-]+\", term):\n            pattern = rf\"(?<![A-Za-z0-9]){escaped}(?![A-Za-z0-9])\"\n        else:\n            pattern = escaped\n        patterns[term] = re.compile(pattern, flags=re.IGNORECASE)\n    return patterns",
+    "kind": "function",
+    "statically_reachable_loaded_calls": [],
+    "referenced_loaded_declarations": [],
+    "other_call_expressions_not_claimed_as_loaded_rules": [
+      "re.compile",
+      "re.escape",
+      "re.escape(term).replace",
+      "re.fullmatch"
+    ],
+    "ordered_if_conditions": [
+      {
+        "line_start": 298,
+        "line_end": 301,
+        "condition": "re.fullmatch(r\"[A-Za-z0-9&.+-]+\", term)"
+      }
+    ]
+  },
+  {
+    "role": "splitter",
+    "name": "normalize_text",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "source_sha256": "5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0",
+    "line_start": 366,
+    "line_end": 372,
+    "ast_sha256": "2f4b14fef7eb81788e00e31d19a95cd291755dca09dde81b645407c2b25a33ec",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "def normalize_text(text: str) -> str:\n    text = html.unescape(text or \"\")\n    text = text.replace(\"&cr;\", \"\\n\").replace(\"&#13;\", \"\\n\")\n    text = text.replace(\"\\xa0\", \" \")\n    text = re.sub(r\"[ \\t\\r\\f\\v]+\", \" \", text)\n    text = re.sub(r\"\\n\\s*\\n+\", \"\\n\", text)\n    return text.strip()",
+    "kind": "function",
+    "statically_reachable_loaded_calls": [],
+    "referenced_loaded_declarations": [],
+    "other_call_expressions_not_claimed_as_loaded_rules": [
+      "html.unescape",
+      "re.sub",
+      "text.replace",
+      "text.replace('&cr;', '\\n').replace",
+      "text.strip"
+    ],
+    "ordered_if_conditions": []
+  },
+  {
+    "role": "splitter",
+    "name": "clean_segment",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "source_sha256": "5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0",
+    "line_start": 375,
+    "line_end": 379,
+    "ast_sha256": "20352f54797613a12c631fbd7518fc9bb50a01cf28bfea6e8e83dc0efc1d34f2",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "def clean_segment(segment: str) -> str:\n    segment = normalize_text(segment)\n    segment = re.sub(r\"[◆◇●■□▶▷※]+\", \" \", segment)\n    segment = re.sub(r\"\\s+\", \" \", segment)\n    return segment.strip(\" \\t\\r\\n-;:·ㆍ\")",
+    "kind": "function",
+    "statically_reachable_loaded_calls": [
+      {
+        "role": "splitter",
+        "name": "normalize_text"
+      }
+    ],
+    "referenced_loaded_declarations": [
+      {
+        "role": "splitter",
+        "name": "normalize_text"
+      }
+    ],
+    "other_call_expressions_not_claimed_as_loaded_rules": [
+      "re.sub",
+      "segment.strip"
+    ],
+    "ordered_if_conditions": []
+  },
+  {
+    "role": "splitter",
+    "name": "match_terms",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "source_sha256": "5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0",
+    "line_start": 404,
+    "line_end": 405,
+    "ast_sha256": "faafb38c859e5decaac8d124b1ccb4b8099645bee5a3e484ddbac05953bbbd44",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "def match_terms(text: str, patterns: Dict[str, re.Pattern[str]]) -> List[str]:\n    return [term for term, pattern in patterns.items() if pattern.search(text)]",
+    "kind": "function",
+    "statically_reachable_loaded_calls": [],
+    "referenced_loaded_declarations": [],
+    "other_call_expressions_not_claimed_as_loaded_rules": [
+      "pattern.search",
+      "patterns.items"
+    ],
+    "ordered_if_conditions": []
+  },
+  {
+    "role": "splitter",
+    "name": "is_table_noise",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "source_sha256": "5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0",
+    "line_start": 408,
+    "line_end": 426,
+    "ast_sha256": "43184e3552153659d25e33e15207f73eff154c4a901abcd7af69e506e805134d",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "def is_table_noise(segment: str) -> bool:\n    if any(pattern.search(segment) for pattern in TABLE_NOISE_REGEX):\n        return True\n    if \"-----------\" in segment or \"========\" in segment:\n        return True\n    if segment.count(\"|\") >= 2 or segment.count(\"\\t\") >= 2:\n        return True\n    digit_count = len(re.findall(r\"\\d\", segment))\n    if len(segment) and digit_count / len(segment) > 0.35:\n        return True\n    comma_count = segment.count(\",\")\n    tokens = KOREAN_TOKEN_RE.findall(segment)\n    if tokens and comma_count / len(tokens) > 0.35:\n        return True\n    if len(tokens) >= 8:\n        numeric_tokens = [token for token in tokens if re.fullmatch(r\"[\\d,./()%+-]+\", token)]\n        if len(numeric_tokens) / len(tokens) > 0.35:\n            return True\n    return False",
+    "kind": "function",
+    "statically_reachable_loaded_calls": [],
+    "referenced_loaded_declarations": [
+      {
+        "role": "splitter",
+        "name": "KOREAN_TOKEN_RE"
+      },
+      {
+        "role": "splitter",
+        "name": "TABLE_NOISE_REGEX"
+      }
+    ],
+    "other_call_expressions_not_claimed_as_loaded_rules": [
+      "KOREAN_TOKEN_RE.findall",
+      "any",
+      "len",
+      "pattern.search",
+      "re.findall",
+      "re.fullmatch",
+      "segment.count"
+    ],
+    "ordered_if_conditions": [
+      {
+        "line_start": 409,
+        "line_end": 410,
+        "condition": "any(pattern.search(segment) for pattern in TABLE_NOISE_REGEX)"
+      },
+      {
+        "line_start": 411,
+        "line_end": 412,
+        "condition": "\"-----------\" in segment or \"========\" in segment"
+      },
+      {
+        "line_start": 413,
+        "line_end": 414,
+        "condition": "segment.count(\"|\") >= 2 or segment.count(\"\\t\") >= 2"
+      },
+      {
+        "line_start": 416,
+        "line_end": 417,
+        "condition": "len(segment) and digit_count / len(segment) > 0.35"
+      },
+      {
+        "line_start": 420,
+        "line_end": 421,
+        "condition": "tokens and comma_count / len(tokens) > 0.35"
+      },
+      {
+        "line_start": 422,
+        "line_end": 425,
+        "condition": "len(tokens) >= 8"
+      },
+      {
+        "line_start": 424,
+        "line_end": 425,
+        "condition": "len(numeric_tokens) / len(tokens) > 0.35"
+      }
+    ]
+  },
+  {
+    "role": "splitter",
+    "name": "is_korean_narrative_segment",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "source_sha256": "5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0",
+    "line_start": 429,
+    "line_end": 440,
+    "ast_sha256": "3e06ebd24719e3ead9684337e64578ecb6ddfab8791d120af4a18cf32c49b1d0",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "def is_korean_narrative_segment(segment: str) -> bool:\n    if len(segment) < 25 or len(segment) > 700:\n        return False\n    hangul_chars = len(HANGUL_RE.findall(segment))\n    if hangul_chars < 15:\n        return False\n    tokens = KOREAN_TOKEN_RE.findall(segment)\n    if len(tokens) < 5:\n        return False\n    if is_table_noise(segment):\n        return False\n    return True",
+    "kind": "function",
+    "statically_reachable_loaded_calls": [
+      {
+        "role": "splitter",
+        "name": "is_table_noise"
+      }
+    ],
+    "referenced_loaded_declarations": [
+      {
+        "role": "splitter",
+        "name": "HANGUL_RE"
+      },
+      {
+        "role": "splitter",
+        "name": "KOREAN_TOKEN_RE"
+      },
+      {
+        "role": "splitter",
+        "name": "is_table_noise"
+      }
+    ],
+    "other_call_expressions_not_claimed_as_loaded_rules": [
+      "HANGUL_RE.findall",
+      "KOREAN_TOKEN_RE.findall",
+      "len"
+    ],
+    "ordered_if_conditions": [
+      {
+        "line_start": 430,
+        "line_end": 431,
+        "condition": "len(segment) < 25 or len(segment) > 700"
+      },
+      {
+        "line_start": 433,
+        "line_end": 434,
+        "condition": "hangul_chars < 15"
+      },
+      {
+        "line_start": 436,
+        "line_end": 437,
+        "condition": "len(tokens) < 5"
+      },
+      {
+        "line_start": 438,
+        "line_end": 439,
+        "condition": "is_table_noise(segment)"
+      }
+    ]
+  },
+  {
+    "role": "splitter",
+    "name": "split_korean_sentences",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "source_sha256": "5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0",
+    "line_start": 443,
+    "line_end": 475,
+    "ast_sha256": "7923d534b53041c95d6cd76eece8a9896bfd896790aa22b19c8496ec71138f3e",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "def split_korean_sentences(text: str) -> List[str]:\n    text = normalize_text(text)\n    text = re.sub(r\"[•]+\", \"\\n\", text)\n    raw_lines = [clean_segment(line) for line in text.splitlines()]\n    raw_lines = [line for line in raw_lines if line]\n\n    candidates: List[str] = []\n    buffer: List[str] = []\n\n    def flush_buffer() -> None:\n        if not buffer:\n            return\n        combined = clean_segment(\" \".join(buffer))\n        buffer.clear()\n        if not combined:\n            return\n        parts = SENTENCE_SPLIT_RE.split(combined)\n        for part in parts:\n            cleaned = clean_segment(part)\n            if is_korean_narrative_segment(cleaned):\n                candidates.append(cleaned)\n\n    for line in raw_lines:\n        if is_table_noise(line) and not match_terms(line, DIGITAL_CORE_PATTERNS):\n            flush_buffer()\n            continue\n        buffer.append(line)\n        current = clean_segment(\" \".join(buffer))\n        if KOREAN_END_RE.search(line) or len(current) >= 350:\n            flush_buffer()\n    flush_buffer()\n\n    return candidates",
+    "kind": "function",
+    "statically_reachable_loaded_calls": [
+      {
+        "role": "splitter",
+        "name": "clean_segment"
+      },
+      {
+        "role": "splitter",
+        "name": "is_korean_narrative_segment"
+      },
+      {
+        "role": "splitter",
+        "name": "is_table_noise"
+      },
+      {
+        "role": "splitter",
+        "name": "match_terms"
+      },
+      {
+        "role": "splitter",
+        "name": "normalize_text"
+      }
+    ],
+    "referenced_loaded_declarations": [
+      {
+        "role": "splitter",
+        "name": "DIGITAL_CORE_PATTERNS"
+      },
+      {
+        "role": "splitter",
+        "name": "KOREAN_END_RE"
+      },
+      {
+        "role": "splitter",
+        "name": "SENTENCE_SPLIT_RE"
+      },
+      {
+        "role": "splitter",
+        "name": "clean_segment"
+      },
+      {
+        "role": "splitter",
+        "name": "is_korean_narrative_segment"
+      },
+      {
+        "role": "splitter",
+        "name": "is_table_noise"
+      },
+      {
+        "role": "splitter",
+        "name": "match_terms"
+      },
+      {
+        "role": "splitter",
+        "name": "normalize_text"
+      }
+    ],
+    "other_call_expressions_not_claimed_as_loaded_rules": [
+      "' '.join",
+      "KOREAN_END_RE.search",
+      "SENTENCE_SPLIT_RE.split",
+      "buffer.append",
+      "buffer.clear",
+      "candidates.append",
+      "flush_buffer",
+      "len",
+      "re.sub",
+      "text.splitlines"
+    ],
+    "ordered_if_conditions": [
+      {
+        "line_start": 453,
+        "line_end": 454,
+        "condition": "not buffer"
+      },
+      {
+        "line_start": 457,
+        "line_end": 458,
+        "condition": "not combined"
+      },
+      {
+        "line_start": 462,
+        "line_end": 463,
+        "condition": "is_korean_narrative_segment(cleaned)"
+      },
+      {
+        "line_start": 466,
+        "line_end": 468,
+        "condition": "is_table_noise(line) and not match_terms(line, DIGITAL_CORE_PATTERNS)"
+      },
+      {
+        "line_start": 471,
+        "line_end": 472,
+        "condition": "KOREAN_END_RE.search(line) or len(current) >= 350"
+      }
+    ]
+  },
+  {
+    "role": "decoder",
+    "name": "decode_bytes",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "source_sha256": "620d4a38c9ab12834c0be529fc14f518d68b4fef03d9a7f9e4328e8dd23236c3",
+    "line_start": 462,
+    "line_end": 468,
+    "ast_sha256": "5b41c3c345876b7186a1bdf966bf3890f58f35167bcd4e52ee9b5e86c7c88b6e",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "def decode_bytes(raw: bytes) -> str:\n    for encoding in (\"utf-8-sig\", \"utf-8\", \"utf-16\", \"euc-kr\", \"cp949\", \"latin-1\"):\n        try:\n            return raw.decode(encoding)\n        except UnicodeDecodeError:\n            continue\n    return raw.decode(\"utf-8\", errors=\"ignore\")",
+    "kind": "function",
+    "statically_reachable_loaded_calls": [],
+    "referenced_loaded_declarations": [],
+    "other_call_expressions_not_claimed_as_loaded_rules": [
+      "raw.decode"
+    ],
+    "ordered_if_conditions": []
+  },
+  {
+    "role": "decoder",
+    "name": "parse_open_dart_error",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "source_sha256": "620d4a38c9ab12834c0be529fc14f518d68b4fef03d9a7f9e4328e8dd23236c3",
+    "line_start": 707,
+    "line_end": 725,
+    "ast_sha256": "c285a0c8d61145e9909a7b5b572b11b62f4b86250919f01d2d4cc9d5a3787e5e",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "def parse_open_dart_error(content: bytes) -> str:\n    text = decode_bytes(content[:5000]).strip()\n    try:\n        root = ET.fromstring(text)\n        status = root.findtext(\"status\") or \"\"\n        message = root.findtext(\"message\") or \"\"\n        if status or message:\n            return f\"{status} {message}\".strip()\n    except ET.ParseError:\n        pass\n    try:\n        data = json.loads(text)\n        status = str(data.get(\"status\", \"\"))\n        message = str(data.get(\"message\", \"\"))\n        if status or message:\n            return f\"{status} {message}\".strip()\n    except json.JSONDecodeError:\n        pass\n    return text[:500]",
+    "kind": "function",
+    "statically_reachable_loaded_calls": [
+      {
+        "role": "decoder",
+        "name": "decode_bytes"
+      }
+    ],
+    "referenced_loaded_declarations": [
+      {
+        "role": "decoder",
+        "name": "decode_bytes"
+      }
+    ],
+    "other_call_expressions_not_claimed_as_loaded_rules": [
+      "ET.fromstring",
+      "data.get",
+      "decode_bytes(content[:5000]).strip",
+      "f'{status} {message}'.strip",
+      "json.loads",
+      "root.findtext",
+      "str"
+    ],
+    "ordered_if_conditions": [
+      {
+        "line_start": 713,
+        "line_end": 714,
+        "condition": "status or message"
+      },
+      {
+        "line_start": 721,
+        "line_end": 722,
+        "condition": "status or message"
+      }
+    ]
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "decode_bytes",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "source_sha256": "620d4a38c9ab12834c0be529fc14f518d68b4fef03d9a7f9e4328e8dd23236c3",
+    "line_start": 462,
+    "line_end": 468,
+    "ast_sha256": "5b41c3c345876b7186a1bdf966bf3890f58f35167bcd4e52ee9b5e86c7c88b6e",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "def decode_bytes(raw: bytes) -> str:\n    for encoding in (\"utf-8-sig\", \"utf-8\", \"utf-16\", \"euc-kr\", \"cp949\", \"latin-1\"):\n        try:\n            return raw.decode(encoding)\n        except UnicodeDecodeError:\n            continue\n    return raw.decode(\"utf-8\", errors=\"ignore\")",
+    "kind": "function",
+    "statically_reachable_loaded_calls": [],
+    "referenced_loaded_declarations": [],
+    "other_call_expressions_not_claimed_as_loaded_rules": [
+      "raw.decode"
+    ],
+    "ordered_if_conditions": []
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "normalize_text",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "source_sha256": "620d4a38c9ab12834c0be529fc14f518d68b4fef03d9a7f9e4328e8dd23236c3",
+    "line_start": 471,
+    "line_end": 477,
+    "ast_sha256": "6e1f84d6594c04ba99f71a47600d05a2e18a0fe9cd31dd89717d1e4eefdc1877",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "def normalize_text(text: str) -> str:\n    text = html_lib.unescape(text or \"\")\n    text = text.replace(\"&cr;\", \"\\n\").replace(\"&#13;\", \"\\n\")\n    text = text.replace(\"\\xa0\", \" \")\n    text = re.sub(r\"[ \\t\\r\\f\\v]+\", \" \", text)\n    text = re.sub(r\"\\n\\s*\\n+\", \"\\n\", text)\n    return text.strip()",
+    "kind": "function",
+    "statically_reachable_loaded_calls": [],
+    "referenced_loaded_declarations": [],
+    "other_call_expressions_not_claimed_as_loaded_rules": [
+      "html_lib.unescape",
+      "re.sub",
+      "text.replace",
+      "text.replace('&cr;', '\\n').replace",
+      "text.strip"
+    ],
+    "ordered_if_conditions": []
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "markup_to_text",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "source_sha256": "620d4a38c9ab12834c0be529fc14f518d68b4fef03d9a7f9e4328e8dd23236c3",
+    "line_start": 675,
+    "line_end": 690,
+    "ast_sha256": "9543d5cea4c2efc0c167ef24b1b1fd90f48f829636cdee6be7c41c38559049c7",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "def markup_to_text(raw_text: str) -> str:\n    raw_text = raw_text or \"\"\n    if BeautifulSoup is not None:\n        parser = \"lxml\" if lxml_html is not None else \"html.parser\"\n        soup = BeautifulSoup(raw_text, parser)\n        for tag in soup([\"script\", \"style\"]):\n            tag.decompose()\n        return normalize_text(soup.get_text(\" \"))\n    if lxml_html is not None:\n        try:\n            root = lxml_html.fromstring(raw_text)\n            return normalize_text(root.text_content())\n        except Exception:\n            pass\n    no_tags = re.sub(r\"<[^>]+>\", \" \", raw_text)\n    return normalize_text(no_tags)",
+    "kind": "function",
+    "statically_reachable_loaded_calls": [
+      {
+        "role": "legacy_cache_parser",
+        "name": "normalize_text"
+      }
+    ],
+    "referenced_loaded_declarations": [
+      {
+        "role": "legacy_cache_parser",
+        "name": "normalize_text"
+      }
+    ],
+    "other_call_expressions_not_claimed_as_loaded_rules": [
+      "BeautifulSoup",
+      "lxml_html.fromstring",
+      "re.sub",
+      "root.text_content",
+      "soup",
+      "soup.get_text",
+      "tag.decompose"
+    ],
+    "ordered_if_conditions": [
+      {
+        "line_start": 677,
+        "line_end": 682,
+        "condition": "BeautifulSoup is not None"
+      },
+      {
+        "line_start": 683,
+        "line_end": 688,
+        "condition": "lxml_html is not None"
+      }
+    ]
+  },
+  {
+    "role": "legacy_cache_parser",
+    "name": "zip_document_to_text",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+    "source_sha256": "620d4a38c9ab12834c0be529fc14f518d68b4fef03d9a7f9e4328e8dd23236c3",
+    "line_start": 693,
+    "line_end": 704,
+    "ast_sha256": "7ab5e92533994ce202d6738fb755cffe4ecc28e8bbdc8383f75aefb9b0ff3441",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "def zip_document_to_text(content: bytes) -> Tuple[str, int]:\n    with zipfile.ZipFile(io.BytesIO(content)) as archive:\n        names = [\n            name\n            for name in archive.namelist()\n            if name.lower().endswith((\".xml\", \".html\", \".htm\", \".txt\"))\n        ]\n        text_parts = []\n        for name in sorted(names):\n            raw = archive.read(name)\n            text_parts.append(markup_to_text(decode_bytes(raw)))\n    return \"\\n\".join(text_parts), len(names)",
+    "kind": "function",
+    "statically_reachable_loaded_calls": [
+      {
+        "role": "legacy_cache_parser",
+        "name": "decode_bytes"
+      },
+      {
+        "role": "legacy_cache_parser",
+        "name": "markup_to_text"
+      }
+    ],
+    "referenced_loaded_declarations": [
+      {
+        "role": "legacy_cache_parser",
+        "name": "decode_bytes"
+      },
+      {
+        "role": "legacy_cache_parser",
+        "name": "markup_to_text"
+      }
+    ],
+    "other_call_expressions_not_claimed_as_loaded_rules": [
+      "'\\n'.join",
+      "archive.namelist",
+      "archive.read",
+      "io.BytesIO",
+      "len",
+      "name.lower",
+      "name.lower().endswith",
+      "sorted",
+      "text_parts.append",
+      "zipfile.ZipFile"
+    ],
+    "ordered_if_conditions": []
+  }
+]

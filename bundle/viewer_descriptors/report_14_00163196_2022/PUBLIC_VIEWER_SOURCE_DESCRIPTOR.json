@@ -1,0 +1,601 @@
+{
+  "schema": "PUBLIC_LOCKED_VIEWER_CAPTURE_METADATA_PROJECTION_V1",
+  "new_acquisition_claimed": false,
+  "report_key": [
+    "00163196",
+    "2022",
+    "20230322001313"
+  ],
+  "current_selected": {
+    "rcpNo": "20230322001313",
+    "dcmNo": "9092621",
+    "eleId": "1",
+    "offset": "811",
+    "length": "4037",
+    "dtd": "dart3.xsd"
+  },
+  "current_nodes": [
+    {
+      "text": "사 업 보 고 서",
+      "id": "1",
+      "rcpNo": "20230322001313",
+      "dcmNo": "9092621",
+      "eleId": "1",
+      "offset": "811",
+      "length": "4037",
+      "dtd": "dart3.xsd",
+      "tocNo": "1",
+      "atocId": ""
+    },
+    {
+      "text": "【 대표이사 등의 확인 】",
+      "id": "2",
+      "rcpNo": "20230322001313",
+      "dcmNo": "9092621",
+      "eleId": "2",
+      "offset": "18108",
+      "length": "414",
+      "dtd": "dart3.xsd",
+      "tocNo": "2",
+      "atocId": ""
+    },
+    {
+      "text": "I. 회사의 개요",
+      "id": "3",
+      "rcpNo": "20230322001313",
+      "dcmNo": "9092621",
+      "eleId": "3",
+      "offset": "18526",
+      "length": "49457",
+      "dtd": "dart3.xsd",
+      "tocNo": "3",
+      "atocId": ""
+    },
+    {
+      "text": "II. 사업의 내용",
+      "id": "9",
+      "rcpNo": "20230322001313",
+      "dcmNo": "9092621",
+      "eleId": "9",
+      "offset": "67987",
+      "length": "116511",
+      "dtd": "dart3.xsd",
+      "tocNo": "9",
+      "atocId": ""
+    },
+    {
+      "text": "III. 재무에 관한 사항",
+      "id": "17",
+      "rcpNo": "20230322001313",
+      "dcmNo": "9092621",
+      "eleId": "17",
+      "offset": "184502",
+      "length": "1016729",
+      "dtd": "dart3.xsd",
+      "tocNo": "17",
+      "atocId": ""
+    },
+    {
+      "text": "IV. 이사의 경영진단 및 분석의견",
+      "id": "28",
+      "rcpNo": "20230322001313",
+      "dcmNo": "9092621",
+      "eleId": "28",
+      "offset": "1201235",
+      "length": "58002",
+      "dtd": "dart3.xsd",
+      "tocNo": "26",
+      "atocId": ""
+    },
+    {
+      "text": "V. 회계감사인의 감사의견 등",
+      "id": "29",
+      "rcpNo": "20230322001313",
+      "dcmNo": "9092621",
+      "eleId": "29",
+      "offset": "1259241",
+      "length": "14550",
+      "dtd": "dart3.xsd",
+      "tocNo": "27",
+      "atocId": ""
+    },
+    {
+      "text": "VI. 이사회 등 회사의 기관에 관한 사항",
+      "id": "32",
+      "rcpNo": "20230322001313",
+      "dcmNo": "9092621",
+      "eleId": "32",
+      "offset": "1273795",
+      "length": "24775",
+      "dtd": "dart3.xsd",
+      "tocNo": "30",
+      "atocId": ""
+    },
+    {
+      "text": "VII. 주주에 관한 사항",
+      "id": "36",
+      "rcpNo": "20230322001313",
+      "dcmNo": "9092621",
+      "eleId": "36",
+      "offset": "1298574",
+      "length": "37540",
+      "dtd": "dart3.xsd",
+      "tocNo": "34",
+      "atocId": ""
+    },
+    {
+      "text": "VIII. 임원 및 직원 등에 관한 사항",
+      "id": "37",
+      "rcpNo": "20230322001313",
+      "dcmNo": "9092621",
+      "eleId": "37",
+      "offset": "1336118",
+      "length": "59562",
+      "dtd": "dart3.xsd",
+      "tocNo": "35",
+      "atocId": ""
+    },
+    {
+      "text": "IX. 계열회사 등에 관한 사항",
+      "id": "40",
+      "rcpNo": "20230322001313",
+      "dcmNo": "9092621",
+      "eleId": "40",
+      "offset": "1395684",
+      "length": "11886",
+      "dtd": "dart3.xsd",
+      "tocNo": "38",
+      "atocId": ""
+    },
+    {
+      "text": "X. 대주주 등과의 거래내용",
+      "id": "41",
+      "rcpNo": "20230322001313",
+      "dcmNo": "9092621",
+      "eleId": "41",
+      "offset": "1407574",
+      "length": "12291",
+      "dtd": "dart3.xsd",
+      "tocNo": "39",
+      "atocId": ""
+    },
+    {
+      "text": "XI. 그 밖에 투자자 보호를 위하여 필요한 사항",
+      "id": "42",
+      "rcpNo": "20230322001313",
+      "dcmNo": "9092621",
+      "eleId": "42",
+      "offset": "1419869",
+      "length": "20040",
+      "dtd": "dart3.xsd",
+      "tocNo": "40",
+      "atocId": ""
+    },
+    {
+      "text": "XII. 상세표",
+      "id": "47",
+      "rcpNo": "20230322001313",
+      "dcmNo": "9092621",
+      "eleId": "47",
+      "offset": "1439913",
+      "length": "17712",
+      "dtd": "dart3.xsd",
+      "tocNo": "45",
+      "atocId": ""
+    },
+    {
+      "text": "【 전문가의 확인 】",
+      "id": "51",
+      "rcpNo": "20230322001313",
+      "dcmNo": "9092621",
+      "eleId": "51",
+      "offset": "1457629",
+      "length": "367",
+      "dtd": "dart3.xsd",
+      "tocNo": "49",
+      "atocId": ""
+    }
+  ],
+  "current_resolution_method": "followed_base_annual_filing",
+  "expected_parsed_sha256": "4c82a55bcfd016b5b42fb932b6cfdd1399ad5a3b93c373730829607640792667",
+  "requests": [
+    {
+      "request_order": 1,
+      "endpoint": "https://dart.fss.or.kr/dsaf001/main.do",
+      "params": {
+        "rcpNo": "20230323001307"
+      },
+      "headers": {},
+      "status_code": 200,
+      "response_headers": {
+        "Date": "Thu, 22 Oct 2026 15:00:58 GMT",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "response_bytes": 43666,
+      "response_sha256": "0cfc292211a6e7272c4fbc82ceaaf33dcee9b5296a569219f59119010d87543f",
+      "response_body_complete": true,
+      "transport_error": null
+    },
+    {
+      "request_order": 2,
+      "endpoint": "https://dart.fss.or.kr/dsaf001/main.do",
+      "params": {
+        "rcpNo": "20230322001313"
+      },
+      "headers": {},
+      "status_code": 200,
+      "response_headers": {
+        "Date": "Thu, 22 Oct 2026 15:00:58 GMT",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "response_bytes": 67230,
+      "response_sha256": "f42da6f98aced37101661a3f9431d6789da023a1158ffd71f517b4d807794c41",
+      "response_body_complete": true,
+      "transport_error": null
+    },
+    {
+      "request_order": 3,
+      "endpoint": "https://dart.fss.or.kr/report/viewer.do",
+      "params": {
+        "rcpNo": "20230322001313",
+        "dcmNo": "9092621",
+        "eleId": "1",
+        "offset": "811",
+        "length": "4037",
+        "dtd": "dart3.xsd"
+      },
+      "headers": {
+        "Referer": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230322001313"
+      },
+      "status_code": 200,
+      "response_headers": {
+        "Date": "Thu, 22 Oct 2026 15:00:58 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "response_bytes": 4525,
+      "response_sha256": "9ec60e6e44a4e16d05073273dafdbbca186c3ccfb40861001af5267f45030a6a",
+      "response_body_complete": true,
+      "transport_error": null
+    },
+    {
+      "request_order": 4,
+      "endpoint": "https://dart.fss.or.kr/report/viewer.do",
+      "params": {
+        "rcpNo": "20230322001313",
+        "dcmNo": "9092621",
+        "eleId": "2",
+        "offset": "18108",
+        "length": "414",
+        "dtd": "dart3.xsd"
+      },
+      "headers": {
+        "Referer": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230322001313"
+      },
+      "status_code": 200,
+      "response_headers": {
+        "Date": "Thu, 22 Oct 2026 15:00:59 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "response_bytes": 1069,
+      "response_sha256": "4d1bef7398d776a601aba7c84527eff6767b27b7032937d08291aab4838f22d0",
+      "response_body_complete": true,
+      "transport_error": null
+    },
+    {
+      "request_order": 5,
+      "endpoint": "https://dart.fss.or.kr/report/viewer.do",
+      "params": {
+        "rcpNo": "20230322001313",
+        "dcmNo": "9092621",
+        "eleId": "3",
+        "offset": "18526",
+        "length": "49457",
+        "dtd": "dart3.xsd"
+      },
+      "headers": {
+        "Referer": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230322001313"
+      },
+      "status_code": 200,
+      "response_headers": {
+        "Date": "Thu, 22 Oct 2026 15:00:59 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "response_bytes": 38898,
+      "response_sha256": "c394fbb3629623b41013e5e43e8b842ac30996c04826bcb3b42961de637a1817",
+      "response_body_complete": true,
+      "transport_error": null
+    },
+    {
+      "request_order": 6,
+      "endpoint": "https://dart.fss.or.kr/report/viewer.do",
+      "params": {
+        "rcpNo": "20230322001313",
+        "dcmNo": "9092621",
+        "eleId": "9",
+        "offset": "67987",
+        "length": "116511",
+        "dtd": "dart3.xsd"
+      },
+      "headers": {
+        "Referer": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230322001313"
+      },
+      "status_code": 200,
+      "response_headers": {
+        "Date": "Thu, 22 Oct 2026 15:01:00 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "response_bytes": 124442,
+      "response_sha256": "23e59a76cee5af28b9d67f08f1588e2c87656e8ff3c9a0e7bef4205b74d3a424",
+      "response_body_complete": true,
+      "transport_error": null
+    },
+    {
+      "request_order": 7,
+      "endpoint": "https://dart.fss.or.kr/report/viewer.do",
+      "params": {
+        "rcpNo": "20230322001313",
+        "dcmNo": "9092621",
+        "eleId": "17",
+        "offset": "184502",
+        "length": "1016729",
+        "dtd": "dart3.xsd"
+      },
+      "headers": {
+        "Referer": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230322001313"
+      },
+      "status_code": 200,
+      "response_headers": {
+        "Date": "Thu, 22 Oct 2026 15:01:00 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "response_bytes": 990007,
+      "response_sha256": "2d8f5b999e322eef65f8a342e0a4e7f311a767187a8e35ce6b8e655785fd1d67",
+      "response_body_complete": true,
+      "transport_error": null
+    },
+    {
+      "request_order": 8,
+      "endpoint": "https://dart.fss.or.kr/report/viewer.do",
+      "params": {
+        "rcpNo": "20230322001313",
+        "dcmNo": "9092621",
+        "eleId": "28",
+        "offset": "1201235",
+        "length": "58002",
+        "dtd": "dart3.xsd"
+      },
+      "headers": {
+        "Referer": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230322001313"
+      },
+      "status_code": 200,
+      "response_headers": {
+        "Date": "Thu, 22 Oct 2026 15:01:02 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "response_bytes": 69931,
+      "response_sha256": "51450a778e3174d2f84415b29a0b99273bdc9fb7396a63ad534501fa45051265",
+      "response_body_complete": true,
+      "transport_error": null
+    },
+    {
+      "request_order": 9,
+      "endpoint": "https://dart.fss.or.kr/report/viewer.do",
+      "params": {
+        "rcpNo": "20230322001313",
+        "dcmNo": "9092621",
+        "eleId": "29",
+        "offset": "1259241",
+        "length": "14550",
+        "dtd": "dart3.xsd"
+      },
+      "headers": {
+        "Referer": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230322001313"
+      },
+      "status_code": 200,
+      "response_headers": {
+        "Date": "Thu, 22 Oct 2026 15:01:02 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "response_bytes": 10658,
+      "response_sha256": "ce776b4112ffeb6f85bb65a34e73181f9174019c0ed6e6a8cceaa54131dfec82",
+      "response_body_complete": true,
+      "transport_error": null
+    },
+    {
+      "request_order": 10,
+      "endpoint": "https://dart.fss.or.kr/report/viewer.do",
+      "params": {
+        "rcpNo": "20230322001313",
+        "dcmNo": "9092621",
+        "eleId": "32",
+        "offset": "1273795",
+        "length": "24775",
+        "dtd": "dart3.xsd"
+      },
+      "headers": {
+        "Referer": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230322001313"
+      },
+      "status_code": 200,
+      "response_headers": {
+        "Date": "Thu, 22 Oct 2026 15:01:03 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "response_bytes": 20284,
+      "response_sha256": "7b14754ee2c3fd2b7e878aad02843add1edb4c14511993c617d4d4d436cd177a",
+      "response_body_complete": true,
+      "transport_error": null
+    },
+    {
+      "request_order": 11,
+      "endpoint": "https://dart.fss.or.kr/report/viewer.do",
+      "params": {
+        "rcpNo": "20230322001313",
+        "dcmNo": "9092621",
+        "eleId": "36",
+        "offset": "1298574",
+        "length": "37540",
+        "dtd": "dart3.xsd"
+      },
+      "headers": {
+        "Referer": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230322001313"
+      },
+      "status_code": 200,
+      "response_headers": {
+        "Date": "Thu, 22 Oct 2026 15:01:03 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "response_bytes": 31914,
+      "response_sha256": "096ef7995404c16707381838dff034b7b3359aaebdae2da3e16e615905fc3419",
+      "response_body_complete": true,
+      "transport_error": null
+    },
+    {
+      "request_order": 12,
+      "endpoint": "https://dart.fss.or.kr/report/viewer.do",
+      "params": {
+        "rcpNo": "20230322001313",
+        "dcmNo": "9092621",
+        "eleId": "37",
+        "offset": "1336118",
+        "length": "59562",
+        "dtd": "dart3.xsd"
+      },
+      "headers": {
+        "Referer": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230322001313"
+      },
+      "status_code": 200,
+      "response_headers": {
+        "Date": "Thu, 22 Oct 2026 15:01:04 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "response_bytes": 41423,
+      "response_sha256": "9e9c097bb4209bbf9a16904bd7288ea6c11049911b45ad13c933d90f8237140d",
+      "response_body_complete": true,
+      "transport_error": null
+    },
+    {
+      "request_order": 13,
+      "endpoint": "https://dart.fss.or.kr/report/viewer.do",
+      "params": {
+        "rcpNo": "20230322001313",
+        "dcmNo": "9092621",
+        "eleId": "40",
+        "offset": "1395684",
+        "length": "11886",
+        "dtd": "dart3.xsd"
+      },
+      "headers": {
+        "Referer": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230322001313"
+      },
+      "status_code": 200,
+      "response_headers": {
+        "Date": "Thu, 22 Oct 2026 15:01:05 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "response_bytes": 9435,
+      "response_sha256": "65bdd2b76beab68b71597ef5f21c92ffae4e837f3ee31198d8c2f17f5cdbe1f0",
+      "response_body_complete": true,
+      "transport_error": null
+    },
+    {
+      "request_order": 14,
+      "endpoint": "https://dart.fss.or.kr/report/viewer.do",
+      "params": {
+        "rcpNo": "20230322001313",
+        "dcmNo": "9092621",
+        "eleId": "41",
+        "offset": "1407574",
+        "length": "12291",
+        "dtd": "dart3.xsd"
+      },
+      "headers": {
+        "Referer": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230322001313"
+      },
+      "status_code": 200,
+      "response_headers": {
+        "Date": "Thu, 22 Oct 2026 15:01:05 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "response_bytes": 10547,
+      "response_sha256": "ff4c275eadd1413b66a6691b9f75555076a8da52c3f18a926f4e3c999455fcfa",
+      "response_body_complete": true,
+      "transport_error": null
+    },
+    {
+      "request_order": 15,
+      "endpoint": "https://dart.fss.or.kr/report/viewer.do",
+      "params": {
+        "rcpNo": "20230322001313",
+        "dcmNo": "9092621",
+        "eleId": "42",
+        "offset": "1419869",
+        "length": "20040",
+        "dtd": "dart3.xsd"
+      },
+      "headers": {
+        "Referer": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230322001313"
+      },
+      "status_code": 200,
+      "response_headers": {
+        "Date": "Thu, 22 Oct 2026 15:01:06 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "response_bytes": 16392,
+      "response_sha256": "9118addf1a0f4ed2770799d2a357436edf00e9e4b370f0aa68c78c50b9b8dfb6",
+      "response_body_complete": true,
+      "transport_error": null
+    },
+    {
+      "request_order": 16,
+      "endpoint": "https://dart.fss.or.kr/report/viewer.do",
+      "params": {
+        "rcpNo": "20230322001313",
+        "dcmNo": "9092621",
+        "eleId": "47",
+        "offset": "1439913",
+        "length": "17712",
+        "dtd": "dart3.xsd"
+      },
+      "headers": {
+        "Referer": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230322001313"
+      },
+      "status_code": 200,
+      "response_headers": {
+        "Date": "Thu, 22 Oct 2026 15:01:06 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "response_bytes": 12325,
+      "response_sha256": "00c55ec21fe47cad76cd8a56ec86a9d36fbf0114c4104e44880fc8adf65996e5",
+      "response_body_complete": true,
+      "transport_error": null
+    },
+    {
+      "request_order": 17,
+      "endpoint": "https://dart.fss.or.kr/report/viewer.do",
+      "params": {
+        "rcpNo": "20230322001313",
+        "dcmNo": "9092621",
+        "eleId": "51",
+        "offset": "1457629",
+        "length": "367",
+        "dtd": "dart3.xsd"
+      },
+      "headers": {
+        "Referer": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230322001313"
+      },
+      "status_code": 200,
+      "response_headers": {
+        "Date": "Thu, 22 Oct 2026 15:01:07 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "response_bytes": 787,
+      "response_sha256": "13f3f3563e67383af04abb070e6597ccf45b1c4180bc1dbfe8ae227e1a39e4cd",
+      "response_body_complete": true,
+      "transport_error": null
+    }
+  ],
+  "original_private_receipt_sha256": "f53224e727e2c391f397042a2b0c53a904d9722df9ea62571961f0511b16c3e1",
+  "historical_evidence": "DIRECT_VIEWER_DOCUMENT_RECORD",
+  "historical_complete_text_byte_identity_proven": false,
+  "projection": "Only path-free capture metadata; original private receipt retained locally; raw HTML/body hashes and request identity/order unchanged"
+}

@@ -1,0 +1,2 @@
+﻿model_id,specification,coefficient,std_error,p_value,ci95_low,ci95_high,t_stat,N,firms,year_min,year_max,within_R2,cluster,sample_index_sha256
+M4_MODEL_B,Firm FE + Year FE + firm-specific linear trend,0.009667260379557813,0.007020323260279818,0.16865025246847704,-0.0041004371589306796,0.023434957918046305,1.3770392076179827,13980,2054,2016,2023,0.0750584434156466,firm,8ee203058337bacc6667fd9a8c23e39ba3fffed102992bc30d131763160d2662

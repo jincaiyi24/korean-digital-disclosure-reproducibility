@@ -1,0 +1,2504 @@
+[
+  {
+    "role": "v4",
+    "name": "CLEAN_FOCAL_RE",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "source_sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+    "line_start": 61,
+    "line_end": 64,
+    "ast_sha256": "38f6306b5eda583e63e15d75490c8b1c6e80697e6accdfcee9707c323b7d3610",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "CLEAN_FOCAL_RE = re.compile(\n    r\"\\ub2f9\\uc0ac|\\ub2f9\\ud68c\\uc0ac|\\ud68c\\uc0ac\\ub294|\\ubcf8\\uc0ac\\ub294|\\uc6b0\\ub9ac\\s*\\ud68c\\uc0ac|\"\n    r\"\\ub2f9\\s*\\uadf8\\ub8f9|\\uc5f0\\uacb0\\ud68c\\uc0ac|\\uc885\\uc18d\\ud68c\\uc0ac\"\n)",
+    "kind": "regex",
+    "pattern": "\\ub2f9\\uc0ac|\\ub2f9\\ud68c\\uc0ac|\\ud68c\\uc0ac\\ub294|\\ubcf8\\uc0ac\\ub294|\\uc6b0\\ub9ac\\s*\\ud68c\\uc0ac|\\ub2f9\\s*\\uadf8\\ub8f9|\\uc5f0\\uacb0\\ud68c\\uc0ac|\\uc885\\uc18d\\ud68c\\uc0ac",
+    "flags_integer": 32,
+    "IGNORECASE": false,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v4",
+    "name": "MARKET_TREND_RE",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "source_sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+    "line_start": 65,
+    "line_end": 69,
+    "ast_sha256": "b2d07e0f3df407bd15fda03cdf5981508bb8429057714e229a9567548d392058",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "MARKET_TREND_RE = re.compile(\n    r\"\\uc2dc\\uc7a5\\uc870\\uc0ac|\\ubcf4\\uace0\\uc11c\\uc5d0\\s*\\ub530\\ub974\\uba74|\\uac83\\uc73c\\ub85c\\s*(?:\\uc804\\ub9dd|\\uc608\\uc0c1)|\"\n    r\"\\uc2dc\\uc7a5\\s*\\uaddc\\ubaa8|\\uc131\\uc7a5\\ub960|\\uc218\\uc694.{0,30}\\uc99d\\uac00|\\uc0b0\\uc5c5\\uc740|\\uc2dc\\uc7a5\\uc740|\"\n    r\"\\uae30\\uc220\\uc774\\s*\\ubc1c\\uc804\\ud568\\uc5d0\\s*\\ub530\\ub77c|\\uc9d1\\uc911\\ub3c4\\uac00\\s*\\uc804\\ud658\"\n)",
+    "kind": "regex",
+    "pattern": "\\uc2dc\\uc7a5\\uc870\\uc0ac|\\ubcf4\\uace0\\uc11c\\uc5d0\\s*\\ub530\\ub974\\uba74|\\uac83\\uc73c\\ub85c\\s*(?:\\uc804\\ub9dd|\\uc608\\uc0c1)|\\uc2dc\\uc7a5\\s*\\uaddc\\ubaa8|\\uc131\\uc7a5\\ub960|\\uc218\\uc694.{0,30}\\uc99d\\uac00|\\uc0b0\\uc5c5\\uc740|\\uc2dc\\uc7a5\\uc740|\\uae30\\uc220\\uc774\\s*\\ubc1c\\uc804\\ud568\\uc5d0\\s*\\ub530\\ub77c|\\uc9d1\\uc911\\ub3c4\\uac00\\s*\\uc804\\ud658",
+    "flags_integer": 32,
+    "IGNORECASE": false,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v4",
+    "name": "EXTERNAL_ACTOR_RE",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "source_sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+    "line_start": 70,
+    "line_end": 72,
+    "ast_sha256": "ebec91203f879e1d9c71b83696017b4f8ce9d2bd5ed1792d4eab659ac6694afa",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "EXTERNAL_ACTOR_RE = re.compile(\n    r\"(?<![A-Za-z])[A-Za-z][A-Za-z0-9.\\-]{1,30}\\s*\\uc5d0\\uc11c.{0,100}(?:\\uac1c\\ubc1c|\\uc0dd\\uc0b0|\\ucd9c\\uc2dc|\\uc81c\\uacf5)\"\n)",
+    "kind": "regex",
+    "pattern": "(?<![A-Za-z])[A-Za-z][A-Za-z0-9.\\-]{1,30}\\s*\\uc5d0\\uc11c.{0,100}(?:\\uac1c\\ubc1c|\\uc0dd\\uc0b0|\\ucd9c\\uc2dc|\\uc81c\\uacf5)",
+    "flags_integer": 32,
+    "IGNORECASE": false,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v4",
+    "name": "GENERIC_EXTERNAL_ACTOR_RE",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "source_sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+    "line_start": 73,
+    "line_end": 77,
+    "ast_sha256": "5619103b473b3a397e2bcecaac204c594105782abba3bcb89c72154ad81202a9",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "GENERIC_EXTERNAL_ACTOR_RE = re.compile(\n    r\"(?:\\ube45\\ud14c\\ud06c\\s*\\uae30\\uc5c5\\ub4e4|\\uae30\\uc5c5\\ub4e4|\\uc5c5\\uccb4\\ub4e4|IT\\uc11c\\ube44\\uc2a4\\s*\\uc5c5\\uccb4\\ub4e4|\"\n    r\"\\ud1b5\\uc2e0\\uc0ac|\\ud1b5\\uc2e0\\uc0ac\\uc5c5\\uc790|\\uace0\\uac1d\\uc0ac|\\ud3ec\\ud138\\s*\\ud50c\\ub7ab\\ud3fc\\ub4e4).{0,80}\"\n    r\"(?:\\uac1c\\ubc1c|\\ub3c4\\uc785|\\uc6b4\\uc601|\\uc81c\\uacf5|\\uad6c\\ucd95|\\ud22c\\uc790|\\ucd9c\\uc2dc|\\uc0c1\\uc6a9\\ud654)\"\n)",
+    "kind": "regex",
+    "pattern": "(?:\\ube45\\ud14c\\ud06c\\s*\\uae30\\uc5c5\\ub4e4|\\uae30\\uc5c5\\ub4e4|\\uc5c5\\uccb4\\ub4e4|IT\\uc11c\\ube44\\uc2a4\\s*\\uc5c5\\uccb4\\ub4e4|\\ud1b5\\uc2e0\\uc0ac|\\ud1b5\\uc2e0\\uc0ac\\uc5c5\\uc790|\\uace0\\uac1d\\uc0ac|\\ud3ec\\ud138\\s*\\ud50c\\ub7ab\\ud3fc\\ub4e4).{0,80}(?:\\uac1c\\ubc1c|\\ub3c4\\uc785|\\uc6b4\\uc601|\\uc81c\\uacf5|\\uad6c\\ucd95|\\ud22c\\uc790|\\ucd9c\\uc2dc|\\uc0c1\\uc6a9\\ud654)",
+    "flags_integer": 32,
+    "IGNORECASE": false,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v4",
+    "name": "STATIC_SCOPE_RE",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "source_sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+    "line_start": 78,
+    "line_end": 85,
+    "ast_sha256": "97ab66990e5a2eba1929420cda18fa64f16bfe5e8bc3b599ba206217d583096f",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "STATIC_SCOPE_RE = re.compile(\n    r\"(?:\\uac1c\\ubc1c|\\uc81c\\uc870)\\s*\\ubc0f\\s*\\ud310\\ub9e4(?:\\s*\\uc0ac\\uc5c5)?\\s*$|\"\n    r\"\\uc0ac\\uc5c5\\s*\\ubaa9\\uc801|\\uc0ac\\uc5c5\\uc758\\s*\\uac1c\\uc694|\\uc0ac\\uc5c5\\uc758\\s*\\ub0b4\\uc6a9\\s*$|\"\n    r\"\\uac1c\\uc694\\s*(?:\\ub2f9\\uc0ac|\\ud68c\\uc0ac)\\ub294|\\uc9c0\\ubc30\\ud68c\\uc0ac\\s*\\ubc0f\\s*\\uc885\\uc18d\\ud68c\\uc0ac\\ub294|\"\n    r\"\\uacf5\\uc2dc\\ub300\\uc0c1\\uc0ac\\uc5c5\\uad6c\\ubd84|\\ud310\\ub9e4\\uacbd\\ub85c|\"\n    r\"\\uc790\\uc6d0\\s*\\uc870\\ub2ec\\s*\\uc0c1\\ud669|\\uc8fc\\ub825\\s*\\uc81c\\ud488(?:\\uc740|\\uc73c\\ub85c)|\"\n    r\"\\uc18c\\ud504\\ud2b8\\uc6e8\\uc5b4.{0,60}(?:\\uacf5\\uae09\\uc5c5|\\ud310\\ub9e4\\uc5c5)\\s*\\d*\\.?\\s*$\"\n)",
+    "kind": "regex",
+    "pattern": "(?:\\uac1c\\ubc1c|\\uc81c\\uc870)\\s*\\ubc0f\\s*\\ud310\\ub9e4(?:\\s*\\uc0ac\\uc5c5)?\\s*$|\\uc0ac\\uc5c5\\s*\\ubaa9\\uc801|\\uc0ac\\uc5c5\\uc758\\s*\\uac1c\\uc694|\\uc0ac\\uc5c5\\uc758\\s*\\ub0b4\\uc6a9\\s*$|\\uac1c\\uc694\\s*(?:\\ub2f9\\uc0ac|\\ud68c\\uc0ac)\\ub294|\\uc9c0\\ubc30\\ud68c\\uc0ac\\s*\\ubc0f\\s*\\uc885\\uc18d\\ud68c\\uc0ac\\ub294|\\uacf5\\uc2dc\\ub300\\uc0c1\\uc0ac\\uc5c5\\uad6c\\ubd84|\\ud310\\ub9e4\\uacbd\\ub85c|\\uc790\\uc6d0\\s*\\uc870\\ub2ec\\s*\\uc0c1\\ud669|\\uc8fc\\ub825\\s*\\uc81c\\ud488(?:\\uc740|\\uc73c\\ub85c)|\\uc18c\\ud504\\ud2b8\\uc6e8\\uc5b4.{0,60}(?:\\uacf5\\uae09\\uc5c5|\\ud310\\ub9e4\\uc5c5)\\s*\\d*\\.?\\s*$",
+    "flags_integer": 32,
+    "IGNORECASE": false,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v4",
+    "name": "SEGMENT_LIST_RE",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "source_sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+    "line_start": 86,
+    "line_end": 91,
+    "ast_sha256": "8b89a3d72506088929ced108a695e4b323c60c65f8f8fb83aee2a8c91118d04b",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "SEGMENT_LIST_RE = re.compile(\n    r\"\\uc0ac\\uc5c5\\ubd80\\ubb38\\ubcc4\\s*\\ud604\\ud669|\\uc0ac\\uc5c5\\ubd80\\ubb38.{0,100}(?:\\uad6c\\uc131|\\ud604\\ud669)|\"\n    r\"\\ubd80\\ubb38\\uc73c\\ub85c\\s*\\uad6c\\uc131|\\uc8fc\\uc694\\s*\\uc81c\\ud488.{0,80}\\ud604\\ud669|\"\n    r\"\\ubd80\\ubb38\\ubcc4\\s*\\uc8fc\\uc694\\s*\\uc81c\\ud488|\\uc8fc\\uc694\\s*\\uc0ac\\uc5c5\\uc758\\s*\\ub0b4\\uc6a9|\"\n    r\"\\ud310\\ub9e4\\uacbd\\ub85c|\\ud310\\ub9e4\\uc804\\ub7b5\\s*\\uc0ac\\uc5c5\\ubd80\\ubb38|(?:\\u2192.{0,160}){3}\"\n)",
+    "kind": "regex",
+    "pattern": "\\uc0ac\\uc5c5\\ubd80\\ubb38\\ubcc4\\s*\\ud604\\ud669|\\uc0ac\\uc5c5\\ubd80\\ubb38.{0,100}(?:\\uad6c\\uc131|\\ud604\\ud669)|\\ubd80\\ubb38\\uc73c\\ub85c\\s*\\uad6c\\uc131|\\uc8fc\\uc694\\s*\\uc81c\\ud488.{0,80}\\ud604\\ud669|\\ubd80\\ubb38\\ubcc4\\s*\\uc8fc\\uc694\\s*\\uc81c\\ud488|\\uc8fc\\uc694\\s*\\uc0ac\\uc5c5\\uc758\\s*\\ub0b4\\uc6a9|\\ud310\\ub9e4\\uacbd\\ub85c|\\ud310\\ub9e4\\uc804\\ub7b5\\s*\\uc0ac\\uc5c5\\ubd80\\ubb38|(?:\\u2192.{0,160}){3}",
+    "flags_integer": 32,
+    "IGNORECASE": false,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v4",
+    "name": "ACTIVE_CLEAN_RE",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "source_sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+    "line_start": 92,
+    "line_end": 108,
+    "ast_sha256": "d7f511e2bd76ef48ef6b7a9087aa644517b6c97d3170dd9bfe493fbd75cdcfdc",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "ACTIVE_CLEAN_RE = re.compile(\n    r\"\\uc6b4\\uc601\\s*\\uc911|\\uc6b4\\uc601(?:\\ud558|\\ud574\\uc624)|\\uc81c\\uacf5\\s*\\uc911|\\ud310\\ub9e4\\s*\\uc911|\\uc2dc\\ud310\\s*\\uc911|\"\n    r\"(?<!\\ucc3d)\\ucd9c\\uc2dc|\\ub860\\uce6d|\\uc624\\ud508|\\uac1c\\uc7a5|\\uc124\\ub9bd|\\ud569\\ubcd1|\\uccb4\\uacb0|\\uc644\\ub8cc|\\uc778\\uc218|\\ucde8\\ub4dd|\"\n    r\"\\uad6c\\ucd95(?:\\ud558|\\ud588|\\ub418|\\uc911|\\uc644\\ub8cc)|\\uad6c\\ucd95.{0,30}(?:\\uc9c4\\ud589|\\uc218\\ud589)|\"\n    r\"\\ud22c\\uc790(?:\\ub97c|\\ub3c4|\\uac00)?\\s*(?:\\ud558\\uc600|\\ud588|\\ud558\\uace0|\\ud560|\\uc911|\\uc9c4\\ud589|\\uc9d1\\ud589|\\uacc4\\ud68d|\\ud655\\ub300|\\uc2b9\\uc778)|\\ub3c4\\uc785(?:\\ud558|\\ud588|\\ub418|\\uc911|\\uc644\\ub8cc)|\"\n    r\"\\uac1c\\ubc1c(?:\\ud558|\\ud588|\\ud574\\uc624|\\uc911|\\uc644\\ub8cc)|\\uac1c\\ubc1c.{0,30}(?:\\uc9c4\\ud589|\\uc218\\ud589|\\uc644\\ub8cc)|\"\n    r\"\\uc9c4\\ud589\\s*\\uc911.{0,30}\\uac1c\\ubc1c|\\ud604\\uc7ac.{0,80}\\uac1c\\ubc1c|\\uc5f0\\uad6c\\uac1c\\ubc1c\\s*(?:\\uc218\\ud589|\\uc9c4\\ud589)|\"\n    r\"(?:\\uc5f0\\uad6c\\uacfc\\uc81c|\\uc790\\uccb4\\uacfc\\uc81c|\\uac1c\\ubc1c\\uc2e4\\uc801|\\uc5f0\\uad6c\\uac1c\\ubc1c\\uc2e4\\uc801)|\"\n    r\"\\uacf5\\uae09.{0,20}(?:\\uc911|\\ub418|\\ud558|\\uc2dc\\uc791)|\\ub0a9\\ud488(?:\\ud558|\\uc911)|\"\n    r\"(?:\\uc11c\\ube44\\uc2a4|\\uc194\\ub8e8\\uc158).{0,8}\\uc81c\\uacf5(?:\\ud558\\uace0|\\ud574\\uc624|\\uc911)|\"\n    r\"\\ud310\\ub9e4.{0,20}(?:\\ud1b5\\ud574|\\ub9e4\\ucd9c)|\\ub9e4\\ucd9c.{0,15}(?:\\ucc3d\\ucd9c|\\ubc1c\\uc0dd)|\"\n    r\"\\ud504\\ub85c\\uc81d\\ud2b8\\ub97c?\\s*\\uc218\\ud589|\\uacc4\\uc57d.{0,20}(?:\\uccb4\\uacb0|\\ub9fa)|\\ucd94\\uc9c4\\s*(?:\\ud558\\uae30\\ub85c|\\uacc4\\ud68d|\\uc911|\\ud558\\uace0)|\"\n    r\"(?:\\uc804\\ub7b5|\\uacc4\\ud68d|\\uc608\\uc815|\\ubaa9\\ud45c).{0,60}(?:\\uad6c\\ucd95|\\uac15\\ud654|\\ud655\\ub300|\\uc804\\ud658|\\ub3c4\\uc785|\\uac1c\\ubc1c|\\ucd9c\\uc2dc)|\"\n    r\"(?:\\uad6c\\ucd95|\\uac15\\ud654|\\ud655\\ub300|\\uc804\\ud658|\\ub3c4\\uc785|\\uac1c\\ubc1c|\\ucd9c\\uc2dc).{0,45}(?:\\uacc4\\ud68d|\\uc608\\uc815|\\ucd94\\uc9c4|\\ud558\\uaca0\\uc2b5\\ub2c8\\ub2e4|\\ud558\\uae30\\ub85c)|\"\n    r\"\\uc785\\uc810.{0,20}(?:\\uc911|\\uc644\\ub8cc)|\\uc9c4\\ucd9c(?:\\ud558|\\uc911)|\\ubaa8\\uc0c9\\s*\\uc911|\"\n    r\"(?:\\uac1c\\ubc1c|\\uacf5\\uae09|\\uc6b4\\uc601|\\ud310\\ub9e4|\\uc11c\\ube44\\uc2a4).{0,20}\\uc2dc\\uc791\"\n)",
+    "kind": "regex",
+    "pattern": "\\uc6b4\\uc601\\s*\\uc911|\\uc6b4\\uc601(?:\\ud558|\\ud574\\uc624)|\\uc81c\\uacf5\\s*\\uc911|\\ud310\\ub9e4\\s*\\uc911|\\uc2dc\\ud310\\s*\\uc911|(?<!\\ucc3d)\\ucd9c\\uc2dc|\\ub860\\uce6d|\\uc624\\ud508|\\uac1c\\uc7a5|\\uc124\\ub9bd|\\ud569\\ubcd1|\\uccb4\\uacb0|\\uc644\\ub8cc|\\uc778\\uc218|\\ucde8\\ub4dd|\\uad6c\\ucd95(?:\\ud558|\\ud588|\\ub418|\\uc911|\\uc644\\ub8cc)|\\uad6c\\ucd95.{0,30}(?:\\uc9c4\\ud589|\\uc218\\ud589)|\\ud22c\\uc790(?:\\ub97c|\\ub3c4|\\uac00)?\\s*(?:\\ud558\\uc600|\\ud588|\\ud558\\uace0|\\ud560|\\uc911|\\uc9c4\\ud589|\\uc9d1\\ud589|\\uacc4\\ud68d|\\ud655\\ub300|\\uc2b9\\uc778)|\\ub3c4\\uc785(?:\\ud558|\\ud588|\\ub418|\\uc911|\\uc644\\ub8cc)|\\uac1c\\ubc1c(?:\\ud558|\\ud588|\\ud574\\uc624|\\uc911|\\uc644\\ub8cc)|\\uac1c\\ubc1c.{0,30}(?:\\uc9c4\\ud589|\\uc218\\ud589|\\uc644\\ub8cc)|\\uc9c4\\ud589\\s*\\uc911.{0,30}\\uac1c\\ubc1c|\\ud604\\uc7ac.{0,80}\\uac1c\\ubc1c|\\uc5f0\\uad6c\\uac1c\\ubc1c\\s*(?:\\uc218\\ud589|\\uc9c4\\ud589)|(?:\\uc5f0\\uad6c\\uacfc\\uc81c|\\uc790\\uccb4\\uacfc\\uc81c|\\uac1c\\ubc1c\\uc2e4\\uc801|\\uc5f0\\uad6c\\uac1c\\ubc1c\\uc2e4\\uc801)|\\uacf5\\uae09.{0,20}(?:\\uc911|\\ub418|\\ud558|\\uc2dc\\uc791)|\\ub0a9\\ud488(?:\\ud558|\\uc911)|(?:\\uc11c\\ube44\\uc2a4|\\uc194\\ub8e8\\uc158).{0,8}\\uc81c\\uacf5(?:\\ud558\\uace0|\\ud574\\uc624|\\uc911)|\\ud310\\ub9e4.{0,20}(?:\\ud1b5\\ud574|\\ub9e4\\ucd9c)|\\ub9e4\\ucd9c.{0,15}(?:\\ucc3d\\ucd9c|\\ubc1c\\uc0dd)|\\ud504\\ub85c\\uc81d\\ud2b8\\ub97c?\\s*\\uc218\\ud589|\\uacc4\\uc57d.{0,20}(?:\\uccb4\\uacb0|\\ub9fa)|\\ucd94\\uc9c4\\s*(?:\\ud558\\uae30\\ub85c|\\uacc4\\ud68d|\\uc911|\\ud558\\uace0)|(?:\\uc804\\ub7b5|\\uacc4\\ud68d|\\uc608\\uc815|\\ubaa9\\ud45c).{0,60}(?:\\uad6c\\ucd95|\\uac15\\ud654|\\ud655\\ub300|\\uc804\\ud658|\\ub3c4\\uc785|\\uac1c\\ubc1c|\\ucd9c\\uc2dc)|(?:\\uad6c\\ucd95|\\uac15\\ud654|\\ud655\\ub300|\\uc804\\ud658|\\ub3c4\\uc785|\\uac1c\\ubc1c|\\ucd9c\\uc2dc).{0,45}(?:\\uacc4\\ud68d|\\uc608\\uc815|\\ucd94\\uc9c4|\\ud558\\uaca0\\uc2b5\\ub2c8\\ub2e4|\\ud558\\uae30\\ub85c)|\\uc785\\uc810.{0,20}(?:\\uc911|\\uc644\\ub8cc)|\\uc9c4\\ucd9c(?:\\ud558|\\uc911)|\\ubaa8\\uc0c9\\s*\\uc911|(?:\\uac1c\\ubc1c|\\uacf5\\uae09|\\uc6b4\\uc601|\\ud310\\ub9e4|\\uc11c\\ube44\\uc2a4).{0,20}\\uc2dc\\uc791",
+    "flags_integer": 32,
+    "IGNORECASE": false,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v4",
+    "name": "HIGH_CONFIDENCE_ACTION_RE",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "source_sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+    "line_start": 109,
+    "line_end": 119,
+    "ast_sha256": "723201930912960ee378ddcecb720aea31ab814bad205e7fedf4d1a76fbb7cb8",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "HIGH_CONFIDENCE_ACTION_RE = re.compile(\n    r\"\\uc5f0\\uad6c\\uacfc\\uc81c|\\uc790\\uccb4\\uacfc\\uc81c|\\uac1c\\ubc1c\\uc2e4\\uc801|\\uc5f0\\uad6c\\uac1c\\ubc1c\\uc2e4\\uc801|\"\n    r\"\\uac1c\\ubc1c(?:\\ud558\\uc600|\\ud588|\\ud558\\uace0|\\uc911|\\uc644\\ub8cc|\\uc9c4\\ud589)|\\uc9c4\\ud589\\s*\\uc911.{0,30}\\uac1c\\ubc1c|\"\n    r\"\\ud604\\uc7ac.{0,80}\\uac1c\\ubc1c|\\uad6c\\ucd95(?:\\ud558\\uc600|\\ud588|\\ud558\\uace0|\\uc644\\ub8cc|\\uc911)|\\ub3c4\\uc785(?:\\ud558\\uc600|\\ud588|\\ud558\\uace0|\\uc644\\ub8cc|\\uc911)|\"\n    r\"\\uacc4\\uc57d.{0,25}(?:\\uccb4\\uacb0|\\ub9fa)|\\ud22c\\uc790.{0,15}(?:\\uc9d1\\ud589|\\uc644\\ub8cc|\\uc2b9\\uc778)|\"\n    r\"(?<!\\ucc3d)\\ucd9c\\uc2dc(?:\\ud558|\\ud588|\\ud560|\\uc911|\\uc608\\uc815)?|\\ub860\\uce6d|\\uc624\\ud508|\\uac1c\\uc7a5|\\uc124\\ub9bd|\\ud569\\ubcd1|\\uc778\\uc218|\"\n    r\"\\uc6b4\\uc601(?:\\ud558\\uace0|\\ud574\\uc624|\\uc911)|(?:\\uc11c\\ube44\\uc2a4|\\uc194\\ub8e8\\uc158).{0,8}\\uc81c\\uacf5(?:\\ud558\\uace0|\\ud574\\uc624|\\uc911)|\"\n    r\"(?:\\uc81c\\ud488|\\uc11c\\ube44\\uc2a4|\\uc194\\ub8e8\\uc158|\\uc7a5\\ube44|\\uc2dc\\uc2a4\\ud15c).{0,35}\\uacf5\\uae09(?:\\ud558\\uace0|\\uc911|\\ub418)|\\ub0a9\\ud488(?:\\ud558\\uace0|\\uc911)|\"\n    r\"\\uc804\\ub7b5\\uc801\\s*\\uc81c\\ud734|\\ucd94\\uc9c4\\s*\\ud558\\uae30\\ub85c|\"\n    r\"(?:\\uc804\\ub7b5|\\uacc4\\ud68d).{0,60}(?:\\uad6c\\ucd95|\\uac15\\ud654|\\ud655\\ub300|\\uc804\\ud658|\\ub3c4\\uc785|\\uac1c\\ubc1c|\\ucd9c\\uc2dc)\"\n)",
+    "kind": "regex",
+    "pattern": "\\uc5f0\\uad6c\\uacfc\\uc81c|\\uc790\\uccb4\\uacfc\\uc81c|\\uac1c\\ubc1c\\uc2e4\\uc801|\\uc5f0\\uad6c\\uac1c\\ubc1c\\uc2e4\\uc801|\\uac1c\\ubc1c(?:\\ud558\\uc600|\\ud588|\\ud558\\uace0|\\uc911|\\uc644\\ub8cc|\\uc9c4\\ud589)|\\uc9c4\\ud589\\s*\\uc911.{0,30}\\uac1c\\ubc1c|\\ud604\\uc7ac.{0,80}\\uac1c\\ubc1c|\\uad6c\\ucd95(?:\\ud558\\uc600|\\ud588|\\ud558\\uace0|\\uc644\\ub8cc|\\uc911)|\\ub3c4\\uc785(?:\\ud558\\uc600|\\ud588|\\ud558\\uace0|\\uc644\\ub8cc|\\uc911)|\\uacc4\\uc57d.{0,25}(?:\\uccb4\\uacb0|\\ub9fa)|\\ud22c\\uc790.{0,15}(?:\\uc9d1\\ud589|\\uc644\\ub8cc|\\uc2b9\\uc778)|(?<!\\ucc3d)\\ucd9c\\uc2dc(?:\\ud558|\\ud588|\\ud560|\\uc911|\\uc608\\uc815)?|\\ub860\\uce6d|\\uc624\\ud508|\\uac1c\\uc7a5|\\uc124\\ub9bd|\\ud569\\ubcd1|\\uc778\\uc218|\\uc6b4\\uc601(?:\\ud558\\uace0|\\ud574\\uc624|\\uc911)|(?:\\uc11c\\ube44\\uc2a4|\\uc194\\ub8e8\\uc158).{0,8}\\uc81c\\uacf5(?:\\ud558\\uace0|\\ud574\\uc624|\\uc911)|(?:\\uc81c\\ud488|\\uc11c\\ube44\\uc2a4|\\uc194\\ub8e8\\uc158|\\uc7a5\\ube44|\\uc2dc\\uc2a4\\ud15c).{0,35}\\uacf5\\uae09(?:\\ud558\\uace0|\\uc911|\\ub418)|\\ub0a9\\ud488(?:\\ud558\\uace0|\\uc911)|\\uc804\\ub7b5\\uc801\\s*\\uc81c\\ud734|\\ucd94\\uc9c4\\s*\\ud558\\uae30\\ub85c|(?:\\uc804\\ub7b5|\\uacc4\\ud68d).{0,60}(?:\\uad6c\\ucd95|\\uac15\\ud654|\\ud655\\ub300|\\uc804\\ud658|\\ub3c4\\uc785|\\uac1c\\ubc1c|\\ucd9c\\uc2dc)",
+    "flags_integer": 32,
+    "IGNORECASE": false,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v4",
+    "name": "PRODUCT_REFERENCE_RE",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "source_sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+    "line_start": 120,
+    "line_end": 123,
+    "ast_sha256": "0ef600924fbab0d912ff1e5403290b1b5d9c29457cd22619f1619bf908d46493",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "PRODUCT_REFERENCE_RE = re.compile(\n    r\"\\ud3ec\\ud2b8\\ud3f4\\ub9ac\\uc624\\s*(?:\\.jpg)?|\\ud65c\\uc6a9\\ubd84\\uc57c\\s*(?:\\.jpg)?|\"\n    r\"\\uc81c\\ud488\\uad70\\s*(?:\\uc18c\\uac1c|\\ud604\\ud669)|\\uc81c\\ud488\\ubcc4\\s*\\ud604\\ud669\"\n)",
+    "kind": "regex",
+    "pattern": "\\ud3ec\\ud2b8\\ud3f4\\ub9ac\\uc624\\s*(?:\\.jpg)?|\\ud65c\\uc6a9\\ubd84\\uc57c\\s*(?:\\.jpg)?|\\uc81c\\ud488\\uad70\\s*(?:\\uc18c\\uac1c|\\ud604\\ud669)|\\uc81c\\ud488\\ubcc4\\s*\\ud604\\ud669",
+    "flags_integer": 32,
+    "IGNORECASE": false,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v4",
+    "name": "NON_DIGITAL_PLATFORM_RE",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "source_sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+    "line_start": 124,
+    "line_end": 127,
+    "ast_sha256": "064bc2844901d89f2c64c9515968158c857e19b22c4a4ccedd55d8c6b1574ea5",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "NON_DIGITAL_PLATFORM_RE = re.compile(\n    r\"(?:\\ubc14\\uc774\\uc624|\\uc784\\uc0c1|\\uc2e0\\uc57d|\\uc81c\\uc57d|\\uc0c1\\uc6a9\\uae30\\uc220|\\uc5f0\\uad6c).{0,35}\\ud50c\\ub7ab\\ud3fc|\"\n    r\"\\ud50c\\ub7ab\\ud3fc\\s*\\ud615\\uc2dd\\uc73c\\ub85c\\s*\\uacf5\\uc815\\ub77c\\uc778|(?:\\uacf5\\uc815\\ub77c\\uc778|\\uc784\\uac00\\uacf5|2\\ucc28\\uc804\\uc9c0\\uc18c\\uc7ac).{0,40}\\ud50c\\ub7ab\\ud3fc\"\n)",
+    "kind": "regex",
+    "pattern": "(?:\\ubc14\\uc774\\uc624|\\uc784\\uc0c1|\\uc2e0\\uc57d|\\uc81c\\uc57d|\\uc0c1\\uc6a9\\uae30\\uc220|\\uc5f0\\uad6c).{0,35}\\ud50c\\ub7ab\\ud3fc|\\ud50c\\ub7ab\\ud3fc\\s*\\ud615\\uc2dd\\uc73c\\ub85c\\s*\\uacf5\\uc815\\ub77c\\uc778|(?:\\uacf5\\uc815\\ub77c\\uc778|\\uc784\\uac00\\uacf5|2\\ucc28\\uc804\\uc9c0\\uc18c\\uc7ac).{0,40}\\ud50c\\ub7ab\\ud3fc",
+    "flags_integer": 32,
+    "IGNORECASE": false,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v4",
+    "name": "DIGITAL_PLATFORM_QUALIFIER_RE",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "source_sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+    "line_start": 128,
+    "line_end": 130,
+    "ast_sha256": "e6b822fb2903ffbd106c5e97f7b9f49844bb3121ab5314c8be62695cfbb3faa1",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "DIGITAL_PLATFORM_QUALIFIER_RE = re.compile(\n    r\"AI|\\uc778\\uacf5\\uc9c0\\ub2a5|\\ub370\\uc774\\ud130|\\uc628\\ub77c\\uc778|\\uc18c\\ud504\\ud2b8\\uc6e8\\uc5b4|IT|\\ud074\\ub77c\\uc6b0\\ub4dc|\\ub514\\uc9c0\\ud138|IoT\"\n)",
+    "kind": "regex",
+    "pattern": "AI|\\uc778\\uacf5\\uc9c0\\ub2a5|\\ub370\\uc774\\ud130|\\uc628\\ub77c\\uc778|\\uc18c\\ud504\\ud2b8\\uc6e8\\uc5b4|IT|\\ud074\\ub77c\\uc6b0\\ub4dc|\\ub514\\uc9c0\\ud138|IoT",
+    "flags_integer": 32,
+    "IGNORECASE": false,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v4",
+    "name": "VAGUE_STRATEGY_RE",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "source_sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+    "line_start": 131,
+    "line_end": 134,
+    "ast_sha256": "3faf635487dc0a4f7b412770d56587a9d9943c0a358f2d337637a379b69a12b6",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "VAGUE_STRATEGY_RE = re.compile(\n    r\"\\ub178\\ub825\\ud558\\uc600|\\ub9e4\\uc9c4|\\uc2dc\\uc7a5\\uc744?\\s*\\uc120\\ub3c4|\\uc8fc\\uc5ed|\\ucc45\\uc784.{0,20}\\ub2e4\\ud558|\"\n    r\"\\ucd5c\\uace0\\uc758\\s*\\uae30\\uc220\\uc744?\\s*\\ubcf4\\uc720\"\n)",
+    "kind": "regex",
+    "pattern": "\\ub178\\ub825\\ud558\\uc600|\\ub9e4\\uc9c4|\\uc2dc\\uc7a5\\uc744?\\s*\\uc120\\ub3c4|\\uc8fc\\uc5ed|\\ucc45\\uc784.{0,20}\\ub2e4\\ud558|\\ucd5c\\uace0\\uc758\\s*\\uae30\\uc220\\uc744?\\s*\\ubcf4\\uc720",
+    "flags_integer": 32,
+    "IGNORECASE": false,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v4",
+    "name": "DIGITAL_DEMAND_EXPOSURE_RE",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "source_sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+    "line_start": 135,
+    "line_end": 139,
+    "ast_sha256": "78a1785039c52f52ce8532b3f47410e5323a02da9a090e812c45be54b261f74e",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "DIGITAL_DEMAND_EXPOSURE_RE = re.compile(\n    r\"(?:5G|AI|\\uc778\\uacf5\\uc9c0\\ub2a5|\\uc790\\uc728\\s*\\uc8fc\\ud589).{0,120}(?:\\uc218\\uc694|\\uc2dc\\uc7a5).{0,120}\"\n    r\"(?:\\uc18c\\uc7ac|\\ud654\\ud559|\\ubd80\\ud488|\\uc6d0\\ub8cc|\\ubc18\\ub3c4\\uccb4\\s*\\uacf5\\uc815)|\"\n    r\"(?:\\ubc18\\ub3c4\\uccb4\\s*\\uacf5\\uc815\\uc6a9\\s*\\ud654\\ud559\\s*\\uc18c\\uc7ac).{0,120}(?:\\uc218\\uc694|5G|AI)\"\n)",
+    "kind": "regex",
+    "pattern": "(?:5G|AI|\\uc778\\uacf5\\uc9c0\\ub2a5|\\uc790\\uc728\\s*\\uc8fc\\ud589).{0,120}(?:\\uc218\\uc694|\\uc2dc\\uc7a5).{0,120}(?:\\uc18c\\uc7ac|\\ud654\\ud559|\\ubd80\\ud488|\\uc6d0\\ub8cc|\\ubc18\\ub3c4\\uccb4\\s*\\uacf5\\uc815)|(?:\\ubc18\\ub3c4\\uccb4\\s*\\uacf5\\uc815\\uc6a9\\s*\\ud654\\ud559\\s*\\uc18c\\uc7ac).{0,120}(?:\\uc218\\uc694|5G|AI)",
+    "flags_integer": 32,
+    "IGNORECASE": false,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v4",
+    "name": "CUSTOMER_OR_COMPETITOR_CONTEXT_RE",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "source_sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+    "line_start": 140,
+    "line_end": 143,
+    "ast_sha256": "0170e8852089bdb8414970cae9097be7faa0d7fe02449be7f9b693c5cb0c0764",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "CUSTOMER_OR_COMPETITOR_CONTEXT_RE = re.compile(\n    r\"(?:\\uace0\\uac1d|\\ubc29\\uc1a1/\\ud1b5\\uc2e0\\uc0ac\\uc5c5\\uc790).{0,240}(?:\\ud22c\\uc790|\\ud655\\ub300).{0,120}\\uc804\\ub9dd|\"\n    r\"(?:\\ub124\\uc774\\ubc84|\\uce74\\uce74\\uc624).{0,500}(?:\\ub124\\uc774\\ubc84|\\uce74\\uce74\\uc624)\"\n)",
+    "kind": "regex",
+    "pattern": "(?:\\uace0\\uac1d|\\ubc29\\uc1a1/\\ud1b5\\uc2e0\\uc0ac\\uc5c5\\uc790).{0,240}(?:\\ud22c\\uc790|\\ud655\\ub300).{0,120}\\uc804\\ub9dd|(?:\\ub124\\uc774\\ubc84|\\uce74\\uce74\\uc624).{0,500}(?:\\ub124\\uc774\\ubc84|\\uce74\\uce74\\uc624)",
+    "flags_integer": 32,
+    "IGNORECASE": false,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v4",
+    "name": "FORMER_BUSINESS_RE",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "source_sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+    "line_start": 144,
+    "line_end": 147,
+    "ast_sha256": "cced0a58d3d752a59241523418d581b5d9e9d61d48cee2f6a1bfd172e70deab7",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "FORMER_BUSINESS_RE = re.compile(\n    r\"\\uc124\\ub9bd\\s*(?:\\ub2f9\\uc2dc|\\ubc30\\uacbd)|\\uc131\\uc7a5\\s*\\uacfc\\uc815|\\ud569\\ubcd1\\s*\\uc804|\\ud569\\ubcd1\\uc804|\\uacfc\\uac70.{0,40}\\uc8fc\\ub41c\\s*\\uc0ac\\uc5c5|\"\n    r\"\\uc18c\\ud504\\ud2b8\\uc6e8\\uc5b4.{0,100}\\ubcc0\\uacbd\\ub418\\uc5c8\"\n)",
+    "kind": "regex",
+    "pattern": "\\uc124\\ub9bd\\s*(?:\\ub2f9\\uc2dc|\\ubc30\\uacbd)|\\uc131\\uc7a5\\s*\\uacfc\\uc815|\\ud569\\ubcd1\\s*\\uc804|\\ud569\\ubcd1\\uc804|\\uacfc\\uac70.{0,40}\\uc8fc\\ub41c\\s*\\uc0ac\\uc5c5|\\uc18c\\ud504\\ud2b8\\uc6e8\\uc5b4.{0,100}\\ubcc0\\uacbd\\ub418\\uc5c8",
+    "flags_integer": 32,
+    "IGNORECASE": false,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v4",
+    "name": "CLEAN_ACCOUNTING_OR_ENTITY_LIST_RE",
+    "file": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+    "source_sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb",
+    "line_start": 148,
+    "line_end": 157,
+    "ast_sha256": "030d21c20b25817a46ebe83295e0a22895bfab7fbd5e396475921191db257116",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "CLEAN_ACCOUNTING_OR_ENTITY_LIST_RE = re.compile(\n    r\"\\ub300\\uc5ec\\uae08|\\ud68c\\uc218\\uac00\\ub2a5\\uc131|\\ucda9\\ub2f9\\uae08|\\ubb34\\ud615\\uc790\\uc0b0|\\ucde8\\ub4dd\\uc6d0\\uac00|\"\n    r\"\\uc5f0\\uacb0\\uc81c\\uc678|\\uc5f0\\uacb0\\uc5d0\\s*\\ud3ec\\ud568|\\uc2e0\\uaddc\\ub85c\\s*\\uc5f0\\uacb0|\\uc9c0\\ubd84\\uc728\\s*\\ubcc0\\ub3d9|\"\n    r\"\\uccad\\uc0b0\\uc73c\\ub85c\\s*\\uc778\\ud55c\\s*\\uc81c\\uc678|\\uc8fc\\uc694\\s*\\uc885\\uc18d\\uae30\\uc5c5|\\ud2b9\\uc218\\uad00\\uacc4\\uc790|\"\n    r\"\\uc9c0\\ubd84\\ubc95|\\uc720\\uc0c1\\uc99d\\uc790|\\uc8fc\\uc2dd.{0,30}\\ucde8\\ub4dd|\\uae30\\ucd08.{0,30}\\ucde8\\ub4dd.{0,30}\\ucc98\\ubd84|\"\n    r\"\\uc2e0\\uaddc\\uc124\\ub9bd\\uc5d0\\s*\\ub530\\ub978\\s*\\uc9c0\\ubc30\\ub825|\\uc7ac\\ubb34\\uc0c1\\ud0dc\\ud45c|\\ucd9c\\uc790\\ubaa9\\uc801|\\uc7a5\\ubd80\\uac00\\uc561|\"\n    r\"\\uc190\\uc0c1\\ud3c9\\uac00|\\uc190\\uc0c1\\uc744\\s*\\uc778\\uc2dd|\\uae30\\uc5c5\\ud68c\\uacc4\\uae30\\uc900\\uc11c|\\uc218\\ud589\\uc758\\ubb34|\"\n    r\"\\uc9c0\\ubc30\\ub825\\uc744\\s*\\ud589\\uc0ac|\\uc885\\uc18d\\uae30\\uc5c5\\uc73c\\ub85c\\s*\\ubd84\\ub958|\\ub2f9\\uae30\\s*\\uc911\\s*\\uc885\\uc18d\\uae30\\uc5c5|\\uc778\\uc801\\ubd84\\ud560|\"\n    r\"\\ud1b5\\uc81c\\uc758\\s*\\uc774\\uc804|\\uc218\\uc775\\uc774\\s*\\uc778\\uc2dd|\\uc218\\uc775\\s*\\uc778\\uc2dd\\uc2dc\\uae30\"\n)",
+    "kind": "regex",
+    "pattern": "\\ub300\\uc5ec\\uae08|\\ud68c\\uc218\\uac00\\ub2a5\\uc131|\\ucda9\\ub2f9\\uae08|\\ubb34\\ud615\\uc790\\uc0b0|\\ucde8\\ub4dd\\uc6d0\\uac00|\\uc5f0\\uacb0\\uc81c\\uc678|\\uc5f0\\uacb0\\uc5d0\\s*\\ud3ec\\ud568|\\uc2e0\\uaddc\\ub85c\\s*\\uc5f0\\uacb0|\\uc9c0\\ubd84\\uc728\\s*\\ubcc0\\ub3d9|\\uccad\\uc0b0\\uc73c\\ub85c\\s*\\uc778\\ud55c\\s*\\uc81c\\uc678|\\uc8fc\\uc694\\s*\\uc885\\uc18d\\uae30\\uc5c5|\\ud2b9\\uc218\\uad00\\uacc4\\uc790|\\uc9c0\\ubd84\\ubc95|\\uc720\\uc0c1\\uc99d\\uc790|\\uc8fc\\uc2dd.{0,30}\\ucde8\\ub4dd|\\uae30\\ucd08.{0,30}\\ucde8\\ub4dd.{0,30}\\ucc98\\ubd84|\\uc2e0\\uaddc\\uc124\\ub9bd\\uc5d0\\s*\\ub530\\ub978\\s*\\uc9c0\\ubc30\\ub825|\\uc7ac\\ubb34\\uc0c1\\ud0dc\\ud45c|\\ucd9c\\uc790\\ubaa9\\uc801|\\uc7a5\\ubd80\\uac00\\uc561|\\uc190\\uc0c1\\ud3c9\\uac00|\\uc190\\uc0c1\\uc744\\s*\\uc778\\uc2dd|\\uae30\\uc5c5\\ud68c\\uacc4\\uae30\\uc900\\uc11c|\\uc218\\ud589\\uc758\\ubb34|\\uc9c0\\ubc30\\ub825\\uc744\\s*\\ud589\\uc0ac|\\uc885\\uc18d\\uae30\\uc5c5\\uc73c\\ub85c\\s*\\ubd84\\ub958|\\ub2f9\\uae30\\s*\\uc911\\s*\\uc885\\uc18d\\uae30\\uc5c5|\\uc778\\uc801\\ubd84\\ud560|\\ud1b5\\uc81c\\uc758\\s*\\uc774\\uc804|\\uc218\\uc775\\uc774\\s*\\uc778\\uc2dd|\\uc218\\uc775\\s*\\uc778\\uc2dd\\uc2dc\\uae30",
+    "flags_integer": 32,
+    "IGNORECASE": false,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "ACCOUNTING_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 26,
+    "line_end": 35,
+    "ast_sha256": "030d0b486aaccac0be07267f78eac05aed54f3bf4ebf272621176dd8170fc402",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "ACCOUNTING_RE = rx(\n    r\"무형자산|상각(?:누계액|비|이|을)|장부금액|역사적\\s*원가|내용연수|\"\n    r\"재무제표|회계정책|손상차손|공정가치|이연법인세|주석\\s*\\d|\"\n    r\"차입금명칭|전자단기사채|출자약정금액|리스채권|특수관계자.{0,80}거래|\"\n    r\"수익인식|자본화된\\s*개발비|컴퓨터소프트웨어|\"\n    r\"\\([12]\\)\\s*(?:제품|상품|재화)의\\s*판매\\s*(?:연결)?회사는|\"\n    r\"영업이익\\s*감소.{0,100}대손충당금|구\\s*분.{0,120}영업이익|\"\n    r\"산출기준.{0,100}(?:단가|가격변동)|주요\\s*가격변동요인|가격변동추이|\"\n    r\"유형자산\\s*취득약정|관계기업.{0,120}ERP\\s*구축\\s*컨설팅\"\n)",
+    "kind": "regex",
+    "pattern": "무형자산|상각(?:누계액|비|이|을)|장부금액|역사적\\s*원가|내용연수|재무제표|회계정책|손상차손|공정가치|이연법인세|주석\\s*\\d|차입금명칭|전자단기사채|출자약정금액|리스채권|특수관계자.{0,80}거래|수익인식|자본화된\\s*개발비|컴퓨터소프트웨어|\\([12]\\)\\s*(?:제품|상품|재화)의\\s*판매\\s*(?:연결)?회사는|영업이익\\s*감소.{0,100}대손충당금|구\\s*분.{0,120}영업이익|산출기준.{0,100}(?:단가|가격변동)|주요\\s*가격변동요인|가격변동추이|유형자산\\s*취득약정|관계기업.{0,120}ERP\\s*구축\\s*컨설팅",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "ENTITY_OR_NAME_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 36,
+    "line_end": 40,
+    "ast_sha256": "230f7d1964c264bbdf778276891401ddb1023bd0848576106a1194bab13a7d73",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "ENTITY_OR_NAME_RE = rx(\n    r\"투자조합|벤처투자조합|사모투자|스마트신세계|스마트\\s*CKD|\"\n    r\"나이스비즈니스플랫폼|요즈마글로벌AI펀드|메디클라우드.{0,40}전환사채|\"\n    r\"스마트사이드주식회사|스마트로더\\s*전자단기사채|스마트역삼\"\n)",
+    "kind": "regex",
+    "pattern": "투자조합|벤처투자조합|사모투자|스마트신세계|스마트\\s*CKD|나이스비즈니스플랫폼|요즈마글로벌AI펀드|메디클라우드.{0,40}전환사채|스마트사이드주식회사|스마트로더\\s*전자단기사채|스마트역삼",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "NON_DIGITAL_COLLISION_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 41,
+    "line_end": 49,
+    "ast_sha256": "ba83e28b328b8360e625bf76fda85b5c7f7171c2b5af69cb6c336bae0a340e40",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "NON_DIGITAL_COLLISION_RE = rx(\n    r\"당사\\s*맥주인\\s*['\\\"]?클라우드|클라우드\\s*제품\\s*리뉴얼|\"\n    r\"브랜드\\s*플랫폼|CPU\\s*플랫폼|터빈.{0,20}플랫폼|날개\\s*구조물\\s*플랫폼|\"\n    r\"마우스\\s*플랫폼|항체.{0,30}플랫폼|기술\\s*플랫폼으로\\s*폴리|\"\n    r\"신약개발\\s*플랫폼(?!.*AI)|화학적으로\\s*현실화시켜.{0,30}플랫폼|\"\n    r\"모바일\\s*화면.{0,30}레진|모바일\\s*스마트기기\\s*시장.{0,30}소재|\"\n    r\"AI\\s*실린더\\s*헤드|PBV.{0,60}플랫폼|플랫폼.{0,60}PBV|\"\n    r\"사외이사.{0,180}4차\\s*산업혁명|4차\\s*산업혁명.{0,180}사외이사\"\n)",
+    "kind": "regex",
+    "pattern": "당사\\s*맥주인\\s*['\\\"]?클라우드|클라우드\\s*제품\\s*리뉴얼|브랜드\\s*플랫폼|CPU\\s*플랫폼|터빈.{0,20}플랫폼|날개\\s*구조물\\s*플랫폼|마우스\\s*플랫폼|항체.{0,30}플랫폼|기술\\s*플랫폼으로\\s*폴리|신약개발\\s*플랫폼(?!.*AI)|화학적으로\\s*현실화시켜.{0,30}플랫폼|모바일\\s*화면.{0,30}레진|모바일\\s*스마트기기\\s*시장.{0,30}소재|AI\\s*실린더\\s*헤드|PBV.{0,60}플랫폼|플랫폼.{0,60}PBV|사외이사.{0,180}4차\\s*산업혁명|4차\\s*산업혁명.{0,180}사외이사",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "FINANCIAL_ENTITY_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 50,
+    "line_end": 53,
+    "ast_sha256": "3b1cf022e39aad7da05196c490c19a84972108c0937d6f65f2d1a3115696d000",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "FINANCIAL_ENTITY_RE = rx(\n    r\"(?:AI|디지털|플랫폼).{0,25}(?:펀드|투자조합).{0,100}\"\n    r\"(?:청산|지분증권|금융자산|처분손실|특수관계자\\s*거래)\"\n)",
+    "kind": "regex",
+    "pattern": "(?:AI|디지털|플랫폼).{0,25}(?:펀드|투자조합).{0,100}(?:청산|지분증권|금융자산|처분손실|특수관계자\\s*거래)",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "NEGATION_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 54,
+    "line_end": 54,
+    "ast_sha256": "d7a76dd49de21562c46d927df7bd154947f75f6a379148ead95a8f985d86959d",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "NEGATION_RE = rx(r\"미영위|추진을\\s*중단|영위하지\\s*않|사업을\\s*영위하지|미추진\")",
+    "kind": "regex",
+    "pattern": "미영위|추진을\\s*중단|영위하지\\s*않|사업을\\s*영위하지|미추진",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "BUSINESS_PURPOSE_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 55,
+    "line_end": 59,
+    "ast_sha256": "d09ec6edd0746493c213f03ba829bfc13c74bbced846e0b91a07b820aa032a29",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "BUSINESS_PURPOSE_RE = rx(\n    r\"사업\\s*목적|목적\\s*사업|정관에\\s*기재된|목\\s*적\\s*사\\s*업|\"\n    r\"사업\\s*분야\\(업종|변경\\s*후\\s*사업목적|각호에\\s*관련된|\"\n    r\"진출\\s*목적|사업분야\\s*및\\s*진출목적\"\n)",
+    "kind": "regex",
+    "pattern": "사업\\s*목적|목적\\s*사업|정관에\\s*기재된|목\\s*적\\s*사\\s*업|사업\\s*분야\\(업종|변경\\s*후\\s*사업목적|각호에\\s*관련된|진출\\s*목적|사업분야\\s*및\\s*진출목적",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "BUSINESS_LIST_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 60,
+    "line_end": 69,
+    "ast_sha256": "a0c9a38aca77b8be2e13151ec71c6ae859a754becebfd3d85e7a14c3091f6696",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "BUSINESS_LIST_RE = rx(\n    r\"제조\\s*및\\s*판매업|개발\\s*및\\s*판매업|소프트웨어\\s*개발업|\"\n    r\"전자상거래업|통신판매업|온라인\\s*판매업|정보서비스업|\"\n    r\"판매조직.{0,160}스마트팜사업부문|사업부문\\s*주요\\s*매출품목|\"\n    r\"(?:개발|판매)사업/?제품\\s*판매사업|판매업\\s*\\d+\\.?$|\"\n    r\"물류업\\s*엔터테인먼트.{0,120}미디어플랫폼\\s*사업|\"\n    r\"전자상거래를\\s*통한\\s*상품\\s*용역의\\s*판매|\"\n    r\"사업부문\\s*요약\\s*재무현황|사업부.{0,80}(?:소프트웨어|시스템)|\"\n    r\"시스템소프트(?:웨어)?개발.{0,100}(?:사업부|수출|제품)\"\n)",
+    "kind": "regex",
+    "pattern": "제조\\s*및\\s*판매업|개발\\s*및\\s*판매업|소프트웨어\\s*개발업|전자상거래업|통신판매업|온라인\\s*판매업|정보서비스업|판매조직.{0,160}스마트팜사업부문|사업부문\\s*주요\\s*매출품목|(?:개발|판매)사업/?제품\\s*판매사업|판매업\\s*\\d+\\.?$|물류업\\s*엔터테인먼트.{0,120}미디어플랫폼\\s*사업|전자상거래를\\s*통한\\s*상품\\s*용역의\\s*판매|사업부문\\s*요약\\s*재무현황|사업부.{0,80}(?:소프트웨어|시스템)|시스템소프트(?:웨어)?개발.{0,100}(?:사업부|수출|제품)",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "SCOPE_ENUM_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 70,
+    "line_end": 77,
+    "ast_sha256": "2abb031525eb9c422dd2d9c4eb9de52686b2bd344e03c35855c2efa5c46b4ad7",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "SCOPE_ENUM_RE = rx(\n    r\"영위하고\\s*있는\\s*사업|사업부문\\s*주요\\s*매출품목|\"\n    r\"시스템\\s*소프트웨어\\s*개발\\s*및\\s*공급업|\"\n    r\"소프트웨어\\s*(?:연구)?개발\\s*및\\s*(?:판매|공급)업?|\"\n    r\"응용소프트웨어\\s*개발\\s*및\\s*공급업|\"\n    r\"소프트웨어\\s*개발\\s*및\\s*판매\\s*\\(주\\)|\"\n    r\"소프트웨어.{0,50}연결조정.{0,30}영업이익\"\n)",
+    "kind": "regex",
+    "pattern": "영위하고\\s*있는\\s*사업|사업부문\\s*주요\\s*매출품목|시스템\\s*소프트웨어\\s*개발\\s*및\\s*공급업|소프트웨어\\s*(?:연구)?개발\\s*및\\s*(?:판매|공급)업?|응용소프트웨어\\s*개발\\s*및\\s*공급업|소프트웨어\\s*개발\\s*및\\s*판매\\s*\\(주\\)|소프트웨어.{0,50}연결조정.{0,30}영업이익",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "CHRONOLOGY_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 78,
+    "line_end": 82,
+    "ast_sha256": "800badb99e7700fd7d1b07e562b3aecdb48f943d97f3953148736ab76a09e1e2",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "CHRONOLOGY_RE = rx(\n    r\"(?:회사\\s*)?연혁|(?:19|20)\\d{2}\\.\\d{1,2}.{0,180}(?:19|20)\\d{2}\\.\\d{1,2}|\"\n    r\"(?:19|20)\\d{2}년\\s*\\d{1,2}월.{0,180}(?:19|20)\\d{2}년\\s*\\d{1,2}월|\"\n    r\"경영상의\\s*주요계약.{0,240}(?:도입계약|전산용역)\"\n)",
+    "kind": "regex",
+    "pattern": "(?:회사\\s*)?연혁|(?:19|20)\\d{2}\\.\\d{1,2}.{0,180}(?:19|20)\\d{2}\\.\\d{1,2}|(?:19|20)\\d{2}년\\s*\\d{1,2}월.{0,180}(?:19|20)\\d{2}년\\s*\\d{1,2}월|경영상의\\s*주요계약.{0,240}(?:도입계약|전산용역)",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "BOARD_LIST_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 83,
+    "line_end": 83,
+    "ast_sha256": "c908c29866563b62535d2faa2a89d17b2b2e70ba05f2844a45b0ea40c700334c",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "BOARD_LIST_RE = rx(r\"보고사항|의안내용|가결\\s*찬성|이사회.{0,40}(?:결의|승인)\")",
+    "kind": "regex",
+    "pattern": "보고사항|의안내용|가결\\s*찬성|이사회.{0,40}(?:결의|승인)",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "GENERIC_CONTEXT_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 84,
+    "line_end": 102,
+    "ast_sha256": "00d2cc7fb64bb493879b3ba2007acbd3cd0cc2a0ec848a9d9f59601ec1d70b27",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "GENERIC_CONTEXT_RE = rx(\n    r\"산업의\\s*(?:현황|정의|개요|특성|성장성)|시장의\\s*향후\\s*전망|성장할\\s*것으로\\s*예상|\"\n    r\"수요가?\\s*(?:증가|확대)|시장(?:의\\s*특성|\\s*특성)|\"\n    r\"시장(?:은|이|의)?.{0,50}(?:성장|확대|전망|전환|증가)|\"\n    r\"산업(?:은|이|의)?.{0,50}(?:성장|확대|전망|변화|전환)|\"\n    r\"정부(?:는|가|의|에서|\\s*또한)|국가적\\s*차원|우리\\s*기업들도|\"\n    r\"모든\\s*기업|대기업들도|업체들이|글로벌\\s*(?:기업|브랜드)들은|\"\n    r\"업계는|최근\\s*원양어업은|네덜란드의\\s*시스템|\"\n    r\"제작사들은|플랫폼\\s*사는|유통\\s*환경의\\s*변화|활성화되고\\s*있|\"\n    r\"증가하고\\s*있는\\s*상황|경쟁이\\s*심화되고|디지털\\s*TV는|\"\n    r\"참고자료\\s*:|지속적인\\s*관심이\\s*필요|주목을\\s*받고\\s*있는|\"\n    r\"발생하고\\s*있는\\s*추세|공급과\\s*수요.{0,40}성장|\"\n    r\"판매경로\\s*및\\s*판매방법|판매조직.{0,60}온라인담당|\"\n    r\"급속히\\s*확대되는\\s*추세|산업.{0,70}방향이\\s*새롭게\\s*떠오르|\"\n    r\"향후.{0,60}추이.{0,30}전망|경쟁\\s*환경.{0,80}중요성|\"\n    r\"중요한\\s*성공요인|진화에\\s*따라.{0,60}변화|\"\n    r\"성장에\\s*따라.{0,100}(?:급증|적용.{0,20}확대)|\"\n    r\"브랜드들.{0,120}큰\\s*관심\"\n)",
+    "kind": "regex",
+    "pattern": "산업의\\s*(?:현황|정의|개요|특성|성장성)|시장의\\s*향후\\s*전망|성장할\\s*것으로\\s*예상|수요가?\\s*(?:증가|확대)|시장(?:의\\s*특성|\\s*특성)|시장(?:은|이|의)?.{0,50}(?:성장|확대|전망|전환|증가)|산업(?:은|이|의)?.{0,50}(?:성장|확대|전망|변화|전환)|정부(?:는|가|의|에서|\\s*또한)|국가적\\s*차원|우리\\s*기업들도|모든\\s*기업|대기업들도|업체들이|글로벌\\s*(?:기업|브랜드)들은|업계는|최근\\s*원양어업은|네덜란드의\\s*시스템|제작사들은|플랫폼\\s*사는|유통\\s*환경의\\s*변화|활성화되고\\s*있|증가하고\\s*있는\\s*상황|경쟁이\\s*심화되고|디지털\\s*TV는|참고자료\\s*:|지속적인\\s*관심이\\s*필요|주목을\\s*받고\\s*있는|발생하고\\s*있는\\s*추세|공급과\\s*수요.{0,40}성장|판매경로\\s*및\\s*판매방법|판매조직.{0,60}온라인담당|급속히\\s*확대되는\\s*추세|산업.{0,70}방향이\\s*새롭게\\s*떠오르|향후.{0,60}추이.{0,30}전망|경쟁\\s*환경.{0,80}중요성|중요한\\s*성공요인|진화에\\s*따라.{0,60}변화|성장에\\s*따라.{0,100}(?:급증|적용.{0,20}확대)|브랜드들.{0,120}큰\\s*관심",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "FOCAL_FIRM_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 103,
+    "line_end": 103,
+    "ast_sha256": "8b3095a08e603d429ec8544f99e8635ba50c9986a0c7abc05d876489de9bbfa5",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "FOCAL_FIRM_RE = rx(r\"당사|우리\\s*회사|회사(?:는|가|의)|연결회사|연결실체|그룹(?:은|내)\")",
+    "kind": "regex",
+    "pattern": "당사|우리\\s*회사|회사(?:는|가|의)|연결회사|연결실체|그룹(?:은|내)",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "EXPLICIT_FOCAL_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 104,
+    "line_end": 107,
+    "ast_sha256": "a357e12e76b298356c647ac657ad6b364fa3a2aebe3957b5ef420c2e1fe89774",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "EXPLICIT_FOCAL_RE = rx(\n    r\"당사|우리\\s*회사|연결회사|연결실체|그룹(?:은|내)|\"\n    r\"회사(?:는|가)\\s*(?:새로운|디지털|스마트|온라인|데이터)\"\n)",
+    "kind": "regex",
+    "pattern": "당사|우리\\s*회사|연결회사|연결실체|그룹(?:은|내)|회사(?:는|가)\\s*(?:새로운|디지털|스마트|온라인|데이터)",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "EXTERNAL_COMPANY_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 108,
+    "line_end": 112,
+    "ast_sha256": "e15e6227a83b20bac6edc75b79666ff7a0ab7a2fc5ea644ca02e8dee1f5cc3f5",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "EXTERNAL_COMPANY_RE = rx(\n    r\"마이크로소프트|구글|아마존|알리바바|테슬라|인텔|\"\n    r\"(?<![A-Za-z])Intel(?![A-Za-z])|(?<![A-Za-z])AMD(?![A-Za-z])|\"\n    r\"메리바라|\\bGM\\b|General\\s*Motors|해외\\s*경쟁사|경쟁업체들은\"\n)",
+    "kind": "regex",
+    "pattern": "마이크로소프트|구글|아마존|알리바바|테슬라|인텔|(?<![A-Za-z])Intel(?![A-Za-z])|(?<![A-Za-z])AMD(?![A-Za-z])|메리바라|\\bGM\\b|General\\s*Motors|해외\\s*경쟁사|경쟁업체들은",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "FOURTH_IR_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 114,
+    "line_end": 114,
+    "ast_sha256": "0872346edf029feaf00a2e89b5d659d5e2835ab60d24a61d70366b909c2b1ae6",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "FOURTH_IR_RE = rx(r\"4차\\s*산업혁명|제4차\\s*산업혁명|디지털\\s*시대\")",
+    "kind": "regex",
+    "pattern": "4차\\s*산업혁명|제4차\\s*산업혁명|디지털\\s*시대",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "STRONG_DIGITAL_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 115,
+    "line_end": 126,
+    "ast_sha256": "28ac745c14d5cbaa7aa4a1407ed62e477b4b479467d70f9a000e42ddd9eab50a",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "STRONG_DIGITAL_RE = rx(\n    r\"디지털(?:화|\\s*(?:전환|트랜스포메이션|혁신|전략|플랫폼|서비스|솔루션|Amp))|\"\n    r\"인공지능|생성형?\\s*AI|(?<![A-Za-z])AI(?![A-Za-z])|머신러닝|딥러닝|\"\n    r\"빅데이터|데이터\\s*(?:분석|플랫폼|기반)|클라우드\\s*(?:서비스|컴퓨팅|플랫폼)|\"\n    r\"사물인터넷|(?<![A-Za-z])IoT(?![A-Za-z])|블록체인|디지털\\s*트윈|\"\n    r\"스마트\\s*(?:팩토리|공장|제조|생태공장|상수도)|지능형.{0,25}시스템|\"\n    r\"(?<![A-Za-z])RPA(?![A-Za-z])|로봇(?:\\s*프로세스\\s*자동화|\\s*기술|\\s*시스템|\\s*개발)|\"\n    r\"사이버\\s*보안|정보보안|(?<![A-Za-z])(?:ERP|MES|WMS|TMS|CRM|BIM)(?![A-Za-z])|\"\n    r\"자율주행|알고리즘|데이터베이스|5G|Bluetooth|UWB|3D\\s*스캔|드론|\"\n    r\"(?<![A-Za-z])TES(?![A-Za-z])|\"\n    r\"구독경제.{0,30}결제|휴대폰\\s*결제|커넥티드카\"\n)",
+    "kind": "regex",
+    "pattern": "디지털(?:화|\\s*(?:전환|트랜스포메이션|혁신|전략|플랫폼|서비스|솔루션|Amp))|인공지능|생성형?\\s*AI|(?<![A-Za-z])AI(?![A-Za-z])|머신러닝|딥러닝|빅데이터|데이터\\s*(?:분석|플랫폼|기반)|클라우드\\s*(?:서비스|컴퓨팅|플랫폼)|사물인터넷|(?<![A-Za-z])IoT(?![A-Za-z])|블록체인|디지털\\s*트윈|스마트\\s*(?:팩토리|공장|제조|생태공장|상수도)|지능형.{0,25}시스템|(?<![A-Za-z])RPA(?![A-Za-z])|로봇(?:\\s*프로세스\\s*자동화|\\s*기술|\\s*시스템|\\s*개발)|사이버\\s*보안|정보보안|(?<![A-Za-z])(?:ERP|MES|WMS|TMS|CRM|BIM)(?![A-Za-z])|자율주행|알고리즘|데이터베이스|5G|Bluetooth|UWB|3D\\s*스캔|드론|(?<![A-Za-z])TES(?![A-Za-z])|구독경제.{0,30}결제|휴대폰\\s*결제|커넥티드카",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "ONLINE_DIGITAL_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 127,
+    "line_end": 134,
+    "ast_sha256": "1144fd0ccab05edac4bda42f85356d225a2a6b2b73dab6740723f56046a6c7f3",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "ONLINE_DIGITAL_RE = rx(\n    r\"온라인\\s*(?:채널|판매|쇼핑몰|몰|사업|플랫폼|마케팅|부문)|\"\n    r\"전자상거래|이커머스|e-?커머스|모바일\\s*(?:앱|플랫폼|서비스|사이트|경로)|\"\n    r\"디지털\\s*채널|옴니\\s*채널|비대면\\s*(?:서비스|채널)|(?<![A-Za-z])OTT(?![A-Za-z])|\"\n    r\"온라인.{0,45}(?:판매|매출|수익|채널|사업|몰|마케팅|진출|입점|확대)|\"\n    r\"모바일.{0,35}(?:서비스|플랫폼|판매|결제|개발|운영)|\"\n    r\"온라인으로\\s*연계|온라인을\\s*근간|인터넷\\s*온라인\\s*광고\"\n)",
+    "kind": "regex",
+    "pattern": "온라인\\s*(?:채널|판매|쇼핑몰|몰|사업|플랫폼|마케팅|부문)|전자상거래|이커머스|e-?커머스|모바일\\s*(?:앱|플랫폼|서비스|사이트|경로)|디지털\\s*채널|옴니\\s*채널|비대면\\s*(?:서비스|채널)|(?<![A-Za-z])OTT(?![A-Za-z])|온라인.{0,45}(?:판매|매출|수익|채널|사업|몰|마케팅|진출|입점|확대)|모바일.{0,35}(?:서비스|플랫폼|판매|결제|개발|운영)|온라인으로\\s*연계|온라인을\\s*근간|인터넷\\s*온라인\\s*광고",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "AUTOMATION_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 135,
+    "line_end": 142,
+    "ast_sha256": "4469116124a1e52b1455cc4e0f081208543022b92fce33456be3a637650a383b",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "AUTOMATION_RE = rx(\n    r\"설비\\s*자동화|설비자동화|자동화\\s*(?:설비|시설|라인|시스템|공정|기술|투자)|\"\n    r\"자동화를\\s*(?:지속|추진|적용)|자동화(?:의|에)?\\s*(?:지속적인\\s*)?투자|\"\n    r\"자동화\\s*(?:신기술|솔루션)|자동화(?:하|했|하여|되|된)|\"\n    r\"설비를?\\s*자동화|로봇을?\\s*(?:활용|적용)|공정\\s*자동화|\"\n    r\"설계\\s*자동화|무인\\s*자동화|로봇\\s*시스템|서비스\\s*로봇|\"\n    r\"스마트\\s*(?:팜|홈|시티|가구)|원격\\s*(?:측정|검침|모니터링)\"\n)",
+    "kind": "regex",
+    "pattern": "설비\\s*자동화|설비자동화|자동화\\s*(?:설비|시설|라인|시스템|공정|기술|투자)|자동화를\\s*(?:지속|추진|적용)|자동화(?:의|에)?\\s*(?:지속적인\\s*)?투자|자동화\\s*(?:신기술|솔루션)|자동화(?:하|했|하여|되|된)|설비를?\\s*자동화|로봇을?\\s*(?:활용|적용)|공정\\s*자동화|설계\\s*자동화|무인\\s*자동화|로봇\\s*시스템|서비스\\s*로봇|스마트\\s*(?:팜|홈|시티|가구)|원격\\s*(?:측정|검침|모니터링)",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "PLATFORM_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 143,
+    "line_end": 143,
+    "ast_sha256": "b5e6b8e71e60f8e6c90def515811c1b99386b8a36f56e9824414616efd75bd43",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "PLATFORM_RE = rx(r\"플랫폼\")",
+    "kind": "regex",
+    "pattern": "플랫폼",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "SOFTWARE_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 144,
+    "line_end": 144,
+    "ast_sha256": "b65812dc9d614ffd3ce50e948b43a430d748233afd12017d8b4c6cac93211e3b",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "SOFTWARE_RE = rx(r\"소프트웨어|IT\\s*(?:서비스|시스템|솔루션)|정보시스템\")",
+    "kind": "regex",
+    "pattern": "소프트웨어|IT\\s*(?:서비스|시스템|솔루션)|정보시스템",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "DATA_OPERATION_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 145,
+    "line_end": 148,
+    "ast_sha256": "a1a3c8875246c15f71d722f09c6ac086b60100ab7eefd3d5394ef80e1abf291d",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "DATA_OPERATION_RE = rx(\n    r\"데이터.{0,35}(?:수집|적재|집적|축적|분석|활용|관리|통합|연결|검증)|\"\n    r\"(?:수집|적재|집적|축적|분석|활용|관리|통합).{0,35}데이터\"\n)",
+    "kind": "regex",
+    "pattern": "데이터.{0,35}(?:수집|적재|집적|축적|분석|활용|관리|통합|연결|검증)|(?:수집|적재|집적|축적|분석|활용|관리|통합).{0,35}데이터",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "ACTION_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 150,
+    "line_end": 157,
+    "ast_sha256": "382445ce00c3a500962f125459fd89e3f86e9c9f4da2c9e9c90ed877f3e4e1c7",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "ACTION_RE = rx(\n    r\"구축|도입|개발|투자|적용|활용|운영|추진|확대|고도화|개선|최적화|\"\n    r\"자동화|통합|출시|제공|강화|협력|제휴|상용화|인수|취득|설립|체결|\"\n    r\"전환|개편|확보|발굴|공급|판매|론칭|오픈|신설|충원|참여|\"\n    r\"수집|적재|집적|축적|측정|관리|조회|모니터링|자리매김|매출이\\s*발생|\"\n    r\"성장하였습니다|증가하고\\s*있|집중|도모|시행|진행|기획|제작|보급|\"\n    r\"소개|중개|발생|자리매김|서비스를\\s*제공\"\n)",
+    "kind": "regex",
+    "pattern": "구축|도입|개발|투자|적용|활용|운영|추진|확대|고도화|개선|최적화|자동화|통합|출시|제공|강화|협력|제휴|상용화|인수|취득|설립|체결|전환|개편|확보|발굴|공급|판매|론칭|오픈|신설|충원|참여|수집|적재|집적|축적|측정|관리|조회|모니터링|자리매김|매출이\\s*발생|성장하였습니다|증가하고\\s*있|집중|도모|시행|진행|기획|제작|보급|소개|중개|발생|자리매김|서비스를\\s*제공",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "IMPLEMENTED_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 158,
+    "line_end": 165,
+    "ast_sha256": "30daa50ad08f1998fc856ffa487b5c02e7ac674bdf959887e7110a061b5b91f7",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "IMPLEMENTED_RE = rx(\n    r\"구축(?:하|했|하여|되어|중)|도입(?:하|했|하여|되어|중)|\"\n    r\"개발(?:하|했|하여|완료|중)|운영(?:하|했|하여|중)|출시|론칭|오픈|\"\n    r\"인수|취득|설립|투자(?:하|했|하여|중)|체결|적용(?:하|했|하여|중)|\"\n    r\"활용(?:하|했|하여|중)|제공(?:하|했|하여|중)|판매(?:하|했|하여|중)|\"\n    r\"확대(?:하|했|하여|중)|강화(?:하|했|하여|중)|고도화(?:하|했|하여|중)|\"\n    r\"진출|전환(?:하|했|하여|중)|시행|수취하였습니다|운용\"\n)",
+    "kind": "regex",
+    "pattern": "구축(?:하|했|하여|되어|중)|도입(?:하|했|하여|되어|중)|개발(?:하|했|하여|완료|중)|운영(?:하|했|하여|중)|출시|론칭|오픈|인수|취득|설립|투자(?:하|했|하여|중)|체결|적용(?:하|했|하여|중)|활용(?:하|했|하여|중)|제공(?:하|했|하여|중)|판매(?:하|했|하여|중)|확대(?:하|했|하여|중)|강화(?:하|했|하여|중)|고도화(?:하|했|하여|중)|진출|전환(?:하|했|하여|중)|시행|수취하였습니다|운용",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "PLAN_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 166,
+    "line_end": 166,
+    "ast_sha256": "56164e9f4d0b81c070b79e3f75b935f7d46f97c82d2f39dc131c605bf1a33433",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "PLAN_RE = rx(r\"계획|예정|목표|추구|하고자|하겠습니다|추진\\s*중|준비\\s*중|검토\")",
+    "kind": "regex",
+    "pattern": "계획|예정|목표|추구|하고자|하겠습니다|추진\\s*중|준비\\s*중|검토",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "GENERIC_HYPE_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 167,
+    "line_end": 170,
+    "ast_sha256": "17e9e86ff1333628d9dc57376c14eb95bce87e9fa3609bec764e29773425c3d4",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "GENERIC_HYPE_RE = rx(\n    r\"4차\\s*산업혁명|제4차\\s*산업혁명|디지털\\s*시대|선제적으로\\s*대응|\"\n    r\"적극적으로\\s*대응|발맞춰|총력을\\s*다하|노력하겠습니다|메가트렌드\"\n)",
+    "kind": "regex",
+    "pattern": "4차\\s*산업혁명|제4차\\s*산업혁명|디지털\\s*시대|선제적으로\\s*대응|적극적으로\\s*대응|발맞춰|총력을\\s*다하|노력하겠습니다|메가트렌드",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "VAGUE_FIRM_CLAIM_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 171,
+    "line_end": 179,
+    "ast_sha256": "9d2b55889598d52805267ddafd67647b33b063d893f09b95e452c0bbb29ed390",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "VAGUE_FIRM_CLAIM_RE = rx(\n    r\"디지털\\s*플랫폼\\s*서비스\\s*차별화로.{0,80}시너지|\"\n    r\"수준\\s*높은\\s*솔루션을\\s*제공하고.{0,100}수익을\\s*확보|\"\n    r\"미래먹거리를\\s*선점.{0,80}총력을\\s*다하|\"\n    r\"유망분야.{0,80}신규사업을\\s*적극\\s*발굴|\"\n    r\"유통구조\\s*변화에\\s*대처하여.{0,80}성장세|\"\n    r\"다양한\\s*플랫폼과\\s*협업.{0,120}기업으로\\s*거듭|\"\n    r\"온라인\\s*수익성\\s*강화.{0,100}외형\\s*성장\"\n)",
+    "kind": "regex",
+    "pattern": "디지털\\s*플랫폼\\s*서비스\\s*차별화로.{0,80}시너지|수준\\s*높은\\s*솔루션을\\s*제공하고.{0,100}수익을\\s*확보|미래먹거리를\\s*선점.{0,80}총력을\\s*다하|유망분야.{0,80}신규사업을\\s*적극\\s*발굴|유통구조\\s*변화에\\s*대처하여.{0,80}성장세|다양한\\s*플랫폼과\\s*협업.{0,120}기업으로\\s*거듭|온라인\\s*수익성\\s*강화.{0,100}외형\\s*성장",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "BMI_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 181,
+    "line_end": 193,
+    "ast_sha256": "05e081e90307ec427b48f3bf1863ecf5a4d9c8695a68efc38b29e561291a2899",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "BMI_RE = rx(\n    r\"비즈니스\\s*모델|사업\\s*모델|수익\\s*모델|구독|정기구독|반복\\s*매출|\"\n    r\"고객\\s*(?:경험|편의|가치)|온라인\\s*(?:채널|판매|쇼핑몰|몰|사업)|\"\n    r\"전자상거래|이커머스|e-?커머스|모바일\\s*(?:앱|플랫폼|서비스|사이트)|\"\n    r\"디지털\\s*(?:플랫폼|서비스|솔루션|채널)|플랫폼\\s*(?:사업|서비스)|\"\n    r\"솔루션\\s*(?:사업|서비스|제공|공급|개발)|신규\\s*서비스|\"\n    r\"모빌리티\\s*서비스|커넥티드|핀테크|전자결제|간편결제|D2C|O2O|\"\n    r\"스마트\\s*(?:제품|홈|팜)|온라인과\\s*오프라인|온/?오프라인|옴니|\"\n    r\"CRM|맞춤형\\s*마케팅|데이터.{0,30}고객|고객.{0,30}데이터|\"\n    r\"온라인\\s*부문|온라인\\s*비즈니스|온라인몰|웹사이트|모바일\\s*사이트|\"\n    r\"IT\\s*서비스|ERP\\s*솔루션|소프트웨어\\s*(?:개발|서비스)|\"\n    r\"스마트.{0,30}솔루션|비즈니스\\s*플랫폼|덴탈\\s*비타민\"\n)",
+    "kind": "regex",
+    "pattern": "비즈니스\\s*모델|사업\\s*모델|수익\\s*모델|구독|정기구독|반복\\s*매출|고객\\s*(?:경험|편의|가치)|온라인\\s*(?:채널|판매|쇼핑몰|몰|사업)|전자상거래|이커머스|e-?커머스|모바일\\s*(?:앱|플랫폼|서비스|사이트)|디지털\\s*(?:플랫폼|서비스|솔루션|채널)|플랫폼\\s*(?:사업|서비스)|솔루션\\s*(?:사업|서비스|제공|공급|개발)|신규\\s*서비스|모빌리티\\s*서비스|커넥티드|핀테크|전자결제|간편결제|D2C|O2O|스마트\\s*(?:제품|홈|팜)|온라인과\\s*오프라인|온/?오프라인|옴니|CRM|맞춤형\\s*마케팅|데이터.{0,30}고객|고객.{0,30}데이터|온라인\\s*부문|온라인\\s*비즈니스|온라인몰|웹사이트|모바일\\s*사이트|IT\\s*서비스|ERP\\s*솔루션|소프트웨어\\s*(?:개발|서비스)|스마트.{0,30}솔루션|비즈니스\\s*플랫폼|덴탈\\s*비타민",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "DIRECT_BMI_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 194,
+    "line_end": 205,
+    "ast_sha256": "fe37ef4cbe7625526dba248e25bc9ecdbe2339a7fc13b6b23d171eb22d56ba3e",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "DIRECT_BMI_RE = rx(\n    r\"비즈니스\\s*모델|사업\\s*모델|수익\\s*모델|구독|정기구독|\"\n    r\"온라인.{0,45}(?:채널|판매|쇼핑몰|몰|사업|비즈니스|마케팅|입점|진출|매출|수익)|\"\n    r\"전자상거래|이커머스|e-?커머스|모바일.{0,35}(?:서비스|플랫폼|사이트|결제)|\"\n    r\"디지털\\s*(?:플랫폼|서비스|솔루션|채널)|CRM|맞춤형\\s*마케팅|\"\n    r\"(?:고객.{0,35}데이터|데이터.{0,35}고객)|핀테크|전자결제|간편결제|휴대폰\\s*결제|\"\n    r\"IT\\s*서비스|ERP\\s*솔루션|소프트웨어\\s*(?:서비스|판매)|\"\n    r\"플랫폼.{0,45}(?:사업|서비스|고객|매출|수익|판매|거래|취득|인수)|\"\n    r\"(?:사업|서비스|고객|매출|수익|판매|거래|취득|인수).{0,45}플랫폼|\"\n    r\"스마트.{0,35}솔루션|자동화\\s*솔루션|온라인과\\s*오프라인|온/?오프라인|\"\n    r\"D2C|O2O|덴탈\\s*비타민\"\n)",
+    "kind": "regex",
+    "pattern": "비즈니스\\s*모델|사업\\s*모델|수익\\s*모델|구독|정기구독|온라인.{0,45}(?:채널|판매|쇼핑몰|몰|사업|비즈니스|마케팅|입점|진출|매출|수익)|전자상거래|이커머스|e-?커머스|모바일.{0,35}(?:서비스|플랫폼|사이트|결제)|디지털\\s*(?:플랫폼|서비스|솔루션|채널)|CRM|맞춤형\\s*마케팅|(?:고객.{0,35}데이터|데이터.{0,35}고객)|핀테크|전자결제|간편결제|휴대폰\\s*결제|IT\\s*서비스|ERP\\s*솔루션|소프트웨어\\s*(?:서비스|판매)|플랫폼.{0,45}(?:사업|서비스|고객|매출|수익|판매|거래|취득|인수)|(?:사업|서비스|고객|매출|수익|판매|거래|취득|인수).{0,45}플랫폼|스마트.{0,35}솔루션|자동화\\s*솔루션|온라인과\\s*오프라인|온/?오프라인|D2C|O2O|덴탈\\s*비타민",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "SMART_PRODUCT_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 206,
+    "line_end": 211,
+    "ast_sha256": "2e046709c273c750786bd54308f89973ae98b44e0ad027f8f6b9b0461a24563d",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "SMART_PRODUCT_RE = rx(\n    r\"IoT.{0,45}(?:제품|서비스|기기)|(?:제품|서비스|기기).{0,45}IoT|\"\n    r\"자율주행.{0,35}(?:개발|솔루션|제품)|로봇.{0,35}(?:개발|솔루션|서비스)|\"\n    r\"AI.{0,35}(?:제품|서비스|비즈니스\\s*모델)|\"\n    r\"(?:제품|서비스|비즈니스\\s*모델).{0,35}AI\"\n)",
+    "kind": "regex",
+    "pattern": "IoT.{0,45}(?:제품|서비스|기기)|(?:제품|서비스|기기).{0,45}IoT|자율주행.{0,35}(?:개발|솔루션|제품)|로봇.{0,35}(?:개발|솔루션|서비스)|AI.{0,35}(?:제품|서비스|비즈니스\\s*모델)|(?:제품|서비스|비즈니스\\s*모델).{0,35}AI",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "CUSTOMER_OR_REVENUE_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 212,
+    "line_end": 214,
+    "ast_sha256": "9b694b2a7e74b47ab1902431fdfa2e649f79f5be862fc3468cd155fa24f1d29a",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "CUSTOMER_OR_REVENUE_RE = rx(\n    r\"고객|판매|매출|수익|채널|서비스|사업|거래|결제|마케팅|유통|시장\\s*진출\"\n)",
+    "kind": "regex",
+    "pattern": "고객|판매|매출|수익|채널|서비스|사업|거래|결제|마케팅|유통|시장\\s*진출",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "CURRENT_LANGUAGE_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 215,
+    "line_end": 218,
+    "ast_sha256": "b155de6dc556a3f1b813c853e7c0b6ab0b7668741aa9f4b587aa45c305aa8340",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "CURRENT_LANGUAGE_RE = rx(\n    r\"현재|지속|운영\\s*중|진행\\s*중|추진\\s*중|확대\\s*중|\\d{4}\\s*~|\"\n    r\"이후|그동안|강화한\\s*결과|진출한\\s*결과\"\n)",
+    "kind": "regex",
+    "pattern": "현재|지속|운영\\s*중|진행\\s*중|추진\\s*중|확대\\s*중|\\d{4}\\s*~|이후|그동안|강화한\\s*결과|진출한\\s*결과",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "PLATFORM_QUALIFIER_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 219,
+    "line_end": 223,
+    "ast_sha256": "a884d576018a8b87ce3771bf7728e9fbbe29b9b798e135a0c3d117d0894c4421",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "PLATFORM_QUALIFIER_RE = rx(\n    r\"디지털|온라인|모바일|데이터|AI|인공지능|블록체인|소프트웨어|전자상거래|\"\n    r\"이커머스|결제|핀테크|물류|헬스케어|미래농업|OTT|NDC|고객|비즈니스|\"\n    r\"수익|거래|대출비교|콘텐츠|덴탈|유통|판매|채널|사업|기록관리|동영상\"\n)",
+    "kind": "regex",
+    "pattern": "디지털|온라인|모바일|데이터|AI|인공지능|블록체인|소프트웨어|전자상거래|이커머스|결제|핀테크|물류|헬스케어|미래농업|OTT|NDC|고객|비즈니스|수익|거래|대출비교|콘텐츠|덴탈|유통|판매|채널|사업|기록관리|동영상",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "ACCOUNTING_EXCEPTION_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 224,
+    "line_end": 227,
+    "ast_sha256": "32219924796b83fffa2bd81dfee9a1e0718da8d15151ed487beaa4dd4638b25b",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "ACCOUNTING_EXCEPTION_RE = rx(\n    r\"당기\\s*중.{0,180}(?:자동화\\s*설비|디지털\\s*플랫폼|WMS).{0,120}(?:백만원|대체)|\"\n    r\"ERP\\s*구축\\s*컨설팅.{0,100}(?:개발약정|계약)\"\n)",
+    "kind": "regex",
+    "pattern": "당기\\s*중.{0,180}(?:자동화\\s*설비|디지털\\s*플랫폼|WMS).{0,120}(?:백만원|대체)|ERP\\s*구축\\s*컨설팅.{0,100}(?:개발약정|계약)",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "PERSONNEL_BIO_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 228,
+    "line_end": 230,
+    "ast_sha256": "6f098ae1af56e3ba95e3e1ba633e19ab32aed28dbcae62edee64394145e4a936",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "PERSONNEL_BIO_RE = rx(\n    r\"미등기\\s*임원|미등기\\s*상근|주요\\s*경력.{0,120}(?:이커머스|AI)|글로벌이커머스\\s*상무\"\n)",
+    "kind": "regex",
+    "pattern": "미등기\\s*임원|미등기\\s*상근|주요\\s*경력.{0,120}(?:이커머스|AI)|글로벌이커머스\\s*상무",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "SOFTWARE_SPECIFIC_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 231,
+    "line_end": 231,
+    "ast_sha256": "669b2c368221146a2a8464c1bd1bbb8000d87fd774a0ae6f078e8abc48536cb7",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "SOFTWARE_SPECIFIC_RE = rx(r\"서비스|솔루션|시스템|개발|운영|공급|판매|구축|사업\")",
+    "kind": "regex",
+    "pattern": "서비스|솔루션|시스템|개발|운영|공급|판매|구축|사업",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "ACTIVE_OPERATION_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 232,
+    "line_end": 236,
+    "ast_sha256": "41e7b4145e7a150e75fe14c8b4f11194c67c346af1e93e851502c4db00fd8307",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "ACTIVE_OPERATION_RE = rx(\n    r\"영위하고\\s*있|운영하고\\s*있|판매를\\s*시작|매출이\\s*발생|매출을\\s*달성|\"\n    r\"서비스를\\s*제공|사업부문은|온라인을\\s*근간|판매하고\\s*있|자리매김|\"\n    r\"운영중|핵심\\s*사업부문으로\\s*성장|온라인몰.{0,40}매출\"\n)",
+    "kind": "regex",
+    "pattern": "영위하고\\s*있|운영하고\\s*있|판매를\\s*시작|매출이\\s*발생|매출을\\s*달성|서비스를\\s*제공|사업부문은|온라인을\\s*근간|판매하고\\s*있|자리매김|운영중|핵심\\s*사업부문으로\\s*성장|온라인몰.{0,40}매출",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "NAMED_COMPANY_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 237,
+    "line_end": 237,
+    "ast_sha256": "b0d3fd529bb1bbcdaa1ced0e11d529b2edd134e3bcff19315df7df17dd143cd7",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "NAMED_COMPANY_RE = rx(r\"\\(주\\)|㈜|주식회사\")",
+    "kind": "regex",
+    "pattern": "\\(주\\)|㈜|주식회사",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "ATTRIBUTION_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 238,
+    "line_end": 238,
+    "ast_sha256": "3b8df58469952b2a389f7a9d3138f165dc24092ba771dc1fe17605b1c10f5dd8",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "ATTRIBUTION_RE = rx(r\"연구개발\\s*실적|개발기술|정부보조금을\\s*수취|특허명|연구과제\")",
+    "kind": "regex",
+    "pattern": "연구개발\\s*실적|개발기술|정부보조금을\\s*수취|특허명|연구과제",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "OWNED_STRATEGY_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 239,
+    "line_end": 239,
+    "ast_sha256": "c497107a26640fde34f8409d2fea17117512253996af6a205bbaa28c2939cb8f",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "OWNED_STRATEGY_RE = rx(r\"전략을\\s*추진|중점\\s*추진\")",
+    "kind": "regex",
+    "pattern": "전략을\\s*추진|중점\\s*추진",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "FOCAL_GENERIC_ACTION_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 240,
+    "line_end": 240,
+    "ast_sha256": "4a11b6cef458f2ed70e91fa8e4eeabf5316c6c982a5212957d1d1155838d5d08",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "FOCAL_GENERIC_ACTION_RE = rx(r\"강화에\\s*집중|개선을\\s*도모|개발하여|구축하여\")",
+    "kind": "regex",
+    "pattern": "강화에\\s*집중|개선을\\s*도모|개발하여|구축하여",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "BOARD_ACTION_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 241,
+    "line_end": 241,
+    "ast_sha256": "ace387215a7f384f5cb576cb15e1515196ac2337734b87140e14061732cc3873",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "BOARD_ACTION_RE = rx(r\"계약을\\s*체결|투자|인수|취득\")",
+    "kind": "regex",
+    "pattern": "계약을\\s*체결|투자|인수|취득",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "CONCRETE_INTENT_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 242,
+    "line_end": 242,
+    "ast_sha256": "50af9b6a16758eabd4bdb79c9d5131b93168ffda10048eccb50e5c88a70611c3",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "CONCRETE_INTENT_RE = rx(r\"진출\\s*목적|하고자|위하여|판매\\s*채널\\s*확대\")",
+    "kind": "regex",
+    "pattern": "진출\\s*목적|하고자|위하여|판매\\s*채널\\s*확대",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "BUSINESS_IMPLEMENTATION_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 243,
+    "line_end": 247,
+    "ast_sha256": "61ef1f630fe67794b719f2a3697f22d839fd4c3808657b41cf6f8a081831147c",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "BUSINESS_IMPLEMENTATION_RE = rx(\n    r\"영위\\s*중|운영\\s*중|매출이?\\s*(?:발생|달성)|매출을\\s*달성|\"\n    r\"판매를\\s*시작|론칭|보급하고\\s*있|합작법인을\\s*설립|투자\\s*하는\\s*약정|\"\n    r\"당사.{0,100}플랫폼을?\\s*통(?:해|하여).{0,140}(?:중개|제공|판매)\"\n)",
+    "kind": "regex",
+    "pattern": "영위\\s*중|운영\\s*중|매출이?\\s*(?:발생|달성)|매출을\\s*달성|판매를\\s*시작|론칭|보급하고\\s*있|합작법인을\\s*설립|투자\\s*하는\\s*약정|당사.{0,100}플랫폼을?\\s*통(?:해|하여).{0,140}(?:중개|제공|판매)",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "INTENT_ADD_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 248,
+    "line_end": 248,
+    "ast_sha256": "89d19f3727340af3123e29b2decd488099d7cf4561d88389c7df5cee115ff26e",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "INTENT_ADD_RE = rx(r\"(?:개발|운영|판매)\\s*추가\\s*$\")",
+    "kind": "regex",
+    "pattern": "(?:개발|운영|판매)\\s*추가\\s*$",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "PLATFORM_VALUE_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 249,
+    "line_end": 249,
+    "ast_sha256": "498e55b846afab32141820024f4de3b7092f5326b8a84e7528cfa2d7cbbd536a",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "PLATFORM_VALUE_RE = rx(r\"서비스|사업|고객|판매|매출|수익|거래|제공|공급\")",
+    "kind": "regex",
+    "pattern": "서비스|사업|고객|판매|매출|수익|거래|제공|공급",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "STATIC_EQUIPMENT_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 250,
+    "line_end": 250,
+    "ast_sha256": "99fe2e0c2c2882c20498bfe380c305e80bb6f80bbc5791c34b5b9a611dd1f080",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "STATIC_EQUIPMENT_RE = rx(r\"자동화\\s*설비를?\\s*갖추(?:고|어|었)\")",
+    "kind": "regex",
+    "pattern": "자동화\\s*설비를?\\s*갖추(?:고|어|었)",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "EQUIPMENT_LIST_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 251,
+    "line_end": 254,
+    "ast_sha256": "b45428c938c6c832a87d7636ccd5d41a5c1c04f69b46db25d18e85b154c5a5bd",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "EQUIPMENT_LIST_RE = rx(\n    r\"(?:공장|물류).{0,20}자동화\\s*설비\\s*등|\"\n    r\"자동화\\s*설비\\s*등\\s*(?:\\(주\\)|㈜|$)\"\n)",
+    "kind": "regex",
+    "pattern": "(?:공장|물류).{0,20}자동화\\s*설비\\s*등|자동화\\s*설비\\s*등\\s*(?:\\(주\\)|㈜|$)",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "v2",
+    "name": "AUTOMATION_CHANGE_RE",
+    "file": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+    "source_sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1",
+    "line_start": 255,
+    "line_end": 255,
+    "ast_sha256": "24f02f612a5ca9a0921c6c5f780c53b6745a45a622ca3693927108bd83b21826",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "AUTOMATION_CHANGE_RE = rx(r\"자동화.{0,60}(?:투자|확대|구축|도입|증설|신설|전환|개선)\")",
+    "kind": "regex",
+    "pattern": "자동화.{0,60}(?:투자|확대|구축|도입|증설|신설|전환|개선)",
+    "flags_integer": 34,
+    "IGNORECASE": true,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "splitter",
+    "name": "DIGITAL_CORE_TERMS",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "source_sha256": "5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0",
+    "line_start": 43,
+    "line_end": 103,
+    "ast_sha256": "d5b0a2ef398fa379029b088be24224876be1f92b98e9c69ad621d7db46036370",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "DIGITAL_CORE_TERMS = [\n    \"디지털 전환\",\n    \"디지털전환\",\n    \"디지털 전략\",\n    \"디지털 혁신\",\n    \"디지털화\",\n    \"디지타이제이션\",\n    \"디지털 트랜스포메이션\",\n    \"인공지능\",\n    \"머신러닝\",\n    \"딥러닝\",\n    \"생성형 ai\",\n    \"생성 ai\",\n    \"ai\",\n    \"빅데이터\",\n    \"데이터 분석\",\n    \"데이터 플랫폼\",\n    \"데이터 기반\",\n    \"클라우드\",\n    \"사물인터넷\",\n    \"iot\",\n    \"블록체인\",\n    \"사이버보안\",\n    \"사이버 보안\",\n    \"정보보안\",\n    \"rpa\",\n    \"로봇 프로세스 자동화\",\n    \"스마트팩토리\",\n    \"스마트 팩토리\",\n    \"스마트공장\",\n    \"스마트 공장\",\n    \"지능형 공장\",\n    \"스마트 제조\",\n    \"디지털 트윈\",\n    \"5g\",\n    \"디지털 플랫폼\",\n    \"디지털 서비스\",\n    \"디지털 솔루션\",\n    \"디지털 시대\",\n    \"4차 산업혁명\",\n    \"온라인 채널\",\n    \"디지털 채널\",\n    \"전자상거래\",\n    \"이커머스\",\n    \"e-commerce\",\n    \"ecommerce\",\n    \"모바일 앱\",\n    \"모바일 플랫폼\",\n    \"앱 서비스\",\n    \"커넥티드카\",\n    \"커넥티드 카\",\n    \"커넥티드 서비스\",\n    \"스마트 모빌리티\",\n    \"모빌리티 서비스\",\n    \"스마트홈\",\n    \"스마트 홈\",\n    \"erp\",\n    \"mes\",\n    \"scm\",\n    \"crm\",\n]",
+    "kind": "list",
+    "values": [
+      {
+        "kind": "str",
+        "value": "디지털 전환"
+      },
+      {
+        "kind": "str",
+        "value": "디지털전환"
+      },
+      {
+        "kind": "str",
+        "value": "디지털 전략"
+      },
+      {
+        "kind": "str",
+        "value": "디지털 혁신"
+      },
+      {
+        "kind": "str",
+        "value": "디지털화"
+      },
+      {
+        "kind": "str",
+        "value": "디지타이제이션"
+      },
+      {
+        "kind": "str",
+        "value": "디지털 트랜스포메이션"
+      },
+      {
+        "kind": "str",
+        "value": "인공지능"
+      },
+      {
+        "kind": "str",
+        "value": "머신러닝"
+      },
+      {
+        "kind": "str",
+        "value": "딥러닝"
+      },
+      {
+        "kind": "str",
+        "value": "생성형 ai"
+      },
+      {
+        "kind": "str",
+        "value": "생성 ai"
+      },
+      {
+        "kind": "str",
+        "value": "ai"
+      },
+      {
+        "kind": "str",
+        "value": "빅데이터"
+      },
+      {
+        "kind": "str",
+        "value": "데이터 분석"
+      },
+      {
+        "kind": "str",
+        "value": "데이터 플랫폼"
+      },
+      {
+        "kind": "str",
+        "value": "데이터 기반"
+      },
+      {
+        "kind": "str",
+        "value": "클라우드"
+      },
+      {
+        "kind": "str",
+        "value": "사물인터넷"
+      },
+      {
+        "kind": "str",
+        "value": "iot"
+      },
+      {
+        "kind": "str",
+        "value": "블록체인"
+      },
+      {
+        "kind": "str",
+        "value": "사이버보안"
+      },
+      {
+        "kind": "str",
+        "value": "사이버 보안"
+      },
+      {
+        "kind": "str",
+        "value": "정보보안"
+      },
+      {
+        "kind": "str",
+        "value": "rpa"
+      },
+      {
+        "kind": "str",
+        "value": "로봇 프로세스 자동화"
+      },
+      {
+        "kind": "str",
+        "value": "스마트팩토리"
+      },
+      {
+        "kind": "str",
+        "value": "스마트 팩토리"
+      },
+      {
+        "kind": "str",
+        "value": "스마트공장"
+      },
+      {
+        "kind": "str",
+        "value": "스마트 공장"
+      },
+      {
+        "kind": "str",
+        "value": "지능형 공장"
+      },
+      {
+        "kind": "str",
+        "value": "스마트 제조"
+      },
+      {
+        "kind": "str",
+        "value": "디지털 트윈"
+      },
+      {
+        "kind": "str",
+        "value": "5g"
+      },
+      {
+        "kind": "str",
+        "value": "디지털 플랫폼"
+      },
+      {
+        "kind": "str",
+        "value": "디지털 서비스"
+      },
+      {
+        "kind": "str",
+        "value": "디지털 솔루션"
+      },
+      {
+        "kind": "str",
+        "value": "디지털 시대"
+      },
+      {
+        "kind": "str",
+        "value": "4차 산업혁명"
+      },
+      {
+        "kind": "str",
+        "value": "온라인 채널"
+      },
+      {
+        "kind": "str",
+        "value": "디지털 채널"
+      },
+      {
+        "kind": "str",
+        "value": "전자상거래"
+      },
+      {
+        "kind": "str",
+        "value": "이커머스"
+      },
+      {
+        "kind": "str",
+        "value": "e-commerce"
+      },
+      {
+        "kind": "str",
+        "value": "ecommerce"
+      },
+      {
+        "kind": "str",
+        "value": "모바일 앱"
+      },
+      {
+        "kind": "str",
+        "value": "모바일 플랫폼"
+      },
+      {
+        "kind": "str",
+        "value": "앱 서비스"
+      },
+      {
+        "kind": "str",
+        "value": "커넥티드카"
+      },
+      {
+        "kind": "str",
+        "value": "커넥티드 카"
+      },
+      {
+        "kind": "str",
+        "value": "커넥티드 서비스"
+      },
+      {
+        "kind": "str",
+        "value": "스마트 모빌리티"
+      },
+      {
+        "kind": "str",
+        "value": "모빌리티 서비스"
+      },
+      {
+        "kind": "str",
+        "value": "스마트홈"
+      },
+      {
+        "kind": "str",
+        "value": "스마트 홈"
+      },
+      {
+        "kind": "str",
+        "value": "erp"
+      },
+      {
+        "kind": "str",
+        "value": "mes"
+      },
+      {
+        "kind": "str",
+        "value": "scm"
+      },
+      {
+        "kind": "str",
+        "value": "crm"
+      }
+    ]
+  },
+  {
+    "role": "splitter",
+    "name": "TABLE_NOISE_PATTERNS",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "source_sha256": "5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0",
+    "line_start": 246,
+    "line_end": 275,
+    "ast_sha256": "916be4eebe2153be172fb312d80f1b5c267decf90855a438532855988ddff342",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "TABLE_NOISE_PATTERNS = [\n    r\"^\\(?단위\\s*:\",\n    r\"^\\(?주\\s*:\",\n    r\"^구\\s*분\\s\",\n    r\"^구분\\s\",\n    r\"^목\\s*차$\",\n    r\"^해당사항\\s*없음\",\n    r\"^감사의견\",\n    r\"^연결재무제표\",\n    r\"^재무제표\",\n    r\"^주석\",\n    r\"^자본금\\s*변동사항\",\n    r\"^주식의\\s*총수\",\n    r\"^임원\\s*및\\s*직원\",\n    r\"^이사회\",\n    r\"^감사위원회\",\n    r\"^타법인\\s*출자\",\n    r\"^특수관계자\",\n    r\"^파생상품\",\n    r\"^공정가치\",\n    r\"^범주별\\s*금융상품\",\n    r\"^당기\\s+전기\",\n    r\"국내외\\s*주요기업\",\n    r\"서울특별시|경기도|부산광역시|대구광역시|인천광역시|대한민국\",\n    r\"지급보증|우발부채|보증보험|공탁보증|이행\\(지급\\)|이행\\(계약\\)|이행\\(하자\\)\",\n    r\"재원\\s*조달방법\",\n    r\"소요자금\\s*미정\",\n    r\"사업자등록번호|법인등록번호\",\n    r\"대표자명|소재지|설립일\",\n]",
+    "kind": "list",
+    "values": [
+      {
+        "kind": "str",
+        "value": "^\\(?단위\\s*:"
+      },
+      {
+        "kind": "str",
+        "value": "^\\(?주\\s*:"
+      },
+      {
+        "kind": "str",
+        "value": "^구\\s*분\\s"
+      },
+      {
+        "kind": "str",
+        "value": "^구분\\s"
+      },
+      {
+        "kind": "str",
+        "value": "^목\\s*차$"
+      },
+      {
+        "kind": "str",
+        "value": "^해당사항\\s*없음"
+      },
+      {
+        "kind": "str",
+        "value": "^감사의견"
+      },
+      {
+        "kind": "str",
+        "value": "^연결재무제표"
+      },
+      {
+        "kind": "str",
+        "value": "^재무제표"
+      },
+      {
+        "kind": "str",
+        "value": "^주석"
+      },
+      {
+        "kind": "str",
+        "value": "^자본금\\s*변동사항"
+      },
+      {
+        "kind": "str",
+        "value": "^주식의\\s*총수"
+      },
+      {
+        "kind": "str",
+        "value": "^임원\\s*및\\s*직원"
+      },
+      {
+        "kind": "str",
+        "value": "^이사회"
+      },
+      {
+        "kind": "str",
+        "value": "^감사위원회"
+      },
+      {
+        "kind": "str",
+        "value": "^타법인\\s*출자"
+      },
+      {
+        "kind": "str",
+        "value": "^특수관계자"
+      },
+      {
+        "kind": "str",
+        "value": "^파생상품"
+      },
+      {
+        "kind": "str",
+        "value": "^공정가치"
+      },
+      {
+        "kind": "str",
+        "value": "^범주별\\s*금융상품"
+      },
+      {
+        "kind": "str",
+        "value": "^당기\\s+전기"
+      },
+      {
+        "kind": "str",
+        "value": "국내외\\s*주요기업"
+      },
+      {
+        "kind": "str",
+        "value": "서울특별시|경기도|부산광역시|대구광역시|인천광역시|대한민국"
+      },
+      {
+        "kind": "str",
+        "value": "지급보증|우발부채|보증보험|공탁보증|이행\\(지급\\)|이행\\(계약\\)|이행\\(하자\\)"
+      },
+      {
+        "kind": "str",
+        "value": "재원\\s*조달방법"
+      },
+      {
+        "kind": "str",
+        "value": "소요자금\\s*미정"
+      },
+      {
+        "kind": "str",
+        "value": "사업자등록번호|법인등록번호"
+      },
+      {
+        "kind": "str",
+        "value": "대표자명|소재지|설립일"
+      }
+    ]
+  },
+  {
+    "role": "splitter",
+    "name": "HANGUL_RE",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "source_sha256": "5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0",
+    "line_start": 287,
+    "line_end": 287,
+    "ast_sha256": "7861659ce09fa860e8e0359468ed20f1c74e7a61de94d0b57369df0ed3dcc7c4",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "HANGUL_RE = re.compile(r\"[\\uac00-\\ud7a3]\")",
+    "kind": "regex",
+    "pattern": "[\\uac00-\\ud7a3]",
+    "flags_integer": 32,
+    "IGNORECASE": false,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "splitter",
+    "name": "LATIN_RE",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "source_sha256": "5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0",
+    "line_start": 288,
+    "line_end": 288,
+    "ast_sha256": "5855923bf757097f8c3dec33cd65bfcc5fafc6af058b5f9a4687d03382285196",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": false,
+    "source_expression": "LATIN_RE = re.compile(r\"[A-Za-z]\")",
+    "kind": "regex",
+    "pattern": "[A-Za-z]",
+    "flags_integer": 32,
+    "IGNORECASE": false,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "splitter",
+    "name": "KOREAN_TOKEN_RE",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "source_sha256": "5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0",
+    "line_start": 289,
+    "line_end": 289,
+    "ast_sha256": "becaadcd2466fbf3a38db9c97e5d5ae3a5ad050643f2e38578ae916b870314fa",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "KOREAN_TOKEN_RE = re.compile(r\"[\\uac00-\\ud7a3A-Za-z0-9&+-]+\")",
+    "kind": "regex",
+    "pattern": "[\\uac00-\\ud7a3A-Za-z0-9&+-]+",
+    "flags_integer": 32,
+    "IGNORECASE": false,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "splitter",
+    "name": "SENTENCE_SPLIT_RE",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "source_sha256": "5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0",
+    "line_start": 290,
+    "line_end": 290,
+    "ast_sha256": "e6c7dfcf130c0725ce22318126649e3b0e4ae4baf9230d595fb6b1f360c2e0ce",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "SENTENCE_SPLIT_RE = re.compile(r\"(?<=[.!?。])\\s+\")",
+    "kind": "regex",
+    "pattern": "(?<=[.!?。])\\s+",
+    "flags_integer": 32,
+    "IGNORECASE": false,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "splitter",
+    "name": "KOREAN_END_RE",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "source_sha256": "5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0",
+    "line_start": 291,
+    "line_end": 291,
+    "ast_sha256": "0b548884fedf48476f5a64c56096c6b21a7f48175945d12e64ec1461a5ec9388",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "KOREAN_END_RE = re.compile(r\"(다|니다|한다|된다|하였다|했다|있다|없다|이다|임|함|됨|음)[.!?]?$\")",
+    "kind": "regex",
+    "pattern": "(다|니다|한다|된다|하였다|했다|있다|없다|이다|임|함|됨|음)[.!?]?$",
+    "flags_integer": 32,
+    "IGNORECASE": false,
+    "MULTILINE": false,
+    "DOTALL": false,
+    "UNICODE": true
+  },
+  {
+    "role": "splitter",
+    "name": "DIGITAL_CORE_PATTERNS",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "source_sha256": "5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0",
+    "line_start": 306,
+    "line_end": 306,
+    "ast_sha256": "e33b5862323d6b57ab4340ec137a3a2923604462144fbb33168fa93465043356",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "DIGITAL_CORE_PATTERNS = compile_terms(DIGITAL_CORE_TERMS)",
+    "kind": "dict",
+    "values": {
+      "디지털 전환": {
+        "kind": "regex",
+        "pattern": "디지털\\s*전환",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "디지털전환": {
+        "kind": "regex",
+        "pattern": "디지털전환",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "디지털 전략": {
+        "kind": "regex",
+        "pattern": "디지털\\s*전략",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "디지털 혁신": {
+        "kind": "regex",
+        "pattern": "디지털\\s*혁신",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "디지털화": {
+        "kind": "regex",
+        "pattern": "디지털화",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "디지타이제이션": {
+        "kind": "regex",
+        "pattern": "디지타이제이션",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "디지털 트랜스포메이션": {
+        "kind": "regex",
+        "pattern": "디지털\\s*트랜스포메이션",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "인공지능": {
+        "kind": "regex",
+        "pattern": "인공지능",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "머신러닝": {
+        "kind": "regex",
+        "pattern": "머신러닝",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "딥러닝": {
+        "kind": "regex",
+        "pattern": "딥러닝",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "생성형 ai": {
+        "kind": "regex",
+        "pattern": "생성형\\s*ai",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "생성 ai": {
+        "kind": "regex",
+        "pattern": "생성\\s*ai",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "ai": {
+        "kind": "regex",
+        "pattern": "(?<![A-Za-z0-9])ai(?![A-Za-z0-9])",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "빅데이터": {
+        "kind": "regex",
+        "pattern": "빅데이터",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "데이터 분석": {
+        "kind": "regex",
+        "pattern": "데이터\\s*분석",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "데이터 플랫폼": {
+        "kind": "regex",
+        "pattern": "데이터\\s*플랫폼",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "데이터 기반": {
+        "kind": "regex",
+        "pattern": "데이터\\s*기반",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "클라우드": {
+        "kind": "regex",
+        "pattern": "클라우드",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "사물인터넷": {
+        "kind": "regex",
+        "pattern": "사물인터넷",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "iot": {
+        "kind": "regex",
+        "pattern": "(?<![A-Za-z0-9])iot(?![A-Za-z0-9])",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "블록체인": {
+        "kind": "regex",
+        "pattern": "블록체인",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "사이버보안": {
+        "kind": "regex",
+        "pattern": "사이버보안",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "사이버 보안": {
+        "kind": "regex",
+        "pattern": "사이버\\s*보안",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "정보보안": {
+        "kind": "regex",
+        "pattern": "정보보안",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "rpa": {
+        "kind": "regex",
+        "pattern": "(?<![A-Za-z0-9])rpa(?![A-Za-z0-9])",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "로봇 프로세스 자동화": {
+        "kind": "regex",
+        "pattern": "로봇\\s*프로세스\\s*자동화",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "스마트팩토리": {
+        "kind": "regex",
+        "pattern": "스마트팩토리",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "스마트 팩토리": {
+        "kind": "regex",
+        "pattern": "스마트\\s*팩토리",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "스마트공장": {
+        "kind": "regex",
+        "pattern": "스마트공장",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "스마트 공장": {
+        "kind": "regex",
+        "pattern": "스마트\\s*공장",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "지능형 공장": {
+        "kind": "regex",
+        "pattern": "지능형\\s*공장",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "스마트 제조": {
+        "kind": "regex",
+        "pattern": "스마트\\s*제조",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "디지털 트윈": {
+        "kind": "regex",
+        "pattern": "디지털\\s*트윈",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "5g": {
+        "kind": "regex",
+        "pattern": "(?<![A-Za-z0-9])5g(?![A-Za-z0-9])",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "디지털 플랫폼": {
+        "kind": "regex",
+        "pattern": "디지털\\s*플랫폼",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "디지털 서비스": {
+        "kind": "regex",
+        "pattern": "디지털\\s*서비스",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "디지털 솔루션": {
+        "kind": "regex",
+        "pattern": "디지털\\s*솔루션",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "디지털 시대": {
+        "kind": "regex",
+        "pattern": "디지털\\s*시대",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "4차 산업혁명": {
+        "kind": "regex",
+        "pattern": "4차\\s*산업혁명",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "온라인 채널": {
+        "kind": "regex",
+        "pattern": "온라인\\s*채널",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "디지털 채널": {
+        "kind": "regex",
+        "pattern": "디지털\\s*채널",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "전자상거래": {
+        "kind": "regex",
+        "pattern": "전자상거래",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "이커머스": {
+        "kind": "regex",
+        "pattern": "이커머스",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "e-commerce": {
+        "kind": "regex",
+        "pattern": "(?<![A-Za-z0-9])e\\-commerce(?![A-Za-z0-9])",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "ecommerce": {
+        "kind": "regex",
+        "pattern": "(?<![A-Za-z0-9])ecommerce(?![A-Za-z0-9])",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "모바일 앱": {
+        "kind": "regex",
+        "pattern": "모바일\\s*앱",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "모바일 플랫폼": {
+        "kind": "regex",
+        "pattern": "모바일\\s*플랫폼",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "앱 서비스": {
+        "kind": "regex",
+        "pattern": "앱\\s*서비스",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "커넥티드카": {
+        "kind": "regex",
+        "pattern": "커넥티드카",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "커넥티드 카": {
+        "kind": "regex",
+        "pattern": "커넥티드\\s*카",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "커넥티드 서비스": {
+        "kind": "regex",
+        "pattern": "커넥티드\\s*서비스",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "스마트 모빌리티": {
+        "kind": "regex",
+        "pattern": "스마트\\s*모빌리티",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "모빌리티 서비스": {
+        "kind": "regex",
+        "pattern": "모빌리티\\s*서비스",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "스마트홈": {
+        "kind": "regex",
+        "pattern": "스마트홈",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "스마트 홈": {
+        "kind": "regex",
+        "pattern": "스마트\\s*홈",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "erp": {
+        "kind": "regex",
+        "pattern": "(?<![A-Za-z0-9])erp(?![A-Za-z0-9])",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "mes": {
+        "kind": "regex",
+        "pattern": "(?<![A-Za-z0-9])mes(?![A-Za-z0-9])",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "scm": {
+        "kind": "regex",
+        "pattern": "(?<![A-Za-z0-9])scm(?![A-Za-z0-9])",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      "crm": {
+        "kind": "regex",
+        "pattern": "(?<![A-Za-z0-9])crm(?![A-Za-z0-9])",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      }
+    }
+  },
+  {
+    "role": "splitter",
+    "name": "TABLE_NOISE_REGEX",
+    "file": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+    "source_sha256": "5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0",
+    "line_start": 312,
+    "line_end": 312,
+    "ast_sha256": "b1a2e4a4ab98949d273e31402ea94c5479826751c8ee32d5c9f3e16496fe47a6",
+    "loaded_by_actual_adapter": true,
+    "reachable_from_effective_roots": true,
+    "source_expression": "TABLE_NOISE_REGEX = [re.compile(pattern, flags=re.IGNORECASE) for pattern in TABLE_NOISE_PATTERNS]",
+    "kind": "list",
+    "values": [
+      {
+        "kind": "regex",
+        "pattern": "^\\(?단위\\s*:",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "^\\(?주\\s*:",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "^구\\s*분\\s",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "^구분\\s",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "^목\\s*차$",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "^해당사항\\s*없음",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "^감사의견",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "^연결재무제표",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "^재무제표",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "^주석",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "^자본금\\s*변동사항",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "^주식의\\s*총수",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "^임원\\s*및\\s*직원",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "^이사회",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "^감사위원회",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "^타법인\\s*출자",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "^특수관계자",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "^파생상품",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "^공정가치",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "^범주별\\s*금융상품",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "^당기\\s+전기",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "국내외\\s*주요기업",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "서울특별시|경기도|부산광역시|대구광역시|인천광역시|대한민국",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "지급보증|우발부채|보증보험|공탁보증|이행\\(지급\\)|이행\\(계약\\)|이행\\(하자\\)",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "재원\\s*조달방법",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "소요자금\\s*미정",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "사업자등록번호|법인등록번호",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      },
+      {
+        "kind": "regex",
+        "pattern": "대표자명|소재지|설립일",
+        "flags_integer": 34,
+        "IGNORECASE": true,
+        "MULTILINE": false,
+        "DOTALL": false,
+        "UNICODE": true
+      }
+    ]
+  }
+]
