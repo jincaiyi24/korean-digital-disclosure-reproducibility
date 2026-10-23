@@ -1,0 +1,577 @@
+{
+  "schema": "KOREAN_FLAT_LAYOUT_MAPPING_V1",
+  "reference_commit": "c040e574ebd4bc3b1b1bcdac3b28831b1034089e",
+  "record_count": 94,
+  "source_scope": "Current approved94files. Runtime/rule/input/results bytes unchanged; documentation-only Korean command updates distinguished. No new full replay claimed.",
+  "documentation_only_changes_since_reference": [
+    "README.md",
+    "docs/BMODD_Reproducibility_Manual_KO.docx",
+    "docs/BMODD_Reproducibility_Manual_KO.pdf"
+  ],
+  "entries": [
+    {
+      "old_relative_path": ".gitattributes",
+      "new_korean_path": ".gitattributes",
+      "size": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "old_relative_path": ".gitignore",
+      "new_korean_path": ".gitignore",
+      "size": 176,
+      "sha256": "94e03031efc53678f0064d505766960eaeb50ab8a69f7d1824804031fc1941be"
+    },
+    {
+      "old_relative_path": "DATA_NOTICE.md",
+      "new_korean_path": "설명서/자료_이용조건.md",
+      "size": 2956,
+      "sha256": "2657121bde7264661b7e72ee6502c55ffc46cfac1064c32a830f3d7cea639746"
+    },
+    {
+      "old_relative_path": "LICENSE",
+      "new_korean_path": "LICENSE",
+      "size": 1066,
+      "sha256": "e41fd66333536ff310a9f022b95876632effac6d99ff7ec1cf8ad8f9323b6370"
+    },
+    {
+      "old_relative_path": "README.md",
+      "new_korean_path": "설명서/기존_실행안내.md",
+      "size": 13051,
+      "sha256": "e98cec51abf02becf33c036c50dc05238361c8a0429aeba437e76ab86b7fb4c3"
+    },
+    {
+      "old_relative_path": "bundle/PUBLIC_ENVIRONMENT_CONTRACT_V1.json",
+      "new_korean_path": "코드/공식_실행환경_검증조건.json",
+      "size": 3005,
+      "sha256": "11d4650b67479ff926135e7942df19e07d30521c4aac58fb02350f4eb8bc8eb2"
+    },
+    {
+      "old_relative_path": "bundle/PUBLIC_INPUT_TEMPLATE.json",
+      "new_korean_path": "코드/공개_입력설정_원형.json",
+      "size": 5558,
+      "sha256": "7435acc785505c1a8af15cc83e5f687ce30d6300993a77f3a6f6e47a256cb58d"
+    },
+    {
+      "old_relative_path": "bundle/PUBLIC_PACKAGE_PAYLOAD_LOCK.json",
+      "new_korean_path": "코드/공식패키지_파일별_해시잠금.json",
+      "size": 2134581,
+      "sha256": "c7e0c483bab96389e166e6240c35fcf629cfdba9298a0e4cf52b4869a6ac67a2"
+    },
+    {
+      "old_relative_path": "bundle/SOURCE_PLAN.json",
+      "new_korean_path": "코드/잠금_원문출처_명세.json",
+      "size": 16772165,
+      "sha256": "ab2a0846f9780534492fc2ffa4ad2b5ae87c6186df39490b131f4ae33a70080a"
+    },
+    {
+      "old_relative_path": "bundle/VIEWER_REPLAY_ROWS_PUBLIC.json",
+      "new_korean_path": "코드/웹원문_재현대상_명세.json",
+      "size": 13416,
+      "sha256": "8efc128fab86f5045f49cf9af7b2e9b485bc14cf15feb0f6d076429260b70f8d"
+    },
+    {
+      "old_relative_path": "bundle/finance/expanded_panel.csv",
+      "new_korean_path": "CSV자료/입력_추가통제변수_연구패널.csv",
+      "size": 22066125,
+      "sha256": "c1100096d259f92b889078618412896cb46ae54ad1f0a394d2627eb2c9a1edfc"
+    },
+    {
+      "old_relative_path": "bundle/finance/frozen_augmented_panel.csv",
+      "new_korean_path": "CSV자료/입력_확정된_보완재무패널.csv",
+      "size": 46238357,
+      "sha256": "fc8bd3fc69d0196ad14f4c14e6424eea0be85b3a857e91e9cc53ca6403fd74bc"
+    },
+    {
+      "old_relative_path": "bundle/method/config/frozen_sources.json",
+      "new_korean_path": "코드/원본_분류기_출처설정.json",
+      "size": 933,
+      "sha256": "43351047965f97fd3486d07f9fe0f7a850324e76d27ea9f3e97e32b91b42cccd"
+    },
+    {
+      "old_relative_path": "bundle/method/frozen_api.py",
+      "new_korean_path": "코드/원본_분류기_불변_인터페이스.py",
+      "size": 5712,
+      "sha256": "9208af07d8f6b7bf65a62c00e7cdc9ba09276955a1691163d83e42b276930349"
+    },
+    {
+      "old_relative_path": "bundle/method/model_code/alias_provenance.py",
+      "new_korean_path": "코드/원본_모형_변수명_출처연결.py",
+      "size": 11543,
+      "sha256": "4858059cb7eba27a7e05b52d7b583a709593c5d7cb88bb34da92228875b66388"
+    },
+    {
+      "old_relative_path": "bundle/method/model_code/current_components.py",
+      "new_korean_path": "코드/원본_현재_모형실행_구성함수.py",
+      "size": 16739,
+      "sha256": "030ec2f769f00bae3a81e5c70f0126a2eb496c9ea38eac67e32006efb0090633"
+    },
+    {
+      "old_relative_path": "bundle/method/model_code/empirical_adapter.py",
+      "new_korean_path": "코드/원본_실증추정_인터페이스.py",
+      "size": 14889,
+      "sha256": "96b0d7c90f3e2c90765a7e4e7a08ee9bcad606547bf5ebd26a383af44215bd64"
+    },
+    {
+      "old_relative_path": "bundle/method/model_sources/formal_h3.py",
+      "new_korean_path": "코드/원본_H3_공통표본_공식검정.py",
+      "size": 24251,
+      "sha256": "583dd4fd61413097c80e68c73ba065e5ec4f58b506f61c782bd5b41c06fe9e21"
+    },
+    {
+      "old_relative_path": "bundle/method/model_sources/original_estimator.py",
+      "new_korean_path": "코드/원본_기초패널과_주회귀_추정함수.py",
+      "size": 53486,
+      "sha256": "937cd7f3a3d3a730bda21d01b8cefa68eb6555d6846d6703a8cba321e606b2a5"
+    },
+    {
+      "old_relative_path": "bundle/method/model_sources/original_viewer_recovery.py",
+      "new_korean_path": "코드/원본_웹문서_복구함수.py",
+      "size": 14933,
+      "sha256": "eaa04dbd970b5032372c75822f8b7673d4d20a098904ab9ee1191aebee3cad6b"
+    },
+    {
+      "old_relative_path": "bundle/method/model_sources/placebo.py",
+      "new_korean_path": "코드/원본_미래공시_위약검정.py",
+      "size": 24593,
+      "sha256": "822f5054fdb6fae259d5811656c9161f30ea4c152b0c3305c9205f4e51c2df6a"
+    },
+    {
+      "old_relative_path": "bundle/method/model_sources/supplement.py",
+      "new_korean_path": "코드/원본_COVID_IFRS_분해분석.py",
+      "size": 30780,
+      "sha256": "a4142cdbe7c786e396bdbf5f02f7237250ce36967fb5172980d16c3141a533aa"
+    },
+    {
+      "old_relative_path": "bundle/method/model_sources/trend.py",
+      "new_korean_path": "코드/원본_기업별_선형추세_모형.py",
+      "size": 24090,
+      "sha256": "8ebd869b1fec9ec45c748e92a760049c9695c1eb173f3a038de5658150177202"
+    },
+    {
+      "old_relative_path": "bundle/method/production_source_api.py",
+      "new_korean_path": "코드/원본_출처별_텍스트추출_인터페이스.py",
+      "size": 3364,
+      "sha256": "21a27ac4847b29cbac0cf25b0e98c77d72f2c490c0ea7fd1452a7c8c1ee4f50a"
+    },
+    {
+      "old_relative_path": "bundle/method/recover_historical_viewer_sources.py",
+      "new_korean_path": "코드/원본_웹문서_출처복구_인터페이스.py",
+      "size": 19349,
+      "sha256": "99ff5ba37539ad5b02c67a02cb71fb6e5bd84df8e37140052fcfe664e875d427"
+    },
+    {
+      "old_relative_path": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_korean_pipeline.py",
+      "new_korean_path": "코드/원본_한국어_정규화와_분절.py",
+      "size": 28305,
+      "sha256": "5ea7f8350bcd78efd4835e9bfaccdc310a53caf9ad819c5b2b58ac79c3afe8c0"
+    },
+    {
+      "old_relative_path": "bundle/method/vendor/frozen/outputs/korea_digital_strategy_pipeline.py",
+      "new_korean_path": "코드/원본_기존_문서디코더.py",
+      "size": 69452,
+      "sha256": "620d4a38c9ab12834c0be529fc14f518d68b4fef03d9a7f9e4328e8dd23236c3"
+    },
+    {
+      "old_relative_path": "bundle/method/vendor/frozen/outputs/ssci_korean_classifier_v2.py",
+      "new_korean_path": "코드/원본_이차_문맥분류_규칙.py",
+      "size": 26259,
+      "sha256": "bc028c9eb800928190279fa543f68d55390442dd3a5a7107ef7410008a5bd8b1"
+    },
+    {
+      "old_relative_path": "bundle/method/vendor/frozen/work/kosdaq_pipeline/kosdaq_text_pipeline.py",
+      "new_korean_path": "코드/원본_최종_분류규칙과_보고서집계.py",
+      "size": 56882,
+      "sha256": "b099eed4fcb235af31c4c30df3dc36de91ebfae89c513ce998c9e857e35a86eb"
+    },
+    {
+      "old_relative_path": "bundle/posthoc/classification_expected.json",
+      "new_korean_path": "코드/사후대조_보고서별_분류기준값.json",
+      "size": 10556899,
+      "sha256": "41d535470e3cbd844d1e3ebd88e4c881b33017bf99874b709bb23ba8c29d0882"
+    },
+    {
+      "old_relative_path": "bundle/posthoc/core.csv",
+      "new_korean_path": "CSV자료/사후대조_전체_주요모형.csv",
+      "size": 13601,
+      "sha256": "442ee471ad069af45b37b6cfc0f24ccf8ecaa3252ef97040b601d921ff203913"
+    },
+    {
+      "old_relative_path": "bundle/posthoc/differences.csv",
+      "new_korean_path": "CSV자료/사후대조_H3_계수차이.csv",
+      "size": 867,
+      "sha256": "fc05522839f5ce22ecf3a16320e6ae7c6d39298b80a54b2ba9bb8a4e11aa7201"
+    },
+    {
+      "old_relative_path": "bundle/posthoc/h45.csv",
+      "new_korean_path": "CSV자료/사후대조_사년후_오년후_시점.csv",
+      "size": 6329,
+      "sha256": "6071cd8f8f0d4b098b03de2bf1f8ad7baa350f5be8f015d9b08591d32081f18d"
+    },
+    {
+      "old_relative_path": "bundle/posthoc/ipw.csv",
+      "new_korean_path": "CSV자료/사후대조_IPW_결과.csv",
+      "size": 672,
+      "sha256": "730c847775a2d7d579e205ce76bba73d3cd36ede9b3fbc6b72461ed1ccfb290c"
+    },
+    {
+      "old_relative_path": "bundle/posthoc/joint.csv",
+      "new_korean_path": "CSV자료/사후대조_H3_공동추정.csv",
+      "size": 773,
+      "sha256": "8bb0c7ddc717185e94f2109dca0bca10dd6f5fba1eb2ff655c867c18f6b708ee"
+    },
+    {
+      "old_relative_path": "bundle/posthoc/placebo.csv",
+      "new_korean_path": "CSV자료/사후대조_위약검정.csv",
+      "size": 571,
+      "sha256": "de5c008a84a3acb08c329a133cb2adca0d21fdc2b7f49c115f6c98c1dd4de35a"
+    },
+    {
+      "old_relative_path": "bundle/posthoc/primary.csv",
+      "new_korean_path": "CSV자료/사후대조_H1_H2_기본회귀.csv",
+      "size": 6015,
+      "sha256": "bf41db67496a457991115c1190f982f46d57d51aa054fc00d3889c95afce4eb3"
+    },
+    {
+      "old_relative_path": "bundle/posthoc/supplement.csv",
+      "new_korean_path": "CSV자료/사후대조_보충분석.csv",
+      "size": 16141,
+      "sha256": "a470bb6361990bd09461d25b3369b01916f0772eaa615142f820aab520420f73"
+    },
+    {
+      "old_relative_path": "bundle/posthoc/trend.csv",
+      "new_korean_path": "CSV자료/사후대조_기업별_선형추세.csv",
+      "size": 706,
+      "sha256": "a35e47ae1d66f2aa47401d693b7407691f7094e83459feb5483b595729268345"
+    },
+    {
+      "old_relative_path": "bundle/posthoc/wald.csv",
+      "new_korean_path": "CSV자료/사후대조_H2_Wald검정.csv",
+      "size": 267,
+      "sha256": "bdca8828bdf8f6e50d73a53f935543e21a069babe395e6c46e26f60eef0edbbf"
+    },
+    {
+      "old_relative_path": "bundle/viewer_descriptors/report_01_00104722_2024/PUBLIC_VIEWER_SOURCE_DESCRIPTOR.json",
+      "new_korean_path": "코드/웹원문_출처명세_01_00104722_2024.json",
+      "size": 17618,
+      "sha256": "05bd4a1796b6d848dd8f44b8216fa2748cabe224318f61f95fa8cae2cc2e2cfa"
+    },
+    {
+      "old_relative_path": "bundle/viewer_descriptors/report_02_00107598_2021/PUBLIC_VIEWER_SOURCE_DESCRIPTOR.json",
+      "new_korean_path": "코드/웹원문_출처명세_02_00107598_2021.json",
+      "size": 17551,
+      "sha256": "eaab2cff32f49464afa8f71d9294a37ba8c98f82af0ef767728a9f9290d36aad"
+    },
+    {
+      "old_relative_path": "bundle/viewer_descriptors/report_03_00113243_2018/PUBLIC_VIEWER_SOURCE_DESCRIPTOR.json",
+      "new_korean_path": "코드/웹원문_출처명세_03_00113243_2018.json",
+      "size": 16527,
+      "sha256": "64fbe33e4d242f0afc961d1f0ed29c0c0276e3da0d9f95eed58635b40134d877"
+    },
+    {
+      "old_relative_path": "bundle/viewer_descriptors/report_04_00113410_2024/PUBLIC_VIEWER_SOURCE_DESCRIPTOR.json",
+      "new_korean_path": "코드/웹원문_출처명세_04_00113410_2024.json",
+      "size": 17680,
+      "sha256": "4417a0c816fa23867b20b312b1aa3fb15c3c7ed8f58104fe704e1d6b5ff82e72"
+    },
+    {
+      "old_relative_path": "bundle/viewer_descriptors/report_05_00113492_2021/PUBLIC_VIEWER_SOURCE_DESCRIPTOR.json",
+      "new_korean_path": "코드/웹원문_출처명세_05_00113492_2021.json",
+      "size": 17553,
+      "sha256": "bf6a2bb3e9ceca7289109f30f8bd160be649d16de3e4628b5d728ccf6fbd9759"
+    },
+    {
+      "old_relative_path": "bundle/viewer_descriptors/report_06_00117230_2016/PUBLIC_VIEWER_SOURCE_DESCRIPTOR.json",
+      "new_korean_path": "코드/웹원문_출처명세_06_00117230_2016.json",
+      "size": 15991,
+      "sha256": "f46969837cba583c8cf868d09dca3180db40ddff30e89a71fb70daea61583e7a"
+    },
+    {
+      "old_relative_path": "bundle/viewer_descriptors/report_07_00117230_2018/PUBLIC_VIEWER_SOURCE_DESCRIPTOR.json",
+      "new_korean_path": "코드/웹원문_출처명세_07_00117230_2018.json",
+      "size": 16544,
+      "sha256": "eb78bebfddebd09594212394186313d8fa97aeb17d84c05761605169b4c1f4ea"
+    },
+    {
+      "old_relative_path": "bundle/viewer_descriptors/report_08_00118345_2025/PUBLIC_VIEWER_SOURCE_DESCRIPTOR.json",
+      "new_korean_path": "코드/웹원문_출처명세_08_00118345_2025.json",
+      "size": 17655,
+      "sha256": "e06c5b466860097ed21bed7291710764ca8b57607a41a7aee2222f56af544dc5"
+    },
+    {
+      "old_relative_path": "bundle/viewer_descriptors/report_09_00121941_2019/PUBLIC_VIEWER_SOURCE_DESCRIPTOR.json",
+      "new_korean_path": "코드/웹원문_출처명세_09_00121941_2019.json",
+      "size": 16544,
+      "sha256": "ad4ff8d29c2f8cb9951aa7ec8fdfb592dc4d2259f39c3b5a1ec346e150a87405"
+    },
+    {
+      "old_relative_path": "bundle/viewer_descriptors/report_10_00145880_2025/PUBLIC_VIEWER_SOURCE_DESCRIPTOR.json",
+      "new_korean_path": "코드/웹원문_출처명세_10_00145880_2025.json",
+      "size": 17679,
+      "sha256": "8acadd6cc735c47dd437a5f2a5bf1cc0b50a63c063ecf720a92798c79bdbef73"
+    },
+    {
+      "old_relative_path": "bundle/viewer_descriptors/report_11_00148443_2025/PUBLIC_VIEWER_SOURCE_DESCRIPTOR.json",
+      "new_korean_path": "코드/웹원문_출처명세_11_00148443_2025.json",
+      "size": 17661,
+      "sha256": "36f9e11c55209a33aa4aa53484af7d1ee750dab2428e9125bb171520e1bd6444"
+    },
+    {
+      "old_relative_path": "bundle/viewer_descriptors/report_12_00157399_2025/PUBLIC_VIEWER_SOURCE_DESCRIPTOR.json",
+      "new_korean_path": "코드/웹원문_출처명세_12_00157399_2025.json",
+      "size": 17663,
+      "sha256": "fd2c136802e64a20ade4906c88e0c5de4d19ed315f9c225dab258dd119864435"
+    },
+    {
+      "old_relative_path": "bundle/viewer_descriptors/report_13_00160588_2016/PUBLIC_VIEWER_SOURCE_DESCRIPTOR.json",
+      "new_korean_path": "코드/웹원문_출처명세_13_00160588_2016.json",
+      "size": 16558,
+      "sha256": "1e49593bb37008c1880c5a7d97f1f9306469afdca0a1804243c3a6b29c0146b1"
+    },
+    {
+      "old_relative_path": "bundle/viewer_descriptors/report_14_00163196_2022/PUBLIC_VIEWER_SOURCE_DESCRIPTOR.json",
+      "new_korean_path": "코드/웹원문_출처명세_14_00163196_2022.json",
+      "size": 17560,
+      "sha256": "c3e1ed2bd826ae191889ff4be40d2f0102c7e0224cc1b95b802373a158595e74"
+    },
+    {
+      "old_relative_path": "bundle/viewer_descriptors/report_15_00163691_2024/PUBLIC_VIEWER_SOURCE_DESCRIPTOR.json",
+      "new_korean_path": "코드/웹원문_출처명세_15_00163691_2024.json",
+      "size": 17603,
+      "sha256": "27cf96019e6b9351e6580a7b5e6966bbcc98d5f69c68e1e2eba8c87a69e07ee7"
+    },
+    {
+      "old_relative_path": "code/acquire_locked_reports.py",
+      "new_korean_path": "코드/원본_잠금보고서_확보도구.py",
+      "size": 29053,
+      "sha256": "316f99ca85750e1b6d39a3e55b8a34ec6f9090ed13deed21a67cf3dd7fce7d01"
+    },
+    {
+      "old_relative_path": "code/complete_current_models.py",
+      "new_korean_path": "코드/원본_전체_보존모형_추정.py",
+      "size": 15600,
+      "sha256": "ceba9ae9a8a8b982d2bb5457d29c876d0e4b9d66c40c7f89d21a3dc47d6d9dbf"
+    },
+    {
+      "old_relative_path": "code/public_run.py",
+      "new_korean_path": "코드/원본_공개실행_진입점.py",
+      "size": 10553,
+      "sha256": "496e563768b888f44ac1941cc7e36523cc81c7ccc01e392732abb3f7289e6b45"
+    },
+    {
+      "old_relative_path": "code/rebuild_current_method.py",
+      "new_korean_path": "코드/원본_분류와_지표_재구성.py",
+      "size": 29634,
+      "sha256": "db797d939967554599ca822b8206bb0343a86b51c327ebb0c1ff83c1446b381c"
+    },
+    {
+      "old_relative_path": "code/replay_three_rounds.py",
+      "new_korean_path": "코드/원본_세차례_실행_조정.py",
+      "size": 5644,
+      "sha256": "f2793c354fc9be7e91711adb70753ef4280d106d2cd0a4595f4c6c743bea24e9"
+    },
+    {
+      "old_relative_path": "docs/BMODD_Reproducibility_Manual_KO.docx",
+      "new_korean_path": "설명서/BMODD_분류와_재현_안내서.docx",
+      "size": 47647,
+      "sha256": "6251d71530eb7e455906bea44fc9b63caefa62cdbd0192eb9017073d844a6929"
+    },
+    {
+      "old_relative_path": "docs/BMODD_Reproducibility_Manual_KO.pdf",
+      "new_korean_path": "설명서/BMODD_분류와_재현_안내서.pdf",
+      "size": 513084,
+      "sha256": "bec59d9fb608e5c869be797eb47334c2d585e06b93d3f175a291f342cac5c776"
+    },
+    {
+      "old_relative_path": "evidence/PUBLIC_ALIAS_CHANGES.csv",
+      "new_korean_path": "CSV자료/공개_변수명_대응내역.csv",
+      "size": 12426,
+      "sha256": "fac54d345a8d620cdf215e0b36fa93fa891d665e279205ef857a3d5f7503ed9d"
+    },
+    {
+      "old_relative_path": "evidence/PUBLIC_RESULTS_EXPORT_RECEIPT.json",
+      "new_korean_path": "설명서/공개결과_원본해시_대응.json",
+      "size": 29051,
+      "sha256": "12ad6cf0f1a5c19da6a723e8773f8052dd79f2c8fef06185e408c56f9784306c"
+    },
+    {
+      "old_relative_path": "evidence/PUBLIC_VALIDATION_SUMMARY.json",
+      "new_korean_path": "설명서/세차례_실제재현_검증요약.json",
+      "size": 6135,
+      "sha256": "8e6a1b26e16ff49a098e6f2d05c08c3149c017df2bf00353f83881f47a11dddc"
+    },
+    {
+      "old_relative_path": "requirements_windows_cp313_hashed.txt",
+      "new_korean_path": "코드/파이썬313_의존성_해시잠금.txt",
+      "size": 3304,
+      "sha256": "4a83acf6d8ba7e1148854e716484519f8cd22c5e748127043d212251398063a4"
+    },
+    {
+      "old_relative_path": "results/diagnostics/decomposition_coefficient_identity.csv",
+      "new_korean_path": "CSV자료/진단_분해모형_계수항등식.csv",
+      "size": 504,
+      "sha256": "4cf4c60f3c41b225bcc68e76b6790c5aa19d275b3f6483a2ee4f9e064929aa9d"
+    },
+    {
+      "old_relative_path": "results/diagnostics/decomposition_sample_flow.csv",
+      "new_korean_path": "CSV자료/진단_분해모형_표본흐름.csv",
+      "size": 628,
+      "sha256": "87d16841e75803ff087cffec7047f584147d1afa7934f3758b984f02852e8cc7"
+    },
+    {
+      "old_relative_path": "results/diagnostics/ipw_balance.csv",
+      "new_korean_path": "CSV자료/진단_IPW_공변량균형.csv",
+      "size": 1357,
+      "sha256": "c9d83238a8c01d7c7c2f981f7ce9cb95b03e4ae63b8cfcb7f5cf2c3bb97f340e"
+    },
+    {
+      "old_relative_path": "results/diagnostics/ipw_weight_diagnostics.csv",
+      "new_korean_path": "CSV자료/진단_IPW_가중치분포.csv",
+      "size": 1037,
+      "sha256": "8d72aa220bfab894b87b5c1717538bc946bac45f29c4ed7ec22283633092878c"
+    },
+    {
+      "old_relative_path": "results/figure_data/figure1_annual_mean_source_data.csv",
+      "new_korean_path": "CSV자료/그림1_연도별_평균_작성자료.csv",
+      "size": 831,
+      "sha256": "545979075b1dbc81fd45ad869d8a52608092680bf02cea746adc4929cb24d8d3"
+    },
+    {
+      "old_relative_path": "results/firm_year/BMODD_FIRM_YEAR_CLASSIFICATION.csv",
+      "new_korean_path": "CSV자료/결과_BMODD_기업연도_분류.csv",
+      "size": 2946845,
+      "sha256": "26bb8691ae0cc57b878c61b1245d251f61b9bca4a990a31ff025c70dd2b4f892"
+    },
+    {
+      "old_relative_path": "results/models/confirmatory_two_test_BH.csv",
+      "new_korean_path": "CSV자료/결과_H1_H2_확인적_두검정_BH조정.csv",
+      "size": 144,
+      "sha256": "3c7684a8464188ac32d901a4a9fdd08a6246680751075bf7ea5b4c41cd5ea2b9"
+    },
+    {
+      "old_relative_path": "results/models/current_core/core_coefficients.csv",
+      "new_korean_path": "CSV자료/결과_전체_주요모형_회귀계수.csv",
+      "size": 71982,
+      "sha256": "510f86d22d0b651311a14a63ebe73f81d2a8437fd1f9c958da862c7843d09347"
+    },
+    {
+      "old_relative_path": "results/models/h2_wald.csv",
+      "new_korean_path": "CSV자료/결과_H2_계수차이_Wald검정.csv",
+      "size": 273,
+      "sha256": "b055be5de279a3da226f6ea4abe43c2e9731b35375d26b3184b17c7b94b2a55f"
+    },
+    {
+      "old_relative_path": "results/models/h3_joint/h3_joint_coefficients.csv",
+      "new_korean_path": "CSV자료/결과_H3_공통표본_회귀계수.csv",
+      "size": 766,
+      "sha256": "716359b5e303ecfbbf85d1471566826a8331c741207722fd9676f64b035c28d4"
+    },
+    {
+      "old_relative_path": "results/models/h3_joint/h3_joint_differences.csv",
+      "new_korean_path": "CSV자료/결과_H3_시점간_계수차이.csv",
+      "size": 863,
+      "sha256": "14741e070651dcbecf3a163339a495ffd15cf57b86c25dcaacf413025ec1bfaa"
+    },
+    {
+      "old_relative_path": "results/models/ipw_lpm_results.csv",
+      "new_korean_path": "CSV자료/결과_표본유지_IPW_LPM.csv",
+      "size": 673,
+      "sha256": "6243e6778820acb427485f16d1d06bdf170790b7c9aa8d6d3cac65629fcee419"
+    },
+    {
+      "old_relative_path": "results/models/placebo.csv",
+      "new_korean_path": "CSV자료/결과_미래공시_위약검정.csv",
+      "size": 576,
+      "sha256": "2a891d44b41a5aa778ca8fb5ef034934fb6672d00a65975e8cf9757378108c2c"
+    },
+    {
+      "old_relative_path": "results/models/primary_h1_h2.csv",
+      "new_korean_path": "CSV자료/결과_H1_H2_기본회귀.csv",
+      "size": 6051,
+      "sha256": "03934c2255039cd8e4e9200084ea0a97d6999959e88ef1c8288c130d3e81dc88"
+    },
+    {
+      "old_relative_path": "results/models/supplement_with_original_BH19.csv",
+      "new_korean_path": "CSV자료/결과_보충분석_원래19개_BH조정.csv",
+      "size": 16163,
+      "sha256": "07ecff42082d7ee286fa4a3e79f2e4d85b13c9026e824f28cd80024fa8e093d0"
+    },
+    {
+      "old_relative_path": "results/models/trend.csv",
+      "new_korean_path": "CSV자료/결과_기업별_선형추세.csv",
+      "size": 439,
+      "sha256": "d1ae2801fc3ef4b9bc6f3042f4bb61036346419b5ce69ec100fb00c6e32db15a"
+    },
+    {
+      "old_relative_path": "results/sample_keys/current_core_sample_keys.csv",
+      "new_korean_path": "CSV자료/결과_주요모형_표본식별자.csv",
+      "size": 8652177,
+      "sha256": "dd66cd424e6fc52c954c7e015b4b7786cbce57ee726e515ec7dc8de5237af21e"
+    },
+    {
+      "old_relative_path": "results/sample_keys/h3_joint_sample_keys.csv",
+      "new_korean_path": "CSV자료/결과_H3_공통표본_식별자.csv",
+      "size": 111444,
+      "sha256": "883cb7187350bb1e28f015c97f0887e6c83ab36b386e67e1ac3bb4f26b355864"
+    },
+    {
+      "old_relative_path": "rules/ACTUALLY_LOADED_RULE_DECLARATIONS.json",
+      "new_korean_path": "설명서/실제로_적재된_분류규칙.json",
+      "size": 122893,
+      "sha256": "948ff454e09d6ce863adbb35f6fc0a658efca22dc0b8cb1f34992959ac97247f"
+    },
+    {
+      "old_relative_path": "rules/AGGREGATION_AND_CATEGORY_SOURCE_SITES.json",
+      "new_korean_path": "설명서/집계와_범주정의_출처.json",
+      "size": 11993,
+      "sha256": "06f48d986f155693735554da40f63eb12df33e9fd23550260c0560dd7760b7e5"
+    },
+    {
+      "old_relative_path": "rules/DECISION_PRIORITY_AND_MEASUREMENT_BOUNDARIES.json",
+      "new_korean_path": "설명서/판정_우선순위와_측정범위.json",
+      "size": 10099,
+      "sha256": "237f75306c0d65d2b21cc17757c22017bc3b934777d4665f504cb4bafb09c657"
+    },
+    {
+      "old_relative_path": "rules/EFFECTIVE_FUNCTIONS_AND_ORDERED_CONDITIONS.json",
+      "new_korean_path": "설명서/실제_함수와_조건_적용순서.json",
+      "size": 60977,
+      "sha256": "d88dde0b02a75d91ae70510338dd3a16302973dae4057ff1959193290ddab675"
+    },
+    {
+      "old_relative_path": "rules/INLINE_REGEX_CALLS.json",
+      "new_korean_path": "설명서/함수내_정규표현식_호출.json",
+      "size": 13388,
+      "sha256": "0e42eba08b088256d6706c191093bb84e6fc4c11cddcf012cfc5b34247667243"
+    },
+    {
+      "old_relative_path": "rules/LOOKUP_SCOPE.json",
+      "new_korean_path": "설명서/규칙목록_읽는법.json",
+      "size": 3293,
+      "sha256": "dded5d24ef40246ef8f621912f700682c645d90cafe4f645807864e7d093acba"
+    },
+    {
+      "old_relative_path": "rules/NESTED_FUNCTION_SCOPE_SUPPLEMENT.json",
+      "new_korean_path": "설명서/내부함수_범위_보충.json",
+      "size": 1021,
+      "sha256": "443cd009aea6f32e1db872f5ca87e3fdd7031bf7d1e2e4acd0de1556634e4625"
+    },
+    {
+      "old_relative_path": "rules/REGEX_AND_KEYWORD_INDEX.csv",
+      "new_korean_path": "CSV자료/정규표현식과_핵심어_목록.csv",
+      "size": 60885,
+      "sha256": "df5e8bb2c7d0fc2a388acdfaa1aae73bf9256b01383f912ec60cfa7b55898ae2"
+    },
+    {
+      "old_relative_path": "rules/SOURCE_FILE_HASH_INDEX.json",
+      "new_korean_path": "설명서/원본_소스파일_해시목록.json",
+      "size": 1802,
+      "sha256": "897402a0c6fc6e2bd5b276524affc0bd5bc9883fd287ff650b9ca1a15f05b118"
+    },
+    {
+      "old_relative_path": "rules/SOURCE_FUNCTIONS_NOT_LOADED.json",
+      "new_korean_path": "설명서/실행에_적재되지_않은_함수.json",
+      "size": 47829,
+      "sha256": "57835e2a884f2bb412eb78321830ac7817fe1a44ffb34df95665a11e5c9c47a5"
+    }
+  ]
+}
