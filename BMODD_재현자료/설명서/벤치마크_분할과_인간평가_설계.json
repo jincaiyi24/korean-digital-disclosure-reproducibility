@@ -1,0 +1,164 @@
+{
+  "sampling": {
+    "source_counts": {
+      "source_rows": 175542,
+      "eligible_original_occurrence_rows": 139984,
+      "excluded_old2700_normalized_text": 4716,
+      "excluded_union_rows": 35558,
+      "excluded_fixed_test_company": 31928,
+      "excluded_fixed_test_exact_text": 308,
+      "excluded_fixed_test_normalized_text": 372
+    },
+    "original_rule_class_counts": {
+      "BMODD": 24702,
+      "Exclude": 128536,
+      "NonBMODD": 22304
+    },
+    "fixed_test_companies": 248,
+    "payload_master_exact_all_fields": true,
+    "global_normalized_groups_after_exclusions": 76936,
+    "normalized_conflicting_saved_label_groups": 217,
+    "conflicts_preserved_without_relabeling": true,
+    "available_unique_pool_counts": {
+      "train/BMODD": 7696,
+      "train/NonBMODD": 7080,
+      "train/Exclude": 46228,
+      "dev/BMODD": 2151,
+      "dev/NonBMODD": 1716,
+      "dev/Exclude": 12065
+    },
+    "selected_counts_by_split": {
+      "train": 1500,
+      "dev": 300,
+      "test": 300
+    },
+    "selected_old_rule_counts_by_split": {
+      "train/BMODD": 500,
+      "train/NonBMODD": 500,
+      "train/Exclude": 500,
+      "dev/BMODD": 100,
+      "dev/NonBMODD": 100,
+      "dev/Exclude": 100,
+      "test/Exclude": 150,
+      "test/BMODD": 75,
+      "test/NonBMODD": 75
+    },
+    "selected_companies_by_split": {
+      "train": 717,
+      "dev": 158,
+      "test": 248
+    },
+    "leakage_overlap_counts": {
+      "train_dev_companies": 0,
+      "train_dev_exact_text": 0,
+      "train_dev_normalized_text": 0,
+      "train_test_companies": 0,
+      "train_test_exact_text": 0,
+      "train_test_normalized_text": 0,
+      "dev_test_companies": 0,
+      "dev_test_exact_text": 0,
+      "dev_test_normalized_text": 0,
+      "train_old2700_normalized_text": 0,
+      "dev_old2700_normalized_text": 0
+    },
+    "selection_sha256": "71c2b512e5dbae37a2944480d4781ca22040608108ea8f63861ce4c368e199f5",
+    "target_type": "current_rule_pseudo_label_NOT_human_gold",
+    "human_gold_available": false,
+    "sampling_algorithm": {
+      "seed": 20261025,
+      "test_ids": "Original N001-N300, exact strings/order and source metadata preserved",
+      "normalize_for_leakage_only": "Unicode NFKC, remove all whitespace, casefold; never edit actual model sentence strings",
+      "exclude_from_training_and_development": [
+        "All 248 corporations represented by the fixed 300 test sentences",
+        "All exact and normalized fixed-test sentence strings, even in other companies",
+        "All normalized strings from the previous 2700-sentence experiment"
+      ],
+      "metadata": "Require exact corp_code/year/rcept_no match in the pinned current SOURCE_PLAN; use real corp_name, no inferred source",
+      "global_duplicate_representative": "For each normalized string, select minimum deterministic SHA-256(seed|source identity plus source CSV row); do not choose a representative by model performance or favorable label",
+      "company_partition": "SHA-256(seed|corp_code) integer modulo 5 equals 0 for dev; other corporations for train",
+      "stratification": "Original saved rule class only for sampling: train 500 and dev 100 per class; exact rank is deterministic SHA-256(seed|source identity plus source CSV row)",
+      "teacher_replay": "Apply the unchanged frozen classifier to the selected real original strings and correct original company/year; preserve both saved and current rule labels, never repair a label",
+      "label_changes": "No resampling on current-label changes; record actual class counts and stop if a training/development class is absent",
+      "test_human_labels_used_for_selection": false,
+      "test_machine_labels_used_for_selection": false,
+      "cross_split_company_overlap_allowed": false,
+      "cross_split_normalized_text_overlap_allowed": false,
+      "new_selection_after_test_scores_allowed": false
+    },
+    "current_counts_by_split": {
+      "train/BMODD": 500,
+      "train/NonBMODD": 500,
+      "train/Exclude": 500,
+      "dev/BMODD": 100,
+      "dev/NonBMODD": 100,
+      "dev/Exclude": 100,
+      "test/Exclude": 150,
+      "test/BMODD": 75,
+      "test/NonBMODD": 75
+    },
+    "old_current_label_changes": 0,
+    "old_current_flag_changes": 0
+  },
+  "fixed_split_checks": {
+    "rows": {
+      "train": 1500,
+      "dev": 300,
+      "test": 300
+    },
+    "corporations": {
+      "train": 717,
+      "dev": 158,
+      "test": 248
+    },
+    "all_company_and_normalized_text_pairs_disjoint": true,
+    "human_gold_absent_from_training_files": true,
+    "all300_reference_IDs_text_hashes_and_context_exact": true,
+    "final_human_counts": {
+      "Exclude": 139,
+      "BMODD": 75,
+      "NonBMODD": 86
+    },
+    "initial_agreement": 278,
+    "initial_disagreements_retained": 22
+  },
+  "stratum_frame": {
+    "candidate_Exclude": {
+      "N_h": 161117,
+      "n_h": 75
+    },
+    "BMI": {
+      "N_h": 16232,
+      "n_h": 75
+    },
+    "NonBMI": {
+      "N_h": 14796,
+      "n_h": 75
+    },
+    "noncandidate_valid": {
+      "N_h": 8630145,
+      "n_h": 75
+    }
+  },
+  "all_design_weights_Nh_over_75_verified": true,
+  "weight_scope": "Original validation posthoc reconstructed globalSHA256 deduplicated sentence frame, not full25millionraw corpus",
+  "human_evaluation": {
+    "script": "outputs\\HUMAN300_BENCHMARK_RETRAIN_20261025\\evaluate_human_reference.py",
+    "script_sha256": "d32fb5016171a229346b64d4134333b6f22be250704e305f58ff588c01fe3916",
+    "bootstrap_replicates": 5000,
+    "seed": 20261025,
+    "bit_generator": "PCG64",
+    "quantile_method": "numpy.quantile(method='linear', q=[0.025,0.975])",
+    "four_training_seeds_fixed_not_ensembled": true
+  },
+  "original_training_protocol_sha256": "211bbf4daf192b622b7473d0d28fb4c98e8cee0b1523b121ba5c5965062d99d2",
+  "original_human_evaluation_protocol_sha256": "a07c703ceef0cd77092a40f2f18e16edae525f9874a8cdf8529defb9355c3d72",
+  "original_dataset_seal_sha256": "a8b26c37f58f6ae056f21ee574ef91c8e0ca4c723b412bb1edb5a1c0ac2e4087",
+  "published_fixed_split_source_sha256": {
+    "train": "1ec6f5262a431c780706ede78c6515188ccd07baf42e539a63492718dfccd7da",
+    "dev": "cb1a8fae5dbc896f07cacbe0d9a6bfff5d59b9871093cb8e40d9e0835b565b3a",
+    "test": "066bab1c69ba2ef7983018d498eadd88f96c3cce8076be87762641629de19ccb"
+  },
+  "training_reference": "current unchanged Python-rule pseudo-labels; no human test labels for training/development/selection",
+  "evaluation_reference": "Same final 300 human labels for rules and all eight neural runs",
+  "sampling_reproduction_scope": "Fixed selected sentences are supplied. Rebuilding the entire historical 175542-sentence source pool is not required to replay this fixed benchmark and is not claimed by this supplement."
+}

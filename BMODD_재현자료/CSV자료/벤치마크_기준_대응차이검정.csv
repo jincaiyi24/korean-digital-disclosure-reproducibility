@@ -1,0 +1,5 @@
+﻿weighting,comparison,metric,point_difference,paired_ci_95_low,paired_ci_95_high,bootstrap_replicates,bootstrap_seed,p_value_computed,mean_over_same_four_seeds_inside_each_replicate
+unweighted,bert_four_seed_mean_minus_python_rules,Macro_F1,-0.2383806772454462,-0.29077897542839626,-0.1885078574629874,5000,20261025,False,True
+unweighted,finbert_four_seed_mean_minus_python_rules,Macro_F1,-0.20821856099981872,-0.25647178975006407,-0.16088216987490353,5000,20261025,False,True
+design_weighted,bert_four_seed_mean_minus_python_rules,Macro_F1,0.11358928078892616,-0.28077848878689027,0.2000170642816086,5000,20261025,False,True
+design_weighted,finbert_four_seed_mean_minus_python_rules,Macro_F1,0.19868538365041277,-0.23672301215049643,0.29234732973420363,5000,20261025,False,True

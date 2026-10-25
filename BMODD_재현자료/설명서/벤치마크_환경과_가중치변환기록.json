@@ -1,0 +1,33 @@
+{
+  "recorded_utc": "2026-10-22T12:55:45.991931+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "packages": {
+    "torch": "2.7.1+cu126",
+    "transformers": "4.57.1",
+    "tokenizers": "0.22.1",
+    "safetensors": "0.6.2",
+    "numpy": "2.2.6",
+    "huggingface-hub": "0.36.2"
+  },
+  "cuda_available": true,
+  "torch_cuda_version": "12.6",
+  "gpu_name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "gpu_total_memory_bytes": 6441926656,
+  "requirements_actual_sha256": "ad860b3204c0f9a0dbe2958e09cdfffc22c48bca01c74f3e26cedfec2b3d6cec",
+  "torch_source": "Official https://download.pytorch.org/whl/cu126 torch==2.7.1, --no-cache-dir",
+  "source_receipt_sha256": "2078f2630406ecceaf5203264f61be8ae26339f6b92f2b22cfe848f78e591664",
+  "scope": "Historical environment snapshot recorded 2026-10-22. The actual 2026-10-25 wrapper enforced Python 3.12.14 and the six core package versions recorded in the fixed configuration. Other packages were not separately frozen again at training start.",
+  "driver_version_at_training": "not recorded",
+  "actual_eight_training_runs_date": "2026-10-25",
+  "finbert_conversion": {
+    "source_bin_sha256": "ad0e270bd60f07fe94ca9eddfae1cf671c013d6d9c938dba7acb17d1bcca4f2c",
+    "safetensors_sha256": "05f10ba650aa57b07184c700ed174890831a3706313f596a162db863c76342e5",
+    "tensor_count": 205,
+    "all_keys_shapes_dtypes_values_exact": true,
+    "weights_only": true,
+    "map_location": "cpu",
+    "torch_version": "2.7.1+cu126",
+    "safetensors_version": "0.6.2"
+  }
+}

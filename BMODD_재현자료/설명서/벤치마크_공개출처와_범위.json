@@ -1,0 +1,17 @@
+{
+  "original_training_operators_sha256": "189f135a951e92bd6522947c12b6b348da2889458c9823257f4a731adcd49614",
+  "original_evaluation_program_sha256": "d32fb5016171a229346b64d4134333b6f22be250704e305f58ff588c01fe3916",
+  "published_data_source": {
+    "train": "1ec6f5262a431c780706ede78c6515188ccd07baf42e539a63492718dfccd7da",
+    "dev": "cb1a8fae5dbc896f07cacbe0d9a6bfff5d59b9871093cb8e40d9e0835b565b3a",
+    "test": "066bab1c69ba2ef7983018d498eadd88f96c3cce8076be87762641629de19ccb"
+  },
+  "no_training_performed_during_packaging": true,
+  "no_paper_or_raw_labels_modified": true,
+  "publication_directory": "BMODD_재현자료",
+  "subdirectories": [
+    "설명서",
+    "코드",
+    "CSV자료"
+  ]
+}

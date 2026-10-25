@@ -1,0 +1,333 @@
+{
+  "labels": [
+    "BMODD",
+    "NonBMODD",
+    "Exclude"
+  ],
+  "seeds": [
+    20261022,
+    20261023,
+    20261024,
+    20261025
+  ],
+  "splits": {
+    "train": "CSV자료/벤치마크_학습.csv",
+    "dev": "CSV자료/벤치마크_개발.csv",
+    "test": "CSV자료/벤치마크_시험.csv"
+  },
+  "human_reference": "CSV자료/벤치마크_인간참조.csv",
+  "previous_sentence_hashes": "CSV자료/벤치마크_이전표본문장해시.csv",
+  "input_template": "기업명: {corp_name}\n보고연도: {year}\n문장: {sentence}",
+  "training": {
+    "training_seeds": [
+      20261022,
+      20261023,
+      20261024,
+      20261025
+    ],
+    "epochs": 3,
+    "batch_size": 8,
+    "gradient_accumulation": 2,
+    "max_length": 192,
+    "learning_rate": 2e-05,
+    "weight_decay": 0.01,
+    "optimizer": "AdamW",
+    "warmup_fraction": 0.1,
+    "max_gradient_norm": 1.0,
+    "class_weights": null,
+    "mixed_precision": false,
+    "deterministic_algorithms": true,
+    "tf32": false,
+    "fresh_three_class_head_for_each_model_and_seed": true,
+    "verify_encoder_unchanged_by_head_reinitialization": true,
+    "selection": "Highest dev Macro-F1, strict improvement; earliest epoch on exact tie",
+    "test": "One forward evaluation of the fixed 300 per model/seed after dev selection is sealed; no test-based model, seed, epoch or sampling selection",
+    "old_finetuned_weights_reused": false,
+    "same_seed_pair_common_pooler_and_classifier_initialization": true,
+    "model_fits_expected": 8
+  },
+  "versions": {
+    "torch": "2.7.1+cu126",
+    "transformers": "4.57.1",
+    "tokenizers": "0.22.1",
+    "safetensors": "0.6.2",
+    "numpy": "2.2.6",
+    "huggingface-hub": "0.36.2"
+  },
+  "training_environment": {
+    "python": "3.12.14",
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "driver_version_at_original_training": "not recorded",
+    "cuda_torch_build": "12.6"
+  },
+  "models": {
+    "bert": {
+      "model_id": "klue/bert-base",
+      "revision": "77c8b3d707df785034b4e50f2da5d37be5f0f546",
+      "verified_files": [
+        {
+          "file": "config.json",
+          "size": 425,
+          "sha256": "ff8471047bcf64659fc0c05c5026b61a0865a90f41c32424c5f4d59149bc6d5b"
+        },
+        {
+          "file": "model.safetensors",
+          "size": 445000316,
+          "sha256": "0ea8642386196d1912a07dea2c75ede789b76a370ee0667745ead5130ad33e92"
+        },
+        {
+          "file": "special_tokens_map.json",
+          "size": 125,
+          "sha256": "d2207e01f191626729e08582912c9bf23876883924839b2bbee97489f804e00e"
+        },
+        {
+          "file": "tokenizer.json",
+          "size": 494860,
+          "sha256": "c0000d13c6b4136b2290abdd30bcf51c1c4d87353aa3c5d1640d003484516afe"
+        },
+        {
+          "file": "tokenizer_config.json",
+          "size": 289,
+          "sha256": "a154c1b94bc766340994eddc5faaf30c415741811f4ee3798871387b1daa428d"
+        },
+        {
+          "file": "vocab.txt",
+          "size": 248477,
+          "sha256": "aca2e1c1b22e58158b262d8ce417e570beb5d5213ab22011f85b0f70b282ddbb"
+        },
+        {
+          "file": "README.md",
+          "size": 10439,
+          "sha256": "6e6c4bdc2d20fa53ff2a622adba0d60ca58404c66f060dd6df752979721b437f"
+        }
+      ]
+    },
+    "finbert": {
+      "model_id": "snunlp/KR-FinBert",
+      "revision": "9ccc6ae2a35c65ed7156da9dc1fc5311f69abc3e",
+      "verified_files": [
+        {
+          "file": "README.md",
+          "size": 2028,
+          "sha256": "69faa72603b61af3e0d2be629453899883b13d68c0cd6cba8e8c32c726f74aad"
+        },
+        {
+          "file": "config.json",
+          "size": 655,
+          "sha256": "cf099f18aaf4fb783d872ebb3792faf49a5e1d9ee16ad38a830c35207aca5e8a"
+        },
+        {
+          "file": "special_tokens_map.json",
+          "size": 112,
+          "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3"
+        },
+        {
+          "file": "tokenizer.json",
+          "size": 293644,
+          "sha256": "58b6130760f3d781fdcf0f65fdd3e284a2469d09bb0a774c6e08d4a2be9ba135"
+        },
+        {
+          "file": "tokenizer_config.json",
+          "size": 336,
+          "sha256": "a7576e2a5ca4c29190cd729c42dfa67f3e4c200fb440ebcd801edbb4fd7306f6"
+        },
+        {
+          "file": "vocab.txt",
+          "size": 143209,
+          "sha256": "a6fb3bad008ed486cf553d7585251a6cb0d72be8fd88386f3646c592876d195c"
+        },
+        {
+          "file": "pytorch_model.bin",
+          "size": 405776795,
+          "sha256": "ad0e270bd60f07fe94ca9eddfae1cf671c013d6d9c938dba7acb17d1bcca4f2c"
+        },
+        {
+          "file": "model.safetensors",
+          "size": 467239640,
+          "sha256": "05f10ba650aa57b07184c700ed174890831a3706313f596a162db863c76342e5"
+        }
+      ]
+    }
+  },
+  "strata": {
+    "BMODD": {
+      "N_h": 16232,
+      "n_h": 75
+    },
+    "NonBMODD": {
+      "N_h": 14796,
+      "n_h": 75
+    },
+    "candidate_Exclude": {
+      "N_h": 161117,
+      "n_h": 75
+    },
+    "noncandidate_valid": {
+      "N_h": 8630145,
+      "n_h": 75
+    }
+  },
+  "runs": {
+    "bert_20261022": {
+      "role": "bert",
+      "seed": 20261022,
+      "dev_predictions": [
+        "CSV자료/벤치마크_bert_20261022_개발예측_01.csv",
+        "CSV자료/벤치마크_bert_20261022_개발예측_02.csv",
+        "CSV자료/벤치마크_bert_20261022_개발예측_03.csv"
+      ],
+      "test_predictions": "CSV자료/벤치마크_bert_20261022_시험예측.csv",
+      "training_log": "CSV자료/벤치마크_bert_20261022_학습기록.csv",
+      "best_epoch": 3,
+      "dev_macro_f1": 0.6697304310264102,
+      "trained_model_state_sha256": "a7d25a2a350ebc57a9de9a9c03e1028b5f318ce7d48e0ab74520ed2fb30df1ad",
+      "new_pooler_and_classifier_state_sha256": {
+        "pooler": "3412bef20dfee4592023947285b44110ef8cd807f942d8bc9c8617cd5e051789",
+        "classifier": "e95aaa721dbef3c935114753fbba7ba12be87ef41ae8ea1ebc889d41d34b4d55"
+      }
+    },
+    "bert_20261023": {
+      "role": "bert",
+      "seed": 20261023,
+      "dev_predictions": [
+        "CSV자료/벤치마크_bert_20261023_개발예측_01.csv",
+        "CSV자료/벤치마크_bert_20261023_개발예측_02.csv",
+        "CSV자료/벤치마크_bert_20261023_개발예측_03.csv"
+      ],
+      "test_predictions": "CSV자료/벤치마크_bert_20261023_시험예측.csv",
+      "training_log": "CSV자료/벤치마크_bert_20261023_학습기록.csv",
+      "best_epoch": 3,
+      "dev_macro_f1": 0.6749380865594737,
+      "trained_model_state_sha256": "c3f16fbae5289b4c880ab1f694d3beef3911b698c740041cea7e20d542befe00",
+      "new_pooler_and_classifier_state_sha256": {
+        "pooler": "bb19306c0b33aad40077622971540b0dc8fa264edefbea408f747a3a7b6e69d3",
+        "classifier": "eeb2d92f4d21b7e474f72ee71da67af50de1a21a3b1891aa6de0e57b6820a9d6"
+      }
+    },
+    "bert_20261024": {
+      "role": "bert",
+      "seed": 20261024,
+      "dev_predictions": [
+        "CSV자료/벤치마크_bert_20261024_개발예측_01.csv",
+        "CSV자료/벤치마크_bert_20261024_개발예측_02.csv",
+        "CSV자료/벤치마크_bert_20261024_개발예측_03.csv"
+      ],
+      "test_predictions": "CSV자료/벤치마크_bert_20261024_시험예측.csv",
+      "training_log": "CSV자료/벤치마크_bert_20261024_학습기록.csv",
+      "best_epoch": 2,
+      "dev_macro_f1": 0.6712923536048332,
+      "trained_model_state_sha256": "d2bee144c8a70df2f1696444abb24ce301c001622530c0f259e07171d3132b25",
+      "new_pooler_and_classifier_state_sha256": {
+        "pooler": "d08b6c347bacfff2ff9506bb8208647a137d019b8b32114776d90b3e9ee993f7",
+        "classifier": "b5e990026a62016b8dc3d596b40310cf6ac599cb4026097735c9006f8a31b690"
+      }
+    },
+    "bert_20261025": {
+      "role": "bert",
+      "seed": 20261025,
+      "dev_predictions": [
+        "CSV자료/벤치마크_bert_20261025_개발예측_01.csv",
+        "CSV자료/벤치마크_bert_20261025_개발예측_02.csv",
+        "CSV자료/벤치마크_bert_20261025_개발예측_03.csv"
+      ],
+      "test_predictions": "CSV자료/벤치마크_bert_20261025_시험예측.csv",
+      "training_log": "CSV자료/벤치마크_bert_20261025_학습기록.csv",
+      "best_epoch": 3,
+      "dev_macro_f1": 0.6817014902417088,
+      "trained_model_state_sha256": "0c28fd0aa24304de31492bbb28f2b3d4c26ef36087d07c5fb17c96bb7f12f362",
+      "new_pooler_and_classifier_state_sha256": {
+        "pooler": "688629022eb5f7fa5d7b4d5b1eb3cd108eea377acb8d5d55a5106d84eef64bdd",
+        "classifier": "d4afc3761a86a789dddea9b2d28b188e3aec9c9ff83418204dd14fbf91f9c78a"
+      }
+    },
+    "finbert_20261022": {
+      "role": "finbert",
+      "seed": 20261022,
+      "dev_predictions": [
+        "CSV자료/벤치마크_finbert_20261022_개발예측_01.csv",
+        "CSV자료/벤치마크_finbert_20261022_개발예측_02.csv",
+        "CSV자료/벤치마크_finbert_20261022_개발예측_03.csv"
+      ],
+      "test_predictions": "CSV자료/벤치마크_finbert_20261022_시험예측.csv",
+      "training_log": "CSV자료/벤치마크_finbert_20261022_학습기록.csv",
+      "best_epoch": 2,
+      "dev_macro_f1": 0.6781327021708128,
+      "trained_model_state_sha256": "50867d142a48b997f0d54d6bef30a26be7962cb183a0b1a4fa6f7293389fc77e",
+      "new_pooler_and_classifier_state_sha256": {
+        "pooler": "3412bef20dfee4592023947285b44110ef8cd807f942d8bc9c8617cd5e051789",
+        "classifier": "e95aaa721dbef3c935114753fbba7ba12be87ef41ae8ea1ebc889d41d34b4d55"
+      }
+    },
+    "finbert_20261023": {
+      "role": "finbert",
+      "seed": 20261023,
+      "dev_predictions": [
+        "CSV자료/벤치마크_finbert_20261023_개발예측_01.csv",
+        "CSV자료/벤치마크_finbert_20261023_개발예측_02.csv",
+        "CSV자료/벤치마크_finbert_20261023_개발예측_03.csv"
+      ],
+      "test_predictions": "CSV자료/벤치마크_finbert_20261023_시험예측.csv",
+      "training_log": "CSV자료/벤치마크_finbert_20261023_학습기록.csv",
+      "best_epoch": 3,
+      "dev_macro_f1": 0.6703920186820324,
+      "trained_model_state_sha256": "9024bcee6818d185fe7147aec6318fa8852eb5845139d400495f0f13aec5a7d0",
+      "new_pooler_and_classifier_state_sha256": {
+        "pooler": "bb19306c0b33aad40077622971540b0dc8fa264edefbea408f747a3a7b6e69d3",
+        "classifier": "eeb2d92f4d21b7e474f72ee71da67af50de1a21a3b1891aa6de0e57b6820a9d6"
+      }
+    },
+    "finbert_20261024": {
+      "role": "finbert",
+      "seed": 20261024,
+      "dev_predictions": [
+        "CSV자료/벤치마크_finbert_20261024_개발예측_01.csv",
+        "CSV자료/벤치마크_finbert_20261024_개발예측_02.csv",
+        "CSV자료/벤치마크_finbert_20261024_개발예측_03.csv"
+      ],
+      "test_predictions": "CSV자료/벤치마크_finbert_20261024_시험예측.csv",
+      "training_log": "CSV자료/벤치마크_finbert_20261024_학습기록.csv",
+      "best_epoch": 3,
+      "dev_macro_f1": 0.7140033354735283,
+      "trained_model_state_sha256": "ad902cc87f2c9e29744bf65477359de983a34989108a4f185a474a2c91363705",
+      "new_pooler_and_classifier_state_sha256": {
+        "pooler": "d08b6c347bacfff2ff9506bb8208647a137d019b8b32114776d90b3e9ee993f7",
+        "classifier": "b5e990026a62016b8dc3d596b40310cf6ac599cb4026097735c9006f8a31b690"
+      }
+    },
+    "finbert_20261025": {
+      "role": "finbert",
+      "seed": 20261025,
+      "dev_predictions": [
+        "CSV자료/벤치마크_finbert_20261025_개발예측_01.csv",
+        "CSV자료/벤치마크_finbert_20261025_개발예측_02.csv",
+        "CSV자료/벤치마크_finbert_20261025_개발예측_03.csv"
+      ],
+      "test_predictions": "CSV자료/벤치마크_finbert_20261025_시험예측.csv",
+      "training_log": "CSV자료/벤치마크_finbert_20261025_학습기록.csv",
+      "best_epoch": 3,
+      "dev_macro_f1": 0.6980607470356932,
+      "trained_model_state_sha256": "e059118af721c0742f643ba65f93898442f4af24c273f5b13bc08d6c27430325",
+      "new_pooler_and_classifier_state_sha256": {
+        "pooler": "688629022eb5f7fa5d7b4d5b1eb3cd108eea377acb8d5d55a5106d84eef64bdd",
+        "classifier": "d4afc3761a86a789dddea9b2d28b188e3aec9c9ff83418204dd14fbf91f9c78a"
+      }
+    }
+  },
+  "reference_outputs": {
+    "seed_metrics": "CSV자료/벤치마크_기준_방법별지표.csv",
+    "group_ci": "CSV자료/벤치마크_기준_세방법신뢰구간.csv"
+  },
+  "bootstrap": {
+    "replicates": 5000,
+    "seed": 20261025,
+    "rng": "numpy.default_rng/PCG64",
+    "stratum_order": [
+      "BMODD",
+      "NonBMODD",
+      "candidate_Exclude",
+      "noncandidate_valid"
+    ],
+    "quantile_method": "linear",
+    "training_seeds_fixed": true
+  }
+}

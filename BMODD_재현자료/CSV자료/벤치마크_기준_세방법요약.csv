@@ -1,0 +1,67 @@
+﻿weighting,method,metric,mean,training_seed_sample_sd_not_CI,seed_count,aggregation
+unweighted,python_rules,Accuracy,0.91,,1,single fixed rule
+unweighted,python_rules,Macro_F1,0.9041032951970217,,1,single fixed rule
+unweighted,python_rules,BMODD_Precision,0.9333333333333333,,1,single fixed rule
+unweighted,python_rules,BMODD_Recall,0.9333333333333333,,1,single fixed rule
+unweighted,python_rules,BMODD_F1,0.9333333333333333,,1,single fixed rule
+unweighted,python_rules,NonBMODD_Precision,0.9066666666666666,,1,single fixed rule
+unweighted,python_rules,NonBMODD_Recall,0.7906976744186046,,1,single fixed rule
+unweighted,python_rules,NonBMODD_F1,0.84472049689441,,1,single fixed rule
+unweighted,python_rules,Exclude_Precision,0.9,,1,single fixed rule
+unweighted,python_rules,Exclude_Recall,0.9712230215827338,,1,single fixed rule
+unweighted,python_rules,Exclude_F1,0.9342560553633218,,1,single fixed rule
+unweighted,bert_four_seed_mean,Accuracy,0.6824999999999999,0.012874033584729381,4,"mean of four seed-specific metrics, not ensemble"
+unweighted,bert_four_seed_mean,Macro_F1,0.6657226179515755,0.013169036871426043,4,"mean of four seed-specific metrics, not ensemble"
+unweighted,bert_four_seed_mean,BMODD_Precision,0.6235377083901013,0.016398530285142786,4,"mean of four seed-specific metrics, not ensemble"
+unweighted,bert_four_seed_mean,BMODD_Recall,0.6566666666666667,0.038297084310253554,4,"mean of four seed-specific metrics, not ensemble"
+unweighted,bert_four_seed_mean,BMODD_F1,0.6392791236826538,0.022678202347748644,4,"mean of four seed-specific metrics, not ensemble"
+unweighted,bert_four_seed_mean,NonBMODD_Precision,0.5981823546241327,0.029636380862031925,4,"mean of four seed-specific metrics, not ensemble"
+unweighted,bert_four_seed_mean,NonBMODD_Recall,0.5988372093023255,0.022265746692007846,4,"mean of four seed-specific metrics, not ensemble"
+unweighted,bert_four_seed_mean,NonBMODD_F1,0.5980875783177845,0.01845304036115984,4,"mean of four seed-specific metrics, not ensemble"
+unweighted,bert_four_seed_mean,Exclude_Precision,0.772180691932502,0.016972531600706917,4,"mean of four seed-specific metrics, not ensemble"
+unweighted,bert_four_seed_mean,Exclude_Recall,0.7482014388489209,0.0176222283653466,4,"mean of four seed-specific metrics, not ensemble"
+unweighted,bert_four_seed_mean,Exclude_F1,0.7598011518542882,0.009625486770903304,4,"mean of four seed-specific metrics, not ensemble"
+unweighted,finbert_four_seed_mean,Accuracy,0.7091666666666666,0.003191423692521143,4,"mean of four seed-specific metrics, not ensemble"
+unweighted,finbert_four_seed_mean,Macro_F1,0.695884734197203,0.0028510027260053045,4,"mean of four seed-specific metrics, not ensemble"
+unweighted,finbert_four_seed_mean,BMODD_Precision,0.6567941486533974,0.02111708053264344,4,"mean of four seed-specific metrics, not ensemble"
+unweighted,finbert_four_seed_mean,BMODD_Recall,0.7366666666666666,0.038297084310253506,4,"mean of four seed-specific metrics, not ensemble"
+unweighted,finbert_four_seed_mean,BMODD_F1,0.6936762667833718,0.014264761648944399,4,"mean of four seed-specific metrics, not ensemble"
+unweighted,finbert_four_seed_mean,NonBMODD_Precision,0.6054551900170165,0.020143191716575852,4,"mean of four seed-specific metrics, not ensemble"
+unweighted,finbert_four_seed_mean,NonBMODD_Recall,0.622093023255814,0.042986575606238045,4,"mean of four seed-specific metrics, not ensemble"
+unweighted,finbert_four_seed_mean,NonBMODD_F1,0.612782659950702,0.01792099686977249,4,"mean of four seed-specific metrics, not ensemble"
+unweighted,finbert_four_seed_mean,Exclude_Precision,0.8172909065418421,0.0028586950453359347,4,"mean of four seed-specific metrics, not ensemble"
+unweighted,finbert_four_seed_mean,Exclude_Recall,0.7482014388489209,0.01017419829045391,4,"mean of four seed-specific metrics, not ensemble"
+unweighted,finbert_four_seed_mean,Exclude_F1,0.7811952758575352,0.005952594931490502,4,"mean of four seed-specific metrics, not ensemble"
+design_weighted,python_rules,Accuracy,0.8808733499654472,,1,single fixed rule
+design_weighted,python_rules,Macro_F1,0.39006643551686815,,1,single fixed rule
+design_weighted,python_rules,BMODD_Precision,0.9333333333333332,,1,single fixed rule
+design_weighted,python_rules,BMODD_Recall,0.11564113996858591,,1,single fixed rule
+design_weighted,python_rules,BMODD_F1,0.20578523764759257,,1,single fixed rule
+design_weighted,python_rules,NonBMODD_Precision,0.9066666666666667,,1,single fixed rule
+design_weighted,python_rules,NonBMODD_Recall,0.014155083227350212,,1,single fixed rule
+design_weighted,python_rules,NonBMODD_F1,0.027874976080024167,,1,single fixed rule
+design_weighted,python_rules,Exclude_Precision,0.8807330779130458,,1,single fixed rule
+design_weighted,python_rules,Exclude_Recall,0.9998956208383942,,1,single fixed rule
+design_weighted,python_rules,Exclude_F1,0.9365390928229876,,1,single fixed rule
+design_weighted,bert_four_seed_mean,Accuracy,0.8026006074764411,0.016820672896936124,4,"mean of four seed-specific metrics, not ensemble"
+design_weighted,bert_four_seed_mean,Macro_F1,0.5036557163057943,0.12081061613777966,4,"mean of four seed-specific metrics, not ensemble"
+design_weighted,bert_four_seed_mean,BMODD_Precision,0.5211619934081643,0.3400172836289591,4,"mean of four seed-specific metrics, not ensemble"
+design_weighted,bert_four_seed_mean,BMODD_Recall,0.7386916472725397,0.4375159111486085,4,"mean of four seed-specific metrics, not ensemble"
+design_weighted,bert_four_seed_mean,BMODD_F1,0.6034003723818754,0.3718362589809006,4,"mean of four seed-specific metrics, not ensemble"
+design_weighted,bert_four_seed_mean,NonBMODD_Precision,0.019785871854744477,0.003114122818141457,4,"mean of four seed-specific metrics, not ensemble"
+design_weighted,bert_four_seed_mean,NonBMODD_Recall,0.014857738830520759,0.002031438380589657,4,"mean of four seed-specific metrics, not ensemble"
+design_weighted,bert_four_seed_mean,NonBMODD_F1,0.01677332780635908,0.001244967410834456,4,"mean of four seed-specific metrics, not ensemble"
+design_weighted,bert_four_seed_mean,Exclude_Precision,0.88189117117606,0.002724202404997326,4,"mean of four seed-specific metrics, not ensemble"
+design_weighted,bert_four_seed_mean,Exclude_Recall,0.9000920748351477,0.025429483892548232,4,"mean of four seed-specific metrics, not ensemble"
+design_weighted,bert_four_seed_mean,Exclude_F1,0.8907934487291487,0.013800723650189046,4,"mean of four seed-specific metrics, not ensemble"
+design_weighted,finbert_four_seed_mean,Accuracy,0.825357395491042,0.006518302802720008,4,"mean of four seed-specific metrics, not ensemble"
+design_weighted,finbert_four_seed_mean,Macro_F1,0.5887518191672809,0.05211752952238481,4,"mean of four seed-specific metrics, not ensemble"
+design_weighted,finbert_four_seed_mean,BMODD_Precision,0.7165085533640947,0.17500978573519582,4,"mean of four seed-specific metrics, not ensemble"
+design_weighted,finbert_four_seed_mean,BMODD_Recall,0.9678111262564031,0.004745055521904404,4,"mean of four seed-specific metrics, not ensemble"
+design_weighted,finbert_four_seed_mean,BMODD_F1,0.8131992090926148,0.1299178619117054,4,"mean of four seed-specific metrics, not ensemble"
+design_weighted,finbert_four_seed_mean,NonBMODD_Precision,0.058701429110000244,0.06288132419023916,4,"mean of four seed-specific metrics, not ensemble"
+design_weighted,finbert_four_seed_mean,NonBMODD_Recall,0.04557611934948137,0.06136745183114043,4,"mean of four seed-specific metrics, not ensemble"
+design_weighted,finbert_four_seed_mean,NonBMODD_F1,0.05047408652634855,0.06282206773630299,4,"mean of four seed-specific metrics, not ensemble"
+design_weighted,finbert_four_seed_mean,Exclude_Precision,0.88742522704094,0.0054086502035549855,4,"mean of four seed-specific metrics, not ensemble"
+design_weighted,finbert_four_seed_mean,Exclude_Recall,0.9183831630675091,0.01224788737694945,4,"mean of four seed-specific metrics, not ensemble"
+design_weighted,finbert_four_seed_mean,Exclude_F1,0.9025821618828794,0.00429380236574597,4,"mean of four seed-specific metrics, not ensemble"

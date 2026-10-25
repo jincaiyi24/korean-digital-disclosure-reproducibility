@@ -1,0 +1,19 @@
+{
+  "training_operators": {
+    "source_sha256": "189f135a951e92bd6522947c12b6b348da2889458c9823257f4a731adcd49614",
+    "public_sha256": "189f135a951e92bd6522947c12b6b348da2889458c9823257f4a731adcd49614",
+    "byte_identical": true
+  },
+  "evaluation_operators": {
+    "source_sha256": "d32fb5016171a229346b64d4134333b6f22be250704e305f58ff588c01fe3916",
+    "function_ast_sha256": {
+      "metrics_from_matrices": "f1aa341f16af7987aa119b9c904b0c1f85f4d7f50c8a03343ed58ef92df75de3",
+      "confusion_matrices": "a3b6f565437cbc99221174de63766415ee742b32d478458402aa45c4b2b8c939",
+      "aggregate_seed_metrics": "e23b7c5702db77d78405cbddd01a23a524f01393b98f2381ce02df1d58316ca3",
+      "make_resample_indices": "e02560d1e36666976234084d4f2949a753cf0c8f0277e7dab574487b6f94b4f7",
+      "stratified_bootstrap": "4f1cf16752cadc47e3a792d5cd7592e879e7c64873fa1647d2b990172ff31a53",
+      "calculate_results": "537dd392fafda0eb3ce6e13f1cf54043e519f60ea4056a16928b3abbcd6f422e"
+    },
+    "public_sha256": "103163f55011a1c77cf99bc6f0e917d360edbcff5b9d79f07e3ad635bb1c753e"
+  }
+}

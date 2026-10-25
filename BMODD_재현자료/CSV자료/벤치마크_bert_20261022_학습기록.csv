@@ -1,0 +1,4 @@
+﻿epoch,training_examples,train_loss,dev_macro_f1,selected_as_best_so_far,best_epoch_so_far,test_evaluations
+1,1500,0.9486276100476583,0.6037380019044044,True,1,0
+2,1500,0.6729349393844605,0.6647590455639991,True,2,0
+3,1500,0.5194662325779597,0.6697304310264102,True,3,0
